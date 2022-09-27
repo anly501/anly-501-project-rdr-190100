@@ -7,6 +7,6 @@ rsync -alvr --delete 501-project-website ramdayal@gtown3.reclaimhosting.com:/hom
 DATE=$(date +"DATE-%Y-%m-%d-TIME-%H-%M-%S")
 message="GITHUB-UPLOAD:$DATE";
 echo "commit message = "$message; 
-git add --all; 
+git add -all; 
 git commit -m $message; 
 git push
