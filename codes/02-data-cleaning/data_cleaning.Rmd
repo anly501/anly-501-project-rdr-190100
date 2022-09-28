@@ -1,0 +1,114 @@
+---
+title: "Data_Cleaning"
+author: "Ramdayal Rewaria"
+date: "2022-09-28"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyr)
+library(tidyverse)
+```
+
+```{r}
+race_df = read_csv("../../data/00-raw-data/race_results.csv")
+colnames(race_df) = c('index', 'season', 'round', 'url', 'raceName', 'Circuit', 'date', 'Results', 'time')
+head(race_df)
+```
+
+```{r}
+drop = c("index", "url")
+race_df = race_df[,!(names(race_df) %in% drop)]
+head(race_df)
+```
+
+```{r}
+race_df$Circuit[1]
+```
+
+```{r}
+summary(race_df)
+```
+
+```{r}
+
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
