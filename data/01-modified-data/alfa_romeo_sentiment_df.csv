@@ -1,0 +1,807 @@
+,0,text,polarity,subjectivity,sentiment,tokenized,nonstop,stemmed
+0,"The only non-qualifier for the race was Franco Forini in his Osella-Alfa Romeo-FA1G. The Swiss missing the cut in the last of his three World Championship entries.
+
+Spanish Grand Prix, (qualifying), Jerez, 25-26 September 1987.
+
+© Motorsport Images
+
+#F1 https://t.co/yCmAPJlVmv","the only nonqualifier for the race was franco forini in his osellaalfa romeofag the swiss missing the cut in the last of his three world championship entries
+
+spanish grand prix qualifying jerez  september 
+
+© motorsport images
+
+f httpstcoycmapjlvmv",0.06,0.42333333333333334,positive,"['the', 'only', 'nonqualifier', 'for', 'the', 'race', 'was', 'franco', 'forini', 'in', 'his', 'osellaalfa', 'romeofag', 'the', 'swiss', 'missing', 'the', 'cut', 'in', 'the', 'last', 'of', 'his', 'three', 'world', 'championship', 'entries', 'spanish', 'grand', 'prix', 'qualifying', 'jerez', 'september', 'motorsport', 'images', 'f', 'httpstcoycmapjlvmv']","['nonqualifier', 'race', 'franco', 'forini', 'osellaalfa', 'romeofag', 'swiss', 'missing', 'cut', 'last', 'three', 'world', 'championship', 'entries', 'spanish', 'grand', 'prix', 'qualifying', 'jerez', 'september', 'motorsport', 'images', 'f', 'httpstcoycmapjlvmv']","['nonqualifi', 'race', 'franco', 'forini', 'osellaalfa', 'romeofag', 'swiss', 'miss', 'cut', 'last', 'three', 'world', 'championship', 'entri', 'spanish', 'grand', 'prix', 'qualifi', 'jerez', 'septemb', 'motorsport', 'imag', 'f', 'httpstcoycmapjlvmv']"
+1,"IM RACING AGAIN! This time in a new league called FRL!
+
+Pre-season race was super fun and the pace looks good so lets see what we can do driving for Alfa Romeo F1 Team! Season begins Sunday 6PM BST! https://t.co/glBbUVdeoh","im racing again this time in a new league called frl
+
+preseason race was super fun and the pace looks good so lets see what we can do driving for alfa romeo f team season begins sunday pm bst httpstcoglbbuvdeoh",0.36742424242424243,0.4803030303030303,positive,"['im', 'racing', 'again', 'this', 'time', 'in', 'a', 'new', 'league', 'called', 'frl', 'preseason', 'race', 'was', 'super', 'fun', 'and', 'the', 'pace', 'looks', 'good', 'so', 'lets', 'see', 'what', 'we', 'can', 'do', 'driving', 'for', 'alfa', 'romeo', 'f', 'team', 'season', 'begins', 'sunday', 'pm', 'bst', 'httpstcoglbbuvdeoh']","['im', 'racing', 'time', 'new', 'league', 'called', 'frl', 'preseason', 'race', 'super', 'fun', 'pace', 'looks', 'good', 'lets', 'see', 'driving', 'alfa', 'romeo', 'f', 'team', 'season', 'begins', 'sunday', 'pm', 'bst', 'httpstcoglbbuvdeoh']","['im', 'race', 'time', 'new', 'leagu', 'call', 'frl', 'preseason', 'race', 'super', 'fun', 'pace', 'look', 'good', 'let', 'see', 'drive', 'alfa', 'romeo', 'f', 'team', 'season', 'begin', 'sunday', 'pm', 'bst', 'httpstcoglbbuvdeoh']"
+2,"@l4ndoslove color: yellow
+weather: sunny
+driver: lando!
+team: mclaren
+animal: a cool bird like a canary or something 
+f1 car: alfa romeo c38","lndoslove color yellow
+weather sunny
+driver lando
+team mclaren
+animal a cool bird like a canary or something 
+f car alfa romeo c",0.175,0.325,positive,"['lndoslove', 'color', 'yellow', 'weather', 'sunny', 'driver', 'lando', 'team', 'mclaren', 'animal', 'a', 'cool', 'bird', 'like', 'a', 'canary', 'or', 'something', 'f', 'car', 'alfa', 'romeo', 'c']","['lndoslove', 'color', 'yellow', 'weather', 'sunny', 'driver', 'lando', 'team', 'mclaren', 'animal', 'cool', 'bird', 'like', 'canary', 'something', 'f', 'car', 'alfa', 'romeo', 'c']","['lndoslov', 'color', 'yellow', 'weather', 'sunni', 'driver', 'lando', 'team', 'mclaren', 'anim', 'cool', 'bird', 'like', 'canari', 'someth', 'f', 'car', 'alfa', 'romeo', 'c']"
+3,"@Leah5899_ Color: yellow
+Weather: spring sunshine 
+Driver: Vettel
+F1 team: Alfa Romeo
+Animal: canary","leah color yellow
+weather spring sunshine 
+driver vettel
+f team alfa romeo
+animal canary",0.0,0.0,positive,"['leah', 'color', 'yellow', 'weather', 'spring', 'sunshine', 'driver', 'vettel', 'f', 'team', 'alfa', 'romeo', 'animal', 'canary']","['leah', 'color', 'yellow', 'weather', 'spring', 'sunshine', 'driver', 'vettel', 'f', 'team', 'alfa', 'romeo', 'animal', 'canary']","['leah', 'color', 'yellow', 'weather', 'spring', 'sunshin', 'driver', 'vettel', 'f', 'team', 'alfa', 'romeo', 'anim', 'canari']"
+4,@stella__f1 @estesunnies you fine with alfa romeo?,stellaf estesunnies you fine with alfa romeo,0.4166666666666667,0.5,positive,"['stellaf', 'estesunnies', 'you', 'fine', 'with', 'alfa', 'romeo']","['stellaf', 'estesunnies', 'fine', 'alfa', 'romeo']","['stellaf', 'estesunni', 'fine', 'alfa', 'romeo']"
+5,let's go Alfa Romeo f1 Team 💪 https://t.co/nqoWrOGZiv,lets go alfa romeo f team 💪 httpstconqowrogziv,0.0,0.0,neutral,"['lets', 'go', 'alfa', 'romeo', 'f', 'team', 'httpstconqowrogziv']","['lets', 'go', 'alfa', 'romeo', 'f', 'team', 'httpstconqowrogziv']","['let', 'go', 'alfa', 'romeo', 'f', 'team', 'httpstconqowrogziv']"
+6,#F1 Today | McLaren needs a “big step” forwards | One win a season record doesn’t bother Hamilton | Ocon finds its ‘strange’ that his results aren’t apricated  | BMW has no interest in F1 return | Alfa Romeo in “no hurry” to decide future | #F1Vault,f today  mclaren needs a “big step” forwards  one win a season record doesn’t bother hamilton  ocon finds its ‘strange’ that his results aren’t apricated   bmw has no interest in f return  alfa romeo in “no hurry” to decide future  fvault,0.1875,0.19375,positive,"['f', 'today', 'mclaren', 'needs', 'a', 'big', 'step', 'forwards', 'one', 'win', 'a', 'season', 'record', 'doesn', 't', 'bother', 'hamilton', 'ocon', 'finds', 'its', 'strange', 'that', 'his', 'results', 'aren', 't', 'apricated', 'bmw', 'has', 'no', 'interest', 'in', 'f', 'return', 'alfa', 'romeo', 'in', 'no', 'hurry', 'to', 'decide', 'future', 'fvault']","['f', 'today', 'mclaren', 'needs', 'big', 'step', 'forwards', 'one', 'win', 'season', 'record', 'bother', 'hamilton', 'ocon', 'finds', 'strange', 'results', 'apricated', 'bmw', 'interest', 'f', 'return', 'alfa', 'romeo', 'hurry', 'decide', 'future', 'fvault']","['f', 'today', 'mclaren', 'need', 'big', 'step', 'forward', 'one', 'win', 'season', 'record', 'bother', 'hamilton', 'ocon', 'find', 'strang', 'result', 'apric', 'bmw', 'interest', 'f', 'return', 'alfa', 'romeo', 'hurri', 'decid', 'futur', 'fvault']"
+7,Alfa Romeo eyes Haas as BMW says no to F1 https://t.co/VzQbGC6NTF,alfa romeo eyes haas as bmw says no to f httpstcovzqbgcntf,0.0,0.0,negative,"['alfa', 'romeo', 'eyes', 'haas', 'as', 'bmw', 'says', 'no', 'to', 'f', 'httpstcovzqbgcntf']","['alfa', 'romeo', 'eyes', 'haas', 'bmw', 'says', 'f', 'httpstcovzqbgcntf']","['alfa', 'romeo', 'eye', 'haa', 'bmw', 'say', 'f', 'httpstcovzqbgcntf']"
+8,"🏁formula 1  30.09.22 - 02.10.22🏁
+
+😄big fan of alfa romeo f1 team orlen (by sauber motorsport f1🇨🇭)👍🏼
+
+🏎️💨#alfaromeof1team #alfaromeosauberf1 #saubermotorsport #alfaromeoc41 #formula1 #bigbreastedbeauty #bustylegend #bigfans #denisemilani #iloveyoudenisemilani❤️💞
+#ThomasHo78 https://t.co/gip6YfTGU0","🏁formula     🏁
+
+😄big fan of alfa romeo f team orlen by sauber motorsport f🇨🇭👍🏼
+
+🏎️💨alfaromeofteam alfaromeosauberf saubermotorsport alfaromeoc formula bigbreastedbeauty bustylegend bigfans denisemilani iloveyoudenisemilani❤️💞
+thomasho httpstcogipyftgu",0.0,0.0,positive,"['', 'formula', 'big', 'fan', 'of', 'alfa', 'romeo', 'f', 'team', 'orlen', 'by', 'sauber', 'motorsport', 'f', 'alfaromeofteam', 'alfaromeosauberf', 'saubermotorsport', 'alfaromeoc', 'formula', 'bigbreastedbeauty', 'bustylegend', 'bigfans', 'denisemilani', 'iloveyoudenisemilani', 'thomasho', 'httpstcogipyftgu']","['', 'formula', 'big', 'fan', 'alfa', 'romeo', 'f', 'team', 'orlen', 'sauber', 'motorsport', 'f', 'alfaromeofteam', 'alfaromeosauberf', 'saubermotorsport', 'alfaromeoc', 'formula', 'bigbreastedbeauty', 'bustylegend', 'bigfans', 'denisemilani', 'iloveyoudenisemilani', 'thomasho', 'httpstcogipyftgu']","['', 'formula', 'big', 'fan', 'alfa', 'romeo', 'f', 'team', 'orlen', 'sauber', 'motorsport', 'f', 'alfaromeofteam', 'alfaromeosauberf', 'saubermotorsport', 'alfaromeoc', 'formula', 'bigbreastedbeauti', 'bustylegend', 'bigfan', 'denisemilani', 'iloveyoudenisemilani', 'thomasho', 'httpstcogipyftgu']"
+9,"So that's Williams, AlphaTauri, Alfa Romeo and Haas with vacant seats.
+
+Think this move basically ends Ricciardo's F1 career, at least as a race driver. https://t.co/lJpgaiwSpK","so thats williams alphatauri alfa romeo and haas with vacant seats
+
+think this move basically ends ricciardos f career at least as a race driver httpstcoljpgaiwspk",-0.3,0.4,neutral,"['so', 'thats', 'williams', 'alphatauri', 'alfa', 'romeo', 'and', 'haas', 'with', 'vacant', 'seats', 'think', 'this', 'move', 'basically', 'ends', 'ricciardos', 'f', 'career', 'at', 'least', 'as', 'a', 'race', 'driver', 'httpstcoljpgaiwspk']","['thats', 'williams', 'alphatauri', 'alfa', 'romeo', 'haas', 'vacant', 'seats', 'think', 'move', 'basically', 'ends', 'ricciardos', 'f', 'career', 'least', 'race', 'driver', 'httpstcoljpgaiwspk']","['that', 'william', 'alphatauri', 'alfa', 'romeo', 'haa', 'vacant', 'seat', 'think', 'move', 'basic', 'end', 'ricciardo', 'f', 'career', 'least', 'race', 'driver', 'httpstcoljpgaiwspk']"
+10,".@alfaromeoorlen is in 'no hurry' to decide its F1 future, says CEO Jean-Philippe Imparato.
+
+The Italian brand will conclude its deal with Sauber at the end of 2023, with the Swiss team rumoured to announce their Audi partnership tomorrow. #SportsBiz #F1
+
+https://t.co/IEw6CSyOEG","alfaromeoorlen is in no hurry to decide its f future says ceo jeanphilippe imparato
+
+the italian brand will conclude its deal with sauber at the end of  with the swiss team rumoured to announce their audi partnership tomorrow sportsbiz f
+
+httpstcoiewcsyoeg",0.0,0.0625,negative,"['alfaromeoorlen', 'is', 'in', 'no', 'hurry', 'to', 'decide', 'its', 'f', 'future', 'says', 'ceo', 'jeanphilippe', 'imparato', 'the', 'italian', 'brand', 'will', 'conclude', 'its', 'deal', 'with', 'sauber', 'at', 'the', 'end', 'of', 'with', 'the', 'swiss', 'team', 'rumoured', 'to', 'announce', 'their', 'audi', 'partnership', 'tomorrow', 'sportsbiz', 'f', 'httpstcoiewcsyoeg']","['alfaromeoorlen', 'hurry', 'decide', 'f', 'future', 'says', 'ceo', 'jeanphilippe', 'imparato', 'italian', 'brand', 'conclude', 'deal', 'sauber', 'end', 'swiss', 'team', 'rumoured', 'announce', 'audi', 'partnership', 'tomorrow', 'sportsbiz', 'f', 'httpstcoiewcsyoeg']","['alfaromeoorlen', 'hurri', 'decid', 'f', 'futur', 'say', 'ceo', 'jeanphilipp', 'imparato', 'italian', 'brand', 'conclud', 'deal', 'sauber', 'end', 'swiss', 'team', 'rumour', 'announc', 'audi', 'partnership', 'tomorrow', 'sportsbiz', 'f', 'httpstcoiewcsyoeg']"
+11,Figured it out. Joe Exotic to Alfa Romeo confirmed #Formula1 #f1 #SingaporeGP https://t.co/6IwGemB5HP,figured it out joe exotic to alfa romeo confirmed formula f singaporegp httpstcoiwgembhp,0.45,1.0,neutral,"['figured', 'it', 'out', 'joe', 'exotic', 'to', 'alfa', 'romeo', 'confirmed', 'formula', 'f', 'singaporegp', 'httpstcoiwgembhp']","['figured', 'joe', 'exotic', 'alfa', 'romeo', 'confirmed', 'formula', 'f', 'singaporegp', 'httpstcoiwgembhp']","['figur', 'joe', 'exot', 'alfa', 'romeo', 'confirm', 'formula', 'f', 'singaporegp', 'httpstcoiwgembhp']"
+12,"What do we think this will be?
+New title sponsor, driver announcement, or something else?
+#F1 #Motorsport #AlfaRomeo
+
+📸 Alfa Romeo F1 Team https://t.co/s34BcUAlea","what do we think this will be
+new title sponsor driver announcement or something else
+f motorsport alfaromeo
+
+📸 alfa romeo f team httpstcosbcualea",0.13636363636363635,0.45454545454545453,neutral,"['what', 'do', 'we', 'think', 'this', 'will', 'be', 'new', 'title', 'sponsor', 'driver', 'announcement', 'or', 'something', 'else', 'f', 'motorsport', 'alfaromeo', 'alfa', 'romeo', 'f', 'team', 'httpstcosbcualea']","['think', 'new', 'title', 'sponsor', 'driver', 'announcement', 'something', 'else', 'f', 'motorsport', 'alfaromeo', 'alfa', 'romeo', 'f', 'team', 'httpstcosbcualea']","['think', 'new', 'titl', 'sponsor', 'driver', 'announc', 'someth', 'els', 'f', 'motorsport', 'alfaromeo', 'alfa', 'romeo', 'f', 'team', 'httpstcosbcualea']"
+13,How Bottas has found his voice after leaving Mercedes for Alfa Romeo #GrandPrix #GPToday #Formula1 #F1 #F1News #Motorsport https://t.co/y5Vgz9hRzO,how bottas has found his voice after leaving mercedes for alfa romeo grandprix gptoday formula f fnews motorsport httpstcoyvgzhrzo,0.0,0.0,neutral,"['how', 'bottas', 'has', 'found', 'his', 'voice', 'after', 'leaving', 'mercedes', 'for', 'alfa', 'romeo', 'grandprix', 'gptoday', 'formula', 'f', 'fnews', 'motorsport', 'httpstcoyvgzhrzo']","['bottas', 'found', 'voice', 'leaving', 'mercedes', 'alfa', 'romeo', 'grandprix', 'gptoday', 'formula', 'f', 'fnews', 'motorsport', 'httpstcoyvgzhrzo']","['botta', 'found', 'voic', 'leav', 'merced', 'alfa', 'romeo', 'grandprix', 'gptoday', 'formula', 'f', 'fnew', 'motorsport', 'httpstcoyvgzhrzo']"
+14,"Alfa Romeo's CEO Jean-Phillipe Imparato has said that there is ""no hurry"" regarding the brand's continued involvement in Formula 1.
+
+This comes surrounding strong rumours that the Sauber Group will announce a partnership with Audi very soon.
+
+#F1 
+https://t.co/RKE9XjHd27","alfa romeos ceo jeanphillipe imparato has said that there is no hurry regarding the brands continued involvement in formula 
+
+this comes surrounding strong rumours that the sauber group will announce a partnership with audi very soon
+
+f 
+httpstcorkexjhd",0.31666666666666665,0.5166666666666666,positive,"['alfa', 'romeos', 'ceo', 'jeanphillipe', 'imparato', 'has', 'said', 'that', 'there', 'is', 'no', 'hurry', 'regarding', 'the', 'brands', 'continued', 'involvement', 'in', 'formula', 'this', 'comes', 'surrounding', 'strong', 'rumours', 'that', 'the', 'sauber', 'group', 'will', 'announce', 'a', 'partnership', 'with', 'audi', 'very', 'soon', 'f', 'httpstcorkexjhd']","['alfa', 'romeos', 'ceo', 'jeanphillipe', 'imparato', 'said', 'hurry', 'regarding', 'brands', 'continued', 'involvement', 'formula', 'comes', 'surrounding', 'strong', 'rumours', 'sauber', 'group', 'announce', 'partnership', 'audi', 'soon', 'f', 'httpstcorkexjhd']","['alfa', 'romeo', 'ceo', 'jeanphillip', 'imparato', 'said', 'hurri', 'regard', 'brand', 'continu', 'involv', 'formula', 'come', 'surround', 'strong', 'rumour', 'sauber', 'group', 'announc', 'partnership', 'audi', 'soon', 'f', 'httpstcorkexjhd']"
+15,"Last week’s #F1 news that you may have missed:
+👉🏻 FIA has formally rejected Colton Herta's F1 super license request.
+👉🏻 Williams confirms Nicholas Latifi’s will not be driving for the team in 2023.
+👉🏻 Alfa Romeo announced “Something is Coming”. What it could be is still unclear!","last week’s f news that you may have missed
+👉🏻 fia has formally rejected colton hertas f super license request
+👉🏻 williams confirms nicholas latifi’s will not be driving for the team in 
+👉🏻 alfa romeo announced “something is coming” what it could be is still unclear",0.16666666666666666,0.36666666666666664,negative,"['last', 'week', 's', 'f', 'news', 'that', 'you', 'may', 'have', 'missed', 'fia', 'has', 'formally', 'rejected', 'colton', 'hertas', 'f', 'super', 'license', 'request', 'williams', 'confirms', 'nicholas', 'latifi', 's', 'will', 'not', 'be', 'driving', 'for', 'the', 'team', 'in', 'alfa', 'romeo', 'announced', 'something', 'is', 'coming', 'what', 'it', 'could', 'be', 'is', 'still', 'unclear']","['last', 'week', 'f', 'news', 'may', 'missed', 'fia', 'formally', 'rejected', 'colton', 'hertas', 'f', 'super', 'license', 'request', 'williams', 'confirms', 'nicholas', 'latifi', 'driving', 'team', 'alfa', 'romeo', 'announced', 'something', 'coming', 'could', 'still', 'unclear']","['last', 'week', 'f', 'news', 'may', 'miss', 'fia', 'formal', 'reject', 'colton', 'herta', 'f', 'super', 'licens', 'request', 'william', 'confirm', 'nichola', 'latifi', 'drive', 'team', 'alfa', 'romeo', 'announc', 'someth', 'come', 'could', 'still', 'unclear']"
+16,"Alfa Romeo in 'no hurry' to decide F1 future, says CEO - Black Book Motorsport https://t.co/wWipVsmC3G",alfa romeo in no hurry to decide f future says ceo  black book motorsport httpstcowwipvsmcg,-0.08333333333333333,0.2791666666666667,negative,"['alfa', 'romeo', 'in', 'no', 'hurry', 'to', 'decide', 'f', 'future', 'says', 'ceo', 'black', 'book', 'motorsport', 'httpstcowwipvsmcg']","['alfa', 'romeo', 'hurry', 'decide', 'f', 'future', 'says', 'ceo', 'black', 'book', 'motorsport', 'httpstcowwipvsmcg']","['alfa', 'romeo', 'hurri', 'decid', 'f', 'futur', 'say', 'ceo', 'black', 'book', 'motorsport', 'httpstcowwipvsmcg']"
+17,"Zhou Guanyu says he and Alfa Romeo are happy with each other as talks are on about 2023 seat.
+
+He adds on the recent performance dip for the team:
+
+https://t.co/Daz434zGgj #F1 https://t.co/ekm2JGZqps","zhou guanyu says he and alfa romeo are happy with each other as talks are on about  seat
+
+he adds on the recent performance dip for the team
+
+httpstcodazzggj f httpstcoekmjgzqps",0.225,0.5416666666666666,positive,"['zhou', 'guanyu', 'says', 'he', 'and', 'alfa', 'romeo', 'are', 'happy', 'with', 'each', 'other', 'as', 'talks', 'are', 'on', 'about', 'seat', 'he', 'adds', 'on', 'the', 'recent', 'performance', 'dip', 'for', 'the', 'team', 'httpstcodazzggj', 'f', 'httpstcoekmjgzqps']","['zhou', 'guanyu', 'says', 'alfa', 'romeo', 'happy', 'talks', 'seat', 'adds', 'recent', 'performance', 'dip', 'team', 'httpstcodazzggj', 'f', 'httpstcoekmjgzqps']","['zhou', 'guanyu', 'say', 'alfa', 'romeo', 'happi', 'talk', 'seat', 'add', 'recent', 'perform', 'dip', 'team', 'httpstcodazzggj', 'f', 'httpstcoekmjgzqp']"
+18,"Zhou Guanyu says he and Alfa Romeo are happy with each other as talks are on about 2023 seat.
+
+He adds on the recent performance dip for the team:
+
+https://t.co/SfHP6nGoMY #F1 | @MsportXtra https://t.co/WuxMWT4Q6F","zhou guanyu says he and alfa romeo are happy with each other as talks are on about  seat
+
+he adds on the recent performance dip for the team
+
+httpstcosfhpngomy f  msportxtra httpstcowuxmwtqf",0.225,0.5416666666666666,positive,"['zhou', 'guanyu', 'says', 'he', 'and', 'alfa', 'romeo', 'are', 'happy', 'with', 'each', 'other', 'as', 'talks', 'are', 'on', 'about', 'seat', 'he', 'adds', 'on', 'the', 'recent', 'performance', 'dip', 'for', 'the', 'team', 'httpstcosfhpngomy', 'f', 'msportxtra', 'httpstcowuxmwtqf']","['zhou', 'guanyu', 'says', 'alfa', 'romeo', 'happy', 'talks', 'seat', 'adds', 'recent', 'performance', 'dip', 'team', 'httpstcosfhpngomy', 'f', 'msportxtra', 'httpstcowuxmwtqf']","['zhou', 'guanyu', 'say', 'alfa', 'romeo', 'happi', 'talk', 'seat', 'add', 'recent', 'perform', 'dip', 'team', 'httpstcosfhpngomi', 'f', 'msportxtra', 'httpstcowuxmwtqf']"
+19,"GGhost272's dominance continues in the PS F1 League, winning 4 of the previous 5 races while Alfa Romeo and Alpine fight it out with 4 points separating both teams.
+
+Can anyone stop GGhost's run? Will there be a change in the Constructor Championship? Join us live from 8pm. https://t.co/9RP3kjK0fv","gghosts dominance continues in the ps f league winning  of the previous  races while alfa romeo and alpine fight it out with  points separating both teams
+
+can anyone stop gghosts run will there be a change in the constructor championship join us live from pm httpstcorpkjkfv",0.15656565656565657,0.47222222222222215,positive,"['gghosts', 'dominance', 'continues', 'in', 'the', 'ps', 'f', 'league', 'winning', 'of', 'the', 'previous', 'races', 'while', 'alfa', 'romeo', 'and', 'alpine', 'fight', 'it', 'out', 'with', 'points', 'separating', 'both', 'teams', 'can', 'anyone', 'stop', 'gghosts', 'run', 'will', 'there', 'be', 'a', 'change', 'in', 'the', 'constructor', 'championship', 'join', 'us', 'live', 'from', 'pm', 'httpstcorpkjkfv']","['gghosts', 'dominance', 'continues', 'ps', 'f', 'league', 'winning', 'previous', 'races', 'alfa', 'romeo', 'alpine', 'fight', 'points', 'separating', 'teams', 'anyone', 'stop', 'gghosts', 'run', 'change', 'constructor', 'championship', 'join', 'us', 'live', 'pm', 'httpstcorpkjkfv']","['gghost', 'domin', 'continu', 'ps', 'f', 'leagu', 'win', 'previou', 'race', 'alfa', 'romeo', 'alpin', 'fight', 'point', 'separ', 'team', 'anyon', 'stop', 'gghost', 'run', 'chang', 'constructor', 'championship', 'join', 'us', 'live', 'pm', 'httpstcorpkjkfv']"
+20,Alfa Romeo eyes HAAS Automation as BMW says no t'F1 - https://t.co/egXSMeUtmy #F1 #oh,alfa romeo eyes haas automation as bmw says no tf  httpstcoegxsmeutmy f oh,0.0,0.0,negative,"['alfa', 'romeo', 'eyes', 'haas', 'automation', 'as', 'bmw', 'says', 'no', 'tf', 'httpstcoegxsmeutmy', 'f', 'oh']","['alfa', 'romeo', 'eyes', 'haas', 'automation', 'bmw', 'says', 'tf', 'httpstcoegxsmeutmy', 'f', 'oh']","['alfa', 'romeo', 'eye', 'haa', 'autom', 'bmw', 'say', 'tf', 'httpstcoegxsmeutmi', 'f', 'oh']"
+21,Alfa Romeo eyes Haas as BMW says no to F1 - https://t.co/FqllKi2jjs #F1,alfa romeo eyes haas as bmw says no to f  httpstcofqllkijjs f,0.0,0.0,negative,"['alfa', 'romeo', 'eyes', 'haas', 'as', 'bmw', 'says', 'no', 'to', 'f', 'httpstcofqllkijjs', 'f']","['alfa', 'romeo', 'eyes', 'haas', 'bmw', 'says', 'f', 'httpstcofqllkijjs', 'f']","['alfa', 'romeo', 'eye', 'haa', 'bmw', 'say', 'f', 'httpstcofqllkijj', 'f']"
+22,Alfa Romeo eyes Haas as BMW says no to F1 https://t.co/CZdgTsMFDk https://t.co/aSC6MTLMM5 🏎 #f1 #formula1,alfa romeo eyes haas as bmw says no to f httpstcoczdgtsmfdk httpstcoascmtlmm 🏎 f formula,0.0,0.0,negative,"['alfa', 'romeo', 'eyes', 'haas', 'as', 'bmw', 'says', 'no', 'to', 'f', 'httpstcoczdgtsmfdk', 'httpstcoascmtlmm', 'f', 'formula']","['alfa', 'romeo', 'eyes', 'haas', 'bmw', 'says', 'f', 'httpstcoczdgtsmfdk', 'httpstcoascmtlmm', 'f', 'formula']","['alfa', 'romeo', 'eye', 'haa', 'bmw', 'say', 'f', 'httpstcoczdgtsmfdk', 'httpstcoascmtlmm', 'f', 'formula']"
+23,@Karol_CyrkF1 Rich Energy Alfa Romeo F1 Team Orlen?,karolcyrkf rich energy alfa romeo f team orlen,0.375,0.75,positive,"['karolcyrkf', 'rich', 'energy', 'alfa', 'romeo', 'f', 'team', 'orlen']","['karolcyrkf', 'rich', 'energy', 'alfa', 'romeo', 'f', 'team', 'orlen']","['karolcyrkf', 'rich', 'energi', 'alfa', 'romeo', 'f', 'team', 'orlen']"
+24,"Vittorio Brambilla had retired from F1, Alfa Romeo brought in F1 debutant Andrea de Cesaris as a replacement. The Italian (5th in the 1980 F2 Championship standings) impressed with the 8th fastest time.
+
+Canadian GP, (first qualifying), Circuit Île Notre-Dame, 26 September 1980. https://t.co/s5ynstaxwc","vittorio brambilla had retired from f alfa romeo brought in f debutant andrea de cesaris as a replacement the italian th in the  f championship standings impressed with the th fastest time
+
+canadian gp first qualifying circuit île notredame  september  httpstcosynstaxwc",0.4166666666666667,0.4444444444444444,positive,"['vittorio', 'brambilla', 'had', 'retired', 'from', 'f', 'alfa', 'romeo', 'brought', 'in', 'f', 'debutant', 'andrea', 'de', 'cesaris', 'as', 'a', 'replacement', 'the', 'italian', 'th', 'in', 'the', 'f', 'championship', 'standings', 'impressed', 'with', 'the', 'th', 'fastest', 'time', 'canadian', 'gp', 'first', 'qualifying', 'circuit', 'île', 'notredame', 'september', 'httpstcosynstaxwc']","['vittorio', 'brambilla', 'retired', 'f', 'alfa', 'romeo', 'brought', 'f', 'debutant', 'andrea', 'de', 'cesaris', 'replacement', 'italian', 'th', 'f', 'championship', 'standings', 'impressed', 'th', 'fastest', 'time', 'canadian', 'gp', 'first', 'qualifying', 'circuit', 'île', 'notredame', 'september', 'httpstcosynstaxwc']","['vittorio', 'brambilla', 'retir', 'f', 'alfa', 'romeo', 'brought', 'f', 'debut', 'andrea', 'de', 'cesari', 'replac', 'italian', 'th', 'f', 'championship', 'stand', 'impress', 'th', 'fastest', 'time', 'canadian', 'gp', 'first', 'qualifi', 'circuit', 'île', 'notredam', 'septemb', 'httpstcosynstaxwc']"
+25,@F1 @F1NightRace Alfa romeo to the moon,f fnightrace alfa romeo to the moon,0.0,0.0,neutral,"['f', 'fnightrace', 'alfa', 'romeo', 'to', 'the', 'moon']","['f', 'fnightrace', 'alfa', 'romeo', 'moon']","['f', 'fnightrac', 'alfa', 'romeo', 'moon']"
+26,"Rumor: Alfa Romeo to move from Sauber F1 to Haas F1 in 2024 - https://t.co/SIcG86Od62
+(GMM) Sauber’s current title sponsor Alfa Romeo has already announced its departure at the end of 2023.
+Alfa Romeo CEO Jean-Philippe Imparato
+There are rumors that Alfa Romeo may instead tea... https://t.co/bryHTjLLek","rumor alfa romeo to move from sauber f to haas f in   httpstcosicgod
+gmm sauber’s current title sponsor alfa romeo has already announced its departure at the end of 
+alfa romeo ceo jeanphilippe imparato
+there are rumors that alfa romeo may instead tea httpstcobryhtjllek",0.0,0.4,neutral,"['rumor', 'alfa', 'romeo', 'to', 'move', 'from', 'sauber', 'f', 'to', 'haas', 'f', 'in', 'httpstcosicgod', 'gmm', 'sauber', 's', 'current', 'title', 'sponsor', 'alfa', 'romeo', 'has', 'already', 'announced', 'its', 'departure', 'at', 'the', 'end', 'of', 'alfa', 'romeo', 'ceo', 'jeanphilippe', 'imparato', 'there', 'are', 'rumors', 'that', 'alfa', 'romeo', 'may', 'instead', 'tea', 'httpstcobryhtjllek']","['rumor', 'alfa', 'romeo', 'move', 'sauber', 'f', 'haas', 'f', 'httpstcosicgod', 'gmm', 'sauber', 'current', 'title', 'sponsor', 'alfa', 'romeo', 'already', 'announced', 'departure', 'end', 'alfa', 'romeo', 'ceo', 'jeanphilippe', 'imparato', 'rumors', 'alfa', 'romeo', 'may', 'instead', 'tea', 'httpstcobryhtjllek']","['rumor', 'alfa', 'romeo', 'move', 'sauber', 'f', 'haa', 'f', 'httpstcosicgod', 'gmm', 'sauber', 'current', 'titl', 'sponsor', 'alfa', 'romeo', 'alreadi', 'announc', 'departur', 'end', 'alfa', 'romeo', 'ceo', 'jeanphilipp', 'imparato', 'rumor', 'alfa', 'romeo', 'may', 'instead', 'tea', 'httpstcobryhtjllek']"
+27,"[Reddit F1]
+[Alfa Romeo F1 Team] The next chapter starts tomorrow! (03:15 MST, 11:15 CET, 02:15 PST). Stay tuned! (Heavily hints at Zhou extension)
+#F1 #ZhouGuanyu24  #Formula1 #F1News
+
+https://t.co/bLRovdBoaF https://t.co/X800jx0hc1","reddit f
+alfa romeo f team the next chapter starts tomorrow  mst  cet  pst stay tuned heavily hints at zhou extension
+f zhouguanyu  formula fnews
+
+httpstcoblrovdboaf httpstcoxjxhc",-0.1,0.25,neutral,"['reddit', 'f', 'alfa', 'romeo', 'f', 'team', 'the', 'next', 'chapter', 'starts', 'tomorrow', 'mst', 'cet', 'pst', 'stay', 'tuned', 'heavily', 'hints', 'at', 'zhou', 'extension', 'f', 'zhouguanyu', 'formula', 'fnews', 'httpstcoblrovdboaf', 'httpstcoxjxhc']","['reddit', 'f', 'alfa', 'romeo', 'f', 'team', 'next', 'chapter', 'starts', 'tomorrow', 'mst', 'cet', 'pst', 'stay', 'tuned', 'heavily', 'hints', 'zhou', 'extension', 'f', 'zhouguanyu', 'formula', 'fnews', 'httpstcoblrovdboaf', 'httpstcoxjxhc']","['reddit', 'f', 'alfa', 'romeo', 'f', 'team', 'next', 'chapter', 'start', 'tomorrow', 'mst', 'cet', 'pst', 'stay', 'tune', 'heavili', 'hint', 'zhou', 'extens', 'f', 'zhouguanyu', 'formula', 'fnew', 'httpstcoblrovdboaf', 'httpstcoxjxhc']"
+28,Alfa Romeo eyes Haas as BMW says no to F1 https://t.co/C5oIlCBQoF,alfa romeo eyes haas as bmw says no to f httpstcocoilcbqof,0.0,0.0,negative,"['alfa', 'romeo', 'eyes', 'haas', 'as', 'bmw', 'says', 'no', 'to', 'f', 'httpstcocoilcbqof']","['alfa', 'romeo', 'eyes', 'haas', 'bmw', 'says', 'f', 'httpstcocoilcbqof']","['alfa', 'romeo', 'eye', 'haa', 'bmw', 'say', 'f', 'httpstcocoilcbqof']"
+29,"Alfa Romeo eyes Haas team as BMW says no to F1 return
+Click on the photo to ✅ check out this full #F1 story at:
+https://t.co/EpE8ru4sQb","alfa romeo eyes haas team as bmw says no to f return
+click on the photo to ✅ check out this full f story at
+httpstcoeperusqb",0.35,0.55,negative,"['alfa', 'romeo', 'eyes', 'haas', 'team', 'as', 'bmw', 'says', 'no', 'to', 'f', 'return', 'click', 'on', 'the', 'photo', 'to', 'check', 'out', 'this', 'full', 'f', 'story', 'at', 'httpstcoeperusqb']","['alfa', 'romeo', 'eyes', 'haas', 'team', 'bmw', 'says', 'f', 'return', 'click', 'photo', 'check', 'full', 'f', 'story', 'httpstcoeperusqb']","['alfa', 'romeo', 'eye', 'haa', 'team', 'bmw', 'say', 'f', 'return', 'click', 'photo', 'check', 'full', 'f', 'stori', 'httpstcoeperusqb']"
+30,"@Lew_F1 @Formula1Wimbo @HSouthwellFE Except AT, Haas, Alfa Romeo and Ferrari aren’t based in UK.",lewf formulawimbo hsouthwellfe except at haas alfa romeo and ferrari aren’t based in uk,0.0,0.0,neutral,"['lewf', 'formulawimbo', 'hsouthwellfe', 'except', 'at', 'haas', 'alfa', 'romeo', 'and', 'ferrari', 'aren', 't', 'based', 'in', 'uk']","['lewf', 'formulawimbo', 'hsouthwellfe', 'except', 'haas', 'alfa', 'romeo', 'ferrari', 'based', 'uk']","['lewf', 'formulawimbo', 'hsouthwellf', 'except', 'haa', 'alfa', 'romeo', 'ferrari', 'base', 'uk']"
+31,Alfa Romeo eyes Haas as BMW says no to F1 https://t.co/juK3hjwMby,alfa romeo eyes haas as bmw says no to f httpstcojukhjwmby,0.0,0.0,negative,"['alfa', 'romeo', 'eyes', 'haas', 'as', 'bmw', 'says', 'no', 'to', 'f', 'httpstcojukhjwmby']","['alfa', 'romeo', 'eyes', 'haas', 'bmw', 'says', 'f', 'httpstcojukhjwmby']","['alfa', 'romeo', 'eye', 'haa', 'bmw', 'say', 'f', 'httpstcojukhjwmbi']"
+32,Reliability Issues in 2022 Costing Alfa Romeo ‘A Fortune in terms of Points’ – Vasseur #Formula1 #F1 #F1News #Motorsport https://t.co/bWSDXXlTAv,reliability issues in  costing alfa romeo ‘a fortune in terms of points’ – vasseur formula f fnews motorsport httpstcobwsdxxltav,0.0,0.0,neutral,"['reliability', 'issues', 'in', 'costing', 'alfa', 'romeo', 'a', 'fortune', 'in', 'terms', 'of', 'points', 'vasseur', 'formula', 'f', 'fnews', 'motorsport', 'httpstcobwsdxxltav']","['reliability', 'issues', 'costing', 'alfa', 'romeo', 'fortune', 'terms', 'points', 'vasseur', 'formula', 'f', 'fnews', 'motorsport', 'httpstcobwsdxxltav']","['reliabl', 'issu', 'cost', 'alfa', 'romeo', 'fortun', 'term', 'point', 'vasseur', 'formula', 'f', 'fnew', 'motorsport', 'httpstcobwsdxxltav']"
+33,What Is Alfa Romeo’s Future In #F1 After 2023? https://t.co/TsIUgOD1b9 #formula1 #f1news,what is alfa romeo’s future in f after  httpstcotsiugodb formula fnews,0.0,0.125,neutral,"['what', 'is', 'alfa', 'romeo', 's', 'future', 'in', 'f', 'after', 'httpstcotsiugodb', 'formula', 'fnews']","['alfa', 'romeo', 'future', 'f', 'httpstcotsiugodb', 'formula', 'fnews']","['alfa', 'romeo', 'futur', 'f', 'httpstcotsiugodb', 'formula', 'fnew']"
+34,"@gotshum @LateBrakers Tsunoda and Zhou are mostly there because of partnership with Honda &amp; monetary value addition for Alfa Romeo, respectively.
+And as far as Lewis is concerned, till date he is racially abused which I feel only a non-human can do. He is the face of F1, the most successful out there.","gotshum latebrakers tsunoda and zhou are mostly there because of partnership with honda amp monetary value addition for alfa romeo respectively
+and as far as lewis is concerned till date he is racially abused which i feel only a nonhuman can do he is the face of f the most successful out there",0.30833333333333335,0.6749999999999999,positive,"['gotshum', 'latebrakers', 'tsunoda', 'and', 'zhou', 'are', 'mostly', 'there', 'because', 'of', 'partnership', 'with', 'honda', 'amp', 'monetary', 'value', 'addition', 'for', 'alfa', 'romeo', 'respectively', 'and', 'as', 'far', 'as', 'lewis', 'is', 'concerned', 'till', 'date', 'he', 'is', 'racially', 'abused', 'which', 'i', 'feel', 'only', 'a', 'nonhuman', 'can', 'do', 'he', 'is', 'the', 'face', 'of', 'f', 'the', 'most', 'successful', 'out', 'there']","['gotshum', 'latebrakers', 'tsunoda', 'zhou', 'mostly', 'partnership', 'honda', 'amp', 'monetary', 'value', 'addition', 'alfa', 'romeo', 'respectively', 'far', 'lewis', 'concerned', 'till', 'date', 'racially', 'abused', 'feel', 'nonhuman', 'face', 'f', 'successful']","['gotshum', 'latebrak', 'tsunoda', 'zhou', 'mostli', 'partnership', 'honda', 'amp', 'monetari', 'valu', 'addit', 'alfa', 'romeo', 'respect', 'far', 'lewi', 'concern', 'till', 'date', 'racial', 'abus', 'feel', 'nonhuman', 'face', 'f', 'success']"
+35,Reliability Issues in 2022 Costing Alfa Romeo ‘A Fortune in terms of Points’ – Vasseur #GrandPrix #GPToday #Formula1 #F1 #F1News #Motorsport https://t.co/ydxOKDj8i2,reliability issues in  costing alfa romeo ‘a fortune in terms of points’ – vasseur grandprix gptoday formula f fnews motorsport httpstcoydxokdji,0.0,0.0,neutral,"['reliability', 'issues', 'in', 'costing', 'alfa', 'romeo', 'a', 'fortune', 'in', 'terms', 'of', 'points', 'vasseur', 'grandprix', 'gptoday', 'formula', 'f', 'fnews', 'motorsport', 'httpstcoydxokdji']","['reliability', 'issues', 'costing', 'alfa', 'romeo', 'fortune', 'terms', 'points', 'vasseur', 'grandprix', 'gptoday', 'formula', 'f', 'fnews', 'motorsport', 'httpstcoydxokdji']","['reliabl', 'issu', 'cost', 'alfa', 'romeo', 'fortun', 'term', 'point', 'vasseur', 'grandprix', 'gptoday', 'formula', 'f', 'fnew', 'motorsport', 'httpstcoydxokdji']"
+36,Alfa Romeo eyes Haas as BMW says no to F1 https://t.co/fSiuj2QVVi,alfa romeo eyes haas as bmw says no to f httpstcofsiujqvvi,0.0,0.0,negative,"['alfa', 'romeo', 'eyes', 'haas', 'as', 'bmw', 'says', 'no', 'to', 'f', 'httpstcofsiujqvvi']","['alfa', 'romeo', 'eyes', 'haas', 'bmw', 'says', 'f', 'httpstcofsiujqvvi']","['alfa', 'romeo', 'eye', 'haa', 'bmw', 'say', 'f', 'httpstcofsiujqvvi']"
+37,"Lewis Hamilton inspires F1 rival as Alfa Romeo driver Zhou Guanyu reveals exciting plans
+
+https://t.co/nFUSwJ2wHm","lewis hamilton inspires f rival as alfa romeo driver zhou guanyu reveals exciting plans
+
+httpstconfuswjwhm",0.3,0.8,positive,"['lewis', 'hamilton', 'inspires', 'f', 'rival', 'as', 'alfa', 'romeo', 'driver', 'zhou', 'guanyu', 'reveals', 'exciting', 'plans', 'httpstconfuswjwhm']","['lewis', 'hamilton', 'inspires', 'f', 'rival', 'alfa', 'romeo', 'driver', 'zhou', 'guanyu', 'reveals', 'exciting', 'plans', 'httpstconfuswjwhm']","['lewi', 'hamilton', 'inspir', 'f', 'rival', 'alfa', 'romeo', 'driver', 'zhou', 'guanyu', 'reveal', 'excit', 'plan', 'httpstconfuswjwhm']"
+38,"Alfa Romeo CEO: “No hurry” to resolve F1 future past 2023
+https://t.co/bVbzv2baOB","alfa romeo ceo “no hurry” to resolve f future past 
+httpstcobvbzvbaob",-0.125,0.1875,positive,"['alfa', 'romeo', 'ceo', 'no', 'hurry', 'to', 'resolve', 'f', 'future', 'past', 'httpstcobvbzvbaob']","['alfa', 'romeo', 'ceo', 'hurry', 'resolve', 'f', 'future', 'past', 'httpstcobvbzvbaob']","['alfa', 'romeo', 'ceo', 'hurri', 'resolv', 'f', 'futur', 'past', 'httpstcobvbzvbaob']"
+39,Alfa Romeo CEO: “No hurry” to decide F1 future beyond 2023 - Autosport https://t.co/JZZMFqVW2a,alfa romeo ceo “no hurry” to decide f future beyond   autosport httpstcojzzmfqvwa,0.0,0.125,neutral,"['alfa', 'romeo', 'ceo', 'no', 'hurry', 'to', 'decide', 'f', 'future', 'beyond', 'autosport', 'httpstcojzzmfqvwa']","['alfa', 'romeo', 'ceo', 'hurry', 'decide', 'f', 'future', 'beyond', 'autosport', 'httpstcojzzmfqvwa']","['alfa', 'romeo', 'ceo', 'hurri', 'decid', 'f', 'futur', 'beyond', 'autosport', 'httpstcojzzmfqvwa']"
+40,Alfa Romeo CEO: “No hurry” to decide F1 future beyond 2023 https://t.co/Wq51lzHa9b,alfa romeo ceo “no hurry” to decide f future beyond  httpstcowqlzhab,0.0,0.125,neutral,"['alfa', 'romeo', 'ceo', 'no', 'hurry', 'to', 'decide', 'f', 'future', 'beyond', 'httpstcowqlzhab']","['alfa', 'romeo', 'ceo', 'hurry', 'decide', 'f', 'future', 'beyond', 'httpstcowqlzhab']","['alfa', 'romeo', 'ceo', 'hurri', 'decid', 'f', 'futur', 'beyond', 'httpstcowqlzhab']"
+41,Alfa Romeo CEO: “No hurry” to decide #F1 future beyond 2023 https://t.co/POCoSOc3yy via @motorsport,alfa romeo ceo “no hurry” to decide f future beyond  httpstcopocosocyy via motorsport,0.0,0.125,neutral,"['alfa', 'romeo', 'ceo', 'no', 'hurry', 'to', 'decide', 'f', 'future', 'beyond', 'httpstcopocosocyy', 'via', 'motorsport']","['alfa', 'romeo', 'ceo', 'hurry', 'decide', 'f', 'future', 'beyond', 'httpstcopocosocyy', 'via', 'motorsport']","['alfa', 'romeo', 'ceo', 'hurri', 'decid', 'f', 'futur', 'beyond', 'httpstcopocosocyy', 'via', 'motorsport']"
+42,"Sauber keen to ""give the best to Alfa Romeo"" amid Audi F1 links #Formula1 #F1 #F1News #Motorsport https://t.co/HOed8W3ECQ",sauber keen to give the best to alfa romeo amid audi f links formula f fnews motorsport httpstcohoedwecq,1.0,0.3,positive,"['sauber', 'keen', 'to', 'give', 'the', 'best', 'to', 'alfa', 'romeo', 'amid', 'audi', 'f', 'links', 'formula', 'f', 'fnews', 'motorsport', 'httpstcohoedwecq']","['sauber', 'keen', 'give', 'best', 'alfa', 'romeo', 'amid', 'audi', 'f', 'links', 'formula', 'f', 'fnews', 'motorsport', 'httpstcohoedwecq']","['sauber', 'keen', 'give', 'best', 'alfa', 'romeo', 'amid', 'audi', 'f', 'link', 'formula', 'f', 'fnew', 'motorsport', 'httpstcohoedwecq']"
+43,Alfa Romeo surprised by situation: 'The culture is different'. #GrandPrix #GPToday #Formula1 #F1 #F1News #Motorsport https://t.co/wqk9fvCJaR,alfa romeo surprised by situation the culture is different grandprix gptoday formula f fnews motorsport httpstcowqkfvcjar,0.05,0.75,positive,"['alfa', 'romeo', 'surprised', 'by', 'situation', 'the', 'culture', 'is', 'different', 'grandprix', 'gptoday', 'formula', 'f', 'fnews', 'motorsport', 'httpstcowqkfvcjar']","['alfa', 'romeo', 'surprised', 'situation', 'culture', 'different', 'grandprix', 'gptoday', 'formula', 'f', 'fnews', 'motorsport', 'httpstcowqkfvcjar']","['alfa', 'romeo', 'surpris', 'situat', 'cultur', 'differ', 'grandprix', 'gptoday', 'formula', 'f', 'fnew', 'motorsport', 'httpstcowqkfvcjar']"
+44,Alfa Romeo mistaken: 'It's not that easy' #GrandPrix #GPToday #Formula1 #F1 #F1News #Motorsport https://t.co/OLTYdrqGpC,alfa romeo mistaken its not that easy grandprix gptoday formula f fnews motorsport httpstcooltydrqgpc,0.43333333333333335,0.8333333333333334,negative,"['alfa', 'romeo', 'mistaken', 'its', 'not', 'that', 'easy', 'grandprix', 'gptoday', 'formula', 'f', 'fnews', 'motorsport', 'httpstcooltydrqgpc']","['alfa', 'romeo', 'mistaken', 'easy', 'grandprix', 'gptoday', 'formula', 'f', 'fnews', 'motorsport', 'httpstcooltydrqgpc']","['alfa', 'romeo', 'mistaken', 'easi', 'grandprix', 'gptoday', 'formula', 'f', 'fnew', 'motorsport', 'httpstcooltydrqgpc']"
+45,Alfa Romeo focus demanded amid Audi rumours #GrandPrix #GPToday #Formula1 #F1 #F1News #Motorsport https://t.co/9HOrUL6trz,alfa romeo focus demanded amid audi rumours grandprix gptoday formula f fnews motorsport httpstcohorultrz,0.0,0.0,negative,"['alfa', 'romeo', 'focus', 'demanded', 'amid', 'audi', 'rumours', 'grandprix', 'gptoday', 'formula', 'f', 'fnews', 'motorsport', 'httpstcohorultrz']","['alfa', 'romeo', 'focus', 'demanded', 'amid', 'audi', 'rumours', 'grandprix', 'gptoday', 'formula', 'f', 'fnews', 'motorsport', 'httpstcohorultrz']","['alfa', 'romeo', 'focu', 'demand', 'amid', 'audi', 'rumour', 'grandprix', 'gptoday', 'formula', 'f', 'fnew', 'motorsport', 'httpstcohorultrz']"
+46,"#‘No #Romeo #Sports
+Alfa Romeo CEO: “No hurry” to resolve F1 future past 2023 
+https://t.co/zFuVEW0mUT https://t.co/jWK5o7XPwp","‘no romeo sports
+alfa romeo ceo “no hurry” to resolve f future past  
+httpstcozfuvewmut httpstcojwkoxpwp",-0.125,0.1875,positive,"['', 'no', 'romeo', 'sports', 'alfa', 'romeo', 'ceo', 'no', 'hurry', 'to', 'resolve', 'f', 'future', 'past', 'httpstcozfuvewmut', 'httpstcojwkoxpwp']","['', 'romeo', 'sports', 'alfa', 'romeo', 'ceo', 'hurry', 'resolve', 'f', 'future', 'past', 'httpstcozfuvewmut', 'httpstcojwkoxpwp']","['', 'romeo', 'sport', 'alfa', 'romeo', 'ceo', 'hurri', 'resolv', 'f', 'futur', 'past', 'httpstcozfuvewmut', 'httpstcojwkoxpwp']"
+47,"Alfa Romeo’s Zhou Guanyu says “it’s been great in the last few years watching Lewis showing a different style in the paddock”.
+
+#F1 #TeamLH
+https://t.co/noM4vaibWW","alfa romeo’s zhou guanyu says “it’s been great in the last few years watching lewis showing a different style in the paddock”
+
+f teamlh
+httpstconomvaibww",0.15000000000000002,0.37916666666666665,positive,"['alfa', 'romeo', 's', 'zhou', 'guanyu', 'says', 'it', 's', 'been', 'great', 'in', 'the', 'last', 'few', 'years', 'watching', 'lewis', 'showing', 'a', 'different', 'style', 'in', 'the', 'paddock', 'f', 'teamlh', 'httpstconomvaibww']","['alfa', 'romeo', 'zhou', 'guanyu', 'says', 'great', 'last', 'years', 'watching', 'lewis', 'showing', 'different', 'style', 'paddock', 'f', 'teamlh', 'httpstconomvaibww']","['alfa', 'romeo', 'zhou', 'guanyu', 'say', 'great', 'last', 'year', 'watch', 'lewi', 'show', 'differ', 'style', 'paddock', 'f', 'teamlh', 'httpstconomvaibww']"
+48,Alfa Romeo CEO: “No hurry” to decide F1 future beyond 2023 https://t.co/40EXYdsgcX https://t.co/HcYFLJE7sM,alfa romeo ceo “no hurry” to decide f future beyond  httpstcoexydsgcx httpstcohcyfljesm,0.0,0.125,neutral,"['alfa', 'romeo', 'ceo', 'no', 'hurry', 'to', 'decide', 'f', 'future', 'beyond', 'httpstcoexydsgcx', 'httpstcohcyfljesm']","['alfa', 'romeo', 'ceo', 'hurry', 'decide', 'f', 'future', 'beyond', 'httpstcoexydsgcx', 'httpstcohcyfljesm']","['alfa', 'romeo', 'ceo', 'hurri', 'decid', 'f', 'futur', 'beyond', 'httpstcoexydsgcx', 'httpstcohcyfljesm']"
+49,Alfa Romeo CEO: “No hurry” to decide F1 future beyond 2023 https://t.co/olqcYkS9J6,alfa romeo ceo “no hurry” to decide f future beyond  httpstcoolqcyksj,0.0,0.125,neutral,"['alfa', 'romeo', 'ceo', 'no', 'hurry', 'to', 'decide', 'f', 'future', 'beyond', 'httpstcoolqcyksj']","['alfa', 'romeo', 'ceo', 'hurry', 'decide', 'f', 'future', 'beyond', 'httpstcoolqcyksj']","['alfa', 'romeo', 'ceo', 'hurri', 'decid', 'f', 'futur', 'beyond', 'httpstcoolqcyksj']"
+50,"Top story: Alfa Romeo CEO: “No hurry” to decide F1 future beyond 2023 https://t.co/cuq8fsg2cb, see more https://t.co/kmpVEIryKI",top story alfa romeo ceo “no hurry” to decide f future beyond  httpstcocuqfsgcb see more httpstcokmpveiryki,0.3333333333333333,0.375,positive,"['top', 'story', 'alfa', 'romeo', 'ceo', 'no', 'hurry', 'to', 'decide', 'f', 'future', 'beyond', 'httpstcocuqfsgcb', 'see', 'more', 'httpstcokmpveiryki']","['top', 'story', 'alfa', 'romeo', 'ceo', 'hurry', 'decide', 'f', 'future', 'beyond', 'httpstcocuqfsgcb', 'see', 'httpstcokmpveiryki']","['top', 'stori', 'alfa', 'romeo', 'ceo', 'hurri', 'decid', 'f', 'futur', 'beyond', 'httpstcocuqfsgcb', 'see', 'httpstcokmpveiryki']"
+51,Alfa Romeo CEO: “No hurry” to decide F1 future beyond 2023 https://t.co/opxMIgfNAX #f1 #latest,alfa romeo ceo “no hurry” to decide f future beyond  httpstcoopxmigfnax f latest,0.25,0.5125,neutral,"['alfa', 'romeo', 'ceo', 'no', 'hurry', 'to', 'decide', 'f', 'future', 'beyond', 'httpstcoopxmigfnax', 'f', 'latest']","['alfa', 'romeo', 'ceo', 'hurry', 'decide', 'f', 'future', 'beyond', 'httpstcoopxmigfnax', 'f', 'latest']","['alfa', 'romeo', 'ceo', 'hurri', 'decid', 'f', 'futur', 'beyond', 'httpstcoopxmigfnax', 'f', 'latest']"
+52,Alfa Romeo CEO: “No hurry” to decide F1 future beyond 2023 https://t.co/WJ2SjFAcqv,alfa romeo ceo “no hurry” to decide f future beyond  httpstcowjsjfacqv,0.0,0.125,neutral,"['alfa', 'romeo', 'ceo', 'no', 'hurry', 'to', 'decide', 'f', 'future', 'beyond', 'httpstcowjsjfacqv']","['alfa', 'romeo', 'ceo', 'hurry', 'decide', 'f', 'future', 'beyond', 'httpstcowjsjfacqv']","['alfa', 'romeo', 'ceo', 'hurri', 'decid', 'f', 'futur', 'beyond', 'httpstcowjsjfacqv']"
+53,@Motorsport Alfa Romeo Haas F1.,motorsport alfa romeo haas f,0.0,0.0,neutral,"['motorsport', 'alfa', 'romeo', 'haas', 'f']","['motorsport', 'alfa', 'romeo', 'haas', 'f']","['motorsport', 'alfa', 'romeo', 'haa', 'f']"
+54,I would like to see Alfa Romeo stay if F1 given their history to start off the 1950s. Would be lovely if they expanded to be another team on the grid I wish https://t.co/hguAPzIz0q,i would like to see alfa romeo stay if f given their history to start off the s would be lovely if they expanded to be another team on the grid i wish httpstcohguapzizq,0.5,0.75,positive,"['i', 'would', 'like', 'to', 'see', 'alfa', 'romeo', 'stay', 'if', 'f', 'given', 'their', 'history', 'to', 'start', 'off', 'the', 's', 'would', 'be', 'lovely', 'if', 'they', 'expanded', 'to', 'be', 'another', 'team', 'on', 'the', 'grid', 'i', 'wish', 'httpstcohguapzizq']","['would', 'like', 'see', 'alfa', 'romeo', 'stay', 'f', 'given', 'history', 'start', 'would', 'lovely', 'expanded', 'another', 'team', 'grid', 'wish', 'httpstcohguapzizq']","['would', 'like', 'see', 'alfa', 'romeo', 'stay', 'f', 'given', 'histori', 'start', 'would', 'love', 'expand', 'anoth', 'team', 'grid', 'wish', 'httpstcohguapzizq']"
+55,With @audisport looming on the horizon Alfa will leave Sauber at the end of next year. So what's the next step for the Italian marque?: https://t.co/8IWsVERQFM,with audisport looming on the horizon alfa will leave sauber at the end of next year so whats the next step for the italian marque httpstcoiwsverqfm,0.0,0.0,negative,"['with', 'audisport', 'looming', 'on', 'the', 'horizon', 'alfa', 'will', 'leave', 'sauber', 'at', 'the', 'end', 'of', 'next', 'year', 'so', 'whats', 'the', 'next', 'step', 'for', 'the', 'italian', 'marque', 'httpstcoiwsverqfm']","['audisport', 'looming', 'horizon', 'alfa', 'leave', 'sauber', 'end', 'next', 'year', 'whats', 'next', 'step', 'italian', 'marque', 'httpstcoiwsverqfm']","['audisport', 'loom', 'horizon', 'alfa', 'leav', 'sauber', 'end', 'next', 'year', 'what', 'next', 'step', 'italian', 'marqu', 'httpstcoiwsverqfm']"
+56,"Alfa Romeo CEO Jean-Philippe Imparato on the company’s #F1 future beyond 2023:
+
+""I'm totally open to everything. By the way, it's a period that gives me the opportunity to study everything with no pressure. That's what I have. And I would say, even if we have to take a decision","alfa romeo ceo jeanphilippe imparato on the company’s f future beyond 
+
+im totally open to everything by the way its a period that gives me the opportunity to study everything with no pressure thats what i have and i would say even if we have to take a decision",0.0,0.3125,negative,"['alfa', 'romeo', 'ceo', 'jeanphilippe', 'imparato', 'on', 'the', 'company', 's', 'f', 'future', 'beyond', 'im', 'totally', 'open', 'to', 'everything', 'by', 'the', 'way', 'its', 'a', 'period', 'that', 'gives', 'me', 'the', 'opportunity', 'to', 'study', 'everything', 'with', 'no', 'pressure', 'thats', 'what', 'i', 'have', 'and', 'i', 'would', 'say', 'even', 'if', 'we', 'have', 'to', 'take', 'a', 'decision']","['alfa', 'romeo', 'ceo', 'jeanphilippe', 'imparato', 'company', 'f', 'future', 'beyond', 'im', 'totally', 'open', 'everything', 'way', 'period', 'gives', 'opportunity', 'study', 'everything', 'pressure', 'thats', 'would', 'say', 'even', 'take', 'decision']","['alfa', 'romeo', 'ceo', 'jeanphilipp', 'imparato', 'compani', 'f', 'futur', 'beyond', 'im', 'total', 'open', 'everyth', 'way', 'period', 'give', 'opportun', 'studi', 'everyth', 'pressur', 'that', 'would', 'say', 'even', 'take', 'decis']"
+57,Alfa Romeo CEO: “No hurry” to decide F1 future beyond 2023 - https://t.co/6ldNMhJzF1 - Formula 1 - Stories https://t.co/HsoktdS8ez,alfa romeo ceo “no hurry” to decide f future beyond   httpstcoldnmhjzf  formula   stories httpstcohsoktdsez,0.0,0.125,neutral,"['alfa', 'romeo', 'ceo', 'no', 'hurry', 'to', 'decide', 'f', 'future', 'beyond', 'httpstcoldnmhjzf', 'formula', 'stories', 'httpstcohsoktdsez']","['alfa', 'romeo', 'ceo', 'hurry', 'decide', 'f', 'future', 'beyond', 'httpstcoldnmhjzf', 'formula', 'stories', 'httpstcohsoktdsez']","['alfa', 'romeo', 'ceo', 'hurri', 'decid', 'f', 'futur', 'beyond', 'httpstcoldnmhjzf', 'formula', 'stori', 'httpstcohsoktdsez']"
+58,With @audisport looming on the horizon Alfa will leave Sauber at the end of next year. So what's the next step for the Italian marque?: https://t.co/8IWsVEAfOe,with audisport looming on the horizon alfa will leave sauber at the end of next year so whats the next step for the italian marque httpstcoiwsveafoe,0.0,0.0,negative,"['with', 'audisport', 'looming', 'on', 'the', 'horizon', 'alfa', 'will', 'leave', 'sauber', 'at', 'the', 'end', 'of', 'next', 'year', 'so', 'whats', 'the', 'next', 'step', 'for', 'the', 'italian', 'marque', 'httpstcoiwsveafoe']","['audisport', 'looming', 'horizon', 'alfa', 'leave', 'sauber', 'end', 'next', 'year', 'whats', 'next', 'step', 'italian', 'marque', 'httpstcoiwsveafoe']","['audisport', 'loom', 'horizon', 'alfa', 'leav', 'sauber', 'end', 'next', 'year', 'what', 'next', 'step', 'italian', 'marqu', 'httpstcoiwsveafo']"
+59,"📰 @ZhouGuanyu24 opens up about the support he got from @LewisHamilton. The Alfa Romeo's driver is full of praise for the 7xworld champion, describing him as one of the greatest in the history of motorsport 😌😌😌
+
+#F1 #LewisHamilton 
+#MercedesAMGF1 #HamiltonInsights https://t.co/uPKzfj5dXB","📰 zhouguanyu opens up about the support he got from lewishamilton the alfa romeos driver is full of praise for the xworld champion describing him as one of the greatest in the history of motorsport 😌😌😌
+
+f lewishamilton 
+mercedesamgf hamiltoninsights httpstcoupkzfjdxb",0.675,0.775,positive,"['', 'zhouguanyu', 'opens', 'up', 'about', 'the', 'support', 'he', 'got', 'from', 'lewishamilton', 'the', 'alfa', 'romeos', 'driver', 'is', 'full', 'of', 'praise', 'for', 'the', 'xworld', 'champion', 'describing', 'him', 'as', 'one', 'of', 'the', 'greatest', 'in', 'the', 'history', 'of', 'motorsport', 'f', 'lewishamilton', 'mercedesamgf', 'hamiltoninsights', 'httpstcoupkzfjdxb']","['', 'zhouguanyu', 'opens', 'support', 'got', 'lewishamilton', 'alfa', 'romeos', 'driver', 'full', 'praise', 'xworld', 'champion', 'describing', 'one', 'greatest', 'history', 'motorsport', 'f', 'lewishamilton', 'mercedesamgf', 'hamiltoninsights', 'httpstcoupkzfjdxb']","['', 'zhouguanyu', 'open', 'support', 'got', 'lewishamilton', 'alfa', 'romeo', 'driver', 'full', 'prais', 'xworld', 'champion', 'describ', 'one', 'greatest', 'histori', 'motorsport', 'f', 'lewishamilton', 'mercedesamgf', 'hamiltoninsight', 'httpstcoupkzfjdxb']"
+60,Bottas: I feel like I have something to say at Alfa Romeo #GrandPrix #GPToday #Formula1 #F1 #F1News #Motorsport https://t.co/cEVT6FDOqC,bottas i feel like i have something to say at alfa romeo grandprix gptoday formula f fnews motorsport httpstcocevtfdoqc,0.0,0.0,positive,"['bottas', 'i', 'feel', 'like', 'i', 'have', 'something', 'to', 'say', 'at', 'alfa', 'romeo', 'grandprix', 'gptoday', 'formula', 'f', 'fnews', 'motorsport', 'httpstcocevtfdoqc']","['bottas', 'feel', 'like', 'something', 'say', 'alfa', 'romeo', 'grandprix', 'gptoday', 'formula', 'f', 'fnews', 'motorsport', 'httpstcocevtfdoqc']","['botta', 'feel', 'like', 'someth', 'say', 'alfa', 'romeo', 'grandprix', 'gptoday', 'formula', 'f', 'fnew', 'motorsport', 'httpstcocevtfdoqc']"
+61,"Alfa Romeo’s Zhou Guanyu says Lewis Hamilton has been “very much on my side, and he knows what I’ve been through, because it’s kind of similar”.
+
+#F1 #TeamLH
+https://t.co/51We7omcQn","alfa romeo’s zhou guanyu says lewis hamilton has been “very much on my side and he knows what i’ve been through because it’s kind of similar”
+
+f teamlh
+httpstcoweomcqn",0.2866666666666667,0.52,neutral,"['alfa', 'romeo', 's', 'zhou', 'guanyu', 'says', 'lewis', 'hamilton', 'has', 'been', 'very', 'much', 'on', 'my', 'side', 'and', 'he', 'knows', 'what', 'i', 've', 'been', 'through', 'because', 'it', 's', 'kind', 'of', 'similar', 'f', 'teamlh', 'httpstcoweomcqn']","['alfa', 'romeo', 'zhou', 'guanyu', 'says', 'lewis', 'hamilton', 'much', 'side', 'knows', 'kind', 'similar', 'f', 'teamlh', 'httpstcoweomcqn']","['alfa', 'romeo', 'zhou', 'guanyu', 'say', 'lewi', 'hamilton', 'much', 'side', 'know', 'kind', 'similar', 'f', 'teamlh', 'httpstcoweomcqn']"
+62,"“No hurry” to decide F1 future beyond 2023.
+Alfa Romeo announced last month that it will conclude its sponsorship deal with the Sauber team at the end of the 2023 season ahead of the Swiss outfit’s expected alliance with Audi....  # # # # #
+
+https://t.co/6nIJMF1bx7","“no hurry” to decide f future beyond 
+alfa romeo announced last month that it will conclude its sponsorship deal with the sauber team at the end of the  season ahead of the swiss outfit’s expected alliance with audi      
+
+httpstconijmfbx",-0.03333333333333333,0.19722222222222222,neutral,"['', 'no', 'hurry', 'to', 'decide', 'f', 'future', 'beyond', 'alfa', 'romeo', 'announced', 'last', 'month', 'that', 'it', 'will', 'conclude', 'its', 'sponsorship', 'deal', 'with', 'the', 'sauber', 'team', 'at', 'the', 'end', 'of', 'the', 'season', 'ahead', 'of', 'the', 'swiss', 'outfit', 's', 'expected', 'alliance', 'with', 'audi', 'httpstconijmfbx']","['', 'hurry', 'decide', 'f', 'future', 'beyond', 'alfa', 'romeo', 'announced', 'last', 'month', 'conclude', 'sponsorship', 'deal', 'sauber', 'team', 'end', 'season', 'ahead', 'swiss', 'outfit', 'expected', 'alliance', 'audi', 'httpstconijmfbx']","['', 'hurri', 'decid', 'f', 'futur', 'beyond', 'alfa', 'romeo', 'announc', 'last', 'month', 'conclud', 'sponsorship', 'deal', 'sauber', 'team', 'end', 'season', 'ahead', 'swiss', 'outfit', 'expect', 'allianc', 'audi', 'httpstconijmfbx']"
+63,"Alfa Romeo will part ways with Sauber Motorsport at the end of the 2023 season - but there appears no rush to look for their replacement 
+
+#F1 #Formula1 
+
+https://t.co/nrlYKzL6FV","alfa romeo will part ways with sauber motorsport at the end of the  season  but there appears no rush to look for their replacement 
+
+f formula 
+
+httpstconrlykzlfv",0.0,0.0,negative,"['alfa', 'romeo', 'will', 'part', 'ways', 'with', 'sauber', 'motorsport', 'at', 'the', 'end', 'of', 'the', 'season', 'but', 'there', 'appears', 'no', 'rush', 'to', 'look', 'for', 'their', 'replacement', 'f', 'formula', 'httpstconrlykzlfv']","['alfa', 'romeo', 'part', 'ways', 'sauber', 'motorsport', 'end', 'season', 'appears', 'rush', 'look', 'replacement', 'f', 'formula', 'httpstconrlykzlfv']","['alfa', 'romeo', 'part', 'way', 'sauber', 'motorsport', 'end', 'season', 'appear', 'rush', 'look', 'replac', 'f', 'formula', 'httpstconrlykzlfv']"
+64,Alfa Romeo CEO: “No hurry” to decide F1 future beyond 2023 https://t.co/Rj7BGcoqWU,alfa romeo ceo “no hurry” to decide f future beyond  httpstcorjbgcoqwu,0.0,0.125,neutral,"['alfa', 'romeo', 'ceo', 'no', 'hurry', 'to', 'decide', 'f', 'future', 'beyond', 'httpstcorjbgcoqwu']","['alfa', 'romeo', 'ceo', 'hurry', 'decide', 'f', 'future', 'beyond', 'httpstcorjbgcoqwu']","['alfa', 'romeo', 'ceo', 'hurri', 'decid', 'f', 'futur', 'beyond', 'httpstcorjbgcoqwu']"
+65,Alfa Romeo CEO: “No hurry” to decide F1 future beyond 2023 https://t.co/AUnhY2c1Bw via @autosport,alfa romeo ceo “no hurry” to decide f future beyond  httpstcoaunhycbw via autosport,0.0,0.125,neutral,"['alfa', 'romeo', 'ceo', 'no', 'hurry', 'to', 'decide', 'f', 'future', 'beyond', 'httpstcoaunhycbw', 'via', 'autosport']","['alfa', 'romeo', 'ceo', 'hurry', 'decide', 'f', 'future', 'beyond', 'httpstcoaunhycbw', 'via', 'autosport']","['alfa', 'romeo', 'ceo', 'hurri', 'decid', 'f', 'futur', 'beyond', 'httpstcoaunhycbw', 'via', 'autosport']"
+66,Alfa Romeo CEO: “No hurry” to decide F1 future beyond 2023 #F1 #F1WM,alfa romeo ceo “no hurry” to decide f future beyond  f fwm,0.0,0.125,neutral,"['alfa', 'romeo', 'ceo', 'no', 'hurry', 'to', 'decide', 'f', 'future', 'beyond', 'f', 'fwm']","['alfa', 'romeo', 'ceo', 'hurry', 'decide', 'f', 'future', 'beyond', 'f', 'fwm']","['alfa', 'romeo', 'ceo', 'hurri', 'decid', 'f', 'futur', 'beyond', 'f', 'fwm']"
+67,Alfa Romeo CEO: “No hurry” to decide F1 future beyond 2023 https://t.co/1TeBW3NoS5 #F1 #Formula1 #News #F12020 #f #formula #racing #motorsport #mclaren #lewishamilton #grandprix #mercedes #charlesleclerc #maxverstappen,alfa romeo ceo “no hurry” to decide f future beyond  httpstcotebwnos f formula news f f formula racing motorsport mclaren lewishamilton grandprix mercedes charlesleclerc maxverstappen,0.0,0.125,neutral,"['alfa', 'romeo', 'ceo', 'no', 'hurry', 'to', 'decide', 'f', 'future', 'beyond', 'httpstcotebwnos', 'f', 'formula', 'news', 'f', 'f', 'formula', 'racing', 'motorsport', 'mclaren', 'lewishamilton', 'grandprix', 'mercedes', 'charlesleclerc', 'maxverstappen']","['alfa', 'romeo', 'ceo', 'hurry', 'decide', 'f', 'future', 'beyond', 'httpstcotebwnos', 'f', 'formula', 'news', 'f', 'f', 'formula', 'racing', 'motorsport', 'mclaren', 'lewishamilton', 'grandprix', 'mercedes', 'charlesleclerc', 'maxverstappen']","['alfa', 'romeo', 'ceo', 'hurri', 'decid', 'f', 'futur', 'beyond', 'httpstcotebwno', 'f', 'formula', 'news', 'f', 'f', 'formula', 'race', 'motorsport', 'mclaren', 'lewishamilton', 'grandprix', 'merced', 'charlesleclerc', 'maxverstappen']"
+68,Alfa Romeo CEO: “No hurry” to decide F1 future beyond 2023 https://t.co/OUHZcdNk8Y,alfa romeo ceo “no hurry” to decide f future beyond  httpstcoouhzcdnky,0.0,0.125,neutral,"['alfa', 'romeo', 'ceo', 'no', 'hurry', 'to', 'decide', 'f', 'future', 'beyond', 'httpstcoouhzcdnky']","['alfa', 'romeo', 'ceo', 'hurry', 'decide', 'f', 'future', 'beyond', 'httpstcoouhzcdnky']","['alfa', 'romeo', 'ceo', 'hurri', 'decid', 'f', 'futur', 'beyond', 'httpstcoouhzcdnki']"
+69,"I would love to see @alfa_romeo in #WEC but I doubt they will get the same name/team profiling  with Haas or any other team in the future in #F1. 
+Them building their own F1 engine/car is wishfull thinking.
+#Alfisti https://t.co/DIgoqnXByP","i would love to see alfaromeo in wec but i doubt they will get the same nameteam profiling  with haas or any other team in the future in f 
+them building their own f enginecar is wishfull thinking
+alfisti httpstcodigoqnxbyp",0.195,0.445,negative,"['i', 'would', 'love', 'to', 'see', 'alfaromeo', 'in', 'wec', 'but', 'i', 'doubt', 'they', 'will', 'get', 'the', 'same', 'nameteam', 'profiling', 'with', 'haas', 'or', 'any', 'other', 'team', 'in', 'the', 'future', 'in', 'f', 'them', 'building', 'their', 'own', 'f', 'enginecar', 'is', 'wishfull', 'thinking', 'alfisti', 'httpstcodigoqnxbyp']","['would', 'love', 'see', 'alfaromeo', 'wec', 'doubt', 'get', 'nameteam', 'profiling', 'haas', 'team', 'future', 'f', 'building', 'f', 'enginecar', 'wishfull', 'thinking', 'alfisti', 'httpstcodigoqnxbyp']","['would', 'love', 'see', 'alfaromeo', 'wec', 'doubt', 'get', 'nameteam', 'profil', 'haa', 'team', 'futur', 'f', 'build', 'f', 'enginecar', 'wishful', 'think', 'alfisti', 'httpstcodigoqnxbyp']"
+70,"Alfa Romeo CEO: ""No hurry"" to decide F1 future beyond 2023 https://t.co/6aZePjfy4B #F1 #Sauber",alfa romeo ceo no hurry to decide f future beyond  httpstcoazepjfyb f sauber,0.0,0.125,negative,"['alfa', 'romeo', 'ceo', 'no', 'hurry', 'to', 'decide', 'f', 'future', 'beyond', 'httpstcoazepjfyb', 'f', 'sauber']","['alfa', 'romeo', 'ceo', 'hurry', 'decide', 'f', 'future', 'beyond', 'httpstcoazepjfyb', 'f', 'sauber']","['alfa', 'romeo', 'ceo', 'hurri', 'decid', 'f', 'futur', 'beyond', 'httpstcoazepjfyb', 'f', 'sauber']"
+71,#Formula1 Alfa Romeo CEO: “No hurry” to decide F1 future beyond 2023 https://t.co/fbswEcdkkH https://t.co/l961aZ8ssZ,formula alfa romeo ceo “no hurry” to decide f future beyond  httpstcofbswecdkkh httpstcolazssz,0.0,0.125,neutral,"['formula', 'alfa', 'romeo', 'ceo', 'no', 'hurry', 'to', 'decide', 'f', 'future', 'beyond', 'httpstcofbswecdkkh', 'httpstcolazssz']","['formula', 'alfa', 'romeo', 'ceo', 'hurry', 'decide', 'f', 'future', 'beyond', 'httpstcofbswecdkkh', 'httpstcolazssz']","['formula', 'alfa', 'romeo', 'ceo', 'hurri', 'decid', 'f', 'futur', 'beyond', 'httpstcofbswecdkkh', 'httpstcolazssz']"
+72,"🗣 ""Everything is on the table, I would say.""
+
+Alfa Romeo CEO Jean-Philippe Imparato says the company is in “no hurry” to make a call on its long-term future in #F1:
+
+https://t.co/tB4kunWfTt","🗣 everything is on the table i would say
+
+alfa romeo ceo jeanphilippe imparato says the company is in “no hurry” to make a call on its longterm future in f
+
+httpstcotbkunwftt",0.0,0.125,neutral,"['', 'everything', 'is', 'on', 'the', 'table', 'i', 'would', 'say', 'alfa', 'romeo', 'ceo', 'jeanphilippe', 'imparato', 'says', 'the', 'company', 'is', 'in', 'no', 'hurry', 'to', 'make', 'a', 'call', 'on', 'its', 'longterm', 'future', 'in', 'f', 'httpstcotbkunwftt']","['', 'everything', 'table', 'would', 'say', 'alfa', 'romeo', 'ceo', 'jeanphilippe', 'imparato', 'says', 'company', 'hurry', 'make', 'call', 'longterm', 'future', 'f', 'httpstcotbkunwftt']","['', 'everyth', 'tabl', 'would', 'say', 'alfa', 'romeo', 'ceo', 'jeanphilipp', 'imparato', 'say', 'compani', 'hurri', 'make', 'call', 'longterm', 'futur', 'f', 'httpstcotbkunwftt']"
+73,"Is it too early to call him the Super Sub? @TSTTylerYT wins the Nitro F1 Season 12 opener at Bahrain, filling in for @SunCi7y at AlphaTauri! His win and @galeforce97 5th place finish puts the team in the constructors lead at 36 points, 18 points ahead of Alfa Romeo! #F122 https://t.co/l7EKby64Vi",is it too early to call him the super sub tsttyleryt wins the nitro f season  opener at bahrain filling in for sunciy at alphatauri his win and galeforce th place finish puts the team in the constructors lead at  points  points ahead of alfa romeo f httpstcolekbyvi,0.38333333333333336,0.3916666666666666,positive,"['is', 'it', 'too', 'early', 'to', 'call', 'him', 'the', 'super', 'sub', 'tsttyleryt', 'wins', 'the', 'nitro', 'f', 'season', 'opener', 'at', 'bahrain', 'filling', 'in', 'for', 'sunciy', 'at', 'alphatauri', 'his', 'win', 'and', 'galeforce', 'th', 'place', 'finish', 'puts', 'the', 'team', 'in', 'the', 'constructors', 'lead', 'at', 'points', 'points', 'ahead', 'of', 'alfa', 'romeo', 'f', 'httpstcolekbyvi']","['early', 'call', 'super', 'sub', 'tsttyleryt', 'wins', 'nitro', 'f', 'season', 'opener', 'bahrain', 'filling', 'sunciy', 'alphatauri', 'win', 'galeforce', 'th', 'place', 'finish', 'puts', 'team', 'constructors', 'lead', 'points', 'points', 'ahead', 'alfa', 'romeo', 'f', 'httpstcolekbyvi']","['earli', 'call', 'super', 'sub', 'tsttyleryt', 'win', 'nitro', 'f', 'season', 'open', 'bahrain', 'fill', 'sunciy', 'alphatauri', 'win', 'galeforc', 'th', 'place', 'finish', 'put', 'team', 'constructor', 'lead', 'point', 'point', 'ahead', 'alfa', 'romeo', 'f', 'httpstcolekbyvi']"
+74,"🔟
+
+NEW 🏎️ JOB from #AlfaRomeoF1:
+
+💼 Composite Design Engineer
+🏢 Alfa Romeo F1 Team Orlen | @alfaromeoorlen
+🇨🇭 Hinwil
+📃 Full Time
+🎚 Senior (5+ years)
+🏷 Motor Racing, #F1, Product Design, Technical Engineering
+
+https://t.co/SLmTZniPdL","🔟
+
+new 🏎️ job from alfaromeof
+
+💼 composite design engineer
+🏢 alfa romeo f team orlen  alfaromeoorlen
+🇨🇭 hinwil
+📃 full time
+🎚 senior  years
+🏷 motor racing f product design technical engineering
+
+httpstcoslmtznipdl",0.1621212121212121,0.3681818181818182,neutral,"['', 'new', 'job', 'from', 'alfaromeof', 'composite', 'design', 'engineer', 'alfa', 'romeo', 'f', 'team', 'orlen', 'alfaromeoorlen', 'hinwil', 'full', 'time', 'senior', 'years', 'motor', 'racing', 'f', 'product', 'design', 'technical', 'engineering', 'httpstcoslmtznipdl']","['', 'new', 'job', 'alfaromeof', 'composite', 'design', 'engineer', 'alfa', 'romeo', 'f', 'team', 'orlen', 'alfaromeoorlen', 'hinwil', 'full', 'time', 'senior', 'years', 'motor', 'racing', 'f', 'product', 'design', 'technical', 'engineering', 'httpstcoslmtznipdl']","['', 'new', 'job', 'alfaromeof', 'composit', 'design', 'engin', 'alfa', 'romeo', 'f', 'team', 'orlen', 'alfaromeoorlen', 'hinwil', 'full', 'time', 'senior', 'year', 'motor', 'race', 'f', 'product', 'design', 'technic', 'engin', 'httpstcoslmtznipdl']"
+75,"Me, about Sauber F1/BMW Sauber F1/Alfa Romeo https://t.co/u9E8CVOZTG",me about sauber fbmw sauber falfa romeo httpstcouecvoztg,0.0,0.0,neutral,"['me', 'about', 'sauber', 'fbmw', 'sauber', 'falfa', 'romeo', 'httpstcouecvoztg']","['sauber', 'fbmw', 'sauber', 'falfa', 'romeo', 'httpstcouecvoztg']","['sauber', 'fbmw', 'sauber', 'falfa', 'romeo', 'httpstcouecvoztg']"
+76,"Bottas feels greater ""human effect"" on F1 car performance at Alfa Romeo #Formula1 #F1 #F1News #Motorsport https://t.co/jZz8i5PHGB",bottas feels greater human effect on f car performance at alfa romeo formula f fnews motorsport httpstcojzziphgb,0.25,0.3,positive,"['bottas', 'feels', 'greater', 'human', 'effect', 'on', 'f', 'car', 'performance', 'at', 'alfa', 'romeo', 'formula', 'f', 'fnews', 'motorsport', 'httpstcojzziphgb']","['bottas', 'feels', 'greater', 'human', 'effect', 'f', 'car', 'performance', 'alfa', 'romeo', 'formula', 'f', 'fnews', 'motorsport', 'httpstcojzziphgb']","['botta', 'feel', 'greater', 'human', 'effect', 'f', 'car', 'perform', 'alfa', 'romeo', 'formula', 'f', 'fnew', 'motorsport', 'httpstcojzziphgb']"
+77,"Alfa Romeo is no longer a problem for McLaren this season! 😬
+
+#AlfaRomeo #McLaren #F1 #DanielRicciardo #ValtteriBottas https://t.co/LnGk1xpU18","alfa romeo is no longer a problem for mclaren this season 😬
+
+alfaromeo mclaren f danielricciardo valtteribottas httpstcolngkxpu",0.0,0.0,negative,"['alfa', 'romeo', 'is', 'no', 'longer', 'a', 'problem', 'for', 'mclaren', 'this', 'season', 'alfaromeo', 'mclaren', 'f', 'danielricciardo', 'valtteribottas', 'httpstcolngkxpu']","['alfa', 'romeo', 'longer', 'problem', 'mclaren', 'season', 'alfaromeo', 'mclaren', 'f', 'danielricciardo', 'valtteribottas', 'httpstcolngkxpu']","['alfa', 'romeo', 'longer', 'problem', 'mclaren', 'season', 'alfaromeo', 'mclaren', 'f', 'danielricciardo', 'valtteribotta', 'httpstcolngkxpu']"
+78,Bottas upbeat despite missing Alfa Romeo target #GrandPrix #GPToday #Formula1 #F1 #F1News #Motorsport https://t.co/11L3KFZ9m5,bottas upbeat despite missing alfa romeo target grandprix gptoday formula f fnews motorsport httpstcolkfzm,-0.2,0.05,positive,"['bottas', 'upbeat', 'despite', 'missing', 'alfa', 'romeo', 'target', 'grandprix', 'gptoday', 'formula', 'f', 'fnews', 'motorsport', 'httpstcolkfzm']","['bottas', 'upbeat', 'despite', 'missing', 'alfa', 'romeo', 'target', 'grandprix', 'gptoday', 'formula', 'f', 'fnews', 'motorsport', 'httpstcolkfzm']","['botta', 'upbeat', 'despit', 'miss', 'alfa', 'romeo', 'target', 'grandprix', 'gptoday', 'formula', 'f', 'fnew', 'motorsport', 'httpstcolkfzm']"
+79,Alfa Romeo goes for the higher goal: 'It's a matter of being consistent' #GrandPrix #GPToday #Formula1 #F1 #F1News #Motorsport https://t.co/fMhjTe67mT,alfa romeo goes for the higher goal its a matter of being consistent grandprix gptoday formula f fnews motorsport httpstcofmhjtemt,0.25,0.375,positive,"['alfa', 'romeo', 'goes', 'for', 'the', 'higher', 'goal', 'its', 'a', 'matter', 'of', 'being', 'consistent', 'grandprix', 'gptoday', 'formula', 'f', 'fnews', 'motorsport', 'httpstcofmhjtemt']","['alfa', 'romeo', 'goes', 'higher', 'goal', 'matter', 'consistent', 'grandprix', 'gptoday', 'formula', 'f', 'fnews', 'motorsport', 'httpstcofmhjtemt']","['alfa', 'romeo', 'goe', 'higher', 'goal', 'matter', 'consist', 'grandprix', 'gptoday', 'formula', 'f', 'fnew', 'motorsport', 'httpstcofmhjtemt']"
+80,"Kenny Acheson (RAM March-Ford-01), Corrado Fabi (Osella-Alfa Romeo-FA1E) &amp; Jacques Laffite (Williams-Ford-FW08C) all failed to qualify for the race.
+
+European Grand Prix, (qualifying), Brands Hatch, 23-24 September 1983.
+
+© Motorsport Images
+
+#F1 https://t.co/T13KMXZrIn","kenny acheson ram marchford corrado fabi osellaalfa romeofae amp jacques laffite williamsfordfwc all failed to qualify for the race
+
+european grand prix qualifying brands hatch  september 
+
+© motorsport images
+
+f httpstcotkmxzrin",0.0,0.43333333333333335,negative,"['kenny', 'acheson', 'ram', 'marchford', 'corrado', 'fabi', 'osellaalfa', 'romeofae', 'amp', 'jacques', 'laffite', 'williamsfordfwc', 'all', 'failed', 'to', 'qualify', 'for', 'the', 'race', 'european', 'grand', 'prix', 'qualifying', 'brands', 'hatch', 'september', 'motorsport', 'images', 'f', 'httpstcotkmxzrin']","['kenny', 'acheson', 'ram', 'marchford', 'corrado', 'fabi', 'osellaalfa', 'romeofae', 'amp', 'jacques', 'laffite', 'williamsfordfwc', 'failed', 'qualify', 'race', 'european', 'grand', 'prix', 'qualifying', 'brands', 'hatch', 'september', 'motorsport', 'images', 'f', 'httpstcotkmxzrin']","['kenni', 'acheson', 'ram', 'marchford', 'corrado', 'fabi', 'osellaalfa', 'romeofa', 'amp', 'jacqu', 'laffit', 'williamsfordfwc', 'fail', 'qualifi', 'race', 'european', 'grand', 'prix', 'qualifi', 'brand', 'hatch', 'septemb', 'motorsport', 'imag', 'f', 'httpstcotkmxzrin']"
+81,"and now the other fighters as f1 liveries for the 2022 season (1/2)
+1 - Alfa Romeo C42 / T-47 Airspeeder
+2 - Aston Martin AMR22 / ETA-2 
+3 - Alpine A552 / DELTA-7
+4 - Ferrari F1-75 / U-Wing https://t.co/7z2rbpPEl6","and now the other fighters as f liveries for the  season 
+  alfa romeo c  t airspeeder
+  aston martin amr  eta 
+  alpine a  delta
+  ferrari f  uwing httpstcozrbppel",-0.125,0.375,negative,"['and', 'now', 'the', 'other', 'fighters', 'as', 'f', 'liveries', 'for', 'the', 'season', 'alfa', 'romeo', 'c', 't', 'airspeeder', 'aston', 'martin', 'amr', 'eta', 'alpine', 'a', 'delta', 'ferrari', 'f', 'uwing', 'httpstcozrbppel']","['fighters', 'f', 'liveries', 'season', 'alfa', 'romeo', 'c', 'airspeeder', 'aston', 'martin', 'amr', 'eta', 'alpine', 'delta', 'ferrari', 'f', 'uwing', 'httpstcozrbppel']","['fighter', 'f', 'liveri', 'season', 'alfa', 'romeo', 'c', 'airspeed', 'aston', 'martin', 'amr', 'eta', 'alpin', 'delta', 'ferrari', 'f', 'uwe', 'httpstcozrbppel']"
+82,"[GP Blog]
+Zhou on Alfa Romeo contract extension: 'Everything looks promising'
+#F1 #ZhouGuanyu24 #alfaromeoorlen  #Formula1 #F1News
+
+https://t.co/5GtAkryBi6 https://t.co/9K4jQnEWqw","gp blog
+zhou on alfa romeo contract extension everything looks promising
+f zhouguanyu alfaromeoorlen  formula fnews
+
+httpstcogtakrybi httpstcokjqnewqw",0.2,0.5,positive,"['gp', 'blog', 'zhou', 'on', 'alfa', 'romeo', 'contract', 'extension', 'everything', 'looks', 'promising', 'f', 'zhouguanyu', 'alfaromeoorlen', 'formula', 'fnews', 'httpstcogtakrybi', 'httpstcokjqnewqw']","['gp', 'blog', 'zhou', 'alfa', 'romeo', 'contract', 'extension', 'everything', 'looks', 'promising', 'f', 'zhouguanyu', 'alfaromeoorlen', 'formula', 'fnews', 'httpstcogtakrybi', 'httpstcokjqnewqw']","['gp', 'blog', 'zhou', 'alfa', 'romeo', 'contract', 'extens', 'everyth', 'look', 'promis', 'f', 'zhouguanyu', 'alfaromeoorlen', 'formula', 'fnew', 'httpstcogtakrybi', 'httpstcokjqnewqw']"
+83,"F1 2023 Lineups:
+Red Bull: Max &amp; Checo
+Ferrari: Charles &amp; Sainz
+Mercedes: Lewis &amp; Russell
+Alpine: Ocon &amp; Nyck De Vries
+Mclaren: Lando &amp; Oscar
+Alfa Romeo: Bottas &amp; Zhou
+Haas: K-Mag &amp; Gio
+AlphaTauri: Gasly &amp; Yuki
+Aston: Lance &amp; Alonso
+Williams: Albon &amp; Logan","f  lineups
+red bull max amp checo
+ferrari charles amp sainz
+mercedes lewis amp russell
+alpine ocon amp nyck de vries
+mclaren lando amp oscar
+alfa romeo bottas amp zhou
+haas kmag amp gio
+alphatauri gasly amp yuki
+aston lance amp alonso
+williams albon amp logan",0.0,0.0,neutral,"['f', 'lineups', 'red', 'bull', 'max', 'amp', 'checo', 'ferrari', 'charles', 'amp', 'sainz', 'mercedes', 'lewis', 'amp', 'russell', 'alpine', 'ocon', 'amp', 'nyck', 'de', 'vries', 'mclaren', 'lando', 'amp', 'oscar', 'alfa', 'romeo', 'bottas', 'amp', 'zhou', 'haas', 'kmag', 'amp', 'gio', 'alphatauri', 'gasly', 'amp', 'yuki', 'aston', 'lance', 'amp', 'alonso', 'williams', 'albon', 'amp', 'logan']","['f', 'lineups', 'red', 'bull', 'max', 'amp', 'checo', 'ferrari', 'charles', 'amp', 'sainz', 'mercedes', 'lewis', 'amp', 'russell', 'alpine', 'ocon', 'amp', 'nyck', 'de', 'vries', 'mclaren', 'lando', 'amp', 'oscar', 'alfa', 'romeo', 'bottas', 'amp', 'zhou', 'haas', 'kmag', 'amp', 'gio', 'alphatauri', 'gasly', 'amp', 'yuki', 'aston', 'lance', 'amp', 'alonso', 'williams', 'albon', 'amp', 'logan']","['f', 'lineup', 'red', 'bull', 'max', 'amp', 'checo', 'ferrari', 'charl', 'amp', 'sainz', 'merced', 'lewi', 'amp', 'russel', 'alpin', 'ocon', 'amp', 'nyck', 'de', 'vri', 'mclaren', 'lando', 'amp', 'oscar', 'alfa', 'romeo', 'botta', 'amp', 'zhou', 'haa', 'kmag', 'amp', 'gio', 'alphatauri', 'gasli', 'amp', 'yuki', 'aston', 'lanc', 'amp', 'alonso', 'william', 'albon', 'amp', 'logan']"
+84,@F1 Mick to Alfa Romeo?,f mick to alfa romeo,0.0,0.0,neutral,"['f', 'mick', 'to', 'alfa', 'romeo']","['f', 'mick', 'alfa', 'romeo']","['f', 'mick', 'alfa', 'romeo']"
+85,"With all of these chaos on driver market in F1, can we get illot into F1 seat pls. 
+
+I want a lot of things.
+Like Lawson with yuki in AT
+Illot get a seat.
+Gasly in better seat than AT
+Mick still in f1
+
+AT - Lawson
+Alpine - Gasly
+Haas - Mick
+Alfa romeo - illot 
+Williams - De Vries https://t.co/layM7T84NX","with all of these chaos on driver market in f can we get illot into f seat pls 
+
+i want a lot of things
+like lawson with yuki in at
+illot get a seat
+gasly in better seat than at
+mick still in f
+
+at  lawson
+alpine  gasly
+haas  mick
+alfa romeo  illot 
+williams  de vries httpstcolaymtnx",0.5,0.5,positive,"['with', 'all', 'of', 'these', 'chaos', 'on', 'driver', 'market', 'in', 'f', 'can', 'we', 'get', 'illot', 'into', 'f', 'seat', 'pls', 'i', 'want', 'a', 'lot', 'of', 'things', 'like', 'lawson', 'with', 'yuki', 'in', 'at', 'illot', 'get', 'a', 'seat', 'gasly', 'in', 'better', 'seat', 'than', 'at', 'mick', 'still', 'in', 'f', 'at', 'lawson', 'alpine', 'gasly', 'haas', 'mick', 'alfa', 'romeo', 'illot', 'williams', 'de', 'vries', 'httpstcolaymtnx']","['chaos', 'driver', 'market', 'f', 'get', 'illot', 'f', 'seat', 'pls', 'want', 'lot', 'things', 'like', 'lawson', 'yuki', 'illot', 'get', 'seat', 'gasly', 'better', 'seat', 'mick', 'still', 'f', 'lawson', 'alpine', 'gasly', 'haas', 'mick', 'alfa', 'romeo', 'illot', 'williams', 'de', 'vries', 'httpstcolaymtnx']","['chao', 'driver', 'market', 'f', 'get', 'illot', 'f', 'seat', 'pl', 'want', 'lot', 'thing', 'like', 'lawson', 'yuki', 'illot', 'get', 'seat', 'gasli', 'better', 'seat', 'mick', 'still', 'f', 'lawson', 'alpin', 'gasli', 'haa', 'mick', 'alfa', 'romeo', 'illot', 'william', 'de', 'vri', 'httpstcolaymtnx']"
+86,"@F1 Schumi Jr. in Alfa Romeo, Gasly in Alpine, Giovinazzi in Haas, De Vries in Alpha Tauri and  Drugovich in Williams",f schumi jr in alfa romeo gasly in alpine giovinazzi in haas de vries in alpha tauri and  drugovich in williams,0.0,0.0,neutral,"['f', 'schumi', 'jr', 'in', 'alfa', 'romeo', 'gasly', 'in', 'alpine', 'giovinazzi', 'in', 'haas', 'de', 'vries', 'in', 'alpha', 'tauri', 'and', 'drugovich', 'in', 'williams']","['f', 'schumi', 'jr', 'alfa', 'romeo', 'gasly', 'alpine', 'giovinazzi', 'haas', 'de', 'vries', 'alpha', 'tauri', 'drugovich', 'williams']","['f', 'schumi', 'jr', 'alfa', 'romeo', 'gasli', 'alpin', 'giovinazzi', 'haa', 'de', 'vri', 'alpha', 'tauri', 'drugovich', 'william']"
+87,"@Mart1nMorales @WBlackwell72 @F1 https://t.co/JSIwZlTy4e
+This is the most recent article Motorsport have. Says Audi are likely to start buying shares next year, nothing to suggest the team will be renamed before that. Unless Audi and Sauber have kept something VERY under wraps, they're Alfa Romeo next year","martnmorales wblackwell f httpstcojsiwzltye
+this is the most recent article motorsport have says audi are likely to start buying shares next year nothing to suggest the team will be renamed before that unless audi and sauber have kept something very under wraps theyre alfa romeo next year",0.11666666666666665,0.3416666666666666,positive,"['martnmorales', 'wblackwell', 'f', 'httpstcojsiwzltye', 'this', 'is', 'the', 'most', 'recent', 'article', 'motorsport', 'have', 'says', 'audi', 'are', 'likely', 'to', 'start', 'buying', 'shares', 'next', 'year', 'nothing', 'to', 'suggest', 'the', 'team', 'will', 'be', 'renamed', 'before', 'that', 'unless', 'audi', 'and', 'sauber', 'have', 'kept', 'something', 'very', 'under', 'wraps', 'theyre', 'alfa', 'romeo', 'next', 'year']","['martnmorales', 'wblackwell', 'f', 'httpstcojsiwzltye', 'recent', 'article', 'motorsport', 'says', 'audi', 'likely', 'start', 'buying', 'shares', 'next', 'year', 'nothing', 'suggest', 'team', 'renamed', 'unless', 'audi', 'sauber', 'kept', 'something', 'wraps', 'theyre', 'alfa', 'romeo', 'next', 'year']","['martnmoral', 'wblackwel', 'f', 'httpstcojsiwzlty', 'recent', 'articl', 'motorsport', 'say', 'audi', 'like', 'start', 'buy', 'share', 'next', 'year', 'noth', 'suggest', 'team', 'renam', 'unless', 'audi', 'sauber', 'kept', 'someth', 'wrap', 'theyr', 'alfa', 'romeo', 'next', 'year']"
+88,"@F1 I think Mick will go to Williams, Nyck De Vries will go to alpha tauri, Pouchaire will join haas, gasly will go to alpine and Zhou stays at Alfa romeo",f i think mick will go to williams nyck de vries will go to alpha tauri pouchaire will join haas gasly will go to alpine and zhou stays at alfa romeo,0.0,0.0,positive,"['f', 'i', 'think', 'mick', 'will', 'go', 'to', 'williams', 'nyck', 'de', 'vries', 'will', 'go', 'to', 'alpha', 'tauri', 'pouchaire', 'will', 'join', 'haas', 'gasly', 'will', 'go', 'to', 'alpine', 'and', 'zhou', 'stays', 'at', 'alfa', 'romeo']","['f', 'think', 'mick', 'go', 'williams', 'nyck', 'de', 'vries', 'go', 'alpha', 'tauri', 'pouchaire', 'join', 'haas', 'gasly', 'go', 'alpine', 'zhou', 'stays', 'alfa', 'romeo']","['f', 'think', 'mick', 'go', 'william', 'nyck', 'de', 'vri', 'go', 'alpha', 'tauri', 'pouchair', 'join', 'haa', 'gasli', 'go', 'alpin', 'zhou', 'stay', 'alfa', 'romeo']"
+89,"@F1 Ricciardo: Alpine
+De Vries: Williams
+Zhou: Alfa Romeo
+Schumacher: Haas
+
+What’s so hard about that?","f ricciardo alpine
+de vries williams
+zhou alfa romeo
+schumacher haas
+
+what’s so hard about that",-0.2916666666666667,0.5416666666666666,negative,"['f', 'ricciardo', 'alpine', 'de', 'vries', 'williams', 'zhou', 'alfa', 'romeo', 'schumacher', 'haas', 'what', 's', 'so', 'hard', 'about', 'that']","['f', 'ricciardo', 'alpine', 'de', 'vries', 'williams', 'zhou', 'alfa', 'romeo', 'schumacher', 'haas', 'hard']","['f', 'ricciardo', 'alpin', 'de', 'vri', 'william', 'zhou', 'alfa', 'romeo', 'schumach', 'haa', 'hard']"
+90,"#F1Manager22 Season 3, we dumped Mick, went with Lando and are looking to continue to bring the American F1 team to the top! Now we just gotta get the car dialed in, through development. You'll also notice Valtteri back with Merc and Lewis with Alfa Romeo. Fun Times! https://t.co/Uer52wExPZ",fmanager season  we dumped mick went with lando and are looking to continue to bring the american f team to the top now we just gotta get the car dialed in through development youll also notice valtteri back with merc and lewis with alfa romeo fun times httpstcouerwexpz,0.2,0.175,positive,"['fmanager', 'season', 'we', 'dumped', 'mick', 'went', 'with', 'lando', 'and', 'are', 'looking', 'to', 'continue', 'to', 'bring', 'the', 'american', 'f', 'team', 'to', 'the', 'top', 'now', 'we', 'just', 'gotta', 'get', 'the', 'car', 'dialed', 'in', 'through', 'development', 'youll', 'also', 'notice', 'valtteri', 'back', 'with', 'merc', 'and', 'lewis', 'with', 'alfa', 'romeo', 'fun', 'times', 'httpstcouerwexpz']","['fmanager', 'season', 'dumped', 'mick', 'went', 'lando', 'looking', 'continue', 'bring', 'american', 'f', 'team', 'top', 'gotta', 'get', 'car', 'dialed', 'development', 'youll', 'also', 'notice', 'valtteri', 'back', 'merc', 'lewis', 'alfa', 'romeo', 'fun', 'times', 'httpstcouerwexpz']","['fmanag', 'season', 'dump', 'mick', 'went', 'lando', 'look', 'continu', 'bring', 'american', 'f', 'team', 'top', 'gotta', 'get', 'car', 'dial', 'develop', 'youll', 'also', 'notic', 'valtteri', 'back', 'merc', 'lewi', 'alfa', 'romeo', 'fun', 'time', 'httpstcouerwexpz']"
+91,Alfa Romeo happy with Zhou; underwhelmed by Chinese sponsorship response #Formula1 #F1 #F1News #Motorsport #Formule1 https://t.co/peEl8vy4Sb,alfa romeo happy with zhou underwhelmed by chinese sponsorship response formula f fnews motorsport formule httpstcopeelvysb,0.4,0.5,positive,"['alfa', 'romeo', 'happy', 'with', 'zhou', 'underwhelmed', 'by', 'chinese', 'sponsorship', 'response', 'formula', 'f', 'fnews', 'motorsport', 'formule', 'httpstcopeelvysb']","['alfa', 'romeo', 'happy', 'zhou', 'underwhelmed', 'chinese', 'sponsorship', 'response', 'formula', 'f', 'fnews', 'motorsport', 'formule', 'httpstcopeelvysb']","['alfa', 'romeo', 'happi', 'zhou', 'underwhelm', 'chines', 'sponsorship', 'respons', 'formula', 'f', 'fnew', 'motorsport', 'formul', 'httpstcopeelvysb']"
+92,Alfa Romeo happy with Zhou; underwhelmed by Chinese sponsorship response #GrandPrix #GPToday #Formula1 #F1 #F1News #Motorsport https://t.co/pcDLQGBeu7,alfa romeo happy with zhou underwhelmed by chinese sponsorship response grandprix gptoday formula f fnews motorsport httpstcopcdlqgbeu,0.4,0.5,positive,"['alfa', 'romeo', 'happy', 'with', 'zhou', 'underwhelmed', 'by', 'chinese', 'sponsorship', 'response', 'grandprix', 'gptoday', 'formula', 'f', 'fnews', 'motorsport', 'httpstcopcdlqgbeu']","['alfa', 'romeo', 'happy', 'zhou', 'underwhelmed', 'chinese', 'sponsorship', 'response', 'grandprix', 'gptoday', 'formula', 'f', 'fnews', 'motorsport', 'httpstcopcdlqgbeu']","['alfa', 'romeo', 'happi', 'zhou', 'underwhelm', 'chines', 'sponsorship', 'respons', 'grandprix', 'gptoday', 'formula', 'f', 'fnew', 'motorsport', 'httpstcopcdlqgbeu']"
+93,@theatricalmama Who loved cars (especially building them with Lego) when he was young that I know still builds cars out of Lego at 30 years old and is now an F1 Strategy Engineer for Alfa Romeo!,theatricalmama who loved cars especially building them with lego when he was young that i know still builds cars out of lego at  years old and is now an f strategy engineer for alfa romeo,0.22499999999999998,0.6000000000000001,positive,"['theatricalmama', 'who', 'loved', 'cars', 'especially', 'building', 'them', 'with', 'lego', 'when', 'he', 'was', 'young', 'that', 'i', 'know', 'still', 'builds', 'cars', 'out', 'of', 'lego', 'at', 'years', 'old', 'and', 'is', 'now', 'an', 'f', 'strategy', 'engineer', 'for', 'alfa', 'romeo']","['theatricalmama', 'loved', 'cars', 'especially', 'building', 'lego', 'young', 'know', 'still', 'builds', 'cars', 'lego', 'years', 'old', 'f', 'strategy', 'engineer', 'alfa', 'romeo']","['theatricalmama', 'love', 'car', 'especi', 'build', 'lego', 'young', 'know', 'still', 'build', 'car', 'lego', 'year', 'old', 'f', 'strategi', 'engin', 'alfa', 'romeo']"
+94,Zhou ‘a surprise of the season’ says Alfa Romeo’s Monchaux as he reveals plan to ‘spoil the party’ in midfield battle #Formula1 #F1 #F1News #Motorsport #Formule1 https://t.co/ZKnqzKP1vp,zhou ‘a surprise of the season’ says alfa romeo’s monchaux as he reveals plan to ‘spoil the party’ in midfield battle formula f fnews motorsport formule httpstcozknqzkpvp,0.0,0.0,negative,"['zhou', 'a', 'surprise', 'of', 'the', 'season', 'says', 'alfa', 'romeo', 's', 'monchaux', 'as', 'he', 'reveals', 'plan', 'to', 'spoil', 'the', 'party', 'in', 'midfield', 'battle', 'formula', 'f', 'fnews', 'motorsport', 'formule', 'httpstcozknqzkpvp']","['zhou', 'surprise', 'season', 'says', 'alfa', 'romeo', 'monchaux', 'reveals', 'plan', 'spoil', 'party', 'midfield', 'battle', 'formula', 'f', 'fnews', 'motorsport', 'formule', 'httpstcozknqzkpvp']","['zhou', 'surpris', 'season', 'say', 'alfa', 'romeo', 'monchaux', 'reveal', 'plan', 'spoil', 'parti', 'midfield', 'battl', 'formula', 'f', 'fnew', 'motorsport', 'formul', 'httpstcozknqzkpvp']"
+95,"F1 TRACKS: Check out Zhou Guanyu's amazing Formula 1 playlist | Formula 1®
+
+Alfa Romeo’s Zhou Guanyu is the latest driver to take over Formula 1’s official ‘F1 Tracks’ playlist, getting the fans in the spirit ahead of next weekend’s Singapore Grand P...
+https://t.co/Cac9nRGV1e","f tracks check out zhou guanyus amazing formula  playlist  formula ®
+
+alfa romeo’s zhou guanyu is the latest driver to take over formula ’s official ‘f tracks’ playlist getting the fans in the spirit ahead of next weekend’s singapore grand p
+httpstcocacnrgve",0.4,0.7,positive,"['f', 'tracks', 'check', 'out', 'zhou', 'guanyus', 'amazing', 'formula', 'playlist', 'formula', 'alfa', 'romeo', 's', 'zhou', 'guanyu', 'is', 'the', 'latest', 'driver', 'to', 'take', 'over', 'formula', 's', 'official', 'f', 'tracks', 'playlist', 'getting', 'the', 'fans', 'in', 'the', 'spirit', 'ahead', 'of', 'next', 'weekend', 's', 'singapore', 'grand', 'p', 'httpstcocacnrgve']","['f', 'tracks', 'check', 'zhou', 'guanyus', 'amazing', 'formula', 'playlist', 'formula', 'alfa', 'romeo', 'zhou', 'guanyu', 'latest', 'driver', 'take', 'formula', 'official', 'f', 'tracks', 'playlist', 'getting', 'fans', 'spirit', 'ahead', 'next', 'weekend', 'singapore', 'grand', 'p', 'httpstcocacnrgve']","['f', 'track', 'check', 'zhou', 'guanyu', 'amaz', 'formula', 'playlist', 'formula', 'alfa', 'romeo', 'zhou', 'guanyu', 'latest', 'driver', 'take', 'formula', 'offici', 'f', 'track', 'playlist', 'get', 'fan', 'spirit', 'ahead', 'next', 'weekend', 'singapor', 'grand', 'p', 'httpstcocacnrgv']"
+96,Give Mick that Alfa Romeo seat 😤 https://t.co/rPTCHm7zUL,give mick that alfa romeo seat 😤 httpstcorptchmzul,0.0,0.0,neutral,"['give', 'mick', 'that', 'alfa', 'romeo', 'seat', 'httpstcorptchmzul']","['give', 'mick', 'alfa', 'romeo', 'seat', 'httpstcorptchmzul']","['give', 'mick', 'alfa', 'romeo', 'seat', 'httpstcorptchmzul']"
+97,$24 Million Swiss villa owner Kimi Raikkonen talks about how he felt calm and independent at Alfa Romeo - The Sportsrush https://t.co/fjjCXfilu9, million swiss villa owner kimi raikkonen talks about how he felt calm and independent at alfa romeo  the sportsrush httpstcofjjcxfilu,0.15000000000000002,0.4375,positive,"['', 'million', 'swiss', 'villa', 'owner', 'kimi', 'raikkonen', 'talks', 'about', 'how', 'he', 'felt', 'calm', 'and', 'independent', 'at', 'alfa', 'romeo', 'the', 'sportsrush', 'httpstcofjjcxfilu']","['', 'million', 'swiss', 'villa', 'owner', 'kimi', 'raikkonen', 'talks', 'felt', 'calm', 'independent', 'alfa', 'romeo', 'sportsrush', 'httpstcofjjcxfilu']","['', 'million', 'swiss', 'villa', 'owner', 'kimi', 'raikkonen', 'talk', 'felt', 'calm', 'independ', 'alfa', 'romeo', 'sportsrush', 'httpstcofjjcxfilu']"
+98,"@Mart1nMorales @WBlackwell72 @F1 That certainly isn't something I've come across. Certainly, we're expecting an announcement in the next couple of weeks, but given the Alfa Romeo sponsorship is carrying to next year, the expectation is that 24 will the earliest an Audi rebrand would happen.",martnmorales wblackwell f that certainly isnt something ive come across certainly were expecting an announcement in the next couple of weeks but given the alfa romeo sponsorship is carrying to next year the expectation is that  will the earliest an audi rebrand would happen,0.10714285714285714,0.2857142857142857,positive,"['martnmorales', 'wblackwell', 'f', 'that', 'certainly', 'isnt', 'something', 'ive', 'come', 'across', 'certainly', 'were', 'expecting', 'an', 'announcement', 'in', 'the', 'next', 'couple', 'of', 'weeks', 'but', 'given', 'the', 'alfa', 'romeo', 'sponsorship', 'is', 'carrying', 'to', 'next', 'year', 'the', 'expectation', 'is', 'that', 'will', 'the', 'earliest', 'an', 'audi', 'rebrand', 'would', 'happen']","['martnmorales', 'wblackwell', 'f', 'certainly', 'isnt', 'something', 'ive', 'come', 'across', 'certainly', 'expecting', 'announcement', 'next', 'couple', 'weeks', 'given', 'alfa', 'romeo', 'sponsorship', 'carrying', 'next', 'year', 'expectation', 'earliest', 'audi', 'rebrand', 'would', 'happen']","['martnmoral', 'wblackwel', 'f', 'certainli', 'isnt', 'someth', 'ive', 'come', 'across', 'certainli', 'expect', 'announc', 'next', 'coupl', 'week', 'given', 'alfa', 'romeo', 'sponsorship', 'carri', 'next', 'year', 'expect', 'earliest', 'audi', 'rebrand', 'would', 'happen']"
+99,Alfa Romeo F1 Team | Beyond the visible | Episode 1 https://t.co/tbqD6PeKhI,alfa romeo f team  beyond the visible  episode  httpstcotbqdpekhi,0.0,0.0,neutral,"['alfa', 'romeo', 'f', 'team', 'beyond', 'the', 'visible', 'episode', 'httpstcotbqdpekhi']","['alfa', 'romeo', 'f', 'team', 'beyond', 'visible', 'episode', 'httpstcotbqdpekhi']","['alfa', 'romeo', 'f', 'team', 'beyond', 'visibl', 'episod', 'httpstcotbqdpekhi']"
+100,"Not the most realistic but:
+
+Alpha Tauri - De Vries 
+Alfa Romeo - Zhou 
+Williams - Vandoorne 
+Alpine - Gasly 
+Haas - Ricciardo https://t.co/i7jotImWe5","not the most realistic but
+
+alpha tauri  de vries 
+alfa romeo  zhou 
+williams  vandoorne 
+alpine  gasly 
+haas  ricciardo httpstcoijotimwe",0.3333333333333333,0.41666666666666663,neutral,"['not', 'the', 'most', 'realistic', 'but', 'alpha', 'tauri', 'de', 'vries', 'alfa', 'romeo', 'zhou', 'williams', 'vandoorne', 'alpine', 'gasly', 'haas', 'ricciardo', 'httpstcoijotimwe']","['realistic', 'alpha', 'tauri', 'de', 'vries', 'alfa', 'romeo', 'zhou', 'williams', 'vandoorne', 'alpine', 'gasly', 'haas', 'ricciardo', 'httpstcoijotimwe']","['realist', 'alpha', 'tauri', 'de', 'vri', 'alfa', 'romeo', 'zhou', 'william', 'vandoorn', 'alpin', 'gasli', 'haa', 'ricciardo', 'httpstcoijotimw']"
+101,"Because F1 Twitter is doing it, and I want a record for when I'm right, here's my remaining seat predictions. 
+
+Alfa Romeo - Bottas / Zhou
+Alpha Tauri - Tsunoda / De Vries 
+Haas - KMag/ Giovinazzi ( I'm manifesting Ricciardo🤞)
+Alpine - Ocon / Gasly
+Williams - Albon / Sargeant","because f twitter is doing it and i want a record for when im right heres my remaining seat predictions 
+
+alfa romeo  bottas  zhou
+alpha tauri  tsunoda  de vries 
+haas  kmag giovinazzi  im manifesting ricciardo🤞
+alpine  ocon  gasly
+williams  albon  sargeant",0.2857142857142857,0.5357142857142857,positive,"['because', 'f', 'twitter', 'is', 'doing', 'it', 'and', 'i', 'want', 'a', 'record', 'for', 'when', 'im', 'right', 'heres', 'my', 'remaining', 'seat', 'predictions', 'alfa', 'romeo', 'bottas', 'zhou', 'alpha', 'tauri', 'tsunoda', 'de', 'vries', 'haas', 'kmag', 'giovinazzi', 'im', 'manifesting', 'ricciardo', 'alpine', 'ocon', 'gasly', 'williams', 'albon', 'sargeant']","['f', 'twitter', 'want', 'record', 'im', 'right', 'heres', 'remaining', 'seat', 'predictions', 'alfa', 'romeo', 'bottas', 'zhou', 'alpha', 'tauri', 'tsunoda', 'de', 'vries', 'haas', 'kmag', 'giovinazzi', 'im', 'manifesting', 'ricciardo', 'alpine', 'ocon', 'gasly', 'williams', 'albon', 'sargeant']","['f', 'twitter', 'want', 'record', 'im', 'right', 'here', 'remain', 'seat', 'predict', 'alfa', 'romeo', 'botta', 'zhou', 'alpha', 'tauri', 'tsunoda', 'de', 'vri', 'haa', 'kmag', 'giovinazzi', 'im', 'manifest', 'ricciardo', 'alpin', 'ocon', 'gasli', 'william', 'albon', 'sargeant']"
+102,At alfa romeo we have @slowcarscharles and @F1_Steady https://t.co/yNQe2aRpCH,at alfa romeo we have slowcarscharles and fsteady httpstcoynqearpch,0.0,0.0,neutral,"['at', 'alfa', 'romeo', 'we', 'have', 'slowcarscharles', 'and', 'fsteady', 'httpstcoynqearpch']","['alfa', 'romeo', 'slowcarscharles', 'fsteady', 'httpstcoynqearpch']","['alfa', 'romeo', 'slowcarscharl', 'fsteadi', 'httpstcoynqearpch']"
+103,Alfa Romeo Racing F1 Camo Hat https://t.co/EfwQMJ5q7h,alfa romeo racing f camo hat httpstcoefwqmjqh,0.0,0.0,neutral,"['alfa', 'romeo', 'racing', 'f', 'camo', 'hat', 'httpstcoefwqmjqh']","['alfa', 'romeo', 'racing', 'f', 'camo', 'hat', 'httpstcoefwqmjqh']","['alfa', 'romeo', 'race', 'f', 'camo', 'hat', 'httpstcoefwqmjqh']"
+104,@AdamIsTalking_ @WBlackwell72 @F1 No. Alfa Romeo (Sauber) will have Audi engines in 2026 but they will be partners in 2023.,adamistalking wblackwell f no alfa romeo sauber will have audi engines in  but they will be partners in ,0.0,0.0,negative,"['adamistalking', 'wblackwell', 'f', 'no', 'alfa', 'romeo', 'sauber', 'will', 'have', 'audi', 'engines', 'in', 'but', 'they', 'will', 'be', 'partners', 'in', '']","['adamistalking', 'wblackwell', 'f', 'alfa', 'romeo', 'sauber', 'audi', 'engines', 'partners', '']","['adamistalk', 'wblackwel', 'f', 'alfa', 'romeo', 'sauber', 'audi', 'engin', 'partner', '']"
+105,Does Daniel Riccardo to Alpine or Alfa Romeo sound crazy? #F1,does daniel riccardo to alpine or alfa romeo sound crazy f,-0.09999999999999998,0.65,negative,"['does', 'daniel', 'riccardo', 'to', 'alpine', 'or', 'alfa', 'romeo', 'sound', 'crazy', 'f']","['daniel', 'riccardo', 'alpine', 'alfa', 'romeo', 'sound', 'crazy', 'f']","['daniel', 'riccardo', 'alpin', 'alfa', 'romeo', 'sound', 'crazi', 'f']"
+106,"Mick Schumacher to Alfa Romeo?
+Latifi to Alpine? https://t.co/4g2LZEkmO2","mick schumacher to alfa romeo
+latifi to alpine httpstcoglzekmo",0.0,0.0,neutral,"['mick', 'schumacher', 'to', 'alfa', 'romeo', 'latifi', 'to', 'alpine', 'httpstcoglzekmo']","['mick', 'schumacher', 'alfa', 'romeo', 'latifi', 'alpine', 'httpstcoglzekmo']","['mick', 'schumach', 'alfa', 'romeo', 'latifi', 'alpin', 'httpstcoglzekmo']"
+107,Zhou deserves to stay in that Alfa Romeo seat. Had a really solid rookie season! https://t.co/Qpocebml32,zhou deserves to stay in that alfa romeo seat had a really solid rookie season httpstcoqpocebml,0.0,0.1,positive,"['zhou', 'deserves', 'to', 'stay', 'in', 'that', 'alfa', 'romeo', 'seat', 'had', 'a', 'really', 'solid', 'rookie', 'season', 'httpstcoqpocebml']","['zhou', 'deserves', 'stay', 'alfa', 'romeo', 'seat', 'really', 'solid', 'rookie', 'season', 'httpstcoqpocebml']","['zhou', 'deserv', 'stay', 'alfa', 'romeo', 'seat', 'realli', 'solid', 'rooki', 'season', 'httpstcoqpocebml']"
+108,"@f1fantwo   Four seats up for grabs (at present) on the #F1 grid next year...
+
+...so go on, let us know who you think should fill each?
+
+- Alpine
+- Alfa Romeo 
+- HAAS Automation
+- Williams 
+
+Comment them below! #F1 #veal","ffantwo   four seats up for grabs at present on the f grid next year
+
+so go on let us know who you think should fill each
+
+ alpine
+ alfa romeo 
+ haas automation
+ williams 
+
+comment them below f veal",0.0,0.0,neutral,"['ffantwo', 'four', 'seats', 'up', 'for', 'grabs', 'at', 'present', 'on', 'the', 'f', 'grid', 'next', 'year', 'so', 'go', 'on', 'let', 'us', 'know', 'who', 'you', 'think', 'should', 'fill', 'each', 'alpine', 'alfa', 'romeo', 'haas', 'automation', 'williams', 'comment', 'them', 'below', 'f', 'veal']","['ffantwo', 'four', 'seats', 'grabs', 'present', 'f', 'grid', 'next', 'year', 'go', 'let', 'us', 'know', 'think', 'fill', 'alpine', 'alfa', 'romeo', 'haas', 'automation', 'williams', 'comment', 'f', 'veal']","['ffantwo', 'four', 'seat', 'grab', 'present', 'f', 'grid', 'next', 'year', 'go', 'let', 'us', 'know', 'think', 'fill', 'alpin', 'alfa', 'romeo', 'haa', 'autom', 'william', 'comment', 'f', 'veal']"
+109,"2023 Grid 
+
+Redbull: Verstappen - Perez
+Ferrari: Leclerc - Sainz
+Mercedes: Hamilton - Russell
+Mclaren: Norris - Piastri
+Alfa Romeo: Bottas - Zhou
+Alpine: Gasly - Ocon
+Alpha Tauri: Mick - Tsunoda
+Haas: Magnussen - Ricciardo
+Aston Martin: Stroll - Alonso
+Williams: Albon - De Vries https://t.co/HRofhwAyM5"," grid 
+
+redbull verstappen  perez
+ferrari leclerc  sainz
+mercedes hamilton  russell
+mclaren norris  piastri
+alfa romeo bottas  zhou
+alpine gasly  ocon
+alpha tauri mick  tsunoda
+haas magnussen  ricciardo
+aston martin stroll  alonso
+williams albon  de vries httpstcohrofhwaym",0.0,0.0,neutral,"['', 'grid', 'redbull', 'verstappen', 'perez', 'ferrari', 'leclerc', 'sainz', 'mercedes', 'hamilton', 'russell', 'mclaren', 'norris', 'piastri', 'alfa', 'romeo', 'bottas', 'zhou', 'alpine', 'gasly', 'ocon', 'alpha', 'tauri', 'mick', 'tsunoda', 'haas', 'magnussen', 'ricciardo', 'aston', 'martin', 'stroll', 'alonso', 'williams', 'albon', 'de', 'vries', 'httpstcohrofhwaym']","['', 'grid', 'redbull', 'verstappen', 'perez', 'ferrari', 'leclerc', 'sainz', 'mercedes', 'hamilton', 'russell', 'mclaren', 'norris', 'piastri', 'alfa', 'romeo', 'bottas', 'zhou', 'alpine', 'gasly', 'ocon', 'alpha', 'tauri', 'mick', 'tsunoda', 'haas', 'magnussen', 'ricciardo', 'aston', 'martin', 'stroll', 'alonso', 'williams', 'albon', 'de', 'vries', 'httpstcohrofhwaym']","['', 'grid', 'redbul', 'verstappen', 'perez', 'ferrari', 'leclerc', 'sainz', 'merced', 'hamilton', 'russel', 'mclaren', 'norri', 'piastri', 'alfa', 'romeo', 'botta', 'zhou', 'alpin', 'gasli', 'ocon', 'alpha', 'tauri', 'mick', 'tsunoda', 'haa', 'magnussen', 'ricciardo', 'aston', 'martin', 'stroll', 'alonso', 'william', 'albon', 'de', 'vri', 'httpstcohrofhwaym']"
+110,@F1 Zhou should continue at Alfa Romeo,f zhou should continue at alfa romeo,0.0,0.0,neutral,"['f', 'zhou', 'should', 'continue', 'at', 'alfa', 'romeo']","['f', 'zhou', 'continue', 'alfa', 'romeo']","['f', 'zhou', 'continu', 'alfa', 'romeo']"
+111,"@EstagiariodaF1 Alfa Romeo - Guanyu
+AlphaTauri - Schumacher
+Alpine - Gasly
+Haas F1 Team - Ricciardo
+Williams - De Vries","estagiariodaf alfa romeo  guanyu
+alphatauri  schumacher
+alpine  gasly
+haas f team  ricciardo
+williams  de vries",0.0,0.0,neutral,"['estagiariodaf', 'alfa', 'romeo', 'guanyu', 'alphatauri', 'schumacher', 'alpine', 'gasly', 'haas', 'f', 'team', 'ricciardo', 'williams', 'de', 'vries']","['estagiariodaf', 'alfa', 'romeo', 'guanyu', 'alphatauri', 'schumacher', 'alpine', 'gasly', 'haas', 'f', 'team', 'ricciardo', 'williams', 'de', 'vries']","['estagiariodaf', 'alfa', 'romeo', 'guanyu', 'alphatauri', 'schumach', 'alpin', 'gasli', 'haa', 'f', 'team', 'ricciardo', 'william', 'de', 'vri']"
+112,"Gasly a Alpine, De Vries a Williams, Mick a Alfa Romeo y Hulkenberg a Haas? https://t.co/ITZ1d8eb4r",gasly a alpine de vries a williams mick a alfa romeo y hulkenberg a haas httpstcoitzdebr,0.0,0.0,neutral,"['gasly', 'a', 'alpine', 'de', 'vries', 'a', 'williams', 'mick', 'a', 'alfa', 'romeo', 'y', 'hulkenberg', 'a', 'haas', 'httpstcoitzdebr']","['gasly', 'alpine', 'de', 'vries', 'williams', 'mick', 'alfa', 'romeo', 'hulkenberg', 'haas', 'httpstcoitzdebr']","['gasli', 'alpin', 'de', 'vri', 'william', 'mick', 'alfa', 'romeo', 'hulkenberg', 'haa', 'httpstcoitzdebr']"
+113,Bottas-Riccardo at Alfa Romeo would be CHAOS https://t.co/qMG0UyPCNQ,bottasriccardo at alfa romeo would be chaos httpstcoqmguypcnq,0.0,0.0,negative,"['bottasriccardo', 'at', 'alfa', 'romeo', 'would', 'be', 'chaos', 'httpstcoqmguypcnq']","['bottasriccardo', 'alfa', 'romeo', 'would', 'chaos', 'httpstcoqmguypcnq']","['bottasriccardo', 'alfa', 'romeo', 'would', 'chao', 'httpstcoqmguypcnq']"
+114,"@f1_historia Mick a Alfa Romeo
+Ricc a Alpine
+De Vries a Williams
+Hulkenberg a Hass
+
+Nada mal no?🤷🏻‍♂️","fhistoria mick a alfa romeo
+ricc a alpine
+de vries a williams
+hulkenberg a hass
+
+nada mal no🤷🏻‍♂️",0.0,0.0,neutral,"['fhistoria', 'mick', 'a', 'alfa', 'romeo', 'ricc', 'a', 'alpine', 'de', 'vries', 'a', 'williams', 'hulkenberg', 'a', 'hass', 'nada', 'mal', 'no', '']","['fhistoria', 'mick', 'alfa', 'romeo', 'ricc', 'alpine', 'de', 'vries', 'williams', 'hulkenberg', 'hass', 'nada', 'mal', '']","['fhistoria', 'mick', 'alfa', 'romeo', 'ricc', 'alpin', 'de', 'vri', 'william', 'hulkenberg', 'hass', 'nada', 'mal', '']"
+115,OPINION: Is Zhou's performance worth the money? #GrandPrix #GPToday #Formula1 #F1 #F1News #Motorsport https://t.co/PBGO5jVrdw,opinion is zhous performance worth the money grandprix gptoday formula f fnews motorsport httpstcopbgojvrdw,0.3,0.1,positive,"['opinion', 'is', 'zhous', 'performance', 'worth', 'the', 'money', 'grandprix', 'gptoday', 'formula', 'f', 'fnews', 'motorsport', 'httpstcopbgojvrdw']","['opinion', 'zhous', 'performance', 'worth', 'money', 'grandprix', 'gptoday', 'formula', 'f', 'fnews', 'motorsport', 'httpstcopbgojvrdw']","['opinion', 'zhou', 'perform', 'worth', 'money', 'grandprix', 'gptoday', 'formula', 'f', 'fnew', 'motorsport', 'httpstcopbgojvrdw']"
+116,"Gasly to Alpine
+Danny Ric to Haas
+Liam Lawson to Alpha Tauri
+Mick to Alfa Romeo
+De Vries to Williams https://t.co/RyhWFc86Pp","gasly to alpine
+danny ric to haas
+liam lawson to alpha tauri
+mick to alfa romeo
+de vries to williams httpstcoryhwfcpp",0.0,0.0,neutral,"['gasly', 'to', 'alpine', 'danny', 'ric', 'to', 'haas', 'liam', 'lawson', 'to', 'alpha', 'tauri', 'mick', 'to', 'alfa', 'romeo', 'de', 'vries', 'to', 'williams', 'httpstcoryhwfcpp']","['gasly', 'alpine', 'danny', 'ric', 'haas', 'liam', 'lawson', 'alpha', 'tauri', 'mick', 'alfa', 'romeo', 'de', 'vries', 'williams', 'httpstcoryhwfcpp']","['gasli', 'alpin', 'danni', 'ric', 'haa', 'liam', 'lawson', 'alpha', 'tauri', 'mick', 'alfa', 'romeo', 'de', 'vri', 'william', 'httpstcoryhwfcpp']"
+117,"@F1 Zhou to Williams. 
+Daniel to Alfa Romeo. 
+Ferrari to bring better PU to the table. 
+Alfa with nice guys on the grid competes for the top mid tier place. 
+
+Seems like a good plan.","f zhou to williams 
+daniel to alfa romeo 
+ferrari to bring better pu to the table 
+alfa with nice guys on the grid competes for the top mid tier place 
+
+seems like a good plan",0.45999999999999996,0.52,positive,"['f', 'zhou', 'to', 'williams', 'daniel', 'to', 'alfa', 'romeo', 'ferrari', 'to', 'bring', 'better', 'pu', 'to', 'the', 'table', 'alfa', 'with', 'nice', 'guys', 'on', 'the', 'grid', 'competes', 'for', 'the', 'top', 'mid', 'tier', 'place', 'seems', 'like', 'a', 'good', 'plan']","['f', 'zhou', 'williams', 'daniel', 'alfa', 'romeo', 'ferrari', 'bring', 'better', 'pu', 'table', 'alfa', 'nice', 'guys', 'grid', 'competes', 'top', 'mid', 'tier', 'place', 'seems', 'like', 'good', 'plan']","['f', 'zhou', 'william', 'daniel', 'alfa', 'romeo', 'ferrari', 'bring', 'better', 'pu', 'tabl', 'alfa', 'nice', 'guy', 'grid', 'compet', 'top', 'mid', 'tier', 'place', 'seem', 'like', 'good', 'plan']"
+118,@F1 Alfa Romeo - @ohtaufiqmazlan,f alfa romeo  ohtaufiqmazlan,0.0,0.0,neutral,"['f', 'alfa', 'romeo', 'ohtaufiqmazlan']","['f', 'alfa', 'romeo', 'ohtaufiqmazlan']","['f', 'alfa', 'romeo', 'ohtaufiqmazlan']"
+119,"@F1 Zhou -&gt; Alpine 
+Mick-&gt; alfa Romeo 
+Ricciardo -&gt;  haas 
+Vries -&gt; Williams","f zhou gt alpine 
+mickgt alfa romeo 
+ricciardo gt  haas 
+vries gt williams",0.0,0.0,positive,"['f', 'zhou', 'gt', 'alpine', 'mickgt', 'alfa', 'romeo', 'ricciardo', 'gt', 'haas', 'vries', 'gt', 'williams']","['f', 'zhou', 'gt', 'alpine', 'mickgt', 'alfa', 'romeo', 'ricciardo', 'gt', 'haas', 'vries', 'gt', 'williams']","['f', 'zhou', 'gt', 'alpin', 'mickgt', 'alfa', 'romeo', 'ricciardo', 'gt', 'haa', 'vri', 'gt', 'william']"
+120,"De Vries to Williams
+Ricciardo to Alpine
+Gasly to Alfa Romeo https://t.co/W1WjXGnvQe","de vries to williams
+ricciardo to alpine
+gasly to alfa romeo httpstcowwjxgnvqe",0.0,0.0,neutral,"['de', 'vries', 'to', 'williams', 'ricciardo', 'to', 'alpine', 'gasly', 'to', 'alfa', 'romeo', 'httpstcowwjxgnvqe']","['de', 'vries', 'williams', 'ricciardo', 'alpine', 'gasly', 'alfa', 'romeo', 'httpstcowwjxgnvqe']","['de', 'vri', 'william', 'ricciardo', 'alpin', 'gasli', 'alfa', 'romeo', 'httpstcowwjxgnvq']"
+121,"@F1 Maybe Mick to Alfa Romeo as a opportunity too?
+Because of audi","f maybe mick to alfa romeo as a opportunity too
+because of audi",0.0,0.0,positive,"['f', 'maybe', 'mick', 'to', 'alfa', 'romeo', 'as', 'a', 'opportunity', 'too', 'because', 'of', 'audi']","['f', 'maybe', 'mick', 'alfa', 'romeo', 'opportunity', 'audi']","['f', 'mayb', 'mick', 'alfa', 'romeo', 'opportun', 'audi']"
+122,alfa romeo should resign zhou https://t.co/OvLPYtZCuD,alfa romeo should resign zhou httpstcoovlpytzcud,0.0,0.0,negative,"['alfa', 'romeo', 'should', 'resign', 'zhou', 'httpstcoovlpytzcud']","['alfa', 'romeo', 'resign', 'zhou', 'httpstcoovlpytzcud']","['alfa', 'romeo', 'resign', 'zhou', 'httpstcoovlpytzcud']"
+123,"@F1 Gasly at Alpine 
+Mick Schumacher at Alfa Romeo
+De Vries at Williams
+Daniel Ricciardo at Haas
+
+;)","f gasly at alpine 
+mick schumacher at alfa romeo
+de vries at williams
+daniel ricciardo at haas
+
+",0.0,0.0,neutral,"['f', 'gasly', 'at', 'alpine', 'mick', 'schumacher', 'at', 'alfa', 'romeo', 'de', 'vries', 'at', 'williams', 'daniel', 'ricciardo', 'at', 'haas', '']","['f', 'gasly', 'alpine', 'mick', 'schumacher', 'alfa', 'romeo', 'de', 'vries', 'williams', 'daniel', 'ricciardo', 'haas', '']","['f', 'gasli', 'alpin', 'mick', 'schumach', 'alfa', 'romeo', 'de', 'vri', 'william', 'daniel', 'ricciardo', 'haa', '']"
+124,"this could work…
+
+Alpine: Gasly - Ocon
+Alfa Romeo: Bottas - Zhou
+Alpha Tauri: De Vries - Tsunoda
+Haas: Magnussen - Schwartzman
+Williams: Albon - Ricciardo https://t.co/GlKZSEfvti","this could work…
+
+alpine gasly  ocon
+alfa romeo bottas  zhou
+alpha tauri de vries  tsunoda
+haas magnussen  schwartzman
+williams albon  ricciardo httpstcoglkzsefvti",0.0,0.0,neutral,"['this', 'could', 'work', 'alpine', 'gasly', 'ocon', 'alfa', 'romeo', 'bottas', 'zhou', 'alpha', 'tauri', 'de', 'vries', 'tsunoda', 'haas', 'magnussen', 'schwartzman', 'williams', 'albon', 'ricciardo', 'httpstcoglkzsefvti']","['could', 'work', 'alpine', 'gasly', 'ocon', 'alfa', 'romeo', 'bottas', 'zhou', 'alpha', 'tauri', 'de', 'vries', 'tsunoda', 'haas', 'magnussen', 'schwartzman', 'williams', 'albon', 'ricciardo', 'httpstcoglkzsefvti']","['could', 'work', 'alpin', 'gasli', 'ocon', 'alfa', 'romeo', 'botta', 'zhou', 'alpha', 'tauri', 'de', 'vri', 'tsunoda', 'haa', 'magnussen', 'schwartzman', 'william', 'albon', 'ricciardo', 'httpstcoglkzsefvti']"
+125,"Alfa Romeo expected to continue with Zhou. de Vries a shoe-in at Williams but probably in other talks. Schumacher apparently isn’t being considered by Alpine, and 50/50 chance at retaining Haas seat. Riccardo unlikely to take a seat in a worse car than McLaren. Hmmm https://t.co/PRwGpOXxHh",alfa romeo expected to continue with zhou de vries a shoein at williams but probably in other talks schumacher apparently isn’t being considered by alpine and  chance at retaining haas seat riccardo unlikely to take a seat in a worse car than mclaren hmmm httpstcoprwgpoxxhh,-0.21500000000000002,0.445,negative,"['alfa', 'romeo', 'expected', 'to', 'continue', 'with', 'zhou', 'de', 'vries', 'a', 'shoein', 'at', 'williams', 'but', 'probably', 'in', 'other', 'talks', 'schumacher', 'apparently', 'isn', 't', 'being', 'considered', 'by', 'alpine', 'and', 'chance', 'at', 'retaining', 'haas', 'seat', 'riccardo', 'unlikely', 'to', 'take', 'a', 'seat', 'in', 'a', 'worse', 'car', 'than', 'mclaren', 'hmmm', 'httpstcoprwgpoxxhh']","['alfa', 'romeo', 'expected', 'continue', 'zhou', 'de', 'vries', 'shoein', 'williams', 'probably', 'talks', 'schumacher', 'apparently', 'considered', 'alpine', 'chance', 'retaining', 'haas', 'seat', 'riccardo', 'unlikely', 'take', 'seat', 'worse', 'car', 'mclaren', 'hmmm', 'httpstcoprwgpoxxhh']","['alfa', 'romeo', 'expect', 'continu', 'zhou', 'de', 'vri', 'shoein', 'william', 'probabl', 'talk', 'schumach', 'appar', 'consid', 'alpin', 'chanc', 'retain', 'haa', 'seat', 'riccardo', 'unlik', 'take', 'seat', 'wors', 'car', 'mclaren', 'hmmm', 'httpstcoprwgpoxxhh']"
+126,"@F1 Alfa Romeo - renew with Zhou
+Haas - Ricciardo or Hulkenberg
+AlphaTauri - Schumacher 
+Alpine - Gasly 
+Willians - De Vries","f alfa romeo  renew with zhou
+haas  ricciardo or hulkenberg
+alphatauri  schumacher 
+alpine  gasly 
+willians  de vries",0.0,0.0,neutral,"['f', 'alfa', 'romeo', 'renew', 'with', 'zhou', 'haas', 'ricciardo', 'or', 'hulkenberg', 'alphatauri', 'schumacher', 'alpine', 'gasly', 'willians', 'de', 'vries']","['f', 'alfa', 'romeo', 'renew', 'zhou', 'haas', 'ricciardo', 'hulkenberg', 'alphatauri', 'schumacher', 'alpine', 'gasly', 'willians', 'de', 'vries']","['f', 'alfa', 'romeo', 'renew', 'zhou', 'haa', 'ricciardo', 'hulkenberg', 'alphatauri', 'schumach', 'alpin', 'gasli', 'willian', 'de', 'vri']"
+127,"@MagicRacingDes @AlpineF1Team @F1 @Spotify Full spotify livery would go hard ngl
+
+Also do coca cola alfa romeo","magicracingdes alpinefteam f spotify full spotify livery would go hard ngl
+
+also do coca cola alfa romeo",0.029166666666666646,0.5458333333333334,negative,"['magicracingdes', 'alpinefteam', 'f', 'spotify', 'full', 'spotify', 'livery', 'would', 'go', 'hard', 'ngl', 'also', 'do', 'coca', 'cola', 'alfa', 'romeo']","['magicracingdes', 'alpinefteam', 'f', 'spotify', 'full', 'spotify', 'livery', 'would', 'go', 'hard', 'ngl', 'also', 'coca', 'cola', 'alfa', 'romeo']","['magicracingd', 'alpinefteam', 'f', 'spotifi', 'full', 'spotifi', 'liveri', 'would', 'go', 'hard', 'ngl', 'also', 'coca', 'cola', 'alfa', 'romeo']"
+128,"Alfa Romeo - renovam com Zhou
+Haas - Ricciardo ou Hulkenberg
+AlphaTauri - Schumacher 
+Alpine - Gasly 
+Willians - De Vries https://t.co/wQqyL1RFHh","alfa romeo  renovam com zhou
+haas  ricciardo ou hulkenberg
+alphatauri  schumacher 
+alpine  gasly 
+willians  de vries httpstcowqqylrfhh",0.0,0.0,neutral,"['alfa', 'romeo', 'renovam', 'com', 'zhou', 'haas', 'ricciardo', 'ou', 'hulkenberg', 'alphatauri', 'schumacher', 'alpine', 'gasly', 'willians', 'de', 'vries', 'httpstcowqqylrfhh']","['alfa', 'romeo', 'renovam', 'com', 'zhou', 'haas', 'ricciardo', 'ou', 'hulkenberg', 'alphatauri', 'schumacher', 'alpine', 'gasly', 'willians', 'de', 'vries', 'httpstcowqqylrfhh']","['alfa', 'romeo', 'renovam', 'com', 'zhou', 'haa', 'ricciardo', 'ou', 'hulkenberg', 'alphatauri', 'schumach', 'alpin', 'gasli', 'willian', 'de', 'vri', 'httpstcowqqylrfhh']"
+129,"@F1 Gasly joins Alpine
+Schumacher joins Alfa Romeo
+Ricciardo joins Haas
+De Vries joins Williams
+Latifi joins Alphatauri 💀💀💀","f gasly joins alpine
+schumacher joins alfa romeo
+ricciardo joins haas
+de vries joins williams
+latifi joins alphatauri 💀💀💀",0.0,0.0,neutral,"['f', 'gasly', 'joins', 'alpine', 'schumacher', 'joins', 'alfa', 'romeo', 'ricciardo', 'joins', 'haas', 'de', 'vries', 'joins', 'williams', 'latifi', 'joins', 'alphatauri', '']","['f', 'gasly', 'joins', 'alpine', 'schumacher', 'joins', 'alfa', 'romeo', 'ricciardo', 'joins', 'haas', 'de', 'vries', 'joins', 'williams', 'latifi', 'joins', 'alphatauri', '']","['f', 'gasli', 'join', 'alpin', 'schumach', 'join', 'alfa', 'romeo', 'ricciardo', 'join', 'haa', 'de', 'vri', 'join', 'william', 'latifi', 'join', 'alphatauri', '']"
+130,"@F1 @danielricciardo to Alpine, @SchumacherMick to Alfa Romeo, @PatricioOWard to William and Arthur leclerc to Hass",f danielricciardo to alpine schumachermick to alfa romeo patriciooward to william and arthur leclerc to hass,0.0,0.0,neutral,"['f', 'danielricciardo', 'to', 'alpine', 'schumachermick', 'to', 'alfa', 'romeo', 'patriciooward', 'to', 'william', 'and', 'arthur', 'leclerc', 'to', 'hass']","['f', 'danielricciardo', 'alpine', 'schumachermick', 'alfa', 'romeo', 'patriciooward', 'william', 'arthur', 'leclerc', 'hass']","['f', 'danielricciardo', 'alpin', 'schumachermick', 'alfa', 'romeo', 'patriciooward', 'william', 'arthur', 'leclerc', 'hass']"
+131,"@F1 Shumacher in Alpine
+Riccardo in Hass
+De vries in Williams
+Zhou/Giovinazzi in Alfa Romeo","f shumacher in alpine
+riccardo in hass
+de vries in williams
+zhougiovinazzi in alfa romeo",0.0,0.0,neutral,"['f', 'shumacher', 'in', 'alpine', 'riccardo', 'in', 'hass', 'de', 'vries', 'in', 'williams', 'zhougiovinazzi', 'in', 'alfa', 'romeo']","['f', 'shumacher', 'alpine', 'riccardo', 'hass', 'de', 'vries', 'williams', 'zhougiovinazzi', 'alfa', 'romeo']","['f', 'shumach', 'alpin', 'riccardo', 'hass', 'de', 'vri', 'william', 'zhougiovinazzi', 'alfa', 'romeo']"
+132,or alfa romeo 🧐 https://t.co/mpGhJEwd10,or alfa romeo 🧐 httpstcompghjewd,0.0,0.0,neutral,"['or', 'alfa', 'romeo', 'httpstcompghjewd']","['alfa', 'romeo', 'httpstcompghjewd']","['alfa', 'romeo', 'httpstcompghjewd']"
+133,"Ideal scenario for me that is also semi realistic 
+
+Alpine - Ricciardo 
+Alfa Romeo - Zhou 
+Haas - Schumacher 
+Williams - Sargeant https://t.co/jgrtltp1rh","ideal scenario for me that is also semi realistic 
+
+alpine  ricciardo 
+alfa romeo  zhou 
+haas  schumacher 
+williams  sargeant httpstcojgrtltprh",0.5333333333333333,0.6666666666666666,positive,"['ideal', 'scenario', 'for', 'me', 'that', 'is', 'also', 'semi', 'realistic', 'alpine', 'ricciardo', 'alfa', 'romeo', 'zhou', 'haas', 'schumacher', 'williams', 'sargeant', 'httpstcojgrtltprh']","['ideal', 'scenario', 'also', 'semi', 'realistic', 'alpine', 'ricciardo', 'alfa', 'romeo', 'zhou', 'haas', 'schumacher', 'williams', 'sargeant', 'httpstcojgrtltprh']","['ideal', 'scenario', 'also', 'semi', 'realist', 'alpin', 'ricciardo', 'alfa', 'romeo', 'zhou', 'haa', 'schumach', 'william', 'sargeant', 'httpstcojgrtltprh']"
+134,"@F1 Zhou to Alfa Romeo
+Gasly to Alpine
+De Vries to Williams
+Schumacher to Alpha Tauri
+No idea about Haas","f zhou to alfa romeo
+gasly to alpine
+de vries to williams
+schumacher to alpha tauri
+no idea about haas",0.0,0.0,negative,"['f', 'zhou', 'to', 'alfa', 'romeo', 'gasly', 'to', 'alpine', 'de', 'vries', 'to', 'williams', 'schumacher', 'to', 'alpha', 'tauri', 'no', 'idea', 'about', 'haas']","['f', 'zhou', 'alfa', 'romeo', 'gasly', 'alpine', 'de', 'vries', 'williams', 'schumacher', 'alpha', 'tauri', 'idea', 'haas']","['f', 'zhou', 'alfa', 'romeo', 'gasli', 'alpin', 'de', 'vri', 'william', 'schumach', 'alpha', 'tauri', 'idea', 'haa']"
+135,"Four seats up for grabs (at present) on the #F1 grid next year...
+
+...so go on, let us know who you think should fill each?
+
+- Alpine
+- Alfa Romeo 
+- Haas
+- Williams 
+
+Comment them below!","four seats up for grabs at present on the f grid next year
+
+so go on let us know who you think should fill each
+
+ alpine
+ alfa romeo 
+ haas
+ williams 
+
+comment them below",0.0,0.0,neutral,"['four', 'seats', 'up', 'for', 'grabs', 'at', 'present', 'on', 'the', 'f', 'grid', 'next', 'year', 'so', 'go', 'on', 'let', 'us', 'know', 'who', 'you', 'think', 'should', 'fill', 'each', 'alpine', 'alfa', 'romeo', 'haas', 'williams', 'comment', 'them', 'below']","['four', 'seats', 'grabs', 'present', 'f', 'grid', 'next', 'year', 'go', 'let', 'us', 'know', 'think', 'fill', 'alpine', 'alfa', 'romeo', 'haas', 'williams', 'comment']","['four', 'seat', 'grab', 'present', 'f', 'grid', 'next', 'year', 'go', 'let', 'us', 'know', 'think', 'fill', 'alpin', 'alfa', 'romeo', 'haa', 'william', 'comment']"
+136,"Here’s what I think will happen
+De Vries will sign with Williams 
+Schumacher will sign with Alpine
+Zhou will stay with Alfa Romeo
+And Hulkenberg will sign with Haas
+#F1 #F12023 https://t.co/lsEawQoj33","here’s what i think will happen
+de vries will sign with williams 
+schumacher will sign with alpine
+zhou will stay with alfa romeo
+and hulkenberg will sign with haas
+f f httpstcolseawqoj",0.0,0.0,neutral,"['here', 's', 'what', 'i', 'think', 'will', 'happen', 'de', 'vries', 'will', 'sign', 'with', 'williams', 'schumacher', 'will', 'sign', 'with', 'alpine', 'zhou', 'will', 'stay', 'with', 'alfa', 'romeo', 'and', 'hulkenberg', 'will', 'sign', 'with', 'haas', 'f', 'f', 'httpstcolseawqoj']","['think', 'happen', 'de', 'vries', 'sign', 'williams', 'schumacher', 'sign', 'alpine', 'zhou', 'stay', 'alfa', 'romeo', 'hulkenberg', 'sign', 'haas', 'f', 'f', 'httpstcolseawqoj']","['think', 'happen', 'de', 'vri', 'sign', 'william', 'schumach', 'sign', 'alpin', 'zhou', 'stay', 'alfa', 'romeo', 'hulkenberg', 'sign', 'haa', 'f', 'f', 'httpstcolseawqoj']"
+137,"Alfa Romeo - sign zhou / replace by drugovich.
+Alpine - nyck de vries.
+Williams - all in for logan sargeant. https://t.co/6X1pYJYz5C","alfa romeo  sign zhou  replace by drugovich
+alpine  nyck de vries
+williams  all in for logan sargeant httpstcoxpyjyzc",0.0,0.0,neutral,"['alfa', 'romeo', 'sign', 'zhou', 'replace', 'by', 'drugovich', 'alpine', 'nyck', 'de', 'vries', 'williams', 'all', 'in', 'for', 'logan', 'sargeant', 'httpstcoxpyjyzc']","['alfa', 'romeo', 'sign', 'zhou', 'replace', 'drugovich', 'alpine', 'nyck', 'de', 'vries', 'williams', 'logan', 'sargeant', 'httpstcoxpyjyzc']","['alfa', 'romeo', 'sign', 'zhou', 'replac', 'drugovich', 'alpin', 'nyck', 'de', 'vri', 'william', 'logan', 'sargeant', 'httpstcoxpyjyzc']"
+138,Zhou got dropped from Alfa Romeo? https://t.co/UCvnW0Y4Pn,zhou got dropped from alfa romeo httpstcoucvnwypn,0.0,0.0,neutral,"['zhou', 'got', 'dropped', 'from', 'alfa', 'romeo', 'httpstcoucvnwypn']","['zhou', 'got', 'dropped', 'alfa', 'romeo', 'httpstcoucvnwypn']","['zhou', 'got', 'drop', 'alfa', 'romeo', 'httpstcoucvnwypn']"
+139,zhou not confirmed for alfa romeo????? https://t.co/Rs4ECK9GN8,zhou not confirmed for alfa romeo httpstcorseckgn,-0.2,1.0,neutral,"['zhou', 'not', 'confirmed', 'for', 'alfa', 'romeo', 'httpstcorseckgn']","['zhou', 'confirmed', 'alfa', 'romeo', 'httpstcorseckgn']","['zhou', 'confirm', 'alfa', 'romeo', 'httpstcorseckgn']"
+140,Most intrigued by how the Williams and Alfa Romeo lineups look heading into next year. Will Mick make a move to another team? Gasly to Alpine and De Vries to Alpha seem the obvious thing rn. Potential for Ricciardo anywhere? Hulkenburg? Drugovich? Pourchaire? We'll see. https://t.co/VI6l6ENYGf,most intrigued by how the williams and alfa romeo lineups look heading into next year will mick make a move to another team gasly to alpine and de vries to alpha seem the obvious thing rn potential for ricciardo anywhere hulkenburg drugovich pourchaire well see httpstcovilenygf,0.125,0.5,positive,"['most', 'intrigued', 'by', 'how', 'the', 'williams', 'and', 'alfa', 'romeo', 'lineups', 'look', 'heading', 'into', 'next', 'year', 'will', 'mick', 'make', 'a', 'move', 'to', 'another', 'team', 'gasly', 'to', 'alpine', 'and', 'de', 'vries', 'to', 'alpha', 'seem', 'the', 'obvious', 'thing', 'rn', 'potential', 'for', 'ricciardo', 'anywhere', 'hulkenburg', 'drugovich', 'pourchaire', 'well', 'see', 'httpstcovilenygf']","['intrigued', 'williams', 'alfa', 'romeo', 'lineups', 'look', 'heading', 'next', 'year', 'mick', 'make', 'move', 'another', 'team', 'gasly', 'alpine', 'de', 'vries', 'alpha', 'seem', 'obvious', 'thing', 'rn', 'potential', 'ricciardo', 'anywhere', 'hulkenburg', 'drugovich', 'pourchaire', 'well', 'see', 'httpstcovilenygf']","['intrigu', 'william', 'alfa', 'romeo', 'lineup', 'look', 'head', 'next', 'year', 'mick', 'make', 'move', 'anoth', 'team', 'gasli', 'alpin', 'de', 'vri', 'alpha', 'seem', 'obviou', 'thing', 'rn', 'potenti', 'ricciardo', 'anywher', 'hulkenburg', 'drugovich', 'pourchair', 'well', 'see', 'httpstcovilenygf']"
+141,@F1 Alfa Romeo?? Is Zhou leaving too,f alfa romeo is zhou leaving too,0.0,0.0,neutral,"['f', 'alfa', 'romeo', 'is', 'zhou', 'leaving', 'too']","['f', 'alfa', 'romeo', 'zhou', 'leaving']","['f', 'alfa', 'romeo', 'zhou', 'leav']"
+142,"No Goatifi in 2023.. 
+
+My predictions are still on track. What are your predictions for the F1 seats in F1? 
+
+My predictions: 
+Gasly to Alpine
+Mick to Williams 
+De Vries to Alpha Tauri
+Hulkenberg to Haas 
+Zhou another year at Alfa Romeo","no goatifi in  
+
+my predictions are still on track what are your predictions for the f seats in f 
+
+my predictions 
+gasly to alpine
+mick to williams 
+de vries to alpha tauri
+hulkenberg to haas 
+zhou another year at alfa romeo",0.0,0.0,negative,"['no', 'goatifi', 'in', 'my', 'predictions', 'are', 'still', 'on', 'track', 'what', 'are', 'your', 'predictions', 'for', 'the', 'f', 'seats', 'in', 'f', 'my', 'predictions', 'gasly', 'to', 'alpine', 'mick', 'to', 'williams', 'de', 'vries', 'to', 'alpha', 'tauri', 'hulkenberg', 'to', 'haas', 'zhou', 'another', 'year', 'at', 'alfa', 'romeo']","['goatifi', 'predictions', 'still', 'track', 'predictions', 'f', 'seats', 'f', 'predictions', 'gasly', 'alpine', 'mick', 'williams', 'de', 'vries', 'alpha', 'tauri', 'hulkenberg', 'haas', 'zhou', 'another', 'year', 'alfa', 'romeo']","['goatifi', 'predict', 'still', 'track', 'predict', 'f', 'seat', 'f', 'predict', 'gasli', 'alpin', 'mick', 'william', 'de', 'vri', 'alpha', 'tauri', 'hulkenberg', 'haa', 'zhou', 'anoth', 'year', 'alfa', 'romeo']"
+143,@WilliamsRacing I think it will be Zhou from Alfa Romeo.  On the 27th Alfa Romeo will rebrand as Audi Sauber with Mick Schumacher for having a German driver with German team (reason he left Ferrari).  Zhou will bring the money to Williams.  Gasly - Alpine and Nick DeVries to Alphatauri #F1,williamsracing i think it will be zhou from alfa romeo  on the th alfa romeo will rebrand as audi sauber with mick schumacher for having a german driver with german team reason he left ferrari  zhou will bring the money to williams  gasly  alpine and nick devries to alphatauri f,0.0,0.0,neutral,"['williamsracing', 'i', 'think', 'it', 'will', 'be', 'zhou', 'from', 'alfa', 'romeo', 'on', 'the', 'th', 'alfa', 'romeo', 'will', 'rebrand', 'as', 'audi', 'sauber', 'with', 'mick', 'schumacher', 'for', 'having', 'a', 'german', 'driver', 'with', 'german', 'team', 'reason', 'he', 'left', 'ferrari', 'zhou', 'will', 'bring', 'the', 'money', 'to', 'williams', 'gasly', 'alpine', 'and', 'nick', 'devries', 'to', 'alphatauri', 'f']","['williamsracing', 'think', 'zhou', 'alfa', 'romeo', 'th', 'alfa', 'romeo', 'rebrand', 'audi', 'sauber', 'mick', 'schumacher', 'german', 'driver', 'german', 'team', 'reason', 'left', 'ferrari', 'zhou', 'bring', 'money', 'williams', 'gasly', 'alpine', 'nick', 'devries', 'alphatauri', 'f']","['williamsrac', 'think', 'zhou', 'alfa', 'romeo', 'th', 'alfa', 'romeo', 'rebrand', 'audi', 'sauber', 'mick', 'schumach', 'german', 'driver', 'german', 'team', 'reason', 'left', 'ferrari', 'zhou', 'bring', 'money', 'william', 'gasli', 'alpin', 'nick', 'devri', 'alphatauri', 'f']"
+144,"@NicoRS99 @CarlossScience Forgot that Italy is a classic country of motorsport, Ferrari, alfa Romeo, alpha tauri, Minardi, Maserati, etc... Is understable 2 races in Italy...but 3 races in USA, without drive to survive you wouldn't know abaut F1",nicors carlossscience forgot that italy is a classic country of motorsport ferrari alfa romeo alpha tauri minardi maserati etc is understable  races in italybut  races in usa without drive to survive you wouldnt know abaut f,0.16666666666666666,0.16666666666666666,neutral,"['nicors', 'carlossscience', 'forgot', 'that', 'italy', 'is', 'a', 'classic', 'country', 'of', 'motorsport', 'ferrari', 'alfa', 'romeo', 'alpha', 'tauri', 'minardi', 'maserati', 'etc', 'is', 'understable', 'races', 'in', 'italybut', 'races', 'in', 'usa', 'without', 'drive', 'to', 'survive', 'you', 'wouldnt', 'know', 'abaut', 'f']","['nicors', 'carlossscience', 'forgot', 'italy', 'classic', 'country', 'motorsport', 'ferrari', 'alfa', 'romeo', 'alpha', 'tauri', 'minardi', 'maserati', 'etc', 'understable', 'races', 'italybut', 'races', 'usa', 'without', 'drive', 'survive', 'wouldnt', 'know', 'abaut', 'f']","['nicor', 'carlosssci', 'forgot', 'itali', 'classic', 'countri', 'motorsport', 'ferrari', 'alfa', 'romeo', 'alpha', 'tauri', 'minardi', 'maserati', 'etc', 'underst', 'race', 'italybut', 'race', 'usa', 'without', 'drive', 'surviv', 'wouldnt', 'know', 'abaut', 'f']"
+145,"Alfa Romeo
+
+- Sauber F1 Team
+- Alfa Romeo F1 Team","alfa romeo
+
+ sauber f team
+ alfa romeo f team",0.0,0.0,neutral,"['alfa', 'romeo', 'sauber', 'f', 'team', 'alfa', 'romeo', 'f', 'team']","['alfa', 'romeo', 'sauber', 'f', 'team', 'alfa', 'romeo', 'f', 'team']","['alfa', 'romeo', 'sauber', 'f', 'team', 'alfa', 'romeo', 'f', 'team']"
+146,@Juul117 @alfaromeoorlen won’t be because this account is alfa romeo f1 team not alfa romeo manufacture,juul alfaromeoorlen won’t be because this account is alfa romeo f team not alfa romeo manufacture,0.0,0.0,neutral,"['juul', 'alfaromeoorlen', 'won', 't', 'be', 'because', 'this', 'account', 'is', 'alfa', 'romeo', 'f', 'team', 'not', 'alfa', 'romeo', 'manufacture']","['juul', 'alfaromeoorlen', 'account', 'alfa', 'romeo', 'f', 'team', 'alfa', 'romeo', 'manufacture']","['juul', 'alfaromeoorlen', 'account', 'alfa', 'romeo', 'f', 'team', 'alfa', 'romeo', 'manufactur']"
+147,"Course 2 - Saison 6 @FOA_officiel
+🏆 WINNER 🏆
+🧑🏼‍🦲Adrian Zanga - Alfa Romeo 🏎
+
+#F1 #F122game #f122 #PS5 #Championship #jeddah #arabiesaoudite #ps4 #PS4share #PS5Share #PS4live #Formula1 #WINNER https://t.co/pKsNO3qPnf","course   saison  foaofficiel
+🏆 winner 🏆
+🧑🏼‍🦲adrian zanga  alfa romeo 🏎
+
+f fgame f ps championship jeddah arabiesaoudite ps psshare psshare pslive formula winner httpstcopksnoqpnf",0.0,0.0,positive,"['course', 'saison', 'foaofficiel', 'winner', 'adrian', 'zanga', 'alfa', 'romeo', 'f', 'fgame', 'f', 'ps', 'championship', 'jeddah', 'arabiesaoudite', 'ps', 'psshare', 'psshare', 'pslive', 'formula', 'winner', 'httpstcopksnoqpnf']","['course', 'saison', 'foaofficiel', 'winner', 'adrian', 'zanga', 'alfa', 'romeo', 'f', 'fgame', 'f', 'ps', 'championship', 'jeddah', 'arabiesaoudite', 'ps', 'psshare', 'psshare', 'pslive', 'formula', 'winner', 'httpstcopksnoqpnf']","['cours', 'saison', 'foaofficiel', 'winner', 'adrian', 'zanga', 'alfa', 'romeo', 'f', 'fgame', 'f', 'ps', 'championship', 'jeddah', 'arabiesaoudit', 'ps', 'psshare', 'psshare', 'pslive', 'formula', 'winner', 'httpstcopksnoqpnf']"
+148,"I know it looks more of a tiger instead of a cheetah, but I’m gonna say: Alfa Romeo Techeetah F1 Team and a new contract for Zhou https://t.co/zj26xVh8zZ",i know it looks more of a tiger instead of a cheetah but i’m gonna say alfa romeo techeetah f team and a new contract for zhou httpstcozjxvhzz,0.3181818181818182,0.4772727272727273,neutral,"['i', 'know', 'it', 'looks', 'more', 'of', 'a', 'tiger', 'instead', 'of', 'a', 'cheetah', 'but', 'i', 'm', 'gonna', 'say', 'alfa', 'romeo', 'techeetah', 'f', 'team', 'and', 'a', 'new', 'contract', 'for', 'zhou', 'httpstcozjxvhzz']","['know', 'looks', 'tiger', 'instead', 'cheetah', 'gonna', 'say', 'alfa', 'romeo', 'techeetah', 'f', 'team', 'new', 'contract', 'zhou', 'httpstcozjxvhzz']","['know', 'look', 'tiger', 'instead', 'cheetah', 'gonna', 'say', 'alfa', 'romeo', 'techeetah', 'f', 'team', 'new', 'contract', 'zhou', 'httpstcozjxvhzz']"
+149,"Discover how Big Data Analysis and Critical Thinking drive Florian Fiedler to succeed as Race Strategy Engineer at Alfa Romeo F1 Team ORLEN!
+
+Watch the full STEM Lab_Revealed episode, out now!
+
+DISCOVER MORE: https://t.co/81lrC3EvW9 https://t.co/Gb5reczn3Z","discover how big data analysis and critical thinking drive florian fiedler to succeed as race strategy engineer at alfa romeo f team orlen
+
+watch the full stem labrevealed episode out now
+
+discover more httpstcolrcevw httpstcogbrecznz",0.2125,0.48750000000000004,positive,"['discover', 'how', 'big', 'data', 'analysis', 'and', 'critical', 'thinking', 'drive', 'florian', 'fiedler', 'to', 'succeed', 'as', 'race', 'strategy', 'engineer', 'at', 'alfa', 'romeo', 'f', 'team', 'orlen', 'watch', 'the', 'full', 'stem', 'labrevealed', 'episode', 'out', 'now', 'discover', 'more', 'httpstcolrcevw', 'httpstcogbrecznz']","['discover', 'big', 'data', 'analysis', 'critical', 'thinking', 'drive', 'florian', 'fiedler', 'succeed', 'race', 'strategy', 'engineer', 'alfa', 'romeo', 'f', 'team', 'orlen', 'watch', 'full', 'stem', 'labrevealed', 'episode', 'discover', 'httpstcolrcevw', 'httpstcogbrecznz']","['discov', 'big', 'data', 'analysi', 'critic', 'think', 'drive', 'florian', 'fiedler', 'succeed', 'race', 'strategi', 'engin', 'alfa', 'romeo', 'f', 'team', 'orlen', 'watch', 'full', 'stem', 'labrev', 'episod', 'discov', 'httpstcolrcevw', 'httpstcogbrecznz']"
+150,"Let's continue our F1 Manager season with Alfa Romeo as we head to Singapore. 
+
+Come and say hi at https://t.co/a1KYIVzqCa","lets continue our f manager season with alfa romeo as we head to singapore 
+
+come and say hi at httpstcoakyivzqca",0.0,0.0,neutral,"['lets', 'continue', 'our', 'f', 'manager', 'season', 'with', 'alfa', 'romeo', 'as', 'we', 'head', 'to', 'singapore', 'come', 'and', 'say', 'hi', 'at', 'httpstcoakyivzqca']","['lets', 'continue', 'f', 'manager', 'season', 'alfa', 'romeo', 'head', 'singapore', 'come', 'say', 'hi', 'httpstcoakyivzqca']","['let', 'continu', 'f', 'manag', 'season', 'alfa', 'romeo', 'head', 'singapor', 'come', 'say', 'hi', 'httpstcoakyivzqca']"
+151,"7th place was taken by McLaren's, Lando Norris 8th was taken by 2020 winner Pierre Gasly, in 9th place it was Nyck de Vries a solid job subbing for Alex Albon at Williams, taking the final point in 10th was Zhou Guanyu for Alfa Romeo...#McLaren #F1",th place was taken by mclarens lando norris th was taken by  winner pierre gasly in th place it was nyck de vries a solid job subbing for alex albon at williams taking the final point in th was zhou guanyu for alfa romeomclaren f,0.0,0.55,positive,"['th', 'place', 'was', 'taken', 'by', 'mclarens', 'lando', 'norris', 'th', 'was', 'taken', 'by', 'winner', 'pierre', 'gasly', 'in', 'th', 'place', 'it', 'was', 'nyck', 'de', 'vries', 'a', 'solid', 'job', 'subbing', 'for', 'alex', 'albon', 'at', 'williams', 'taking', 'the', 'final', 'point', 'in', 'th', 'was', 'zhou', 'guanyu', 'for', 'alfa', 'romeomclaren', 'f']","['th', 'place', 'taken', 'mclarens', 'lando', 'norris', 'th', 'taken', 'winner', 'pierre', 'gasly', 'th', 'place', 'nyck', 'de', 'vries', 'solid', 'job', 'subbing', 'alex', 'albon', 'williams', 'taking', 'final', 'point', 'th', 'zhou', 'guanyu', 'alfa', 'romeomclaren', 'f']","['th', 'place', 'taken', 'mclaren', 'lando', 'norri', 'th', 'taken', 'winner', 'pierr', 'gasli', 'th', 'place', 'nyck', 'de', 'vri', 'solid', 'job', 'sub', 'alex', 'albon', 'william', 'take', 'final', 'point', 'th', 'zhou', 'guanyu', 'alfa', 'romeomclaren', 'f']"
+152,"@formularacers_ Hulk had his chance in F1. Let a rookie step in. You're doing it for the drama and not the sake of sportsmanship. MSC is showing potential. He's not Michael, but he can a valuable asset. Got to give him time.
+
+Or get a rookie. Stick to being an academy/sister team like Alfa Romeo","formularacers hulk had his chance in f let a rookie step in youre doing it for the drama and not the sake of sportsmanship msc is showing potential hes not michael but he can a valuable asset got to give him time
+
+or get a rookie stick to being an academysister team like alfa romeo",0.0,1.0,positive,"['formularacers', 'hulk', 'had', 'his', 'chance', 'in', 'f', 'let', 'a', 'rookie', 'step', 'in', 'youre', 'doing', 'it', 'for', 'the', 'drama', 'and', 'not', 'the', 'sake', 'of', 'sportsmanship', 'msc', 'is', 'showing', 'potential', 'hes', 'not', 'michael', 'but', 'he', 'can', 'a', 'valuable', 'asset', 'got', 'to', 'give', 'him', 'time', 'or', 'get', 'a', 'rookie', 'stick', 'to', 'being', 'an', 'academysister', 'team', 'like', 'alfa', 'romeo']","['formularacers', 'hulk', 'chance', 'f', 'let', 'rookie', 'step', 'youre', 'drama', 'sake', 'sportsmanship', 'msc', 'showing', 'potential', 'hes', 'michael', 'valuable', 'asset', 'got', 'give', 'time', 'get', 'rookie', 'stick', 'academysister', 'team', 'like', 'alfa', 'romeo']","['formularac', 'hulk', 'chanc', 'f', 'let', 'rooki', 'step', 'your', 'drama', 'sake', 'sportsmanship', 'msc', 'show', 'potenti', 'he', 'michael', 'valuabl', 'asset', 'got', 'give', 'time', 'get', 'rooki', 'stick', 'academysist', 'team', 'like', 'alfa', 'romeo']"
+153,"@BostonExpat412 @F1 Points in a Williams/Alfa Romeo/Mclaren Honda
+Zhou/De vries/Vandoorne:31
+Hamilton:0","bostonexpat f points in a williamsalfa romeomclaren honda
+zhoude vriesvandoorne
+hamilton",0.0,0.0,neutral,"['bostonexpat', 'f', 'points', 'in', 'a', 'williamsalfa', 'romeomclaren', 'honda', 'zhoude', 'vriesvandoorne', 'hamilton']","['bostonexpat', 'f', 'points', 'williamsalfa', 'romeomclaren', 'honda', 'zhoude', 'vriesvandoorne', 'hamilton']","['bostonexpat', 'f', 'point', 'williamsalfa', 'romeomclaren', 'honda', 'zhoud', 'vriesvandoorn', 'hamilton']"
+154,"What do you think Alfa Romeo is going to announce?
+
+#f1 #formulaone #lewishamilton #georgerussell #maxverstappen #sergioperez #carlossainz #charlesleclerc #alfaromeoracing #f1memes #memes https://t.co/Qqk5wXaSEm","what do you think alfa romeo is going to announce
+
+f formulaone lewishamilton georgerussell maxverstappen sergioperez carlossainz charlesleclerc alfaromeoracing fmemes memes httpstcoqqkwxasem",0.0,0.0,neutral,"['what', 'do', 'you', 'think', 'alfa', 'romeo', 'is', 'going', 'to', 'announce', 'f', 'formulaone', 'lewishamilton', 'georgerussell', 'maxverstappen', 'sergioperez', 'carlossainz', 'charlesleclerc', 'alfaromeoracing', 'fmemes', 'memes', 'httpstcoqqkwxasem']","['think', 'alfa', 'romeo', 'going', 'announce', 'f', 'formulaone', 'lewishamilton', 'georgerussell', 'maxverstappen', 'sergioperez', 'carlossainz', 'charlesleclerc', 'alfaromeoracing', 'fmemes', 'memes', 'httpstcoqqkwxasem']","['think', 'alfa', 'romeo', 'go', 'announc', 'f', 'formulaon', 'lewishamilton', 'georgerussel', 'maxverstappen', 'sergioperez', 'carlossainz', 'charlesleclerc', 'alfaromeorac', 'fmeme', 'meme', 'httpstcoqqkwxasem']"
+155,Check out 2020 Topps Chrome F1 Sapphire Kimi Raikkonen Refractor #15 Alfa Romeo A947 https://t.co/Rkr9a7vdHk #eBay via @eBay,check out  topps chrome f sapphire kimi raikkonen refractor  alfa romeo a httpstcorkravdhk ebay via ebay,0.0,0.0,neutral,"['check', 'out', 'topps', 'chrome', 'f', 'sapphire', 'kimi', 'raikkonen', 'refractor', 'alfa', 'romeo', 'a', 'httpstcorkravdhk', 'ebay', 'via', 'ebay']","['check', 'topps', 'chrome', 'f', 'sapphire', 'kimi', 'raikkonen', 'refractor', 'alfa', 'romeo', 'httpstcorkravdhk', 'ebay', 'via', 'ebay']","['check', 'topp', 'chrome', 'f', 'sapphir', 'kimi', 'raikkonen', 'refractor', 'alfa', 'romeo', 'httpstcorkravdhk', 'ebay', 'via', 'ebay']"
+156,Got some Alfa Romeo F1 merch 😌 https://t.co/nlfCCC4MFZ,got some alfa romeo f merch 😌 httpstconlfcccmfz,0.0,0.0,neutral,"['got', 'some', 'alfa', 'romeo', 'f', 'merch', 'httpstconlfcccmfz']","['got', 'alfa', 'romeo', 'f', 'merch', 'httpstconlfcccmfz']","['got', 'alfa', 'romeo', 'f', 'merch', 'httpstconlfcccmfz']"
+157,‘Please not another NFT thing’: F1 Twitter left bewildered by Alfa Romeo’s cryptic announcement teaser https://t.co/okpKd4IeD8 #Formula1,‘please not another nft thing’ f twitter left bewildered by alfa romeo’s cryptic announcement teaser httpstcookpkdied formula,0.0,0.0,negative,"['', 'please', 'not', 'another', 'nft', 'thing', 'f', 'twitter', 'left', 'bewildered', 'by', 'alfa', 'romeo', 's', 'cryptic', 'announcement', 'teaser', 'httpstcookpkdied', 'formula']","['', 'please', 'another', 'nft', 'thing', 'f', 'twitter', 'left', 'bewildered', 'alfa', 'romeo', 'cryptic', 'announcement', 'teaser', 'httpstcookpkdied', 'formula']","['', 'pleas', 'anoth', 'nft', 'thing', 'f', 'twitter', 'left', 'bewild', 'alfa', 'romeo', 'cryptic', 'announc', 'teaser', 'httpstcookpkdi', 'formula']"
+158,OPINION PIECE: Is Zhou's performance worth the money? #GrandPrix #GPToday #Formula1 #F1 #F1News #Motorsport https://t.co/WIgFM1W2xV,opinion piece is zhous performance worth the money grandprix gptoday formula f fnews motorsport httpstcowigfmwxv,0.3,0.1,positive,"['opinion', 'piece', 'is', 'zhous', 'performance', 'worth', 'the', 'money', 'grandprix', 'gptoday', 'formula', 'f', 'fnews', 'motorsport', 'httpstcowigfmwxv']","['opinion', 'piece', 'zhous', 'performance', 'worth', 'money', 'grandprix', 'gptoday', 'formula', 'f', 'fnews', 'motorsport', 'httpstcowigfmwxv']","['opinion', 'piec', 'zhou', 'perform', 'worth', 'money', 'grandprix', 'gptoday', 'formula', 'f', 'fnew', 'motorsport', 'httpstcowigfmwxv']"
+159,"WELCOME THÉO ! 🇫🇷
+
+The young Frenchman will join Alfa Romeo F1 Team ORLEN in 2023 for a 2 years contract !
+
+Read full announcement 📲 https://t.co/QkeQ9QjI2J
+
+#AlfaRomeoRacing #ORLEN #TP21 https://t.co/nwnHgWABqR","welcome théo  🇫🇷
+
+the young frenchman will join alfa romeo f team orlen in  for a  years contract 
+
+read full announcement 📲 httpstcoqkeqqjij
+
+alfaromeoracing orlen tp httpstconwnhgwabqr",0.4166666666666667,0.6166666666666667,positive,"['welcome', 'théo', 'the', 'young', 'frenchman', 'will', 'join', 'alfa', 'romeo', 'f', 'team', 'orlen', 'in', 'for', 'a', 'years', 'contract', 'read', 'full', 'announcement', 'httpstcoqkeqqjij', 'alfaromeoracing', 'orlen', 'tp', 'httpstconwnhgwabqr']","['welcome', 'théo', 'young', 'frenchman', 'join', 'alfa', 'romeo', 'f', 'team', 'orlen', 'years', 'contract', 'read', 'full', 'announcement', 'httpstcoqkeqqjij', 'alfaromeoracing', 'orlen', 'tp', 'httpstconwnhgwabqr']","['welcom', 'théo', 'young', 'frenchman', 'join', 'alfa', 'romeo', 'f', 'team', 'orlen', 'year', 'contract', 'read', 'full', 'announc', 'httpstcoqkeqqjij', 'alfaromeorac', 'orlen', 'tp', 'httpstconwnhgwabqr']"
+160,Data Driven F1 Facts: Alfa Romeo Racing (1913 - 1949) https://t.co/AH01Fqmr5m via @YouTube,data driven f facts alfa romeo racing    httpstcoahfqmrm via youtube,0.0,0.0,neutral,"['data', 'driven', 'f', 'facts', 'alfa', 'romeo', 'racing', 'httpstcoahfqmrm', 'via', 'youtube']","['data', 'driven', 'f', 'facts', 'alfa', 'romeo', 'racing', 'httpstcoahfqmrm', 'via', 'youtube']","['data', 'driven', 'f', 'fact', 'alfa', 'romeo', 'race', 'httpstcoahfqmrm', 'via', 'youtub']"
+161,"Latest #F1 news... F1 News: Alfa Romeo tease big upcoming announcement
+More details here:
+https://t.co/emMKYqpIr4","latest f news f news alfa romeo tease big upcoming announcement
+more details here
+httpstcoemmkyqpir",0.3333333333333333,0.5,negative,"['latest', 'f', 'news', 'f', 'news', 'alfa', 'romeo', 'tease', 'big', 'upcoming', 'announcement', 'more', 'details', 'here', 'httpstcoemmkyqpir']","['latest', 'f', 'news', 'f', 'news', 'alfa', 'romeo', 'tease', 'big', 'upcoming', 'announcement', 'details', 'httpstcoemmkyqpir']","['latest', 'f', 'news', 'f', 'news', 'alfa', 'romeo', 'teas', 'big', 'upcom', 'announc', 'detail', 'httpstcoemmkyqpir']"
+162,Zhou under pressure at Alfa Romeo: Is his performance worth the money? #GrandPrix #GPToday #Formula1 #F1 #F1News #Motorsport https://t.co/IjlfiiXItG,zhou under pressure at alfa romeo is his performance worth the money grandprix gptoday formula f fnews motorsport httpstcoijlfiixitg,0.3,0.1,negative,"['zhou', 'under', 'pressure', 'at', 'alfa', 'romeo', 'is', 'his', 'performance', 'worth', 'the', 'money', 'grandprix', 'gptoday', 'formula', 'f', 'fnews', 'motorsport', 'httpstcoijlfiixitg']","['zhou', 'pressure', 'alfa', 'romeo', 'performance', 'worth', 'money', 'grandprix', 'gptoday', 'formula', 'f', 'fnews', 'motorsport', 'httpstcoijlfiixitg']","['zhou', 'pressur', 'alfa', 'romeo', 'perform', 'worth', 'money', 'grandprix', 'gptoday', 'formula', 'f', 'fnew', 'motorsport', 'httpstcoijlfiixitg']"
+163,F1 Rumours 🚨| Alfa Romeo F1 team announcement which is to come on Tuesday 27th September will be a collaboration for Sauber and Audi for 2026 https://t.co/4fD1hpz4OM,f rumours 🚨 alfa romeo f team announcement which is to come on tuesday th september will be a collaboration for sauber and audi for  httpstcofdhpzom,0.0,0.0,neutral,"['f', 'rumours', 'alfa', 'romeo', 'f', 'team', 'announcement', 'which', 'is', 'to', 'come', 'on', 'tuesday', 'th', 'september', 'will', 'be', 'a', 'collaboration', 'for', 'sauber', 'and', 'audi', 'for', 'httpstcofdhpzom']","['f', 'rumours', 'alfa', 'romeo', 'f', 'team', 'announcement', 'come', 'tuesday', 'th', 'september', 'collaboration', 'sauber', 'audi', 'httpstcofdhpzom']","['f', 'rumour', 'alfa', 'romeo', 'f', 'team', 'announc', 'come', 'tuesday', 'th', 'septemb', 'collabor', 'sauber', 'audi', 'httpstcofdhpzom']"
+164,@FootballF1Talk @formel1_DE Alfa Romeo leaves Sauber at the end of 2023. This has been confirmed right after Audi's official press conference (regarding their entry into F1) at Belgium.,footballftalk formelde alfa romeo leaves sauber at the end of  this has been confirmed right after audis official press conference regarding their entry into f at belgium,0.34285714285714286,0.7678571428571428,neutral,"['footballftalk', 'formelde', 'alfa', 'romeo', 'leaves', 'sauber', 'at', 'the', 'end', 'of', 'this', 'has', 'been', 'confirmed', 'right', 'after', 'audis', 'official', 'press', 'conference', 'regarding', 'their', 'entry', 'into', 'f', 'at', 'belgium']","['footballftalk', 'formelde', 'alfa', 'romeo', 'leaves', 'sauber', 'end', 'confirmed', 'right', 'audis', 'official', 'press', 'conference', 'regarding', 'entry', 'f', 'belgium']","['footballftalk', 'formeld', 'alfa', 'romeo', 'leav', 'sauber', 'end', 'confirm', 'right', 'audi', 'offici', 'press', 'confer', 'regard', 'entri', 'f', 'belgium']"
+165,"📰: It is reported that the Alfa Romeo F1 team announcement which is to come on Tuesday 27th September will be a collaboration for Sauber and Audi for 2026.
+
+#F1 https://t.co/z7MaO82HSa","📰 it is reported that the alfa romeo f team announcement which is to come on tuesday th september will be a collaboration for sauber and audi for 
+
+f httpstcozmaohsa",0.0,0.0,neutral,"['', 'it', 'is', 'reported', 'that', 'the', 'alfa', 'romeo', 'f', 'team', 'announcement', 'which', 'is', 'to', 'come', 'on', 'tuesday', 'th', 'september', 'will', 'be', 'a', 'collaboration', 'for', 'sauber', 'and', 'audi', 'for', 'f', 'httpstcozmaohsa']","['', 'reported', 'alfa', 'romeo', 'f', 'team', 'announcement', 'come', 'tuesday', 'th', 'september', 'collaboration', 'sauber', 'audi', 'f', 'httpstcozmaohsa']","['', 'report', 'alfa', 'romeo', 'f', 'team', 'announc', 'come', 'tuesday', 'th', 'septemb', 'collabor', 'sauber', 'audi', 'f', 'httpstcozmaohsa']"
+166,"LATEST: Latest news reports say that the Alfa Romeo F1 team announcement next Tuesday 27th Sept WILL be the collaboration for Sauber and Audi for 2026 - as has been rumoured. 
+
+Source: @Motorsport_FR 
+
+#F1 #Formula1 https://t.co/HY9nGnhIqy","latest latest news reports say that the alfa romeo f team announcement next tuesday th sept will be the collaboration for sauber and audi for   as has been rumoured 
+
+source motorsportfr 
+
+f formula httpstcohyngnhiqy",0.3333333333333333,0.6,neutral,"['latest', 'latest', 'news', 'reports', 'say', 'that', 'the', 'alfa', 'romeo', 'f', 'team', 'announcement', 'next', 'tuesday', 'th', 'sept', 'will', 'be', 'the', 'collaboration', 'for', 'sauber', 'and', 'audi', 'for', 'as', 'has', 'been', 'rumoured', 'source', 'motorsportfr', 'f', 'formula', 'httpstcohyngnhiqy']","['latest', 'latest', 'news', 'reports', 'say', 'alfa', 'romeo', 'f', 'team', 'announcement', 'next', 'tuesday', 'th', 'sept', 'collaboration', 'sauber', 'audi', 'rumoured', 'source', 'motorsportfr', 'f', 'formula', 'httpstcohyngnhiqy']","['latest', 'latest', 'news', 'report', 'say', 'alfa', 'romeo', 'f', 'team', 'announc', 'next', 'tuesday', 'th', 'sept', 'collabor', 'sauber', 'audi', 'rumour', 'sourc', 'motorsportfr', 'f', 'formula', 'httpstcohyngnhiqi']"
+167,Zhou : Alfa Romeo F1 analyse mes performances https://t.co/PHcPuvNyw9,zhou  alfa romeo f analyse mes performances httpstcophcpuvnyw,0.0,0.0,neutral,"['zhou', 'alfa', 'romeo', 'f', 'analyse', 'mes', 'performances', 'httpstcophcpuvnyw']","['zhou', 'alfa', 'romeo', 'f', 'analyse', 'mes', 'performances', 'httpstcophcpuvnyw']","['zhou', 'alfa', 'romeo', 'f', 'analys', 'me', 'perform', 'httpstcophcpuvnyw']"
+168,Zhou : Alfa Romeo F1 analyse mes performances https://t.co/zFXmdcpIhz https://t.co/8VpZ177Bya,zhou  alfa romeo f analyse mes performances httpstcozfxmdcpihz httpstcovpzbya,0.0,0.0,neutral,"['zhou', 'alfa', 'romeo', 'f', 'analyse', 'mes', 'performances', 'httpstcozfxmdcpihz', 'httpstcovpzbya']","['zhou', 'alfa', 'romeo', 'f', 'analyse', 'mes', 'performances', 'httpstcozfxmdcpihz', 'httpstcovpzbya']","['zhou', 'alfa', 'romeo', 'f', 'analys', 'me', 'perform', 'httpstcozfxmdcpihz', 'httpstcovpzbya']"
+169,"Alfa Romeo is announcing something interesting later this month...
+
+#F1 https://t.co/8sHcxZmic3","alfa romeo is announcing something interesting later this month
+
+f httpstcoshcxzmic",0.25,0.25,positive,"['alfa', 'romeo', 'is', 'announcing', 'something', 'interesting', 'later', 'this', 'month', 'f', 'httpstcoshcxzmic']","['alfa', 'romeo', 'announcing', 'something', 'interesting', 'later', 'month', 'f', 'httpstcoshcxzmic']","['alfa', 'romeo', 'announc', 'someth', 'interest', 'later', 'month', 'f', 'httpstcoshcxzmic']"
+170,"[Reddit F1]
+[Alfa Romeo Racing] Announcement coming soon… stay tuned. 27.09.22
+#F1  #Formula1 #F1News
+
+https://t.co/dMxzhDEryW https://t.co/GIrTalNs78","reddit f
+alfa romeo racing announcement coming soon… stay tuned 
+f  formula fnews
+
+httpstcodmxzhderyw httpstcogirtalns",0.0,0.0,neutral,"['reddit', 'f', 'alfa', 'romeo', 'racing', 'announcement', 'coming', 'soon', 'stay', 'tuned', 'f', 'formula', 'fnews', 'httpstcodmxzhderyw', 'httpstcogirtalns']","['reddit', 'f', 'alfa', 'romeo', 'racing', 'announcement', 'coming', 'soon', 'stay', 'tuned', 'f', 'formula', 'fnews', 'httpstcodmxzhderyw', 'httpstcogirtalns']","['reddit', 'f', 'alfa', 'romeo', 'race', 'announc', 'come', 'soon', 'stay', 'tune', 'f', 'formula', 'fnew', 'httpstcodmxzhderyw', 'httpstcogirtaln']"
+171,“Alfa Romeo F1 Team ORLEN is delighted to showcase its new range of NFTs featuring the buttocks of driver Valtteri Bottas.” https://t.co/jqDXjq2bOi,“alfa romeo f team orlen is delighted to showcase its new range of nfts featuring the buttocks of driver valtteri bottas” httpstcojqdxjqboi,0.41818181818181815,0.5772727272727273,positive,"['', 'alfa', 'romeo', 'f', 'team', 'orlen', 'is', 'delighted', 'to', 'showcase', 'its', 'new', 'range', 'of', 'nfts', 'featuring', 'the', 'buttocks', 'of', 'driver', 'valtteri', 'bottas', 'httpstcojqdxjqboi']","['', 'alfa', 'romeo', 'f', 'team', 'orlen', 'delighted', 'showcase', 'new', 'range', 'nfts', 'featuring', 'buttocks', 'driver', 'valtteri', 'bottas', 'httpstcojqdxjqboi']","['', 'alfa', 'romeo', 'f', 'team', 'orlen', 'delight', 'showcas', 'new', 'rang', 'nft', 'featur', 'buttock', 'driver', 'valtteri', 'botta', 'httpstcojqdxjqboi']"
+172,Are Alfa Romeo F1 putting one of those sh*t Polaroid radios in their car? 🤣🤣🤣🤣🤣🤣 https://t.co/iTl2QytIWQ,are alfa romeo f putting one of those sht polaroid radios in their car 🤣🤣🤣🤣🤣🤣 httpstcoitlqytiwq,0.0,0.0,neutral,"['are', 'alfa', 'romeo', 'f', 'putting', 'one', 'of', 'those', 'sht', 'polaroid', 'radios', 'in', 'their', 'car', 'httpstcoitlqytiwq']","['alfa', 'romeo', 'f', 'putting', 'one', 'sht', 'polaroid', 'radios', 'car', 'httpstcoitlqytiwq']","['alfa', 'romeo', 'f', 'put', 'one', 'sht', 'polaroid', 'radio', 'car', 'httpstcoitlqytiwq']"
+173,@Patryk341122pv Alfa Romeo powrut Orlen f1 team,patrykpv alfa romeo powrut orlen f team,0.0,0.0,neutral,"['patrykpv', 'alfa', 'romeo', 'powrut', 'orlen', 'f', 'team']","['patrykpv', 'alfa', 'romeo', 'powrut', 'orlen', 'f', 'team']","['patrykpv', 'alfa', 'romeo', 'powrut', 'orlen', 'f', 'team']"
+174,@alfaromeoorlen Audi Alfa Romeo Sauber F1 Team unprecedented combo incoming,alfaromeoorlen audi alfa romeo sauber f team unprecedented combo incoming,0.6,0.9,neutral,"['alfaromeoorlen', 'audi', 'alfa', 'romeo', 'sauber', 'f', 'team', 'unprecedented', 'combo', 'incoming']","['alfaromeoorlen', 'audi', 'alfa', 'romeo', 'sauber', 'f', 'team', 'unprecedented', 'combo', 'incoming']","['alfaromeoorlen', 'audi', 'alfa', 'romeo', 'sauber', 'f', 'team', 'unpreced', 'combo', 'incom']"
+175,"F1: Zhou admits 2023 race seat ‘not decided yet’ - https://t.co/SJCQrMVb5i
+(GMM) Guanyu Zhou is still not worried that he will be left without a race seat in Formula 1 next year.
+The Chinese rookie says Alfa Romeo is “very happy” with him – but the Sauber-run team is still ye... https://t.co/mdbL25UYe5","f zhou admits  race seat ‘not decided yet’  httpstcosjcqrmvbi
+gmm guanyu zhou is still not worried that he will be left without a race seat in formula  next year
+the chinese rookie says alfa romeo is “very happy” with him – but the sauberrun team is still ye httpstcomdbluye",0.25,0.25,positive,"['f', 'zhou', 'admits', 'race', 'seat', 'not', 'decided', 'yet', 'httpstcosjcqrmvbi', 'gmm', 'guanyu', 'zhou', 'is', 'still', 'not', 'worried', 'that', 'he', 'will', 'be', 'left', 'without', 'a', 'race', 'seat', 'in', 'formula', 'next', 'year', 'the', 'chinese', 'rookie', 'says', 'alfa', 'romeo', 'is', 'very', 'happy', 'with', 'him', 'but', 'the', 'sauberrun', 'team', 'is', 'still', 'ye', 'httpstcomdbluye']","['f', 'zhou', 'admits', 'race', 'seat', 'decided', 'yet', 'httpstcosjcqrmvbi', 'gmm', 'guanyu', 'zhou', 'still', 'worried', 'left', 'without', 'race', 'seat', 'formula', 'next', 'year', 'chinese', 'rookie', 'says', 'alfa', 'romeo', 'happy', 'sauberrun', 'team', 'still', 'ye', 'httpstcomdbluye']","['f', 'zhou', 'admit', 'race', 'seat', 'decid', 'yet', 'httpstcosjcqrmvbi', 'gmm', 'guanyu', 'zhou', 'still', 'worri', 'left', 'without', 'race', 'seat', 'formula', 'next', 'year', 'chines', 'rooki', 'say', 'alfa', 'romeo', 'happi', 'sauberrun', 'team', 'still', 'ye', 'httpstcomdbluy']"
+176,Alfa Romeo and Haas are the only 2 F1 teams that's currently following Audi Sport's twitter account. https://t.co/NCvB4sKGnp,alfa romeo and haas are the only  f teams thats currently following audi sports twitter account httpstconcvbskgnp,0.0,0.55,neutral,"['alfa', 'romeo', 'and', 'haas', 'are', 'the', 'only', 'f', 'teams', 'thats', 'currently', 'following', 'audi', 'sports', 'twitter', 'account', 'httpstconcvbskgnp']","['alfa', 'romeo', 'haas', 'f', 'teams', 'thats', 'currently', 'following', 'audi', 'sports', 'twitter', 'account', 'httpstconcvbskgnp']","['alfa', 'romeo', 'haa', 'f', 'team', 'that', 'current', 'follow', 'audi', 'sport', 'twitter', 'account', 'httpstconcvbskgnp']"
+177,Alfa Romeo must have the best value for money deal in F1. That thing is a Sauber,alfa romeo must have the best value for money deal in f that thing is a sauber,1.0,0.3,positive,"['alfa', 'romeo', 'must', 'have', 'the', 'best', 'value', 'for', 'money', 'deal', 'in', 'f', 'that', 'thing', 'is', 'a', 'sauber']","['alfa', 'romeo', 'must', 'best', 'value', 'money', 'deal', 'f', 'thing', 'sauber']","['alfa', 'romeo', 'must', 'best', 'valu', 'money', 'deal', 'f', 'thing', 'sauber']"
+178,"Alpine, Alfa Romeo, Williams and Haas all have one seat open while there's still uncertainty around Pierre Gasly's not-as-confirmed-as-it-once-was AlphaTauri stay #F1
+
+https://t.co/305zQ3dVgj","alpine alfa romeo williams and haas all have one seat open while theres still uncertainty around pierre gaslys notasconfirmedasitoncewas alphatauri stay f
+
+httpstcozqdvgj",0.0,0.5,negative,"['alpine', 'alfa', 'romeo', 'williams', 'and', 'haas', 'all', 'have', 'one', 'seat', 'open', 'while', 'theres', 'still', 'uncertainty', 'around', 'pierre', 'gaslys', 'notasconfirmedasitoncewas', 'alphatauri', 'stay', 'f', 'httpstcozqdvgj']","['alpine', 'alfa', 'romeo', 'williams', 'haas', 'one', 'seat', 'open', 'theres', 'still', 'uncertainty', 'around', 'pierre', 'gaslys', 'notasconfirmedasitoncewas', 'alphatauri', 'stay', 'f', 'httpstcozqdvgj']","['alpin', 'alfa', 'romeo', 'william', 'haa', 'one', 'seat', 'open', 'there', 'still', 'uncertainti', 'around', 'pierr', 'gasli', 'notasconfirmedasitoncewa', 'alphatauri', 'stay', 'f', 'httpstcozqdvgj']"
+179,"Zhou admits Alfa Romeo 2023 race seat extension not decided yet
+Click on the photo to ✅ check out this full #F1 story at:
+https://t.co/gElDyAyzov","zhou admits alfa romeo  race seat extension not decided yet
+click on the photo to ✅ check out this full f story at
+httpstcogeldyayzov",0.35,0.55,positive,"['zhou', 'admits', 'alfa', 'romeo', 'race', 'seat', 'extension', 'not', 'decided', 'yet', 'click', 'on', 'the', 'photo', 'to', 'check', 'out', 'this', 'full', 'f', 'story', 'at', 'httpstcogeldyayzov']","['zhou', 'admits', 'alfa', 'romeo', 'race', 'seat', 'extension', 'decided', 'yet', 'click', 'photo', 'check', 'full', 'f', 'story', 'httpstcogeldyayzov']","['zhou', 'admit', 'alfa', 'romeo', 'race', 'seat', 'extens', 'decid', 'yet', 'click', 'photo', 'check', 'full', 'f', 'stori', 'httpstcogeldyayzov']"
