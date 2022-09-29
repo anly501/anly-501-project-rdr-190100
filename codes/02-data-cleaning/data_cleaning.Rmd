@@ -12,78 +12,239 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 library(tidyr)
 library(tidyverse)
+library(plyr)
 ```
 
 ```{r}
 race_df = read_csv("../../data/00-raw-data/race_results.csv")
-colnames(race_df) = c('index', 'season', 'round', 'url', 'raceName', 'Circuit', 'date', 'Results', 'time')
-head(race_df)
+circuit_df = read_csv("../../data/00-raw-data/circuit_info.csv")
 ```
 
 ```{r}
+colnames(race_df) = c('index', 'season', 'round', 'url', 'raceName', 'Circuit', 'date', 'Results', 'time')
+#head(race_df)
 drop = c("index", "url")
 race_df = race_df[,!(names(race_df) %in% drop)]
-head(race_df)
+#head(race_df)
 ```
 
 ```{r}
-race_df$Circuit[1]
+race_df = race_df %>% 
+  mutate(across('Circuit', str_replace, fixed("{"), ''),
+         across('Circuit', str_replace, fixed("}"), ''))
 ```
 
 ```{r}
-summary(race_df)
+library(stringr)
+race_df$circuitId =  word(race_df$Circuit,1,sep = ",")
+race_df$circuitId = word(race_df$circuitId,2,sep = ": ")
+race_df$circuitId = gsub("'", "", race_df$circuitId)
 ```
 
 ```{r}
+colnames(circuit_df) = c('index', 'circuitId', 'url', 'circuitName', 'Location')
+drop = c("index", "url")
+circuit_df = circuit_df[,!(names(circuit_df) %in% drop)]
+```
+
+```{r}
+df = merge(race_df, circuit_df, by = 'circuitId', all.x = TRUE)
+df = df[order(df$season, df$round), ]
+#df
+```
+
+```{r}
+driver_df = read_csv('../../data/00-raw-data/drivers.csv')
+driver_df
+```
+
+```{r}
+#df$Results[1]
+library(stringr)
+df$Results_Position_1 =  word(df$Results,1,sep = fixed(", {'number'"))
+df$Results_Position_2 =  word(df$Results,2,sep = fixed(", {'number'"))
+df$Results_Position_3 =  word(df$Results,3,sep = fixed(", {'number'"))
+df$Results_Position_4 =  word(df$Results,4,sep = fixed(", {'number'"))
+df$Results_Position_5 =  word(df$Results,5,sep = fixed(", {'number'"))
+
+#df
+```
+
+```{r}
+library(stringr)
+
+df$Driver_Position_1 = word(df$Results_Position_1,2,sep = fixed(","))
+df$Driver_Position_2 = word(df$Results_Position_2,2,sep = fixed(","))
+df$Driver_Position_3 = word(df$Results_Position_3,2,sep = fixed(","))
+df$Driver_Position_4 = word(df$Results_Position_4,2,sep = fixed(","))
+df$Driver_Position_5 = word(df$Results_Position_5,2,sep = fixed(","))
+
+df$Driver_Position_1 = word(df$Driver_Position_1,2,sep = fixed(": "))
+df$Driver_Position_2 = word(df$Driver_Position_2,2,sep = fixed(": "))
+df$Driver_Position_3 = word(df$Driver_Position_3,2,sep = fixed(": "))
+df$Driver_Position_4 = word(df$Driver_Position_4,2,sep = fixed(": "))
+df$Driver_Position_5 = word(df$Driver_Position_5,2,sep = fixed(": "))
+
+df$Driver_Points_1 = word(df$Results_Position_1,4,sep = fixed(","))
+df$Driver_Points_2 = word(df$Results_Position_2,4,sep = fixed(","))
+df$Driver_Points_3 = word(df$Results_Position_3,4,sep = fixed(","))
+df$Driver_Points_4 = word(df$Results_Position_4,4,sep = fixed(","))
+df$Driver_Points_5 = word(df$Results_Position_5,4,sep = fixed(","))
+
+df$Driver_Points_1 = word(df$Driver_Points_1,2,sep = fixed(": "))
+df$Driver_Points_2 = word(df$Driver_Points_2,2,sep = fixed(": "))
+df$Driver_Points_3 = word(df$Driver_Points_3,2,sep = fixed(": "))
+df$Driver_Points_4 = word(df$Driver_Points_4,2,sep = fixed(": "))
+df$Driver_Points_5 = word(df$Driver_Points_5,2,sep = fixed(": "))
+
+df$Driver_Info_1 = word(df$Results_Position_1,2,sep = fixed("'Driver': {"))
+df$Driver_Info_2 = word(df$Results_Position_2,2,sep = fixed("'Driver': {"))
+df$Driver_Info_3 = word(df$Results_Position_3,2,sep = fixed("'Driver': {"))
+df$Driver_Info_4 = word(df$Results_Position_4,2,sep = fixed("'Driver': {"))
+df$Driver_Info_5 = word(df$Results_Position_5,2,sep = fixed("'Driver': {"))
+
+df$driverRef_1 = word(df$Driver_Info_1,1,sep = fixed(","))
+df$driverRef_2 = word(df$Driver_Info_2,1,sep = fixed(","))
+df$driverRef_3 = word(df$Driver_Info_3,1,sep = fixed(","))
+df$driverRef_4 = word(df$Driver_Info_4,1,sep = fixed(","))
+df$driverRef_5 = word(df$Driver_Info_5,1,sep = fixed(","))
+
+df$driverRef_1 = word(df$driverRef_1,2,sep = fixed(": "))
+df$driverRef_2 = word(df$driverRef_2,2,sep = fixed(": "))
+df$driverRef_3 = word(df$driverRef_3,2,sep = fixed(": "))
+df$driverRef_4 = word(df$driverRef_4,2,sep = fixed(": "))
+df$driverRef_5 = word(df$driverRef_5,2,sep = fixed(": "))
+
+df$Constructor_Info_1 = word(df$Results_Position_1,2,sep = fixed("'Constructor': {"))
+df$Constructor_Info_2 = word(df$Results_Position_2,2,sep = fixed("'Constructor': {"))
+df$Constructor_Info_3 = word(df$Results_Position_3,2,sep = fixed("'Constructor': {"))
+df$Constructor_Info_4 = word(df$Results_Position_4,2,sep = fixed("'Constructor': {"))
+df$Constructor_Info_5 = word(df$Results_Position_5,2,sep = fixed("'Constructor': {"))
+
+df$constructorRef_1 = word(df$Constructor_Info_1,1,sep = fixed(","))
+df$constructorRef_2 = word(df$Constructor_Info_2,1,sep = fixed(","))
+df$constructorRef_3 = word(df$Constructor_Info_3,1,sep = fixed(","))
+df$constructorRef_4 = word(df$Constructor_Info_4,1,sep = fixed(","))
+df$constructorRef_5 = word(df$Constructor_Info_5,1,sep = fixed(","))
+
+df$constructorRef_1 = word(df$constructorRef_1,2,sep = fixed(": "))
+df$constructorRef_2 = word(df$constructorRef_2,2,sep = fixed(": "))
+df$constructorRef_3 = word(df$constructorRef_3,2,sep = fixed(": "))
+df$constructorRef_4 = word(df$constructorRef_4,2,sep = fixed(": "))
+df$constructorRef_5 = word(df$constructorRef_5,2,sep = fixed(": "))
+
+df$otherinfo_1 = word(df$Results_Position_1,2,sep = fixed("'grid'"))
+df$otherinfo_2 = word(df$Results_Position_2,2,sep = fixed("'grid'"))
+df$otherinfo_3 = word(df$Results_Position_3,2,sep = fixed("'grid'"))
+df$otherinfo_4 = word(df$Results_Position_4,2,sep = fixed("'grid'"))
+df$otherinfo_5 = word(df$Results_Position_5,2,sep = fixed("'grid'"))
+
+df$grid_pos_1 = word(df$otherinfo_1,1,sep = fixed(","))
+df$grid_pos_2 = word(df$otherinfo_2,1,sep = fixed(","))
+df$grid_pos_3 = word(df$otherinfo_3,1,sep = fixed(","))
+df$grid_pos_4 = word(df$otherinfo_4,1,sep = fixed(","))
+df$grid_pos_5 = word(df$otherinfo_5,1,sep = fixed(","))
+
+df$completed_laps_1 = word(df$otherinfo_1,2,sep = fixed(","))
+df$completed_laps_2 = word(df$otherinfo_2,2,sep = fixed(","))
+df$completed_laps_3 = word(df$otherinfo_3,2,sep = fixed(","))
+df$completed_laps_4 = word(df$otherinfo_4,2,sep = fixed(","))
+df$completed_laps_5 = word(df$otherinfo_5,2,sep = fixed(","))
+
+df$race_status_1 = word(df$otherinfo_1,3,sep = fixed(","))
+df$race_status_2 = word(df$otherinfo_2,3,sep = fixed(","))
+df$race_status_3 = word(df$otherinfo_3,3,sep = fixed(","))
+df$race_status_4 = word(df$otherinfo_4,3,sep = fixed(","))
+df$race_status_5 = word(df$otherinfo_5,3,sep = fixed(","))
+
+df$race_time_1 = word(df$otherinfo_1,2,sep = fixed("'Time':"))
+df$race_time_2 = word(df$otherinfo_2,2,sep = fixed("'Time':"))
+df$race_time_3 = word(df$otherinfo_3,2,sep = fixed("'Time':"))
+df$race_time_4 = word(df$otherinfo_4,2,sep = fixed("'Time':"))
+df$race_time_5 = word(df$otherinfo_5,2,sep = fixed("'Time':"))
+
+df$grid_pos_1 = word(df$grid_pos_1,2,sep = fixed(": "))
+df$grid_pos_2 = word(df$grid_pos_2,2,sep = fixed(": "))
+df$grid_pos_3 = word(df$grid_pos_3,2,sep = fixed(": "))
+df$grid_pos_4 = word(df$grid_pos_4,2,sep = fixed(": "))
+df$grid_pos_5 = word(df$grid_pos_5,2,sep = fixed(": "))
+
+df$completed_laps_1 = word(df$completed_laps_1,2,sep = fixed(": "))
+df$completed_laps_2 = word(df$completed_laps_2,2,sep = fixed(": "))
+df$completed_laps_3 = word(df$completed_laps_3,2,sep = fixed(": "))
+df$completed_laps_4 = word(df$completed_laps_4,2,sep = fixed(": "))
+df$completed_laps_5 = word(df$completed_laps_5,2,sep = fixed(": "))
+
+df$race_status_1 = word(df$race_status_1,2,sep = fixed(": "))
+df$race_status_2 = word(df$race_status_2,2,sep = fixed(": "))
+df$race_status_3 = word(df$race_status_3,2,sep = fixed(": "))
+df$race_status_4 = word(df$race_status_4,2,sep = fixed(": "))
+df$race_status_5 = word(df$race_status_5,2,sep = fixed(": "))
+
+#df = gsub("'", "", df)
+
+#df
 
 ```
 
 ```{r}
+drop = c("Driver_Info_1", "Driver_Info_2", "Driver_Info_3", "Driver_Info_4", "Driver_Info_5", "Constructor_Info_1", "Constructor_Info_2", "Constructor_Info_3", "Constructor_Info_4", "Constructor_Info_5", "Driver_Info_1", "Driver_Info_1", "Driver_Info_1", "Driver_Info_1", "Driver_Info_1", "Circuit", "Results", "otherinfo_1", "otherinfo_2", "otherinfo_3", "otherinfo_4", "otherinfo_5", "Results_Position_1", "Results_Position_2", "Results_Position_3", "Results_Position_4", "Results_Position_5", "time")
+df = df[,!(names(df) %in% drop)]
 ```
 
 ```{r}
+df
 ```
 
 ```{r}
+#df$Driver_Position_1 = gsub("'", "", df$Driver_Position_1)
+```
+
+
+```{r}
+num_cols = c('Driver_Position_1', 'Driver_Position_2', 'Driver_Position_3', 'Driver_Position_4', 'Driver_Position_5',
+             'Driver_Points_1', 'Driver_Points_2', 'Driver_Points_3', 'Driver_Points_4', 'Driver_Points_5',
+             'grid_pos_1', 'grid_pos_2', 'grid_pos_3', 'grid_pos_4', 'grid_pos_5', 
+             'completed_laps_1', 'completed_laps_2', 'completed_laps_3', 'completed_laps_4', 'completed_laps_5')
+#df[num_cols] = gsub("'", "", df[num_cols])
 ```
 
 ```{r}
+fn <- function(x) gsub("'", "", x)
+fncol <- colwise(fn, .cols=num_cols)
+df[, num_cols] = fncol(df)
 ```
 
 ```{r}
+df[num_cols] = sapply(df[num_cols], as.numeric)
 ```
 
 ```{r}
+colnames(df)
 ```
 
 ```{r}
+df2 = df[rep(seq_len(nrow(df)), each = 5), ]
+rownames(df2) <- 1:nrow(df2)
+df2
 ```
 
 ```{r}
+write_csv(df2, '../../data/01-modified-data/data_cleaning_R.csv', na = '') #to python
 ```
 
 ```{r}
+python_data = read_csv('../../data/01-modified-data/race_result_cleaned.csv')
 ```
 
 ```{r}
+python_data
 ```
 
-```{r}
-```
+To be Continued
 
 ```{r}
-```
 
-```{r}
-```
-
-```{r}
-```
-
-```{r}
-```
-
-```{r}
 ```
 
 ```{r}
