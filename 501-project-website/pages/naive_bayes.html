@@ -80,11 +80,7 @@
 		<td style = "border: 1px solid black">
 			<table>
 				<td>
-					<img src="https://ramdayal.georgetown.domains/501-project-website/images/race_info_code.png" style = "width:400px; height:300px">
-				</td>
-		
-				<td>
-					<img src="https://ramdayal.georgetown.domains/501-project-website/images/race_csv.png" style = "width:400px; height:300px">
+					<img src="https://ramdayal.georgetown.domains/501-project-website/images/tweet_data_NB.png" style = "width:800px; height:400px">
 				</td>
 	
 			</table>
@@ -92,14 +88,27 @@
 		</td>
 
 		<!--ROW-1 COL-2-->
-		<td style = "border: 1px solid black"><p><b>Race Information</b></p>
+		<td style = "border: 1px solid black"><p><b>Twitter Data</b></p>
+        <td style = "border: 1px solid black"><p><b>The Dataset</b></p>
 		  
-		  <p  style="font-size: 24px;">There are 2 main things in a Formula 1. The first is Season and the second is Round. There are multiple rounds (also called as Races) in every season and every Season happends once a year. The data contains the information about every round of every season such as race name, circuit information, date and the results.</p>
-		  <a href="https://github.com/anly501/anly-501-project-rdr-190100/blob/main/codes/01-data-gathering/f1_data.ipynb">Python Code File</a>
-		  <a href="https://github.com/anly501/anly-501-project-rdr-190100/blob/main/data/00-raw-data/race_results.csv">Complete CSV File</a>
-		  <a href="https://github.com/anly501/anly-501-project-rdr-190100/blob/main/data/00-raw-data/race_data.json">Preview JSON File</a>
+		  <p  style="font-size: 22px;">Twitter Text Data consists of 10 labels which correspond to the current teams in Formula 1. Of those 10 teams each, there are a number of tweets in the past 7 days. My goal for this section is to analyse those tweets with the help of Count Vectorizer and create a Multinomial Naive Bayes Classification model to classify a particular tweet into one of these 10 teams.</p>
+          <p>Distribution of Label as shown in graph on the right is:</p>
+          <p>- Williams: 574</p>
+          <p>- Mclaren: 550</p>
+          <p>- Mercedes: 534</p>
+          <p>- Alpine: 523</p>
+          <p>- Ferrari: 453</p>
+          <p>- Haas: 419</p>
+          <p>- Redbull: 322</p>
+          <p>- Aston Martin: 267</p>
+          <p>- Alfa Romeo: 180</p>
+          <p>Alpha Tauri: 106</p>
+
+		  <a href="https://github.com/anly501/anly-501-project-rdr-190100/blob/main/codes/04-naive-bayes/Naive-Bayes-twitterdata.ipynb">Python Code File</a>
+		  <a href="https://github.com/anly501/anly-501-project-rdr-190100/blob/main/data/01-modified-data/all_teams_sentiment_df.csv">Complete CSV File</a>
 
 		</td> 
+        </td>
 	 </tr>
 
 
