@@ -43,138 +43,221 @@
 </ul>
 
 <table style = "border: 1px solid black">
-  <!--TABLE ROW-1-->
- <tr style = "border: 1px solid black">
-    <!--ROW-1 COL-1-->
-    <td style = "border: 1px solid black">
-          <img src="https://ramdayal.georgetown.domains/501-project-website/images/naivebayes_info.png" style = "width:700px; height:400px">
-    </td>
-    
-    <!--ROW-1 COL-2-->
-    <td style = "border: 1px solid black">
-
-      <img src="https://ramdayal.georgetown.domains/501-project-website/images/naivebayes_info2.png" style = "width:600px; height:400px">
-
-    </td>
-
-  </tr>
-  <!--TABLE ROW-1--> 
-
- <tr style = "border: 1px solid black">
-<!--ROW-1 COL-1-->
-<td style = "border: 1px solid black">
-    <img src="https://ramdayal.georgetown.domains/501-project-website/images/dataviz_code.png" style = "width:700px; height:400px">
-</td>
-
-<!--ROW-1 COL-2-->
-<td style = "border: 1px solid black"><p><b>Data Exploration Introduction</b></p>
-  
-  <p  style="font-size: 20px;">I will be using the twitter data to Visualize data in Python through some graphs. As the data in twitter is mostly text data we will not be able to get a lot of graphs. Some of the graphs that I made were Wordclouds and Pie charts.</p>
- 
-  <a href="https://github.com/anly501/anly-501-project-rdr-190100/blob/main/codes/03-data-exploration/twitter_data_exploration.ipynb">Python Code File</a>
-</td> 
-</tr> 
-
- <tr style = "border: 1px solid black">
-  <td style = "border: 1px solid black">
-
-        <img src="https://ramdayal.georgetown.domains/501-project-website/images/visualizations/sentiment_analysis/all_pie_charts.png" style = "width:700px; height:400px">
-
-  </td>
-
-  <!--ROW-1 COL-2-->
-  <td style = "border: 1px solid black"><p><b>Pie Chart</b></p>
-    
-    <p  style="font-size: 24px;">Although pie charts are not a Data Scientists favourite type of Visualization, sometimes when percentages are involved Pie charts are easy to read and understand. Our data has information and tweets of 10 teams with a sentiment attached to every tweet in it. We can easily calculate the percentage of tweets in the positive, negative and neutral segment and plot a pie chart.</p>
-  </td> 
- </tr>
-
-
- <tr style = "border: 1px solid black">
-  <td style = "border: 1px solid black">
-
-        <img src="https://ramdayal.georgetown.domains/501-project-website/images/visualizations/sentiment_analysis/all_wordclouds.png" style = "width:700px; height:500px">
-
-  </td>
-  
-  <!--ROW-1 COL-2-->
-  <td style = "border: 1px solid black"><p><b>Word Cloud</b></p>
-    
-    <p  style="font-size: 24px;">Word clouds (also known as text clouds or tag clouds) work in a simple way: the more a specific word appears in a source of textual data (such as a speech, blog post, or database), the bigger and bolder it appears in the word cloud. A word cloud is a collection, or cluster, of words depicted in different sizes. The bigger and bolder the word appears, the more often it’s mentioned within a given text and the more important it is. I have created 10 wordclouds, 1 for each team. </p>
-
-  </td> 
- </tr>
-
-
- <tr style = "border: 1px solid black">
-    <td style = "border: 1px solid black">
-  
-          <img src="https://ramdayal.georgetown.domains/501-project-website/images/visualizations/sentiment_analysis/scatterplot_polarity_vs_subjectivity.png" style = "width:700px; height:500px">
-  
-    </td>
-     
-    <!--ROW-1 COL-2-->
-    <td style = "border: 1px solid black"><p><b>Scatter Plot - Polarity vs Subjectivity</b></p>
+    <!--TABLE ROW-1-->
+   <tr style = "border: 1px solid black">
+      <!--ROW-1 COL-1-->
+      <td style = "border: 1px solid black">
+            <img src="https://ramdayal.georgetown.domains/501-project-website/images/naivebayes_info.png" style = "width:800px; height:400px">
+      </td>
       
-      <p  style="font-size: 24px;">In sentiment analysis, polarity value lies between [-1,1] and is used to determine the Sentiment of any text. Polarity closer to -1 indicates negative sentiment while closer to 1 indicates a positive sentiment. Subjectivity on the other hand has values between [0,1] and is defined as the degree of personal emotion and passion in any text. This graph is particularly interesting since some tweets even after having a polarity lower than 0 are classified as Positive. One reason for this can be that even though polarity is negative, they have a very high subjectivity which means their tweet is passionate and full of personal emotions.</p>  
-    </td> 
-   </tr>
+      <!--ROW-1 COL-2-->
+      <td style = "border: 1px solid black"> <p><b>Information about Naive Bayes</b></p>
+        
+        <p  style="font-size: 22px;">It is a classification technique based on Bayes’ Theorem with an assumption of independence among predictors. In simple terms, a Naive Bayes classifier assumes that the presence of a particular feature in a class is unrelated to the presence of any other feature.</p>
 
-<tr style = "border: 1px solid black">
-    <td style = "border: 1px solid black">
-  
-          <img src="https://ramdayal.georgetown.domains/501-project-website/images/visualizations/sentiment_analysis/Team_vs_Polarity_Subjectivity.png" style = "width:700px; height:500px">
-  
-    </td>
-     
-    <!--ROW-1 COL-2-->
-    <td style = "border: 1px solid black"><p><b>Bar Plot - Comparison of Team vs Polarity and Subjectivity</b></p>
-      
-      <p  style="font-size: 24px;"> When you plot the Average of Polarity and Subjectivity against Teams, there's one interesting thing to be noticed. There are a lot of negative sentiment tweets regarding Ferrari, the people are passionate while tweeting about the team and have a personal touch while tweeting about the team and the same goes for other teams as well such as Redbull, Alpine and Aston Martin.</p>  
-    </td> 
-   </tr>
+      </td>
+	
+    </tr>
+    <!--TABLE ROW-1--> 
 
    <tr style = "border: 1px solid black">
-    <td style = "border: 1px solid black">
-  
-          <img src="https://ramdayal.georgetown.domains/501-project-website/images/visualizations/main_data/top10_drivers_wins_points.png" style = "width:700px; height:500px">
-  
-    </td>
-     
-    <!--ROW-1 COL-2-->
-    <td style = "border: 1px solid black"><p><b>Bar Plot - Comparison of Top 10 Drivers w.r.t. Wins and Points</b></p>
-      
-      <p  style="font-size: 24px;"> In formula 1 there are a lot of drivers competing and changing every season. But some drivers stand out in terms of performance and this can be showed by plotting a bar graph of their performace in their career.</p>  
-    </td> 
-   </tr>
+	<!--ROW-1 COL-1-->
+	<td style = "border: 1px solid black">
+		  <img src="https://ramdayal.georgetown.domains/501-project-website/images/naivebayes_info2.png" style = "width:800px; height:400px">
+	</td>
+	
+	<!--ROW-1 COL-2-->
+	<td style = "border: 1px solid black"><p><b>Bayes' Theorem</b></p>
+	  
+	  <p  style="font-size: 18px;">In probability theory and statistics, Bayes' theorem (alternatively Bayes' law or Bayes' rule), named after Thomas Bayes, describes the probability of an event, based on prior knowledge of conditions that might be related to the event.[1] For example, if the risk of developing health problems is known to increase with age, Bayes' theorem allows the risk to an individual of a known age to be assessed more accurately (by conditioning it on their age) than simply assuming that the individual is typical of the population as a whole.</p>
+	</td> 
+	</tr> 
 
-   <tr style = "border: 1px solid black">
-    <td style = "border: 1px solid black">
-  
-          <img src="https://ramdayal.georgetown.domains/501-project-website/images/visualizations/main_data/top10_constructor_wins_points.png" style = "width:700px; height:500px">
-  
-    </td>
-     
-    <!--ROW-1 COL-2-->
-    <td style = "border: 1px solid black"><p><b>Bar Plot - Comparison of Top 10 Constructors w.r.t. Wins and Points</b></p>
-      
-      <p  style="font-size: 24px;"> Along with drivers, individual teams also compete to win the constructor's cup and their overall performance with respect to wins and points is showed with this graph.</p>  
-    </td> 
-   </tr>
+	 <tr style = "border: 1px solid black">
+		<td style = "border: 1px solid black">
+			<table>
+				<td>
+					<img src="https://ramdayal.georgetown.domains/501-project-website/images/race_info_code.png" style = "width:400px; height:300px">
+				</td>
+		
+				<td>
+					<img src="https://ramdayal.georgetown.domains/501-project-website/images/race_csv.png" style = "width:400px; height:300px">
+				</td>
+	
+			</table>
 
-   <tr style = "border: 1px solid black">
-    <td style = "border: 1px solid black">
-  
-          <img src="https://ramdayal.georgetown.domains/501-project-website/images/visualizations/main_data/pairplot.png" style = "width:700px; height:500px">
-  
-    </td>
-     
-    <!--ROW-1 COL-2-->
-    <td style = "border: 1px solid black"><p><b>Pairplot of every numerical column in the Data</b></p>
-      
-      <p  style="font-size: 24px;">Pair plot is used to understand the best set of features to explain a relationship between two variables or to form the most separated clusters. It also helps to form some simple classification models by drawing some simple lines or make linear separation in our data-set. Many interesting features can be noticed from this graph such as in Season vs Laps completed after 1990 the laps completed have become more constant. </p>  
-    </td> 
-   </tr>
+		</td>
+
+		<!--ROW-1 COL-2-->
+		<td style = "border: 1px solid black"><p><b>Race Information</b></p>
+		  
+		  <p  style="font-size: 24px;">There are 2 main things in a Formula 1. The first is Season and the second is Round. There are multiple rounds (also called as Races) in every season and every Season happends once a year. The data contains the information about every round of every season such as race name, circuit information, date and the results.</p>
+		  <a href="https://github.com/anly501/anly-501-project-rdr-190100/blob/main/codes/01-data-gathering/f1_data.ipynb">Python Code File</a>
+		  <a href="https://github.com/anly501/anly-501-project-rdr-190100/blob/main/data/00-raw-data/race_results.csv">Complete CSV File</a>
+		  <a href="https://github.com/anly501/anly-501-project-rdr-190100/blob/main/data/00-raw-data/race_data.json">Preview JSON File</a>
+
+		</td> 
+	 </tr>
+
+
+	 <tr style = "border: 1px solid black">
+		<td style = "border: 1px solid black">
+			<table>
+				<td>
+					<img src="https://ramdayal.georgetown.domains/501-project-website/images/qual_info_code.png" style = "width:400px; height:300px">
+				</td>
+		
+				<td>
+					<img src="https://ramdayal.georgetown.domains/501-project-website/images/qual_csv.png" style = "width:400px; height:300px">
+				</td>
+	
+			</table>
+
+		</td>
+		
+		<!--ROW-1 COL-2-->
+		<td style = "border: 1px solid black"><p><b>Qualifying Information</b></p>
+		  
+		  <p  style="font-size: 24px;">Before every main Race of a season, there is a Qualifier where each driver races around the whole Circuit to set the fastest lap time. This determines the position that the driver is going to be starting on the Race day. The Qualifiers were fully implemented properly from the 2003 season onwards so there is no data available for seasons before 2003.</p>
+		  <a href="https://github.com/anly501/anly-501-project-rdr-190100/blob/main/codes/01-data-gathering/f1_data.ipynb">Python Code File</a>
+		  <a href="https://github.com/anly501/anly-501-project-rdr-190100/blob/main/data/00-raw-data/qual_results.csv">Complete CSV File</a>
+		  <a href="https://github.com/anly501/anly-501-project-rdr-190100/blob/main/data/00-raw-data/qual_data.json">Preview JSON File</a>
+
+		</td> 
+	 </tr>
+
+
+	 <tr style = "border: 1px solid black">
+		<td>
+			<table>
+				<td>
+					<img src="https://ramdayal.georgetown.domains/501-project-website/images/circuit_info.png" style = "width:400px; height:300px">
+				</td>
+		
+				<td>
+					<img src="https://ramdayal.georgetown.domains/501-project-website/images/circuit_csv.png" style = "width:400px; height:300px">
+				</td>
+	
+			</table>
+
+		</td>
+
+		<!--ROW-1 COL-2-->
+		<td style = "border: 1px solid black"><p><b>Circuit Information</b></p>
+		  
+		  <p  style="font-size: 24px;">The tracks where each race is conducted on are knows as Circuits. The track owners have to renew their contract each year with the FIA to keep their track as one of the tracks where the Races will be held. The data has columns such as id of the circuit, the location and so on.</p>
+		  <a href="https://github.com/anly501/anly-501-project-rdr-190100/blob/main/codes/01-data-gathering/f1_data.ipynb">Python Code File</a>
+		  <a href="https://github.com/anly501/anly-501-project-rdr-190100/blob/main/data/00-raw-data/circuit_info.csv">Complete CSV File</a>
+		  <a href="https://github.com/anly501/anly-501-project-rdr-190100/blob/main/data/00-raw-data/circuit_data.json">Preview JSON File</a>
+
+		</td> 
+	 </tr>
+
+
+	 <tr style = "border: 1px solid black">
+		<td style = "border: 1px solid black">
+			<table>
+				<td>
+					<img src="https://ramdayal.georgetown.domains/501-project-website/images/driverstandings_info_code.png" style = "width:400px; height:300px">
+				</td>
+		
+				<td>
+					<img src="https://ramdayal.georgetown.domains/501-project-website/images/driver_standings_csv.png" style = "width:400px; height:300px">
+				</td>
+	
+			</table>
+
+		</td>
+		
+		<!--ROW-1 COL-2-->
+		<td style = "border: 1px solid black"><p><b>Driver Standings Information</b></p>
+		  
+		  <p  style="font-size: 24px;">After each Round, points are allocated to winners of the race that follow a set of rules. All the points are combined at the end of every season for the World Driver's Championship. The driver with the highest points wins the WDC. This data contains the standings and points of each driver that competed in each season at the end of season. </p>
+		  <a href="https://github.com/anly501/anly-501-project-rdr-190100/blob/main/codes/01-data-gathering/f1_data.ipynb">Python Code File</a>
+		  <a href="https://github.com/anly501/anly-501-project-rdr-190100/blob/main/data/00-raw-data/driver_standings.csv">Complete CSV File</a>
+		  <a href="https://github.com/anly501/anly-501-project-rdr-190100/blob/main/data/00-raw-data/driverstandings_data.json">Preview JSON File</a>
+
+		</td> 
+	 </tr>
+
+
+
+	 <tr style = "border: 1px solid black">
+		<td style = "border: 1px solid black">
+			<table>
+				<td>
+					<img src="https://ramdayal.georgetown.domains/501-project-website/images/constructorstandings_info.png" style = "width:400px; height:300px">
+				</td>
+		
+				<td>
+					<img src="https://ramdayal.georgetown.domains/501-project-website/images/constructor_standings_csv.png" style = "width:400px; height:300px">
+				</td>
+	
+			</table>
+
+		</td>
+
+		<!--ROW-1 COL-2-->
+		<td style = "border: 1px solid black"><p><b>Constructor Standings Information</b></p>
+		  
+		  <p  style="font-size: 24px;">A Constructor in F1 is a term for teams. Each constructor has 2 drivers with identical cars competing in a season. At the end of the season the points of both the drivers are combined for the Constructor's Cup. The team with the highest points wins that cup. This data contains the standings and points of every Constructor that competed in each season at the end of season. </p>
+		  <a href="https://github.com/anly501/anly-501-project-rdr-190100/blob/main/codes/01-data-gathering/f1_data.ipynb">Python Code File</a>
+		  <a href="https://github.com/anly501/anly-501-project-rdr-190100/blob/main/data/00-raw-data/constructor_standings.csv">Complete CSV File</a>
+		  <a href="https://github.com/anly501/anly-501-project-rdr-190100/blob/main/data/00-raw-data/constructorstandings_data.json">Preview JSON File</a>
+
+		</td> 
+	 </tr>
+
+
+
+	 <tr style = "border: 1px solid black">
+		<td style = "border: 1px solid black">
+			<table>
+				<td>
+					<img src="https://ramdayal.georgetown.domains/501-project-website/images/each_season_info.png" style = "width:400px; height:300px">
+				</td>
+		
+				<td>
+					<img src="https://ramdayal.georgetown.domains/501-project-website/images/all_season_csv.png" style = "width:400px; height:300px">
+				</td>
+	
+			</table>
+
+		</td>
+
+		<!--ROW-1 COL-2-->
+		<td style = "border: 1px solid black"><p><b>All Season Information</b></p>
+		  
+		  <p  style="font-size: 24px;">Every season there is either new set of drivers or tracks or rules. This data has all the information of the tracks of all the rounds of every season.</p>
+		  <a href="https://github.com/anly501/anly-501-project-rdr-190100/blob/main/codes/01-data-gathering/f1_data.ipynb">Python Code File</a>
+		  <a href="https://github.com/anly501/anly-501-project-rdr-190100/blob/main/data/00-raw-data/all_season_info.csv">Complete CSV File</a>
+		</td> 
+	 </tr>
+
+	 <tr style = "border: 1px solid black">
+		<td style = "border: 1px solid black">
+			<table>
+				<td>
+					<img src="https://ramdayal.georgetown.domains/501-project-website/images/twitter_code.png" style = "width:400px; height:300px">
+				</td>
+		
+				<td>
+					<img src="https://ramdayal.georgetown.domains/501-project-website/images/twitter_csv.png" style = "width:400px; height:300px">
+				</td>
+	
+			</table>
+
+		</td>
+
+		<!--ROW-1 COL-2-->
+		<td style = "border: 1px solid black"><p><b>Tweets about Formula 1</b></p>
+		  
+		  <p  style="font-size: 24px;">The Twitter API enables programmatic access to Twitter in unique and advanced ways and tap into core elements of Twitter like: Tweets, Direct Messages, Spaces, Lists, users, and more. We get extract 1000 tweets per team or constructor for further analysis.</p>
+		  <a href="https://github.com/anly501/anly-501-project-rdr-190100/blob/main/codes/01-data-gathering/f1_twitter_api.ipynb">Python Code File</a>
+		  <a href="https://github.com/anly501/anly-501-project-rdr-190100/blob/main/data/00-raw-data/formula1_tweets.csv">Complete CSV File</a>
+		</td> 
+	 </tr>
+
 
 </table>
 </body>
