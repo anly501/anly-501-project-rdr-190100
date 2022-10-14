@@ -135,3 +135,7 @@ ggplot(data = test_cm_df, mapping = aes(x = truth , y = pred)) +
   # scale_fill_gradient(low = "cyan", high = "darkgoldenrod1") +
   theme_bw() + theme(legend.position = "none")
 ```
+
+```{r}
+model1
+```
