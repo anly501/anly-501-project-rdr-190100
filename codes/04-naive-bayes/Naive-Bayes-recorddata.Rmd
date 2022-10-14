@@ -31,6 +31,7 @@ head(df)
 
 ```{r}
 barplot(table(df$label), col = 'lightblue', main = 'Distribution of Labels', xlab = 'Labels', ylab = 'Count')
+
 ```
 
 ```{r}
