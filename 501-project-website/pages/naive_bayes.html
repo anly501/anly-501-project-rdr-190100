@@ -156,27 +156,31 @@
 
 
 	 <tr style = "border: 1px solid black">
-		<td>
+		<td style = "border: 1px solid black">
 			<table>
-				<td>
-					<img src="https://ramdayal.georgetown.domains/501-project-website/images/circuit_info.png" style = "width:400px; height:300px">
-				</td>
-		
-				<td>
-					<img src="https://ramdayal.georgetown.domains/501-project-website/images/circuit_csv.png" style = "width:400px; height:300px">
-				</td>
+				<tr>
+					<img src="https://ramdayal.georgetown.domains/501-project-website/images/race_data_clean_final.png" style = "width:800px; height:400px">
+				</tr>
+
+                <tr>
+					<img src="https://ramdayal.georgetown.domains/501-project-website/images/label_dist_R.png" style = "width:800px; height:400px">
+				</tr>
 	
 			</table>
 
 		</td>
 
 		<!--ROW-1 COL-2-->
-		<td style = "border: 1px solid black"><p><b>Circuit Information</b></p>
+		<td style = "border: 1px solid black"><p><b>Record Dataset</b></p>
 		  
-		  <p  style="font-size: 24px;">The tracks where each race is conducted on are knows as Circuits. The track owners have to renew their contract each year with the FIA to keep their track as one of the tracks where the Races will be held. The data has columns such as id of the circuit, the location and so on.</p>
-		  <a href="https://github.com/anly501/anly-501-project-rdr-190100/blob/main/codes/01-data-gathering/f1_data.ipynb">Python Code File</a>
-		  <a href="https://github.com/anly501/anly-501-project-rdr-190100/blob/main/data/00-raw-data/circuit_info.csv">Complete CSV File</a>
-		  <a href="https://github.com/anly501/anly-501-project-rdr-190100/blob/main/data/00-raw-data/circuit_data.json">Preview JSON File</a>
+		  <p  style="font-size: 24px;">The labelled record dataset has 19 columns with 18 features and 1 label column. Some of the feature variables include: Id of the race, Position finished, Laps completed, Cumulative points/wins/laps and so on. Our labels are Podium, Top_10, Outside_Top_10 finishes. I am using Naive Bayes in R to predict that given the feature variables, if a driver will finish in Top 3 (Podium), Top 10 or Outside Top 10.</p>
+          <p>Distribution of Label as shown in graph on the right is:</p>
+          <p>- Podium: 3439</p>
+          <p>- Top_10: 7978</p>
+          <p>- OutsideTop_10: 15524</p>
+
+		  <a href="https://github.com/anly501/anly-501-project-rdr-190100/blob/main/codes/04-naive-bayes/Naive-Bayes-recorddata.Rmd">R Code File</a>
+		  <a href="https://github.com/anly501/anly-501-project-rdr-190100/blob/main/data/00-raw-data/data_cleaned.csv">Complete CSV File</a>
 
 		</td> 
 	 </tr>
