@@ -1,0 +1,254 @@
+---
+title: Support Vector Machine Classifier for Record Data
+author: Ramdayal Rewaria
+format:
+  html:
+    code-fold: false
+    theme: yeti
+jupyter: python3
+---
+
+# Import Libraries
+
+```{python}
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from scipy import stats
+
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.svm import SVC
+from sklearn.metrics import classification_report
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
+
+from sklearn.preprocessing import LabelEncoder
+from sklearn.metrics import confusion_matrix, plot_confusion_matrix,\
+    precision_score, recall_score, accuracy_score, f1_score, log_loss,\
+    roc_curve, roc_auc_score, classification_report
+from sklearn.pipeline import Pipeline, FeatureUnion, make_pipeline
+from sklearn.compose import ColumnTransformer
+
+import warnings 
+warnings.filterwarnings("ignore")
+```
+
+# Import Data
+- Cleaned record data is considered to perform SVM supervised learning algorithm and predict the label variable (Podium, Top 10 or Outside Top 10).
+- The data consists of 26,941 rows and 22 feature variables and 1 label column.
+- It is a historical record data of all the races that have happened in the past 71 years with the results of every position that a driver has held in all the races.
+- Some of the feature variables include laps in the race, grid position held, age at time of the race, history of wins in the past, history of laps completed in the past, weather of the race, points gained in the race and many more.
+
+```{python}
+df = pd.read_csv('../../data/02-model-data/data_cleaned.csv')
+df.head()
+```
+
+```{python}
+driver_df = pd.read_csv('../../data/00-raw-data/drivers.csv')
+driver_df.head()
+```
+
+```{python}
+df = pd.merge(df, driver_df[['driverId', 'driverRef']], on='driverId')
+```
+
+```{python}
+df.shape
+```
+
+# Data Pre-Processing and Visualization
+- The data was cleaned in the sections before but there are still some pre-processing left to be in order for the data to be "model-ready".
+- Some unnecessary columns are dropped and columns are segregated into numeric and categorical sections.
+- The numerical columns are scaled using a Standard Scaler and the categorical columns are one hot encoded to minimize loss of data. All of this is done with the help of a function which use sklearn's Pipeline module.
+- If a transformer and model estimator are applied separately, it will result in fitted training features being wrongly included in the test-fold of GridSearchCV.
+- Pipelines help avoid leaking statistics from your test data into the trained model in cross-validation, by ensuring that the same samples are used to train the transformers and predictors.
+- If you separate feature scaling and model-fitting functions while using GridSearchCV, you will be creating a biased testing dataset that already contains information about the training set which is not good.
+- Furthermore, the data is split into training and testing but not traditionally (with the help of sklearn's train_test_split). The training set is made up of races before 2021 and the testing is done on the races of 2021.
+
+```{python}
+df.drop(['season_round', 'constructorRef', 'raceId', 'driverId'], axis=1, inplace=True)
+```
+
+```{python}
+df.info()
+```
+
+```{python}
+df.head()
+```
+
+```{python}
+df = df[df['season'] != 2022]
+```
+
+Splitting data into train and test:
+
+```{python}
+X_train = df[df['season'] != 2021].drop(columns = ['label'])
+y_train = df.loc[df['season'] != 2021, ['season', 'round', 'driverRef', 'label']]
+X_test = df[df['season'] == 2021].drop(columns = ['label'])
+y_test = df.loc[(df['season'] == 2021), ['season', 'round', 'driverRef', 'label']]
+```
+
+Grouping the data by setting the index of train and test data into season, round and driver references:
+
+```{python}
+X_train = X_train.set_index(['season', 'round', 'driverRef'])
+y_train = y_train.set_index(['season', 'round', 'driverRef'])
+X_test = X_test.set_index(['season', 'round', 'driverRef'])
+y_test = y_test.set_index(['season', 'round', 'driverRef'])
+```
+
+```{python}
+numeric_features = ['circuitId', 'position', 'points', 'grid', 'laps', 'age_on_race', 'cumulative_points', 'cumulative_laps',
+       'pole_driverId', 'pole_history', 'win_driverId', 'win_history']
+
+categorical_features = ['status', 'weather', 'stop']
+```
+
+```{python}
+display(X_test.head())
+display(y_test.head())
+```
+
+Creating a function with sklearn's Pipeline module and transformers to convert categorical and numerical features:
+
+```{python}
+def prediction_model(model_type, model_id):
+    # Scale numeric features using 'StandardScaler' and 'One-Hot Encode' categorical features
+    scoring = ['neg_log_loss', 'accuracy']
+    numeric_transformer = Pipeline(steps=[('scaler', StandardScaler())])
+    categorical_transformer = Pipeline(steps=[('ohe', OneHotEncoder(handle_unknown = 'ignore'))])
+    preprocessor = ColumnTransformer(transformers=[('num', numeric_transformer, numeric_features),
+                                                   ('cat', categorical_transformer, categorical_features)])
+    pipeline = Pipeline(steps=[('prep', preprocessor), 
+                               (model_id, model_type)])
+    return pipeline
+```
+
+# SVM
+- `Support Vector Machines` are a set of supervised learning methods used for classification, regression, and outliers detection. All of these are common tasks in machine learning.
+- There are specific types of SVMs you can use for particular machine learning problems, like support vector regression (SVR) which is an extension of support vector classification (SVC).
+- SVMs are different from other classification algorithms because of the way they choose the decision boundary that maximizes the distance from the nearest data points of all the classes. The decision boundary created by SVMs is called the maximum margin classifier or the maximum margin hyper plane.
+- A simple linear SVM classifier works by making a straight line between two classes. That means all of the data points on one side of the line will represent a category and the data points on the other side of the line will be put into a different category. This means there can be an infinite number of lines to choose from.
+- What makes the linear SVM algorithm better than some of the other algorithms, like k-nearest neighbors, is that it chooses the best line to classify your data points. It chooses the line that separates the data and is the furthest away from the closet data points as possible.
+- Pros
+    - Effective on datasets with multiple features, like financial or medical data.
+    - Uses a subset of training points in the decision function called support vectors which makes it memory efficient.
+    - Different kernel functions can be specified for the decision function. You can use common kernels, but it's also possible to specify custom kernels.
+- Cons
+    - If the number of features is a lot bigger than the number of data points, avoiding over-fitting when choosing kernel functions and regularization term is crucial.
+    - SVMs don't directly provide probability estimates. Those are calculated using an expensive five-fold cross-validation.
+    - Works best on small sample sets because of its high training time.
+
+## Model Prediction function
+- After fitting the model it is important to showcase and visualize the model classification results.
+- The model_results function predicts the model results on test data (2021 races). It displays out the 40 results from the test data along with the prediction probabilities. 
+- The function also fills the prediction scorecard dictionary which contains:
+    1. Model
+    2. Accuracy
+    3. Precision
+    4. Recall
+    5. Best parameters
+
+```{python}
+prediction_scorecard = {'model':[],
+                        'accuracy_score':[],
+                        'precision_score':[],
+                        'recall_score':[],
+                        'best_params':[]}
+```
+
+```{python}
+def model_results(X_test, model, model_id):
+    # Predict!
+    pred = model.predict(X_test)
+    pred_proba = model.predict_proba(X_test)
+    df_pred = pd.DataFrame(np.around(pred_proba, 4), index=X_test.index, columns=['prob_0', 'prob_1', 'prob_2'])
+    df_pred['prediction'] = list(pred)
+    df_pred['actual'] = y_test['label']
+    df_pred['grid_position'] = X_test['grid']
+
+    # Include row if an 'actual' or 'predicted' podium occured for calculating accuracy
+    # df_pred['sort'] = df_pred['prediction'] + df_pred['actual']
+    # df_pred = df_pred[df_pred['sort'] > 0]
+    # df_pred.reset_index(inplace=True)
+    df_pred = df_pred.groupby(['round']).apply(pd.DataFrame.sort_values, 'prob_1', ascending=False)
+    # df_pred.drop(['sort'], axis=1, inplace=True)
+    # df_pred.reset_index(drop=True, inplace=True) 
+    
+    # Save Accuracy, Precision, 
+    prediction_scorecard['model'].append(model_id)
+    prediction_scorecard['accuracy_score'].append(accuracy_score(df_pred['actual'], df_pred['prediction']))
+    prediction_scorecard['precision_score'].append(precision_score(df_pred['actual'], df_pred['prediction'], average='micro'))
+    prediction_scorecard['recall_score'].append(recall_score(df_pred['actual'], df_pred['prediction'], average='micro'))
+    prediction_scorecard['best_params'].append(str(model.best_params_))
+    display(df_pred.head(40))
+```
+
+## Grid search CV
+- Hyper-parameters are variables that you specify while building a machine-learning model. This means that it’s the user that defines the hyper-parameters while building the model. Hyper-parameters control the learning process, while parameters are learned.
+- The performance of a model significantly depends on the value of hyperparameters. Note that there is no way to know in advance the best values for hyperparameters so ideally, we need to try all possible values to know the optimal values. 
+- Doing this manually could take a considerable amount of time and resources and thus we use GridSearchCV to automate the tuning of hyperparameters.
+- Grid search CV of the sklearn library is a module for hyperparameter tuning.
+- It runs through all the different parameters that is fed into the parameter grid and produces the best combination of parameters, based on a scoring metric of your choice (accuracy, f1, etc).
+- GridSearchCV tries all the combinations of the values passed in the dictionary and evaluates the model for each combination using the Cross-Validation method.
+- The process is time consuming.
+
+```{python}
+svm_params= {'svm__C': [0.1, 0.01, 0.001],
+             'svm__kernel': ['linear', 'poly', 'rbf'],
+             'svm__degree': [1, 2, 3],
+             'svm__gamma': [0.1, 0.01, 0.001]}
+```
+
+Types of SVM Kernels: <br>
+- `Linear`: These are commonly recommended for text classification because most of these types of classification problems are linearly separable.<br>
+- `Polynomial`: The polynomial kernel isn't used in practice very often because it isn't as computationally efficient as other kernels and its predictions aren't as accurate.<br>
+- `Gaussian Radial Basis Function (RBF)`: One of the most powerful and commonly used kernels in SVMs. Usually the choice for non-linear data.
+
+```{python}
+scoring = ['neg_log_loss', 'accuracy']
+
+svm_cv = GridSearchCV(prediction_model(SVC(probability=True), 'svm'),
+                      param_grid=svm_params,
+                      scoring=scoring, 
+                      refit='neg_log_loss',  
+                      verbose=10)
+```
+
+## Fitting and Training the SVM model
+
+```{python}
+# Train Model
+svm_cv.fit(X_train, y_train)
+```
+
+## Testing the SVM model
+
+```{python}
+# Test Model
+model_results(X_test, svm_cv, 'Support Vector Machines')
+svm_results = pd.DataFrame(prediction_scorecard)
+```
+
+The best parameters for our model are:
+
+```{python}
+svm_cv.best_params_
+```
+
+```{python}
+svm_results
+```
+
+## Conclusion
+- The SVM model gives out 100% accuracy, precision and recall values.
+- The ideal hyperparameters are:
+    - C = 0.1
+    - degree = 3
+    - gamma = 0.01
+    - kernel = linear
+

@@ -1,0 +1,329 @@
+---
+jupyter: python3
+format:
+  html:
+    code-fold: true
+theme: cosmo
+---
+
+# Import Libraries
+
+```{python}
+from sklearn.datasets import load_iris
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as  pd
+from scipy import stats
+from sklearn.model_selection import train_test_split
+from sklearn.naive_bayes import GaussianNB
+import nltk
+from wordcloud import WordCloud, STOPWORDS
+from PIL import Image
+from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
+from sklearn.metrics import confusion_matrix
+from sklearn.metrics import classification_report, accuracy_score
+import matplotlib.pyplot as plt
+from sklearn.tree import plot_tree
+from sklearn.utils import resample
+
+from sklearn.model_selection import cross_val_score
+from sklearn.model_selection import cross_val_predict
+from sklearn.model_selection import train_test_split
+import seaborn as sns
+from sklearn.tree import DecisionTreeClassifier
+from sklearn import metrics
+
+from sklearn.naive_bayes import MultinomialNB
+from sklearn import metrics
+from sklearn.metrics import confusion_matrix
+
+from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
+from sklearn.preprocessing import LabelEncoder
+from sklearn.metrics import accuracy_score
+from sklearn.metrics import precision_score
+from sklearn.metrics import recall_score
+
+import re
+```
+
+# Import Data
+
+```{python}
+df = pd.read_csv('../../data/01-modified-data/all_teams_sentiment_df.csv')
+df.drop(['Unnamed: 0'], axis=1, inplace=True)
+df.head()
+```
+
+# Data Pre-Processing
+
+```{python}
+df = df[['Team', 'text']]
+df.head(10)
+```
+
+```{python}
+for i in range(len(df)):
+    
+    df['text'][i] = df['text'][i].replace(" f ", " f1 ")
+    df['text'][i] = re.sub('\n', ' ', df['text'][i])
+    df['text'][i].replace(",","").replace("[","").replace("]","").replace("'","")
+    
+df.head()
+```
+
+```{python}
+fig, ax = plt.subplots(figsize=(8, 4))
+
+sns.barplot(x = df['Team'].value_counts().index, y = df['Team'].value_counts().values, ax=ax)
+
+ax.set_xlabel('Team')
+ax.set_ylabel('Number of Tweets')
+ax.set_title('Number of Tweets per Team')
+ax.set_xticklabels(ax.get_xticklabels(), rotation=45, ha="right")
+```
+
+```{python}
+X = df['text']
+y = df['Team']
+```
+
+```{python}
+labelencoder = LabelEncoder()
+y = labelencoder.fit_transform(y)
+y
+```
+
+```{python}
+teams = ['Ferrari', 'Mercedes', 'Redbull', 'Haas', 'Mclaren', 'Alpine', 'Williams', 'Aston Martin', 'Alpha Tauri', 'Alfa Romeo']
+y1 = labelencoder.fit(teams)
+label_map = dict(zip(y1.classes_, y1.transform(y1.classes_)))
+label_map
+```
+
+```{python}
+label_list = list(label_map.keys())
+label_list
+```
+
+# Decision Tree Model
+
+```{python}
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=10)
+```
+
+```{python}
+vectorizer = CountVectorizer()
+X_train1 = vectorizer.fit_transform(X_train.astype('U')) 
+X_test1 = vectorizer.transform(X_test.astype('U'))
+```
+
+## Decision Trees with random Hyperparameters
+
+### Decision Tree 1 - Entropy, Best
+
+```{python}
+dt1 = DecisionTreeClassifier(random_state=1973,criterion = "entropy", splitter = "best", max_depth = 4)
+dt1.fit(X_train1, y_train)
+y_pred = dt1.predict(X_test1)
+Classification_report_1 = classification_report(y_test, y_pred)
+conf_matrix_1 = confusion_matrix(y_test, y_pred)
+```
+
+```{python}
+plt.figure(figsize = (30,30))
+dec_tree_1 = plot_tree(decision_tree=dt1, class_names=label_list, filled=True, rounded=True, fontsize=10, max_depth=4)
+```
+
+```{python}
+#Confusion matrix seaborn
+sns.heatmap(conf_matrix_1,annot=True)
+plt.xlabel('Original')
+plt.ylabel('Predicted')
+plt.title('Heatmap of Confusion Matrix 1: Entropy, Best')
+#plt.savefig('Confusion_Matrix1.png')
+
+#Accuracy
+print('Accuracy',metrics.accuracy_score(y_test,y_pred))
+print(classification_report(y_test,y_pred))
+```
+
+### Decision Tree 2 - Gini, Random
+
+```{python}
+dt2 = DecisionTreeClassifier(random_state=10,criterion = "gini", splitter = "random",max_depth = 5)
+dt2.fit(X_train1, y_train)
+y_pred = dt2.predict(X_test1)
+Classification_report_2 = classification_report(y_test, y_pred)
+conf_matrix_2 = confusion_matrix(y_test, y_pred)
+```
+
+```{python}
+plt.figure(figsize = (30,30))
+dec_tree_1 = plot_tree(decision_tree=dt2, class_names=label_list, filled=True, rounded=True, fontsize=10, max_depth=5)
+```
+
+```{python}
+#Confusion matrix seaborn
+sns.heatmap(conf_matrix_2,annot=True)
+plt.xlabel('Original')
+plt.ylabel('Predicted')
+plt.title('Heatmap of Confusion Matrix 2: Gini, Random')
+plt.savefig('Confusion_Matrix2.png')
+
+#Accuracy
+print('Accuracy',metrics.accuracy_score(y_test,y_pred))
+print(classification_report(y_test,y_pred))
+```
+
+### Decision Tree 3 - Entropy, Random
+
+```{python}
+dt3 = DecisionTreeClassifier(random_state=0,criterion = "entropy", splitter = "random",max_depth = 4)
+dt3.fit(X_train1, y_train)
+y_pred = dt3.predict(X_test1)
+Classification_report_3 = classification_report(y_test, y_pred)
+conf_matrix_3 = confusion_matrix(y_test, y_pred)
+```
+
+```{python}
+plt.figure(figsize = (60,40))
+dec_tree_1 = plot_tree(decision_tree=dt3, class_names=label_list, filled=True, rounded=True, fontsize=10, max_depth=4)
+```
+
+```{python}
+#Confusion matrix seaborn
+sns.heatmap(conf_matrix_3,annot=True)
+plt.xlabel('Original')
+plt.ylabel('Predicted')
+plt.title('Heatmap of Confusion Matrix 3: Gini, Random')
+plt.savefig('Confusion_Matrix3.png')
+
+#Accuracy
+print('Accuracy',metrics.accuracy_score(y_test,y_pred))
+print(classification_report(y_test,y_pred))
+```
+
+## Hyperparameter Tuning
+
+```{python}
+test_results=[]
+train_results=[]
+
+for num_layer in range(1,20):
+    model = DecisionTreeClassifier(max_depth=num_layer)
+    model = model.fit(X_train1, y_train)
+
+    yp_train=model.predict(X_train1)
+    yp_test=model.predict(X_test1)
+
+    # print(y_pred.shape)
+    test_results.append([num_layer,accuracy_score(y_test, yp_test),recall_score(y_test, yp_test,pos_label=0, average='micro'),recall_score(y_test, yp_test,pos_label=1, average='micro'),
+                         recall_score(y_test, yp_test,pos_label=2, average='micro'),recall_score(y_test, yp_test,pos_label=3, average='micro'),
+                         recall_score(y_test, yp_test,pos_label=4, average='micro'),recall_score(y_test, yp_test,pos_label=5, average='micro'),
+                         recall_score(y_test, yp_test,pos_label=6, average='micro'),recall_score(y_test, yp_test,pos_label=7, average='micro'),
+                         recall_score(y_test, yp_test,pos_label=8, average='micro'),recall_score(y_test, yp_test,pos_label=9, average='micro')])
+    train_results.append([num_layer,accuracy_score(y_train, yp_train),recall_score(y_train, yp_train,pos_label=0, average='micro'),recall_score(y_train, yp_train,pos_label=1, average='micro'),
+                          recall_score(y_train, yp_train,pos_label=2, average='micro'),recall_score(y_train, yp_train,pos_label=3, average='micro'),
+                          recall_score(y_train, yp_train,pos_label=4, average='micro'),recall_score(y_train, yp_train,pos_label=5, average='micro'),
+                          recall_score(y_train, yp_train,pos_label=6, average='micro'),recall_score(y_train, yp_train,pos_label=7, average='micro'),
+                          recall_score(y_train, yp_train,pos_label=8, average='micro'),recall_score(y_train, yp_train,pos_label=9, average='micro')])
+```
+
+```{python}
+plt.plot([x[0] for x in test_results],[x[1] for x in test_results],label='test', color='red', marker='o')
+plt.plot([x[0] for x in train_results],[x[1] for x in train_results],label='train', color='blue', marker='o')
+plt.xlabel('Number of layers in decision tree (max_depth)')
+plt.ylabel('ACCURACY : Training (blue) and Test (red)')
+plt.show()
+
+plt.plot([x[0] for x in test_results],[x[2] for x in test_results],label='test', color='red', marker='o')
+plt.plot([x[0] for x in train_results],[x[2] for x in train_results],label='train', color='blue', marker='o')
+plt.xlabel('Number of layers in decision tree (max_depth)')
+plt.ylabel('RECALL (Y=0): Training (blue) and Test (red)')
+plt.show()
+
+plt.plot([x[0] for x in test_results],[x[3] for x in test_results],label='test', color='red', marker='o')
+plt.plot([x[0] for x in train_results],[x[3] for x in train_results],label='train', color='blue', marker='o')
+plt.xlabel('Number of layers in decision tree (max_depth)')
+plt.ylabel('RECALL (Y=1): Training (blue) and Test (red)')
+plt.show()
+
+plt.plot([x[0] for x in test_results],[x[4] for x in test_results],label='test', color='red', marker='o')
+plt.plot([x[0] for x in train_results],[x[4] for x in train_results],label='train', color='blue', marker='o')
+plt.xlabel('Number of layers in decision tree (max_depth)')
+plt.ylabel('RECALL (Y=2): Training (blue) and Test (red)')
+plt.show()
+
+plt.plot([x[0] for x in test_results],[x[5] for x in test_results],label='test', color='red', marker='o')
+plt.plot([x[0] for x in train_results],[x[5] for x in train_results],label='train', color='blue', marker='o')
+plt.xlabel('Number of layers in decision tree (max_depth)')
+plt.ylabel('RECALL (Y=3): Training (blue) and Test (red)')
+plt.show()
+
+plt.plot([x[0] for x in test_results],[x[6] for x in test_results],label='test', color='red', marker='o')
+plt.plot([x[0] for x in train_results],[x[6] for x in train_results],label='train', color='blue', marker='o')
+plt.xlabel('Number of layers in decision tree (max_depth)')
+plt.ylabel('RECALL (Y=4): Training (blue) and Test (red)')
+plt.show()
+
+plt.plot([x[0] for x in test_results],[x[7] for x in test_results],label='test', color='red', marker='o')
+plt.plot([x[0] for x in train_results],[x[7] for x in train_results],label='train', color='blue', marker='o')
+plt.xlabel('Number of layers in decision tree (max_depth)')
+plt.ylabel('RECALL (Y=5): Training (blue) and Test (red)')
+plt.show()
+
+plt.plot([x[0] for x in test_results],[x[8] for x in test_results],label='test', color='red', marker='o')
+plt.plot([x[0] for x in train_results],[x[8] for x in train_results],label='train', color='blue', marker='o')
+plt.xlabel('Number of layers in decision tree (max_depth)')
+plt.ylabel('RECALL (Y=6): Training (blue) and Test (red)')
+plt.show()
+
+plt.plot([x[0] for x in test_results],[x[9] for x in test_results],label='test', color='red', marker='o')
+plt.plot([x[0] for x in train_results],[x[9] for x in train_results],label='train', color='blue', marker='o')
+plt.xlabel('Number of layers in decision tree (max_depth)')
+plt.ylabel('RECALL (Y=7): Training (blue) and Test (red)')
+plt.show()
+
+plt.plot([x[0] for x in test_results],[x[10] for x in test_results],label='test', color='red', marker='o')
+plt.plot([x[0] for x in train_results],[x[10] for x in train_results],label='train', color='blue', marker='o')
+plt.xlabel('Number of layers in decision tree (max_depth)')
+plt.ylabel('RECALL (Y=8): Training (blue) and Test (red)')
+plt.show()
+
+plt.plot([x[0] for x in test_results],[x[11] for x in test_results],label='test', color='red', marker='o')
+plt.plot([x[0] for x in train_results],[x[11] for x in train_results],label='train', color='blue', marker='o')
+plt.xlabel('Number of layers in decision tree (max_depth)')
+plt.ylabel('RECALL (Y=9): Training (blue) and Test (red)')
+plt.show()
+```
+
+## Optimal Decision Tree
+
+```{python}
+dt4 = DecisionTreeClassifier(random_state=10, max_depth = 10, criterion = 'gini')
+dt4.fit(X_train1, y_train)
+y_pred = dt4.predict(X_test1)
+Classification_report_4 = classification_report(y_test, y_pred)
+conf_matrix_4 = confusion_matrix(y_test, y_pred)
+```
+
+```{python}
+plt.figure(figsize = (320,180))
+dec_tree_4 = plot_tree(decision_tree=dt4, class_names=label_list, filled=True, rounded=True, fontsize=10, max_depth=10)
+plt.savefig('dec_tree_4.png')
+```
+
+```{python}
+sns.heatmap(conf_matrix_4,annot=True)
+plt.xlabel('Original')
+plt.ylabel('Predicted')
+plt.title('Heatmap of Confusion Matrix 4')
+#plt.savefig('Confusion_Matrix3.png')
+
+#Accuracy
+print('Accuracy',metrics.accuracy_score(y_test,y_pred))
+print(classification_report(y_test,y_pred))
+```
+
+
