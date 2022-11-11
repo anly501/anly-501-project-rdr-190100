@@ -1052,7 +1052,7 @@ memory usage: 2.6+ MB</code></pre>
 <li>There are 2 main terms to be known to understand silhouette scores:
 <ul>
 <li>Cohesion (Similarity to its own cluster)</li><br>
-<li>Separation (Similarity to other clusters)</li>
+<li>Separation (Similarity to other clusters)</li><br>
 </ul></li>
 <li>The silhouette value is a measure of how similar an object is to its own cluster (cohesion) compared to other clusters (separation). The silhouette scores lie between the range [-1,1] where a value close to the upper limit shows that a point is well matched to the cluster and a value close to the lower limit shows that it isn’t. After calculating silhouette values of all the points in the data, the silhouette score can be determined by averaging out the silhouette values.</li>
 <li>The silhouette coefficient, s(i), can be calculated by the following formula:<br> <em>where: <br> a(i): The average distance of that point with all other points in the same clusters and <br>b(i): The average distance of that point with all the points in the closest cluster to its cluster;</em> <span class="math display">\[ s_{i} = \frac {b_{i} - a_{i}}{max(b_{i}, a_{i})} \]</span></li>
