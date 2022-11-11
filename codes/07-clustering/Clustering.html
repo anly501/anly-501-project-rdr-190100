@@ -1,0 +1,1691 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Ramdayal Rewaria">
+
+<title>Clustering Techniques for Record Data</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="Clustering_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Clustering_files/libs/quarto-html/quarto.js"></script>
+<script src="Clustering_files/libs/quarto-html/popper.min.js"></script>
+<script src="Clustering_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Clustering_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Clustering_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Clustering_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Clustering_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Clustering_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Clustering_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Clustering Techniques for Record Data</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Ramdayal Rewaria </p>
+          </div>
+  </div>
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<ul>
+<li>I have taken Record History Data from F1 archives (<a href="https://ergast.com/mrd/">Ergast API</a>) to perform various Clustering Algorithms.</li>
+<li>The Data is cleaned in the previous sections.</li>
+<li>Overview of Data Cleaning:
+<ul>
+<li>F1 archives have important information about races held since 1950 to the current season.</li>
+<li>There are different tables of data that can be extracted such as Results of the Race, Constructor (Team) Information, Driver Information, Results of the Qualification, Season-End Results and many more.</li>
+<li>These individual tables have data inside dictionaries inside every row.</li>
+<li>These dictionaries can be expanded and every dictionary can be transformed into a separate table.</li>
+<li>Valuable information from these tables are then concatenated/joined into one master table</li>
+</ul></li>
+<li>The master table has consists of 26,941 rows and 21 feature variables and 1 label column.</li>
+<li>Some of the feature variables include laps in the race, grid position held, age at time of the race, history of wins in the past, history of laps completed in the past, weather of the race, points gained in the race and many more.</li>
+<li>The label column is based on the position achieved by a single driver in a particular race. The position range from 1 to 20/21/22 (based on the number of drivers that races in that particular race). For simplification purposes, the positions have been grouped into 3 different sections:
+<ul>
+<li>Podium (Top 3 finish)</li>
+<li>Top_10 (Positions 4-10)</li>
+<li>Outside Top_10 (Positions 10 and above)</li>
+</ul></li>
+<li>The motivation behind these sections were solely based on the fact that Top 3 finish receive more points than Positions 4-10, while Positions 10 and above do not receive any points at all.</li>
+<li>From the clustering analysis, I want to see that without the label column (Un-supervised ML), do we still achieve the same number of clusters as the sections that were originally decided upon i.e., 3.</li>
+</ul>
+</section>
+<section id="import-libraries" class="level1">
+<h1>Import Libraries</h1>
+<div class="cell" data-execution_count="241">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>sns.set_theme(style<span class="op">=</span><span class="st">"whitegrid"</span>, palette<span class="op">=</span><span class="st">'Set2'</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.spatial.distance <span class="im">import</span> cdist</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> OneHotEncoder, StandardScaler</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.cluster <span class="im">import</span> KMeans</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.cluster <span class="im">import</span> DBSCAN</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> silhouette_score</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> silhouette_samples</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.cluster <span class="im">import</span> AgglomerativeClustering</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.cluster.hierarchy <span class="im">import</span> dendrogram, linkage</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.cluster <span class="im">import</span> MeanShift, estimate_bandwidth</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> itertools <span class="im">import</span> cycle</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.cluster <span class="im">import</span> Birch</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.neighbors <span class="im">import</span> NearestNeighbors</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> warnings</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">'ignore'</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> time</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="import-data" class="level1">
+<h1>Import Data</h1>
+<div class="cell" data-execution_count="162">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'../../data/02-model-data/data_cleaned.csv'</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="162">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>season</th>
+      <th>round</th>
+      <th>season_round</th>
+      <th>driverId</th>
+      <th>raceId</th>
+      <th>circuitId</th>
+      <th>position</th>
+      <th>points</th>
+      <th>grid</th>
+      <th>laps</th>
+      <th>...</th>
+      <th>weather</th>
+      <th>stop</th>
+      <th>age_on_race</th>
+      <th>cumulative_points</th>
+      <th>cumulative_laps</th>
+      <th>pole_driverId</th>
+      <th>pole_history</th>
+      <th>win_driverId</th>
+      <th>win_history</th>
+      <th>label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1950</td>
+      <td>1</td>
+      <td>1950_1</td>
+      <td>642</td>
+      <td>833</td>
+      <td>9</td>
+      <td>1</td>
+      <td>9.0</td>
+      <td>1</td>
+      <td>70</td>
+      <td>...</td>
+      <td>Fine</td>
+      <td>Not Available</td>
+      <td>44</td>
+      <td>9.0</td>
+      <td>70</td>
+      <td>642</td>
+      <td>1</td>
+      <td>642</td>
+      <td>1</td>
+      <td>Podium</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1950</td>
+      <td>1</td>
+      <td>1950_1</td>
+      <td>786</td>
+      <td>833</td>
+      <td>9</td>
+      <td>2</td>
+      <td>6.0</td>
+      <td>2</td>
+      <td>70</td>
+      <td>...</td>
+      <td>Fine</td>
+      <td>Not Available</td>
+      <td>52</td>
+      <td>6.0</td>
+      <td>70</td>
+      <td>642</td>
+      <td>0</td>
+      <td>642</td>
+      <td>0</td>
+      <td>Podium</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1950</td>
+      <td>1</td>
+      <td>1950_1</td>
+      <td>686</td>
+      <td>833</td>
+      <td>9</td>
+      <td>3</td>
+      <td>4.0</td>
+      <td>4</td>
+      <td>70</td>
+      <td>...</td>
+      <td>Fine</td>
+      <td>Not Available</td>
+      <td>39</td>
+      <td>4.0</td>
+      <td>70</td>
+      <td>642</td>
+      <td>0</td>
+      <td>642</td>
+      <td>0</td>
+      <td>Podium</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1950</td>
+      <td>1</td>
+      <td>1950_1</td>
+      <td>704</td>
+      <td>833</td>
+      <td>9</td>
+      <td>4</td>
+      <td>3.0</td>
+      <td>6</td>
+      <td>68</td>
+      <td>...</td>
+      <td>Fine</td>
+      <td>Not Available</td>
+      <td>46</td>
+      <td>3.0</td>
+      <td>68</td>
+      <td>642</td>
+      <td>0</td>
+      <td>642</td>
+      <td>0</td>
+      <td>Top_10</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1950</td>
+      <td>1</td>
+      <td>1950_1</td>
+      <td>627</td>
+      <td>833</td>
+      <td>9</td>
+      <td>5</td>
+      <td>2.0</td>
+      <td>9</td>
+      <td>68</td>
+      <td>...</td>
+      <td>Fine</td>
+      <td>Not Available</td>
+      <td>45</td>
+      <td>2.0</td>
+      <td>68</td>
+      <td>642</td>
+      <td>0</td>
+      <td>642</td>
+      <td>0</td>
+      <td>Top_10</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 22 columns</p>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="163">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df.shape</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="163">
+<pre><code>(26941, 22)</code></pre>
+</div>
+</div>
+</section>
+<section id="data-pre-processing-and-visualization" class="level1">
+<h1>Data Pre-Processing and Visualization</h1>
+<ul>
+<li>The cleaned data needs some pre-processing for it to be fed into Clustering models.</li>
+<li>Overview of <code>Pre-Processing</code>:
+<ul>
+<li>Dropping unnecessary columns.</li>
+<li>The current season should not be taken into consideration while performing any Machine Learning algorithms since it is still ongoing.</li>
+<li>All the features should be numeric.
+<ul>
+<li>The features that are already numeric should be normalized.</li>
+<li>Some of the numeric features such as ‘season’, ‘round’ are categories and should be converted to categorical data type.</li>
+<li>Variables such as ‘status’, ‘weather’ and ‘stop’ are not numerical and should be One-Hot Encoded to numeric.</li>
+</ul></li>
+<li>Lastly, the label column is not needed to perform Clustering Algorithms, hence it should be dropped before running Clustering Algorithms.</li>
+</ul></li>
+</ul>
+<div class="cell" data-execution_count="164">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df.drop([<span class="st">'season_round'</span>, <span class="st">'constructorRef'</span>, <span class="st">'raceId'</span>], axis<span class="op">=</span><span class="dv">1</span>, inplace<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-execution_count="165">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[df[<span class="st">'season'</span>] <span class="op">!=</span> <span class="dv">2022</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-execution_count="166">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>df.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="166">
+<pre><code>Index(['season', 'round', 'driverId', 'circuitId', 'position', 'points',
+       'grid', 'laps', 'status', 'weather', 'stop', 'age_on_race',
+       'cumulative_points', 'cumulative_laps', 'pole_driverId', 'pole_history',
+       'win_driverId', 'win_history', 'label'],
+      dtype='object')</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="167">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>numeric_features <span class="op">=</span> [<span class="st">'season'</span>, <span class="st">'driverId'</span> , <span class="st">'round'</span> , <span class="st">'circuitId'</span> , <span class="st">'pole_driverId'</span> , <span class="st">'position'</span> ,<span class="st">'points'</span>, <span class="st">'grid'</span>,</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>                    <span class="st">'laps'</span>, <span class="st">'age_on_race'</span>, <span class="st">'cumulative_points'</span>, <span class="st">'cumulative_laps'</span>, <span class="st">'pole_history'</span>, <span class="st">'win_history'</span>, <span class="st">'win_driverId'</span>]</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>categorical_features <span class="op">=</span> [<span class="st">'status'</span>, <span class="st">'weather'</span>, <span class="st">'stop'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-execution_count="168">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>scaler <span class="op">=</span> StandardScaler()</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>df[numeric_features] <span class="op">=</span> scaler.fit_transform(df[numeric_features])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-execution_count="169">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'season'</span>] <span class="op">=</span> df[<span class="st">'season'</span>].astype(<span class="st">'category'</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'driverId'</span>] <span class="op">=</span> df[<span class="st">'driverId'</span>].astype(<span class="st">'category'</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'round'</span>] <span class="op">=</span> df[<span class="st">'round'</span>].astype(<span class="st">'category'</span>)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'circuitId'</span>] <span class="op">=</span> df[<span class="st">'circuitId'</span>].astype(<span class="st">'category'</span>)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'pole_driverId'</span>] <span class="op">=</span> df[<span class="st">'pole_driverId'</span>].astype(<span class="st">'category'</span>)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'win_driverId'</span>] <span class="op">=</span> df[<span class="st">'win_driverId'</span>].astype(<span class="st">'category'</span>)</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'position'</span>] <span class="op">=</span> df[<span class="st">'position'</span>].astype(<span class="st">'category'</span>)</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'grid'</span>] <span class="op">=</span> df[<span class="st">'grid'</span>].astype(<span class="st">'category'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-execution_count="170">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.get_dummies(df, columns<span class="op">=</span>categorical_features)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-execution_count="171">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="171">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>season</th>
+      <th>round</th>
+      <th>driverId</th>
+      <th>circuitId</th>
+      <th>position</th>
+      <th>points</th>
+      <th>grid</th>
+      <th>laps</th>
+      <th>age_on_race</th>
+      <th>cumulative_points</th>
+      <th>...</th>
+      <th>weather_Snowy</th>
+      <th>weather_Sunny</th>
+      <th>weather_Windy</th>
+      <th>stop_Five</th>
+      <th>stop_Four</th>
+      <th>stop_Not Available</th>
+      <th>stop_One</th>
+      <th>stop_Six</th>
+      <th>stop_Three</th>
+      <th>stop_Two</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-1.910324</td>
+      <td>-1.468876</td>
+      <td>1.413545</td>
+      <td>-0.803986</td>
+      <td>-1.532137</td>
+      <td>1.803095</td>
+      <td>-1.400046</td>
+      <td>0.794341</td>
+      <td>2.483855</td>
+      <td>-0.385949</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>-1.910324</td>
+      <td>-1.468876</td>
+      <td>1.957913</td>
+      <td>-0.803986</td>
+      <td>-1.402770</td>
+      <td>1.053931</td>
+      <td>-1.262381</td>
+      <td>0.794341</td>
+      <td>3.928107</td>
+      <td>-0.393713</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-1.910324</td>
+      <td>-1.468876</td>
+      <td>1.579880</td>
+      <td>-0.803986</td>
+      <td>-1.273404</td>
+      <td>0.554488</td>
+      <td>-0.987052</td>
+      <td>0.794341</td>
+      <td>1.581198</td>
+      <td>-0.398889</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>-1.910324</td>
+      <td>-1.468876</td>
+      <td>1.647926</td>
+      <td>-0.803986</td>
+      <td>-1.144037</td>
+      <td>0.304767</td>
+      <td>-0.711723</td>
+      <td>0.728096</td>
+      <td>2.844918</td>
+      <td>-0.401477</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>-1.910324</td>
+      <td>-1.468876</td>
+      <td>1.356840</td>
+      <td>-0.803986</td>
+      <td>-1.014670</td>
+      <td>0.055046</td>
+      <td>-0.298729</td>
+      <td>0.728096</td>
+      <td>2.664387</td>
+      <td>-0.404065</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 34 columns</p>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="172">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>df.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+Int64Index: 26621 entries, 0 to 26620
+Data columns (total 34 columns):
+ #   Column                   Non-Null Count  Dtype   
+---  ------                   --------------  -----   
+ 0   season                   26621 non-null  category
+ 1   round                    26621 non-null  category
+ 2   driverId                 26621 non-null  category
+ 3   circuitId                26621 non-null  category
+ 4   position                 26621 non-null  category
+ 5   points                   26621 non-null  float64 
+ 6   grid                     26621 non-null  category
+ 7   laps                     26621 non-null  float64 
+ 8   age_on_race              26621 non-null  float64 
+ 9   cumulative_points        26621 non-null  float64 
+ 10  cumulative_laps          26621 non-null  float64 
+ 11  pole_driverId            26621 non-null  category
+ 12  pole_history             26621 non-null  float64 
+ 13  win_driverId             26621 non-null  category
+ 14  win_history              26621 non-null  float64 
+ 15  label                    26621 non-null  object  
+ 16  status_Accident          26621 non-null  uint8   
+ 17  status_Finished          26621 non-null  uint8   
+ 18  status_Lapped            26621 non-null  uint8   
+ 19  status_Mechanical_Issue  26621 non-null  uint8   
+ 20  weather_Cloudy           26621 non-null  uint8   
+ 21  weather_Fine             26621 non-null  uint8   
+ 22  weather_Not Available    26621 non-null  uint8   
+ 23  weather_Rainy            26621 non-null  uint8   
+ 24  weather_Snowy            26621 non-null  uint8   
+ 25  weather_Sunny            26621 non-null  uint8   
+ 26  weather_Windy            26621 non-null  uint8   
+ 27  stop_Five                26621 non-null  uint8   
+ 28  stop_Four                26621 non-null  uint8   
+ 29  stop_Not Available       26621 non-null  uint8   
+ 30  stop_One                 26621 non-null  uint8   
+ 31  stop_Six                 26621 non-null  uint8   
+ 32  stop_Three               26621 non-null  uint8   
+ 33  stop_Two                 26621 non-null  uint8   
+dtypes: category(8), float64(7), object(1), uint8(18)
+memory usage: 2.6+ MB</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="173">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>df.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="173">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>points</th>
+      <th>laps</th>
+      <th>age_on_race</th>
+      <th>cumulative_points</th>
+      <th>cumulative_laps</th>
+      <th>pole_history</th>
+      <th>win_history</th>
+      <th>status_Accident</th>
+      <th>status_Finished</th>
+      <th>status_Lapped</th>
+      <th>...</th>
+      <th>weather_Snowy</th>
+      <th>weather_Sunny</th>
+      <th>weather_Windy</th>
+      <th>stop_Five</th>
+      <th>stop_Four</th>
+      <th>stop_Not Available</th>
+      <th>stop_One</th>
+      <th>stop_Six</th>
+      <th>stop_Three</th>
+      <th>stop_Two</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>2.662100e+04</td>
+      <td>2.662100e+04</td>
+      <td>2.662100e+04</td>
+      <td>2.662100e+04</td>
+      <td>2.662100e+04</td>
+      <td>2.662100e+04</td>
+      <td>2.662100e+04</td>
+      <td>26621.000000</td>
+      <td>26621.000000</td>
+      <td>26621.000000</td>
+      <td>...</td>
+      <td>26621.000000</td>
+      <td>26621.000000</td>
+      <td>26621.000000</td>
+      <td>26621.000000</td>
+      <td>26621.000000</td>
+      <td>26621.000000</td>
+      <td>26621.000000</td>
+      <td>26621.000000</td>
+      <td>26621.000000</td>
+      <td>26621.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>8.869780e-14</td>
+      <td>1.418972e-15</td>
+      <td>-1.343136e-15</td>
+      <td>-3.520447e-16</td>
+      <td>-1.600204e-15</td>
+      <td>2.277195e-14</td>
+      <td>-2.390364e-14</td>
+      <td>0.041959</td>
+      <td>0.261523</td>
+      <td>0.284925</td>
+      <td>...</td>
+      <td>0.005973</td>
+      <td>0.459825</td>
+      <td>0.093648</td>
+      <td>0.002930</td>
+      <td>0.009128</td>
+      <td>0.838811</td>
+      <td>0.053003</td>
+      <td>0.000676</td>
+      <td>0.032531</td>
+      <td>0.062920</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>1.000019e+00</td>
+      <td>1.000019e+00</td>
+      <td>1.000019e+00</td>
+      <td>1.000019e+00</td>
+      <td>1.000019e+00</td>
+      <td>1.000019e+00</td>
+      <td>1.000019e+00</td>
+      <td>0.200500</td>
+      <td>0.439472</td>
+      <td>0.451387</td>
+      <td>...</td>
+      <td>0.077054</td>
+      <td>0.498393</td>
+      <td>0.291344</td>
+      <td>0.054051</td>
+      <td>0.095106</td>
+      <td>0.367712</td>
+      <td>0.224044</td>
+      <td>0.025995</td>
+      <td>0.177408</td>
+      <td>0.242824</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>-4.443970e-01</td>
+      <td>-1.524228e+00</td>
+      <td>-2.209962e+00</td>
+      <td>-4.092412e-01</td>
+      <td>-8.824187e-01</td>
+      <td>-3.807719e-01</td>
+      <td>-3.728114e-01</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>-4.443970e-01</td>
+      <td>-8.286577e-01</td>
+      <td>-7.657108e-01</td>
+      <td>-4.040651e-01</td>
+      <td>-7.258831e-01</td>
+      <td>-3.807719e-01</td>
+      <td>-3.728114e-01</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>-4.443970e-01</td>
+      <td>1.981373e-01</td>
+      <td>-4.358498e-02</td>
+      <td>-3.523044e-01</td>
+      <td>-3.662826e-01</td>
+      <td>-3.807719e-01</td>
+      <td>-3.728114e-01</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>5.504573e-02</td>
+      <td>6.949735e-01</td>
+      <td>6.785409e-01</td>
+      <td>-5.209218e-02</td>
+      <td>3.797267e-01</td>
+      <td>-1.838849e-01</td>
+      <td>-1.842184e-01</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>1.204167e+01</td>
+      <td>5.100255e+00</td>
+      <td>5.191827e+00</td>
+      <td>1.036605e+01</td>
+      <td>4.854550e+00</td>
+      <td>9.758907e+00</td>
+      <td>9.339728e+00</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>...</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+<p>8 rows × 25 columns</p>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="174">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> df.drop([<span class="st">'label'</span>], axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> df[<span class="st">'label'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="clustering" class="level1">
+<h1>Clustering</h1>
+<ul>
+<li>Clustering is a Machine Learning method that groups vectors or observations (set of objects) into groups (clusters).</li>
+<li>If we are given a set of vectors, each data point or vector can be classified into a particular group.</li>
+<li>Suppose there are n amount of vectors in 1 cluster and there are m amount of clusters for a specific data. In theory, the n vectors in each cluster are similar to each other and have the same properties and the vectors that are not in the same cluster should have different properties.</li>
+<li>Clustering is an Un-supervised ML method which means that there is no target variable present while creating a clustering model.</li>
+<li>When no predefined classification is required but the data needs to be organized into logical groupings, clustering techniques are applied.</li>
+<li>By examining the groups that our data points fall into after using a clustering algorithm, we can utilize it to gain some valuable insights about our data.</li>
+<li>Some of the applications of Clustering include:
+<ul>
+<li>Market segmentation</li>
+<li>Social network analysis</li>
+<li>Grouping of search results</li>
+<li>Medical image processing</li>
+<li>Image segmentation</li>
+<li>Anomaly detection.</li>
+</ul></li>
+<li>The grouping of data into clusters is based on spatial similarity of different vectors. The spatial separation between the vectors, is referred to as similarity. There are several ways to calculate this distance. But this fact already shows that there isn’t a standard, well-defined process for cluster determination. Hence, there are different Algorithms to group the data into clusters:
+<ul>
+<li>Connectivity Models: Hierarchical Clustering (Agglomerative and Birch Clustering)</li>
+<li>Centroid Models: K-Means Clustering</li>
+<li>Density Models: DBSCAN and OPTICS Clustering</li>
+<li>Distribution Models</li>
+<li>Subspace Models</li>
+<li>Graph-based Models</li>
+<li>Group Models</li>
+<li>Neural Models and so on.</li>
+</ul></li>
+<li>As always, there are some drawbacks with Clustering:
+<ul>
+<li>With very large data sets, the key concept of clustering – the distance between individual measurements / observations – is made useless by the so-called curse of dimensionality. This makes it very time consuming for large datasets – especially if the space has multiple dimensions.</li>
+<li>Shortcomings of existing (and applied) algorithms. These include:
+<ul>
+<li>the inability to recognise whether the data set is homogeneous or contains clusters.</li>
+<li>the inability to rank variables according to their contribution to the heterogeneity of the dataset.</li>
+<li>the inability to recognise specific patterns: Cluster centers, core regions, boundaries of clusters, zones of mixing, noise or even outliers.</li>
+<li>the inability to estimate the correct number of clusters.</li>
+<li>Moreover, each algorithm is designed to find the same type of clusters. As a result, it fails as soon as there is a mixture of clusters with different properties.</li>
+</ul></li>
+<li>The effectiveness of the clustering is determined by the chosen method of distance measurement. Usually, there is no universally correct result. This is due to the fact that it varies drastically depending on the different methods, each with different parameters.</li>
+</ul></li>
+</ul>
+<section id="clustering-with-random-hyper-parameters" class="level2">
+<h2 class="anchored" data-anchor-id="clustering-with-random-hyper-parameters">Clustering with random Hyper-parameters</h2>
+<p>For every algorithm that performs Clustering on a dataset, there are many hyperparameters that needs to be specified beforehand. But these hyper-parameters need to be tuned, keeping in mind our dataset. Giving random hyperparameters that do not match our dataset may result in loss of data and/or wrong datapoints being classified into clusters. Thus before hyper-parameter tuning, let’s see a k-means model with random hyperparameters as follows: - Initializer: kmeans++ - Number of clusters: 6 - Maximum iterations: 300 - Random state: 1973</p>
+<div class="cell" data-execution_count="175">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>kmeans <span class="op">=</span> KMeans(</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    init<span class="op">=</span><span class="st">"k-means++"</span>,</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    n_clusters<span class="op">=</span><span class="dv">6</span>,</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    max_iter<span class="op">=</span><span class="dv">300</span>,</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    random_state<span class="op">=</span><span class="dv">1973</span>)</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>label <span class="op">=</span> kmeans.fit_predict(X)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-execution_count="176">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'cluster_label'</span>] <span class="op">=</span> label</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-execution_count="177">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>df.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="177">
+<pre><code>Index(['season', 'round', 'driverId', 'circuitId', 'position', 'points',
+       'grid', 'laps', 'age_on_race', 'cumulative_points', 'cumulative_laps',
+       'pole_driverId', 'pole_history', 'win_driverId', 'win_history', 'label',
+       'status_Accident', 'status_Finished', 'status_Lapped',
+       'status_Mechanical_Issue', 'weather_Cloudy', 'weather_Fine',
+       'weather_Not Available', 'weather_Rainy', 'weather_Snowy',
+       'weather_Sunny', 'weather_Windy', 'stop_Five', 'stop_Four',
+       'stop_Not Available', 'stop_One', 'stop_Six', 'stop_Three', 'stop_Two',
+       'cluster_label'],
+      dtype='object')</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="179">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the clusters</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>features <span class="op">=</span> [<span class="st">'season'</span>, <span class="st">'driverId'</span> , <span class="st">'round'</span> , <span class="st">'circuitId'</span> , <span class="st">'pole_driverId'</span> , <span class="st">'position'</span> ,<span class="st">'points'</span>, <span class="st">'grid'</span>,</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>                    <span class="st">'laps'</span>, <span class="st">'age_on_race'</span>, <span class="st">'cumulative_points'</span>, <span class="st">'cumulative_laps'</span>, <span class="st">'pole_history'</span>, <span class="st">'win_history'</span>, <span class="st">'win_driverId'</span>, <span class="st">'cluster_label'</span>]</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>sns.pairplot(df[features], hue<span class="op">=</span><span class="st">'cluster_label'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="179">
+<pre><code>&lt;seaborn.axisgrid.PairGrid at 0x7f8a21d3dc00&gt;</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="Clustering_files/figure-html/cell-19-output-2.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="hyper-parameter-tuning" class="level2">
+<h2 class="anchored" data-anchor-id="hyper-parameter-tuning">Hyper-parameter Tuning</h2>
+<ul>
+<li><code>Hyper-parameters</code> are variables that you specify while building a machine-learning model. This means that it’s the user that defines the hyper-parameters while building the model. Hyper-parameters control the learning process, while parameters are learned.</li>
+<li>The performance of a model significantly depends on the value of hyperparameters. Note that there is no way to know in advance the best values for hyperparameters so ideally, we need to try all possible values to know the optimal values.</li>
+<li>Doing this manually could take a considerable amount of time and resources.</li>
+<li>Hence we create functions with loops and parameters and try to find the best possible Hyper-parameter(s) based on a metric. This metric changes between algorithm to algorithm and also betwwen methods inside the algorithm. For example, in clustering silhouette method is a very commonly used method to determine hyper-parameters and it is based on maximizing the silhouette score, but there are other methods too to determine hyper-parameters such as Elbow method, Grubbs and so on.</li>
+<li>Elbow Method is good for finding optimal hyper-parameters when the dimension of the dataset is low but for high dimension data, Silhouette method is preferred.</li>
+</ul>
+<section id="silhouette-method" class="level3">
+<h3 class="anchored" data-anchor-id="silhouette-method">Silhouette Method</h3>
+<ul>
+<li>Similar to Elbow Method, <code>Silhouette method</code> is also a method to find the optimal number of clusters or other hyper-parameters and also to validate the consistency of data inside the clusters.</li>
+<li>This method calculates silhouette coefficients for each of point, and averages it out for all the samples to get the silhouette score. The set of hyper-parameters with maximum silhouette score is chosen.</li>
+<li>There are 2 main terms to be known to understand silhouette scores:
+<ul>
+<li>Cohesion (Similarity to its own cluster)</li>
+<li>Separation (Similarity to other clusters)</li>
+</ul></li>
+<li>The silhouette value is a measure of how similar an object is to its own cluster (cohesion) compared to other clusters (separation). The silhouette scores lie between the range [-1,1] where a value close to the upper limit shows that a point is well matched to the cluster and a value close to the lower limit shows that it isn’t. After calculating silhouette values of all the points in the data, the silhouette score can be determined by averaging out the silhouette values.</li>
+<li>The silhouette coefficient, s(i), can be calculated by the following formula:<br> <em>where: <br> a(i): The average distance of that point with all other points in the same clusters and <br>b(i): The average distance of that point with all the points in the closest cluster to its cluster;</em> <span class="math display">\[ s_{i} = \frac {b_{i} - a_{i}}{max(b_{i}, a_{i})} \]</span></li>
+</ul>
+</section>
+<section id="hyper-parameter-tuning-function-maximize_silhouette" class="level3">
+<h3 class="anchored" data-anchor-id="hyper-parameter-tuning-function-maximize_silhouette">Hyper-Parameter tuning function (maximize_silhouette)</h3>
+<ul>
+<li>There are tons of different models that can be used to perform Clustering but for this dataset, we are focusing mainly on the 4 most used methods which are:
+<ul>
+<li><code>K-Means</code></li>
+<li><code>DBSCAN</code></li>
+<li><code>Agglomerative</code></li>
+<li><code>Birch</code></li>
+</ul></li>
+<li>The tuning function takes in the dataset (X), algorithm to be used (algo), maximum number of loops to run (nmax) and a boolean function to plot the silhouette scores against hyper-parameter (i_plot). It converts our dataset into a contiguous array and runs models with different value of hyper-parameters using a for loop and computes silhouette scores for each iteration. It then stores the optimal values of hyper-parameter, label and model and returns it out. If the i_plot parameter is set to ‘True’, the function will also a plot a graph of silhouette score v/s hyper-parameter.</li>
+</ul>
+<div class="cell" data-execution_count="197">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> maximize_silhouette(X,algo<span class="op">=</span><span class="st">"birch"</span>,nmax<span class="op">=</span><span class="dv">20</span>,i_plot<span class="op">=</span><span class="va">False</span>):</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># PARAM</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>    i_print<span class="op">=</span><span class="va">False</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">#FORCE CONTIGUOUS</span></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>    X<span class="op">=</span>np.ascontiguousarray(X) </span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># LOOP OVER HYPER-PARAM</span></span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>    params<span class="op">=</span>[]<span class="op">;</span> sil_scores<span class="op">=</span>[]</span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>    sil_max<span class="op">=-</span><span class="dv">10</span></span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> algo <span class="kw">in</span> [<span class="st">"kmeans"</span>,<span class="st">"birch"</span>,<span class="st">"ag"</span>]:</span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> param <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>,nmax<span class="op">+</span><span class="dv">1</span>):</span>
+<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span>(algo<span class="op">==</span><span class="st">"birch"</span>):</span>
+<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a>                </span>
+<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a>                model <span class="op">=</span> Birch(n_clusters<span class="op">=</span>param).fit(X)</span>
+<span id="cb24-20"><a href="#cb24-20" aria-hidden="true" tabindex="-1"></a>                labels<span class="op">=</span>model.predict(X)</span>
+<span id="cb24-21"><a href="#cb24-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-22"><a href="#cb24-22" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span>(algo<span class="op">==</span><span class="st">"ag"</span>):</span>
+<span id="cb24-23"><a href="#cb24-23" aria-hidden="true" tabindex="-1"></a>                </span>
+<span id="cb24-24"><a href="#cb24-24" aria-hidden="true" tabindex="-1"></a>                model <span class="op">=</span> AgglomerativeClustering(n_clusters<span class="op">=</span>param).fit(X)</span>
+<span id="cb24-25"><a href="#cb24-25" aria-hidden="true" tabindex="-1"></a>                labels<span class="op">=</span>model.labels_</span>
+<span id="cb24-26"><a href="#cb24-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-27"><a href="#cb24-27" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span>(algo<span class="op">==</span><span class="st">"kmeans"</span>):</span>
+<span id="cb24-28"><a href="#cb24-28" aria-hidden="true" tabindex="-1"></a>                </span>
+<span id="cb24-29"><a href="#cb24-29" aria-hidden="true" tabindex="-1"></a>                model <span class="op">=</span> KMeans(n_clusters<span class="op">=</span>param, init<span class="op">=</span><span class="st">'k-means++'</span>).fit(X)</span>
+<span id="cb24-30"><a href="#cb24-30" aria-hidden="true" tabindex="-1"></a>                labels<span class="op">=</span>model.predict(X)</span>
+<span id="cb24-31"><a href="#cb24-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-32"><a href="#cb24-32" aria-hidden="true" tabindex="-1"></a>            <span class="cf">try</span>:</span>
+<span id="cb24-33"><a href="#cb24-33" aria-hidden="true" tabindex="-1"></a>                </span>
+<span id="cb24-34"><a href="#cb24-34" aria-hidden="true" tabindex="-1"></a>                sil_scores.append(silhouette_score(X,labels))</span>
+<span id="cb24-35"><a href="#cb24-35" aria-hidden="true" tabindex="-1"></a>                params.append(param)</span>
+<span id="cb24-36"><a href="#cb24-36" aria-hidden="true" tabindex="-1"></a>                </span>
+<span id="cb24-37"><a href="#cb24-37" aria-hidden="true" tabindex="-1"></a>            <span class="cf">except</span>:</span>
+<span id="cb24-38"><a href="#cb24-38" aria-hidden="true" tabindex="-1"></a>                </span>
+<span id="cb24-39"><a href="#cb24-39" aria-hidden="true" tabindex="-1"></a>                <span class="cf">continue</span> </span>
+<span id="cb24-40"><a href="#cb24-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-41"><a href="#cb24-41" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span>(i_print): <span class="bu">print</span>(param,sil_scores[<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb24-42"><a href="#cb24-42" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb24-43"><a href="#cb24-43" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span>(sil_scores[<span class="op">-</span><span class="dv">1</span>]<span class="op">&gt;</span>sil_max):</span>
+<span id="cb24-44"><a href="#cb24-44" aria-hidden="true" tabindex="-1"></a>                opt_param<span class="op">=</span>param</span>
+<span id="cb24-45"><a href="#cb24-45" aria-hidden="true" tabindex="-1"></a>                sil_max<span class="op">=</span>sil_scores[<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb24-46"><a href="#cb24-46" aria-hidden="true" tabindex="-1"></a>                opt_labels<span class="op">=</span>labels</span>
+<span id="cb24-47"><a href="#cb24-47" aria-hidden="true" tabindex="-1"></a>                opt_model<span class="op">=</span>model</span>
+<span id="cb24-48"><a href="#cb24-48" aria-hidden="true" tabindex="-1"></a>                </span>
+<span id="cb24-49"><a href="#cb24-49" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> algo <span class="kw">in</span> [<span class="st">"dbscan"</span>]:</span>
+<span id="cb24-50"><a href="#cb24-50" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb24-51"><a href="#cb24-51" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> eps <span class="kw">in</span> np.arange(<span class="fl">0.2</span>, nmax<span class="op">+</span><span class="dv">1</span>, <span class="fl">0.2</span>):</span>
+<span id="cb24-52"><a href="#cb24-52" aria-hidden="true" tabindex="-1"></a>                </span>
+<span id="cb24-53"><a href="#cb24-53" aria-hidden="true" tabindex="-1"></a>                model <span class="op">=</span> DBSCAN(eps<span class="op">=</span>eps, min_samples<span class="op">=</span>X.shape[<span class="dv">1</span>]<span class="op">*</span><span class="dv">2</span>).fit(X)</span>
+<span id="cb24-54"><a href="#cb24-54" aria-hidden="true" tabindex="-1"></a>                labels<span class="op">=</span>model.labels_</span>
+<span id="cb24-55"><a href="#cb24-55" aria-hidden="true" tabindex="-1"></a>                </span>
+<span id="cb24-56"><a href="#cb24-56" aria-hidden="true" tabindex="-1"></a>                <span class="cf">try</span>:</span>
+<span id="cb24-57"><a href="#cb24-57" aria-hidden="true" tabindex="-1"></a>                        </span>
+<span id="cb24-58"><a href="#cb24-58" aria-hidden="true" tabindex="-1"></a>                    sil_scores.append(silhouette_score(X,labels))</span>
+<span id="cb24-59"><a href="#cb24-59" aria-hidden="true" tabindex="-1"></a>                    params.append(eps)</span>
+<span id="cb24-60"><a href="#cb24-60" aria-hidden="true" tabindex="-1"></a>                    </span>
+<span id="cb24-61"><a href="#cb24-61" aria-hidden="true" tabindex="-1"></a>                <span class="cf">except</span>:</span>
+<span id="cb24-62"><a href="#cb24-62" aria-hidden="true" tabindex="-1"></a>                            </span>
+<span id="cb24-63"><a href="#cb24-63" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">continue</span></span>
+<span id="cb24-64"><a href="#cb24-64" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb24-65"><a href="#cb24-65" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span>(i_print): <span class="bu">print</span>(eps,sil_scores[<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb24-66"><a href="#cb24-66" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb24-67"><a href="#cb24-67" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span>(sil_scores[<span class="op">-</span><span class="dv">1</span>]<span class="op">&gt;</span>sil_max):</span>
+<span id="cb24-68"><a href="#cb24-68" aria-hidden="true" tabindex="-1"></a>                    opt_param<span class="op">=</span>eps</span>
+<span id="cb24-69"><a href="#cb24-69" aria-hidden="true" tabindex="-1"></a>                    sil_max<span class="op">=</span>sil_scores[<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb24-70"><a href="#cb24-70" aria-hidden="true" tabindex="-1"></a>                    opt_labels<span class="op">=</span>labels</span>
+<span id="cb24-71"><a href="#cb24-71" aria-hidden="true" tabindex="-1"></a>                    opt_model<span class="op">=</span>model</span>
+<span id="cb24-72"><a href="#cb24-72" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb24-73"><a href="#cb24-73" aria-hidden="true" tabindex="-1"></a>    <span class="co">#print("Optimal Parameter for {} algorithm = {}".format(algo,opt_param))</span></span>
+<span id="cb24-74"><a href="#cb24-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-75"><a href="#cb24-75" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(i_plot):</span>
+<span id="cb24-76"><a href="#cb24-76" aria-hidden="true" tabindex="-1"></a>        fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb24-77"><a href="#cb24-77" aria-hidden="true" tabindex="-1"></a>        ax.plot(params, sil_scores, <span class="st">"-o"</span>)  </span>
+<span id="cb24-78"><a href="#cb24-78" aria-hidden="true" tabindex="-1"></a>        ax.<span class="bu">set</span>(xlabel<span class="op">=</span><span class="st">'Hyper-parameter'</span>, ylabel<span class="op">=</span><span class="st">'Silhouette'</span>)</span>
+<span id="cb24-79"><a href="#cb24-79" aria-hidden="true" tabindex="-1"></a>        plt.show()</span>
+<span id="cb24-80"><a href="#cb24-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-81"><a href="#cb24-81" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> opt_labels, opt_param, opt_model</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<section id="k-means-algorithm-hyper-parameter-n_clusters" class="level4">
+<h4 class="anchored" data-anchor-id="k-means-algorithm-hyper-parameter-n_clusters">K-Means Algorithm (Hyper-Parameter = n_clusters)</h4>
+<ul>
+<li><code>K-Means Algorithm</code> is a type of Partition-based or Centroid-based clustering.</li>
+<li><code>How does the K-Means algorithm work?</code>
+<ul>
+<li>First we choose k random data points and assign those as centroids or cluster centres.</li>
+<li>Then for every data point, we see which centroid is nearest to it using some measurement method such as Euclidean (default) or Manhattan.</li>
+<li>We assign the data point to that centroid.</li>
+<li>The new centroi is now at the average distance of the centroid chosen before and the data point assigned to it.</li>
+<li>Repeat the previous 3 steps until the centroid stops changing.</li>
+<li>The algorithm is said to have “converged” once there are no more changes.</li>
+</ul></li>
+<li>The goal is to minimize the sum of the distances between the data points and the cluster centroid in order to determine which group each data point should belong to.</li>
+<li>K-means follows the same approach as Expectation-Maximization(EM). EM is an iterative method to find the maximum likelihood of parameters where the machine learning model depends on unobserved features. This approach consists of two steps Expectation(E) and Maximization(M) and iterates between these two.</li>
+<li><code>Advantages</code>:
+<ul>
+<li>Relatively easy to understand and implement.</li>
+<li>Scalable to large datasets.</li>
+<li>Better computation cost.</li>
+<li>Easily warm start the assignments and positions of centroids.</li>
+</ul></li>
+<li><code>Disadvantages</code>:
+<ul>
+<li>Choosing K manually and being dependent on the initial values.</li>
+<li>Lacks consistent results for different values of K.</li>
+<li>Always tries to find circular clusters.</li>
+<li>Centroids get dragged due to outliers in the dataset.</li>
+<li>Curse of dimensionality, K is ineffective when the number of dimensions increases.</li>
+</ul></li>
+<li>For this exercise, we are choosing the hyper-parameter to tune as n_clusters while the other hyper-parameters are set to default. The tuning function calculates the maximum silhouette score for n_cluster values from 1-10 and outputs the Silhouette v/s N-Clusters graph. The labels are then predicted and appended to our original dataset for plotting clusters using Seaborn’s Pairplot function.</li>
+</ul>
+<div class="cell" data-execution_count="205">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>algo_features <span class="op">=</span> [<span class="st">'season'</span>, <span class="st">'driverId'</span> , <span class="st">'round'</span> , <span class="st">'circuitId'</span> , <span class="st">'pole_driverId'</span> , <span class="st">'position'</span> ,<span class="st">'points'</span>, <span class="st">'grid'</span>,</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>                    <span class="st">'laps'</span>, <span class="st">'age_on_race'</span>, <span class="st">'cumulative_points'</span>, <span class="st">'cumulative_laps'</span>, <span class="st">'pole_history'</span>, <span class="st">'win_history'</span>, <span class="st">'win_driverId'</span>]</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>start <span class="op">=</span> time.time()</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'KMeans Algorithm'</span>)</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>kmeans_labels, n_clusters, kmeans_model <span class="op">=</span> maximize_silhouette(X, <span class="st">'kmeans'</span>, <span class="dv">10</span>, <span class="va">True</span>)</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'The number of clusters for Kmeans algorithm is: '</span>, <span class="bu">len</span>(np.unique(kmeans_labels)))</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'kmeans_label'</span>] <span class="op">=</span> kmeans_labels</span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>algo_features.append(<span class="st">'kmeans_label'</span>)</span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Cluster Plots for Kmeans algorithm'</span>)</span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>sns.pairplot(df[algo_features], hue<span class="op">=</span><span class="st">'kmeans_label'</span>)</span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>end <span class="op">=</span> time.time()</span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Time taken for KMEANS algorithm: </span><span class="sc">{}</span><span class="st"> minutes'</span>.<span class="bu">format</span>((end <span class="op">-</span> start)<span class="op">/</span><span class="dv">60</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>KMeans Algorithm</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="Clustering_files/figure-html/cell-21-output-2.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The number of clusters for Kmeans algorithm is:  3
+Cluster Plots for Kmeans algorithm</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="Clustering_files/figure-html/cell-21-output-4.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Time taken for KMEANS algorithm: 2.348343348503113 minutes</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="207">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'kmeans_label'</span>].value_counts()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="207">
+<pre><code>2    17146
+1     7349
+0     2126
+Name: kmeans_label, dtype: int64</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="208">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'label'</span>].value_counts()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="208">
+<pre><code>Outside_Top_10    15364
+Top_10             7866
+Podium             3391
+Name: label, dtype: int64</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="231">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'kmeans_accuracy'</span>] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(df)):</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> df[<span class="st">'kmeans_label'</span>][i] <span class="op">==</span> <span class="dv">0</span> <span class="kw">and</span> df[<span class="st">'label'</span>][i] <span class="op">==</span> <span class="st">'Podium'</span>:</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>        df[<span class="st">'kmeans_accuracy'</span>][i] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> df[<span class="st">'kmeans_label'</span>][i] <span class="op">==</span> <span class="dv">1</span> <span class="kw">and</span> df[<span class="st">'label'</span>][i] <span class="op">==</span> <span class="st">'Top_10'</span>:</span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>        df[<span class="st">'kmeans_accuracy'</span>][i] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> df[<span class="st">'kmeans_label'</span>][i] <span class="op">==</span> <span class="dv">2</span> <span class="kw">and</span> df[<span class="st">'label'</span>][i] <span class="op">==</span> <span class="st">'Outside_Top_10'</span>:</span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a>        df[<span class="st">'kmeans_accuracy'</span>][i] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb33-14"><a href="#cb33-14" aria-hidden="true" tabindex="-1"></a>        df[<span class="st">'kmeans_accuracy'</span>][i] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb33-15"><a href="#cb33-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-16"><a href="#cb33-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'The accuracy of correct clusters formed by K-Means Algorithm = </span><span class="sc">{}</span><span class="st"> %'</span>.<span class="bu">format</span>(df[<span class="st">'kmeans_accuracy'</span>].mean()<span class="op">*</span><span class="dv">100</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>The accuracy of correct clusters formed by K-Means Algorithm = 55.47500093910822 %</code></pre>
+</div>
+</div>
+<section id="results-for-k-means-algorithm" class="level5">
+<h5 class="anchored" data-anchor-id="results-for-k-means-algorithm">Results for K-Means Algorithm</h5>
+<ul>
+<li><code>The optimal number of clusters formed came out to be 3</code> which is also equal to the number of labels present in the original dataset.</li>
+<li>But after comparing proposed cluster labels with the original labels, around <code>14,800 out of 26,000 values (55.475%) are matching with each other</code>. This is due to the fact that our dataset is historical and contains a lot of inter-dependencies between the features which leads the algorithm to not create clusters properly as it is a simple clustering algorithm. Another reason might be that the dimensionality of the data is very high and this makes it very complex.</li>
+</ul>
+</section>
+</section>
+<section id="dbscan-algorithm-hyper-parameter-eps" class="level4">
+<h4 class="anchored" data-anchor-id="dbscan-algorithm-hyper-parameter-eps">DBSCAN Algorithm (Hyper-Parameter = eps)</h4>
+<ul>
+<li>DBSCAN stands for <em>Density-Based Spatial Clustering of Applications with Noise</em> and it is a Density Based Algorithm.</li>
+<li>It works on the assumption that clusters are dense regions in space separated by regions of lower density. Densely grouped data points are grouped into a single cluster.</li>
+<li>By seeing local density of data points in large spatial datasets, the clusters are identified.</li>
+<li>This algorithm is robust to outliers and the number of clusters to make cannot be specified as a hyper-parameter.</li>
+<li>Let a given dataset of points (dataset D = {xi}), we have to partition the point into the dense region which we will call them as Clusters and sparse region which may contain noise.</li>
+<li>The 2 main hyper-parameters for this model are:
+<ul>
+<li><code>Epsilon (eps)</code>: specifies how close points should be to each other to be considered a part of a cluster. It means that if the distance between two points is lower or equal to this value (eps), these points are considered to be neighbors.</li>
+<li><code>Minimum number of Points (min_samples)</code>: the minimum number of points to form a dense region. For example, if we set the minPoints parameter as 5, then we need at least 5 points to form a dense region.</li>
+</ul></li>
+<li>There are 3 types of points in this algorithm:
+<ul>
+<li><code>Core Point</code>: The point where, within the specified ‘eps’ radius it has more than the specified min_samples number of points. This points always belongs to a dense region.</li>
+<li><code>Border Point</code>: A point where, within the specified ‘eps’ radius it has less than the specified min_samples number of points but it is in the neighborhood of a core point.</li>
+<li><code>Noise Point</code>: A point that does not belong to both a Core point or a Border Point.</li>
+</ul></li>
+<li>Every point in the dataset on given min_samples and eps, can categorize every data point into Core point, Border point and Noise point.</li>
+<li><code>Density Edge</code>: If p and q both are core points and distance between (p,q) ≤ eps then we can connect p, q vertex in a graph and call it “Density Edge”.</li>
+<li><code>Density Connected Points</code>: Two points p and q are said to be density connected points if both p and q are core points and they exist a path formed by density edges connecting point (p) to point(q).</li>
+<li><code>How does the DBSCAN algorithm work?</code>
+<ul>
+<li>Label the points as Core, Border and Noise Point.</li>
+<li>Get rid of every Noise point as they do not belong to any density region (cluster).</li>
+<li>For every core point that has not been assigned to any cluster yet:
+<ul>
+<li>create a new cluster with the point p and</li>
+<li>add all the points that are density-connected to p.</li>
+</ul></li>
+<li>Assign each border points to the cluster of the closest core point.</li>
+</ul></li>
+<li><code>Advantages</code>:
+<ul>
+<li>It can handle Noise very well.</li>
+<li>DBSCAN can handle clusters of different shapes and sizes.</li>
+</ul></li>
+<li><code>Disadvantages</code>:
+<ul>
+<li>If your dataset has multiple densities or varying densities, DBSCAN tends to fail. It does not work very well in such cases.</li>
+<li>It’s extremely sensitive to the hyperparameters. A slight change in hyperparameters can lead to a drastic change in the outcome.</li>
+<li>As we know, a concept like Density, may not work well in high dimensionality of data. We should avoid using it for text data.</li>
+</ul></li>
+<li>For this exercise, we are choosing the hyper-parameter to tune as eps while min_samples is taken as twice the dimensionality of the data (33*2 = 66) and other hyper-parameters are set to default.
+<ul>
+<li>The range of values where eps will lie between is calculated using K-distance graph while calculates K-nearest neighbors (n_neighbors = dimensionality of data multiplied by 2) and their distances.</li>
+<li>The tuning function calculates the maximum silhouette score for eps values between (0.2, 0.4, 0.6, … , 3) and outputs the Silhouette v/s Eps graph. The labels are then predicted and appended to our original dataset for plotting clusters using Seaborn’s Pairplot function.</li>
+</ul></li>
+</ul>
+<div class="cell" data-execution_count="213">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>neighbors <span class="op">=</span> NearestNeighbors(n_neighbors<span class="op">=</span><span class="dv">66</span>)</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>neighbors_fit <span class="op">=</span> neighbors.fit(X)</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>distances, indices <span class="op">=</span> neighbors_fit.kneighbors(X)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-execution_count="214">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>distances <span class="op">=</span> np.sort(distances, axis<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>distances <span class="op">=</span> distances[:,<span class="dv">1</span>]</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>plt.plot(distances)</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Points'</span>)</span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Distance (EPS)'</span>)</span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'K-Distance Graph for DBSCAN'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="214">
+<pre><code>Text(0.5, 1.0, 'K-Distance Graph for DBSCAN')</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="Clustering_files/figure-html/cell-26-output-2.png" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="217">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>algo_features <span class="op">=</span> [<span class="st">'season'</span>, <span class="st">'driverId'</span> , <span class="st">'round'</span> , <span class="st">'circuitId'</span> , <span class="st">'pole_driverId'</span> , <span class="st">'position'</span> ,<span class="st">'points'</span>, <span class="st">'grid'</span>,</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>                    <span class="st">'laps'</span>, <span class="st">'age_on_race'</span>, <span class="st">'cumulative_points'</span>, <span class="st">'cumulative_laps'</span>, <span class="st">'pole_history'</span>, <span class="st">'win_history'</span>, <span class="st">'win_driverId'</span>]</span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>start <span class="op">=</span> time.time()</span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'DBSCAN Algorithm'</span>)</span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>dbscan_labels, parameter, db_model <span class="op">=</span> maximize_silhouette(X, <span class="st">'dbscan'</span>, <span class="dv">2</span>, <span class="va">True</span>)</span>
+<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'The EPS for DBSCAN algorithm is: </span><span class="sc">{}</span><span class="st">'</span>.<span class="bu">format</span>(parameter))</span>
+<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'The number of clusters for DBSCAN algorithm is: '</span>, <span class="bu">len</span>(np.unique(dbscan_labels)))</span>
+<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'dbscan_label'</span>] <span class="op">=</span> dbscan_labels</span>
+<span id="cb38-11"><a href="#cb38-11" aria-hidden="true" tabindex="-1"></a>algo_features.append(<span class="st">'dbscan_label'</span>)</span>
+<span id="cb38-12"><a href="#cb38-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Cluster Plots for DBSCAN algorithm'</span>)</span>
+<span id="cb38-13"><a href="#cb38-13" aria-hidden="true" tabindex="-1"></a>sns.pairplot(df[algo_features], hue<span class="op">=</span><span class="st">'dbscan_label'</span>)</span>
+<span id="cb38-14"><a href="#cb38-14" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'DBSCAN Algorithm'</span>)</span>
+<span id="cb38-15"><a href="#cb38-15" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb38-16"><a href="#cb38-16" aria-hidden="true" tabindex="-1"></a>end <span class="op">=</span> time.time()</span>
+<span id="cb38-17"><a href="#cb38-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Time taken for DBSCAN algorithm: </span><span class="sc">{}</span><span class="st"> minutes'</span>.<span class="bu">format</span>((end <span class="op">-</span> start)<span class="op">/</span><span class="dv">60</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>DBSCAN Algorithm</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="Clustering_files/figure-html/cell-27-output-2.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The EPS for DBSCAN algorithm is: 2.6000000000000005
+The number of clusters for DBSCAN algorithm is:  3
+Cluster Plots for DBSCAN algorithm</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="Clustering_files/figure-html/cell-27-output-4.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Time taken for DBSCAN algorithm: 3.2984065810839334 minutes</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="218">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'dbscan_label'</span>].value_counts()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="218">
+<pre><code> 0    24342
+-1     2130
+ 1      149
+Name: dbscan_label, dtype: int64</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="219">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'label'</span>].value_counts()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="219">
+<pre><code>Outside_Top_10    15364
+Top_10             7866
+Podium             3391
+Name: label, dtype: int64</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="229">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'dbscan_accuracy'</span>] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(df)):</span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> df[<span class="st">'dbscan_label'</span>][i] <span class="op">==</span> <span class="dv">0</span> <span class="kw">and</span> df[<span class="st">'label'</span>][i] <span class="op">==</span> <span class="st">'Outside_Top_10'</span>:</span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a>        df[<span class="st">'dbscan_accuracy'</span>][i] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> df[<span class="st">'dbscan_label'</span>][i] <span class="op">==</span> <span class="op">-</span><span class="dv">1</span> <span class="kw">and</span> df[<span class="st">'label'</span>][i] <span class="op">==</span> <span class="st">'Top_10'</span>:</span>
+<span id="cb46-8"><a href="#cb46-8" aria-hidden="true" tabindex="-1"></a>        df[<span class="st">'dbscan_accuracy'</span>][i] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb46-9"><a href="#cb46-9" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb46-10"><a href="#cb46-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> df[<span class="st">'dbscan_label'</span>][i] <span class="op">==</span> <span class="dv">2</span> <span class="kw">and</span> df[<span class="st">'label'</span>][i] <span class="op">==</span> <span class="st">'Podium'</span>:</span>
+<span id="cb46-11"><a href="#cb46-11" aria-hidden="true" tabindex="-1"></a>        df[<span class="st">'dbscan_accuracy'</span>][i] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb46-12"><a href="#cb46-12" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb46-13"><a href="#cb46-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb46-14"><a href="#cb46-14" aria-hidden="true" tabindex="-1"></a>        df[<span class="st">'dbscan_accuracy'</span>][i] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb46-15"><a href="#cb46-15" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb46-16"><a href="#cb46-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'The accuracy of correct clusters formed by DBSCAN Algorithm = </span><span class="sc">{}</span><span class="st"> %'</span>.<span class="bu">format</span>(df[<span class="st">'dbscan_accuracy'</span>].mean()<span class="op">*</span><span class="dv">100</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>The accuracy of correct clusters formed by DBSCAN Algorithm = 56.549340746027575 %</code></pre>
+</div>
+</div>
+<section id="results-for-dbscan-algorithm" class="level5">
+<h5 class="anchored" data-anchor-id="results-for-dbscan-algorithm">Results for DBSCAN Algorithm</h5>
+<ul>
+<li>From the K-Distance graph it can be seen that the curve changes between the range 1-3 of eps and hence the <code>optimal value of epsilon should lie between 1 and 3</code>.</li>
+<li>The tuning algorithm output shows that <code>the optimal eps value for which the silhouette score is maximum is 2.6</code>.</li>
+<li>After putting our <code>hyper-parameters eps=2.6 and min_samples=66 the clusters formed came out to be 3</code> which is also equal to the number of labels present in the original dataset.</li>
+<li>But after comparing proposed cluster labels with the original labels, around <code>15,050 out of 26,000 values (56.543%) are matching with each other</code>. This is due to the fact that our dataset is historical and contains a lot of inter-dependencies between the features which leads the algorithm to not create clusters properly as it is a simple clustering algorithm. Another reason might be that the dimensionality of the data is very high and this makes it very complex.</li>
+</ul>
+</section>
+</section>
+<section id="agglomerative-hierarchical-algorithm-hyper-parameter-n_clusters" class="level4">
+<h4 class="anchored" data-anchor-id="agglomerative-hierarchical-algorithm-hyper-parameter-n_clusters">Agglomerative (Hierarchical) Algorithm (Hyper-Parameter = n_clusters)</h4>
+<ul>
+<li><code>Agglomerative Model</code> is a type of Hierarchical Clustering.</li>
+<li>It is also known as bottom-up clustering.</li>
+<li>The Agglomerative model works as follows: each object is initially considered as a single-element cluster (leaf). At each step of the algorithm, the two clusters that are the most similar are combined into a new bigger cluster (nodes). This procedure is iterated until all points are member of just one single big cluster (root).</li>
+<li>Pairs of clusters are merged as one moves up the hierarchy.</li>
+<li>The clusters are merged by finding the distance between 2 data points. The most famous method is the Euclidean distance.</li>
+<li><code>Euclidean distance</code> is a method of finding distance between 2 points where distance is calculated by drawing a straight line between the 2 data points and then calculating the length of the line. The formula to calculate the distance between 2 points p and q is: <span class="math display">\[ d\left( p,q\right)   = \sqrt {\sum _{i=1}^{n}  \left( q_{i}-p_{i}\right)^2 } \]</span></li>
+<li><code>How does Agglomerative Clustering work?</code>
+<ul>
+<li>It starts by treating each observation as a separate cluster.</li>
+<li>Distance Measurement: The distance is calculated between each observation using methods like Euclidean, Manhattan and so on. For example, suppose we have 3 features of 5 rows each. The distance between the Obs. 1 and Obs. 2 can be calculated using the formula above, and same for Obs. 1 and Obs. 3 and Obs. 2 and Obs. 4 and so on. After that, we merge the smallest non-zero distance in the matrix to create our first node. To calculate the distance between this newly created node to other data points, linkage criterion should be set.</li>
+<li>Linkage Criterion: The linkage criterion is where exactly the distance is measured. The simplest linkage criterion is <em>Single Linkage</em>. In a single linkage criterion, we define our distance as the minimum distance between clusters data point. In other words, let’s assume that in our previous example, The node came to be as (Obs. 1, Obs. 3). Now to calculate distance between this node and Obs. 2, we will calculate individual distances (using Euclidean distance formula) between the node and Obs. 2 i.e., Distance between Obs. 1 and Obs. 2 and Obs. 3 and Obs. 2. The minimum of these 2 distances will be taken as the distance between the node (Obs. 1, Obs. 3) and Obs. 2. The same goes for Obs. 4 and Obs. 5 as well.</li>
+<li>The next step would be again look at distances and merge points with the minimum distance. Continuing the same example, now suppose Obs. 2 and Obs. 4 have the least distance, hence it is merged into a node. Now we are left with 2 nodes: (Obs. 1, Obs. 3) and (Obs. 2, Obs. 4) and 1 other data point: Obs. 5. Again the distances are calculated using the linkage criterion and the nodes are merged again.</li>
+<li>We keep the merging ongoing until all the data is clustered into one cluster. In the end, we would obtain a dendrogram with all the data that have been merged into one cluster.</li>
+</ul></li>
+<li><code>Advantages</code>:
+<ul>
+<li>No need for information about how many numbers of clusters are required.</li>
+<li>Easy to use and implement</li>
+</ul></li>
+<li><code>Disadvantages</code>:
+<ul>
+<li>We can not take a step back in this algorithm.</li>
+<li>Time complexity is higher at least O(n^2logn)</li>
+</ul></li>
+<li>For this exercise, we are choosing the hyper-parameter to tune as n_clusters while the other hyper-parameters are set to default. The tuning function calculates the maximum silhouette score for n_cluster values from 1-10 and outputs the Silhouette v/s N-Clusters graph. The labels are then predicted and appended to our original dataset for plotting clusters using Seaborn’s Pairplot function.</li>
+</ul>
+<div class="cell" data-execution_count="222">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>algo_features <span class="op">=</span> [<span class="st">'season'</span>, <span class="st">'driverId'</span> , <span class="st">'round'</span> , <span class="st">'circuitId'</span> , <span class="st">'pole_driverId'</span> , <span class="st">'position'</span> ,<span class="st">'points'</span>, <span class="st">'grid'</span>,</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>                    <span class="st">'laps'</span>, <span class="st">'age_on_race'</span>, <span class="st">'cumulative_points'</span>, <span class="st">'cumulative_laps'</span>, <span class="st">'pole_history'</span>, <span class="st">'win_history'</span>, <span class="st">'win_driverId'</span>]</span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a>start <span class="op">=</span> time.time()</span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Agglomerative (Hierarchical) Algorithm'</span>)</span>
+<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-7"><a href="#cb48-7" aria-hidden="true" tabindex="-1"></a>ag_labels, n_clusters, agg_model <span class="op">=</span> maximize_silhouette(X, <span class="st">'ag'</span>, <span class="dv">10</span>, <span class="va">True</span>)</span>
+<span id="cb48-8"><a href="#cb48-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'The number of clusters for Agglomerative (Hierarchical) algorithm is: '</span>, <span class="bu">len</span>(np.unique(ag_labels)))</span>
+<span id="cb48-9"><a href="#cb48-9" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'ag_label'</span>] <span class="op">=</span> ag_labels</span>
+<span id="cb48-10"><a href="#cb48-10" aria-hidden="true" tabindex="-1"></a>algo_features.append(<span class="st">'ag_label'</span>)</span>
+<span id="cb48-11"><a href="#cb48-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Cluster Plots for Agglomerative (Hierarchical) algorithm'</span>)</span>
+<span id="cb48-12"><a href="#cb48-12" aria-hidden="true" tabindex="-1"></a>sns.pairplot(df[algo_features], hue<span class="op">=</span><span class="st">'ag_label'</span>)</span>
+<span id="cb48-13"><a href="#cb48-13" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb48-14"><a href="#cb48-14" aria-hidden="true" tabindex="-1"></a>end <span class="op">=</span> time.time()</span>
+<span id="cb48-15"><a href="#cb48-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Time taken for Agglomerative (Hierarchical) algorithm: </span><span class="sc">{}</span><span class="st"> minutes'</span>.<span class="bu">format</span>((end <span class="op">-</span> start)<span class="op">/</span><span class="dv">60</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Agglomerative (Hierarchical) Algorithm</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="Clustering_files/figure-html/cell-31-output-2.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The number of clusters for Agglomerative (Hierarchical) algorithm is:  4
+Cluster Plots for Agglomerative (Hierarchical) algorithm</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="Clustering_files/figure-html/cell-31-output-4.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Time taken for Agglomerative (Hierarchical) algorithm: 5.082929484049479 minutes</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="233">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>X1 <span class="op">=</span> df.drop([<span class="st">'label'</span>, <span class="st">'ag_label'</span>, <span class="st">'dbscan_label'</span>, <span class="st">'kmeans_label'</span>, <span class="st">'cluster_label'</span>, <span class="st">'kmeans_accuracy'</span>, <span class="st">'dbscan_accuracy'</span>], axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>Z <span class="op">=</span> linkage(X1, method<span class="op">=</span><span class="st">'ward'</span>)</span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a>dend <span class="op">=</span> dendrogram(Z, truncate_mode<span class="op">=</span><span class="st">'lastp'</span>,  <span class="co"># show only the last p merged clusters</span></span>
+<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a>    p<span class="op">=</span><span class="dv">4</span>,</span>
+<span id="cb52-6"><a href="#cb52-6" aria-hidden="true" tabindex="-1"></a>    leaf_rotation<span class="op">=</span><span class="dv">90</span>,</span>
+<span id="cb52-7"><a href="#cb52-7" aria-hidden="true" tabindex="-1"></a>    leaf_font_size<span class="op">=</span><span class="dv">12</span>,</span>
+<span id="cb52-8"><a href="#cb52-8" aria-hidden="true" tabindex="-1"></a>    show_contracted<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb52-9"><a href="#cb52-9" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Truncated Hierarchical Clustering Dendrogram'</span>)</span>
+<span id="cb52-10"><a href="#cb52-10" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Cluster Size'</span>)</span>
+<span id="cb52-11"><a href="#cb52-11" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Distance'</span>)</span>
+<span id="cb52-12"><a href="#cb52-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<p><img src="Clustering_files/figure-html/cell-32-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="223">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'ag_label'</span>].value_counts()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="223">
+<pre><code>0    17576
+2     3875
+3     2990
+1     2180
+Name: ag_label, dtype: int64</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="224">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'label'</span>].value_counts()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="224">
+<pre><code>Outside_Top_10    15364
+Top_10             7866
+Podium             3391
+Name: label, dtype: int64</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="228">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'ag_accuracy'</span>] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(df)):</span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> df[<span class="st">'ag_label'</span>][i] <span class="op">==</span> <span class="dv">0</span> <span class="kw">and</span> df[<span class="st">'label'</span>][i] <span class="op">==</span> <span class="st">'Outside_Top_10'</span>:</span>
+<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a>        df[<span class="st">'ag_accuracy'</span>][i] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb57-6"><a href="#cb57-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb57-7"><a href="#cb57-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> df[<span class="st">'ag_label'</span>][i] <span class="op">==</span> <span class="dv">2</span> <span class="kw">and</span> df[<span class="st">'label'</span>][i] <span class="op">==</span> <span class="st">'Top_10'</span>:</span>
+<span id="cb57-8"><a href="#cb57-8" aria-hidden="true" tabindex="-1"></a>        df[<span class="st">'ag_accuracy'</span>][i] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb57-9"><a href="#cb57-9" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb57-10"><a href="#cb57-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> df[<span class="st">'ag_label'</span>][i] <span class="op">==</span> <span class="dv">3</span> <span class="kw">and</span> df[<span class="st">'label'</span>][i] <span class="op">==</span> <span class="st">'Top_10'</span>:</span>
+<span id="cb57-11"><a href="#cb57-11" aria-hidden="true" tabindex="-1"></a>        df[<span class="st">'ag_accuracy'</span>][i] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb57-12"><a href="#cb57-12" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb57-13"><a href="#cb57-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> df[<span class="st">'ag_label'</span>][i] <span class="op">==</span> <span class="dv">1</span> <span class="kw">and</span> df[<span class="st">'label'</span>][i] <span class="op">==</span> <span class="st">'Podium'</span>:</span>
+<span id="cb57-14"><a href="#cb57-14" aria-hidden="true" tabindex="-1"></a>        df[<span class="st">'ag_accuracy'</span>][i] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb57-15"><a href="#cb57-15" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb57-16"><a href="#cb57-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb57-17"><a href="#cb57-17" aria-hidden="true" tabindex="-1"></a>        df[<span class="st">'ag_accuracy'</span>][i] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb57-18"><a href="#cb57-18" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb57-19"><a href="#cb57-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'The accuracy of correct clusters formed by Agglomerative (Hierarchical) Algorithm = </span><span class="sc">{}</span><span class="st"> %'</span>.<span class="bu">format</span>(df[<span class="st">'ag_accuracy'</span>].mean()<span class="op">*</span><span class="dv">100</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>The accuracy of correct clusters formed by Agglomerative (Hierarchical) Algorithm = 51.185154577213474 %</code></pre>
+</div>
+</div>
+<section id="results-for-agglomerative-hierarchical-algorithm" class="level5">
+<h5 class="anchored" data-anchor-id="results-for-agglomerative-hierarchical-algorithm">Results for Agglomerative (Hierarchical) Algorithm</h5>
+<ul>
+<li><code>The optimal number of clusters formed came out to be 4</code> which is not equal to the number of labels present in the original dataset.</li>
+<li>It is also seen that if we merge clusters 2 and 3 and then compare the proposed cluster labels with the original labels, around <code>13,600 out of 26,000 values (51.185%) are matching with each other</code> which is the highest among all the other merges of clusters ([1,3], [2,4], [1,4] and so on).</li>
+<li>This means that maybe we should consider splitting the Top_10 label into 2 and then run other models.</li>
+<li>But since the matching score is not high, we will not implement it.</li>
+</ul>
+</section>
+</section>
+</section>
+</section>
+</section>
+<section id="final-results" class="level1">
+<h1>Final Results</h1>
+<ul>
+<li>Comparing the time taken for running each of the Clustering Algorithms, it is noticed that Agglomerative (Hierarchical) Algorithm takes the most time (5.08 minutes) followed by DBSCAN algorithm (3.29 minutes) and K-means Algorithm is the fastest among all (2.34 minutes).</li>
+<li>The Clusters formed for K-Means and DBSCAN (3) match the original number of labels (3) but the matching score for DBSCAN is higher than that of K-means (by 1%).</li>
+<li>The Clusters formed for Agglomerative (4) do not match the original number of labels (3) which gives us a new insight into the data and the target variable.</li>
+<li>The complexity of DBSCAN is greater as compared to the other 2 algorithms even after simplifying the algorithm by taking an important hyper-parameter (min_samples) as constant (dimensionality*2 = 66).</li>
+<li>From the cluster plots of each algorithm, it is seen that clusters are more distinct for Agglomerative followed by K-means and finally DBSCAN.</li>
+</ul>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<ul>
+<li>Even though the matching score is a little higher for DBSCAN Algorithm, I would still choose K-means Algorithm as our optimal algorithm to perform clustering because of the fast processing time and less complexity.</li>
+<li>The Agglomerative Algorithm shows us that maybe the label variables should be split into 4, or specifically the ‘Top_10’ variable should be split into 2 to give better clusters.</li>
+<li>From the dataset we can get basic idea that the Top_10 label can be split into 2 with positions 4 to 6 as one and positions 7 to 10 as the other.</li>
+<li>But since the matching score of Agglomerative is not higher than the other 2 algorithms, the Top_10 variable should not be split and the labels we have taken are correct.</li>
+<li>The complexity, size of the data and the fact that the data is historical so there many features have inter-dependencies accounts for low matching scores across all Clustering algorithms.</li>
+</ul>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
