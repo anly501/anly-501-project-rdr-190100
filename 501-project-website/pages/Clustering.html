@@ -1064,8 +1064,8 @@ memory usage: 2.6+ MB</code></pre>
 <li>There are tons of different models that can be used to perform Clustering but for this dataset, we are focusing mainly on the 3 most used methods which are:
 <ul>
 <li style="white-space: wrap"><code>K-Means      </code></li>
-<li style="white-space: wrap"><code>DBSCAN     </code></li>
-<li style="white-space: wrap"><code>Agglomerative     </code></li>
+<li style="white-space: wrap"><code>DBSCAN      </code></li>
+<li style="white-space: wrap"><code>Agglomerative </code></li>
 </ul></li>
 <li>The tuning function takes in the dataset (X), algorithm to be used (algo), maximum number of loops to run (nmax) and a boolean function to plot the silhouette scores against hyper-parameter (i_plot). It converts our dataset into a contiguous array and runs models with different value of hyper-parameters using a for loop and computes silhouette scores for each iteration. It then stores the optimal values of hyper-parameter, label and model and returns it out. If the i_plot parameter is set to ‘True’, the function will also a plot a graph of silhouette score v/s hyper-parameter.</li>
 </ul>
