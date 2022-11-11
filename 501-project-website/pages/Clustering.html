@@ -1051,7 +1051,7 @@ memory usage: 2.6+ MB</code></pre>
 <li>This method calculates silhouette coefficients for each of point, and averages it out for all the samples to get the silhouette score. The set of hyper-parameters with maximum silhouette score is chosen.</li>
 <li>There are 2 main terms to be known to understand silhouette scores:
 <ul>
-<li>Cohesion (Similarity to its own cluster)</li>
+<li>Cohesion (Similarity to its own cluster)</li><br>
 <li>Separation (Similarity to other clusters)</li>
 </ul></li>
 <li>The silhouette value is a measure of how similar an object is to its own cluster (cohesion) compared to other clusters (separation). The silhouette scores lie between the range [-1,1] where a value close to the upper limit shows that a point is well matched to the cluster and a value close to the lower limit shows that it isn’t. After calculating silhouette values of all the points in the data, the silhouette score can be determined by averaging out the silhouette values.</li>
@@ -1063,9 +1063,9 @@ memory usage: 2.6+ MB</code></pre>
 <ul>
 <li>There are tons of different models that can be used to perform Clustering but for this dataset, we are focusing mainly on the 4 most used methods which are:
 <ul>
-<li><code>K-Means</code></li>
-<li><code>DBSCAN</code></li>
-<li><code>Agglomerative</code></li>
+<li><code>K-Means</code></li><br>
+<li><code>DBSCAN</code></li><br>
+<li><code>Agglomerative</code></li><br>
 <li><code>Birch</code></li>
 </ul></li>
 <li>The tuning function takes in the dataset (X), algorithm to be used (algo), maximum number of loops to run (nmax) and a boolean function to plot the silhouette scores against hyper-parameter (i_plot). It converts our dataset into a contiguous array and runs models with different value of hyper-parameters using a for loop and computes silhouette scores for each iteration. It then stores the optimal values of hyper-parameter, label and model and returns it out. If the i_plot parameter is set to ‘True’, the function will also a plot a graph of silhouette score v/s hyper-parameter.</li>
