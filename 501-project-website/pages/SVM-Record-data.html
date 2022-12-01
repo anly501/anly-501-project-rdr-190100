@@ -6,48 +6,68 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<link rel="stylesheet" href="styles.css">
-
-<body>
-  <a href="https://analytics.georgetown.edu/"><img src="https://ngpardeshi.georgetown.domains/ANLY 501 IMAGES/DSA.jpg" style="width:600px;height:200px;" /> 
-     <img src="https://ngpardeshi.georgetown.domains/ANLY 501 IMAGES/GU_Background.png" style="width:700px;height:200px;" align="right">
-  </a> 
-
-<ul class="header"><!-- link back to homepage -->
-<li><a href="https://ramdayal.georgetown.domains/501-project-website/index.html">About me</a></li>
-<!-- tab with dropdown  -->
-<li class="dropdown"><a class="dropbtn" href="javascript:void(0)">Code</a>
-<div class="dropdown-content"><!-- open in new tab use:   <a href="https://www.google.com/" target="_blank">google</a>--><!-- open in same tab use:  <a href="https://www.google.com/">google</a>--><a href="https://github.com/anly501/anly-501-project-rdr-190100" target="_blank">Github</a></div>
-</li>
-<!-- tab with dropdown  -->
-<li class="dropdown"><a class="dropbtn" href="javascript:void(0)">Data</a>
-<div class="dropdown-content"><!-- open in new tab use:   <a href="https://www.google.com/" target="_blank">google</a>--><!-- open in same tab use:  <a href="https://www.google.com/">google</a>--><a href="https://github.com/anly501/anly-501-project-rdr-190100/tree/main/data" target="_blank">Data Files</a></div>
-</li>
-<!-- tab without dropdown  -->
-<li><a href="https://ramdayal.georgetown.domains/501-project-website/pages/introduction.html">Introduction</a></li>
-<!-- tab without dropdown  -->
-<li><a href="https://ramdayal.georgetown.domains/501-project-website/pages/data_gathering.html">Data Gathering</a></li>
-<!-- tab without dropdown  -->
-<li><a href="https://ramdayal.georgetown.domains/501-project-website/pages/data_cleaning.html">Data Cleaning</a></li>
-<!-- tab without dropdown  -->
-<li><a href="https://ramdayal.georgetown.domains/501-project-website/pages/exploring_data.html">Exploring Data</a></li>
-<!-- tab without dropdown  -->
-<li><a href="https://ramdayal.georgetown.domains/501-project-website/pages/naive_bayes.html">Naive Bayes</a></li>
-<!-- tab without dropdown  -->
-<li><a href="https://ramdayal.georgetown.domains/501-project-website/pages/Decision-Trees.html">Decision Trees</a></li>
-<!-- tab without dropdown  -->
-<li><a href="https://ramdayal.georgetown.domains/501-project-website/pages/SVM-Record-data.html">SVM</a></li>
-<!-- tab without dropdown  -->
-<li><a href="https://ramdayal.georgetown.domains/501-project-website/pages/Clustering.html">Clustering</a></li>
-<!-- tab without dropdown  -->
-<li><a href="https://ramdayal.georgetown.domains/501-project-website/pages/arm_and_networking.html">ARM and Networking</a></li>
-<!-- tab without dropdown  -->
-<li><a href="https://ramdayal.georgetown.domains/501-project-website/pages/conclusions.html">Conclusion</a></li>
-</ul>
-
 <meta name="author" content="Ramdayal Rewaria">
 
 <title>Support Vector Machine Classifier for Record Data</title>
+
+<ul style="list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: red ; max-width:100%; padding-top:0%; padding-bottom:0%; display: flex; justify-content: center;">
+  <li style = "display: inline-block; color: black; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: black; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="https://ramdayal.georgetown.domains/501-project-website/index.html">About Me</a>
+  </li>
+  <li style = "display: inline-block; color: black; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: black; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="https://github.com/anly501/anly-501-project-rdr-190100">Code</a>
+  </li>
+  <li style = "display: inline-block; color: black; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: black; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="https://github.com/anly501/anly-501-project-rdr-190100/tree/main/data">Data</a>
+  </li>
+  <li style = "display: inline-block; color: black; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: black; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="https://ramdayal.georgetown.domains/501-project-website/pages/introduction.html">Introduction</a>
+  </li>
+  <li style = "display: inline-block; color: black; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: black; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="https://ramdayal.georgetown.domains/501-project-website/pages/data_gathering.html">Data Gathering</a>
+  </li>
+  <li style = "display: inline-block; color: black; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: black; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="https://ramdayal.georgetown.domains/501-project-website/pages/data_cleaning.html">Data Cleaning</a>
+  </li>
+  <li style = "display: inline-block; color: black; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: black; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="https://ramdayal.georgetown.domains/501-project-website/pages/exploring_data.html">Exploring Data</a>
+  </li>
+  <li class="dropdown" style = "display: inline-block; color: black; text-align: center; padding: 6px 6px;">
+    <a class="dropbtn" style = "display: inline-block; color: black; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="javascript:void(0)">Naive Bayes’</a>
+    <div class="dropdown-content">
+      <a href="https://ramdayal.georgetown.domains/501-project-website/pages/Naive-Bayes-twitterdata.html" target="_blank">Twitter Data in Python</a>
+      <a href="https://ramdayal.georgetown.domains/501-project-website/pages/Naive-Bayes-recorddata.html" target="_blank">Record Data in R</a>
+  </li>
+  <li style = "display: inline-block; color: black; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: black; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="https://ramdayal.georgetown.domains/501-project-website/pages/Decision-Trees.html">Decision Trees</a>
+  </li>
+  <li style = "display: inline-block; color: black; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: black; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="https://ramdayal.georgetown.domains/501-project-website/pages/introduction.html">SVM</a>
+  </li>
+  <li style = "display: inline-block; color: black; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: black; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="https://ramdayal.georgetown.domains/501-project-website/pages/SVM-Record-data.html">Clustering</a>
+  </li>
+  <li style = "display: inline-block; color: black; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: black; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="https://ramdayal.georgetown.domains/501-project-website/pages/introduction.html">ARM and Networking</a>
+  </li>
+  <li style = "display: inline-block; color: black; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: black; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="https://ramdayal.georgetown.domains/501-project-website/pages/introduction.html">Conclusion</a>
+  </li>
+  </ul>
+  
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -123,6 +143,26 @@ code span.st { color: #4070a0; } /* String */
 code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: white;}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    min-width: 160px;   
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;   
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: .8;
+}
 </style>
 
 
@@ -132,10 +172,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="SVM-Record-data_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="SVM-Record-data_files/libs/quarto-html/anchor.min.js"></script>
 <link href="SVM-Record-data_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="SVM-Record-data_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="SVM-Record-data_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="SVM-Record-data_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="SVM-Record-data_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="SVM-Record-data_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="SVM-Record-data_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
@@ -174,6 +214,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="import-libraries" class="level1">
 <h1>Import Libraries</h1>
 <div class="cell" data-execution_count="100">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -195,6 +237,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> warnings </span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">"ignore"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 </section>
 <section id="import-data" class="level1">
@@ -206,8 +249,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Some of the feature variables include laps in the race, grid position held, age at time of the race, history of wins in the past, history of laps completed in the past, weather of the race, points gained in the race and many more.</li>
 </ul>
 <div class="cell" data-execution_count="78">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'../../data/02-model-data/data_cleaned.csv'</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display" data-execution_count="78">
 
 <div>
@@ -367,8 +413,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 <div class="cell" data-execution_count="79">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>driver_df <span class="op">=</span> pd.read_csv(<span class="st">'../../data/00-raw-data/drivers.csv'</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>driver_df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display" data-execution_count="79">
 
 <div>
@@ -455,10 +504,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 <div class="cell" data-execution_count="80">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.merge(df, driver_df[[<span class="st">'driverId'</span>, <span class="st">'driverRef'</span>]], on<span class="op">=</span><span class="st">'driverId'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <div class="cell" data-execution_count="81">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df.shape</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display" data-execution_count="81">
 <pre><code>(26941, 23)</code></pre>
 </div>
@@ -476,10 +531,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Furthermore, the data is split into training and testing but not traditionally (with the help of sklearn’s train_test_split). The training set is made up of races before 2021 and the testing is done on the races of 2021.</li>
 </ul>
 <div class="cell" data-execution_count="82">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>df.drop([<span class="st">'season_round'</span>, <span class="st">'constructorRef'</span>, <span class="st">'raceId'</span>, <span class="st">'driverId'</span>], axis<span class="op">=</span><span class="dv">1</span>, inplace<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <div class="cell" data-execution_count="83">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>df.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
 Int64Index: 26941 entries, 0 to 26940
@@ -510,7 +571,10 @@ memory usage: 4.1+ MB</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="84">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display" data-execution_count="84">
 
 <div>
@@ -657,31 +721,46 @@ memory usage: 4.1+ MB</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="87">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[df[<span class="st">'season'</span>] <span class="op">!=</span> <span class="dv">2022</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <p>Splitting data into train and test:</p>
 <div class="cell" data-execution_count="88">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>X_train <span class="op">=</span> df[df[<span class="st">'season'</span>] <span class="op">!=</span> <span class="dv">2021</span>].drop(columns <span class="op">=</span> [<span class="st">'label'</span>])</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>y_train <span class="op">=</span> df.loc[df[<span class="st">'season'</span>] <span class="op">!=</span> <span class="dv">2021</span>, [<span class="st">'season'</span>, <span class="st">'round'</span>, <span class="st">'driverRef'</span>, <span class="st">'label'</span>]]</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>X_test <span class="op">=</span> df[df[<span class="st">'season'</span>] <span class="op">==</span> <span class="dv">2021</span>].drop(columns <span class="op">=</span> [<span class="st">'label'</span>])</span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>y_test <span class="op">=</span> df.loc[(df[<span class="st">'season'</span>] <span class="op">==</span> <span class="dv">2021</span>), [<span class="st">'season'</span>, <span class="st">'round'</span>, <span class="st">'driverRef'</span>, <span class="st">'label'</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <p>Grouping the data by setting the index of train and test data into season, round and driver references:</p>
 <div class="cell" data-execution_count="91">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>X_train <span class="op">=</span> X_train.set_index([<span class="st">'season'</span>, <span class="st">'round'</span>, <span class="st">'driverRef'</span>])</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>y_train <span class="op">=</span> y_train.set_index([<span class="st">'season'</span>, <span class="st">'round'</span>, <span class="st">'driverRef'</span>])</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>X_test <span class="op">=</span> X_test.set_index([<span class="st">'season'</span>, <span class="st">'round'</span>, <span class="st">'driverRef'</span>])</span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>y_test <span class="op">=</span> y_test.set_index([<span class="st">'season'</span>, <span class="st">'round'</span>, <span class="st">'driverRef'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <div class="cell" data-execution_count="94">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>numeric_features <span class="op">=</span> [<span class="st">'circuitId'</span>, <span class="st">'position'</span>, <span class="st">'points'</span>, <span class="st">'grid'</span>, <span class="st">'laps'</span>, <span class="st">'age_on_race'</span>, <span class="st">'cumulative_points'</span>, <span class="st">'cumulative_laps'</span>,</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>       <span class="st">'pole_driverId'</span>, <span class="st">'pole_history'</span>, <span class="st">'win_driverId'</span>, <span class="st">'win_history'</span>]</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>categorical_features <span class="op">=</span> [<span class="st">'status'</span>, <span class="st">'weather'</span>, <span class="st">'stop'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <div class="cell" data-execution_count="95">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>display(X_test.head())</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>display(y_test.head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 
 <div>
@@ -883,6 +962,8 @@ memory usage: 4.1+ MB</code></pre>
 </div>
 <p>Creating a function with sklearn’s Pipeline module and transformers to convert categorical and numerical features:</p>
 <div class="cell" data-execution_count="98">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> prediction_model(model_type, model_id):</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Scale numeric features using 'StandardScaler' and 'One-Hot Encode' categorical features</span></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    scoring <span class="op">=</span> [<span class="st">'neg_log_loss'</span>, <span class="st">'accuracy'</span>]</span>
@@ -893,6 +974,7 @@ memory usage: 4.1+ MB</code></pre>
 <span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>    pipeline <span class="op">=</span> Pipeline(steps<span class="op">=</span>[(<span class="st">'prep'</span>, preprocessor), </span>
 <span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>                               (model_id, model_type)])</span>
 <span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pipeline</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 </section>
 <section id="svm" class="level1">
@@ -931,13 +1013,18 @@ memory usage: 4.1+ MB</code></pre>
 </ol></li>
 </ul>
 <div class="cell" data-execution_count="118">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>prediction_scorecard <span class="op">=</span> {<span class="st">'model'</span>:[],</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'accuracy_score'</span>:[],</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'precision_score'</span>:[],</span>
 <span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'recall_score'</span>:[],</span>
 <span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'best_params'</span>:[]}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <div class="cell" data-execution_count="116">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> model_results(X_test, model, model_id):</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Predict!</span></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    pred <span class="op">=</span> model.predict(X_test)</span>
@@ -962,6 +1049,7 @@ memory usage: 4.1+ MB</code></pre>
 <span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a>    prediction_scorecard[<span class="st">'recall_score'</span>].append(recall_score(df_pred[<span class="st">'actual'</span>], df_pred[<span class="st">'prediction'</span>], average<span class="op">=</span><span class="st">'micro'</span>))</span>
 <span id="cb18-23"><a href="#cb18-23" aria-hidden="true" tabindex="-1"></a>    prediction_scorecard[<span class="st">'best_params'</span>].append(<span class="bu">str</span>(model.best_params_))</span>
 <span id="cb18-24"><a href="#cb18-24" aria-hidden="true" tabindex="-1"></a>    display(df_pred.head(<span class="dv">40</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 </section>
 <section id="grid-search-cv" class="level2">
@@ -976,13 +1064,18 @@ memory usage: 4.1+ MB</code></pre>
 <li>The process is time consuming.</li>
 </ul>
 <div class="cell" data-execution_count="101">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>svm_params<span class="op">=</span> {<span class="st">'svm__C'</span>: [<span class="fl">0.1</span>, <span class="fl">0.01</span>, <span class="fl">0.001</span>],</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>             <span class="st">'svm__kernel'</span>: [<span class="st">'linear'</span>, <span class="st">'poly'</span>, <span class="st">'rbf'</span>],</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>             <span class="st">'svm__degree'</span>: [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>],</span>
 <span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>             <span class="st">'svm__gamma'</span>: [<span class="fl">0.1</span>, <span class="fl">0.01</span>, <span class="fl">0.001</span>]}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <p>Types of SVM Kernels: <br> - <code>Linear</code>: These are commonly recommended for text classification because most of these types of classification problems are linearly separable.<br> - <code>Polynomial</code>: The polynomial kernel isn’t used in practice very often because it isn’t as computationally efficient as other kernels and its predictions aren’t as accurate.<br> - <code>Gaussian Radial Basis Function (RBF)</code>: One of the most powerful and commonly used kernels in SVMs. Usually the choice for non-linear data.</p>
 <div class="cell" data-execution_count="103">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>scoring <span class="op">=</span> [<span class="st">'neg_log_loss'</span>, <span class="st">'accuracy'</span>]</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>svm_cv <span class="op">=</span> GridSearchCV(prediction_model(SVC(probability<span class="op">=</span><span class="va">True</span>), <span class="st">'svm'</span>),</span>
@@ -990,13 +1083,17 @@ memory usage: 4.1+ MB</code></pre>
 <span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>                      scoring<span class="op">=</span>scoring, </span>
 <span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>                      refit<span class="op">=</span><span class="st">'neg_log_loss'</span>,  </span>
 <span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>                      verbose<span class="op">=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 </section>
 <section id="fitting-and-training-the-svm-model" class="level2">
 <h2 class="anchored" data-anchor-id="fitting-and-training-the-svm-model">Fitting and Training the SVM model</h2>
 <div class="cell" data-execution_count="104">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Train Model</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>svm_cv.fit(X_train, y_train)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Fitting 5 folds for each of 81 candidates, totalling 405 fits
 [CV 1/5; 1/81] START svm__C=0.1, svm__degree=1, svm__gamma=0.1, svm__kernel=linear
@@ -1900,9 +1997,12 @@ memory usage: 4.1+ MB</code></pre>
 <section id="testing-the-svm-model" class="level2">
 <h2 class="anchored" data-anchor-id="testing-the-svm-model">Testing the SVM model</h2>
 <div class="cell" data-execution_count="119">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Test Model</span></span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>model_results(X_test, svm_cv, <span class="st">'Support Vector Machines'</span>)</span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>svm_results <span class="op">=</span> pd.DataFrame(prediction_scorecard)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 
 <div>
@@ -2308,13 +2408,19 @@ memory usage: 4.1+ MB</code></pre>
 </div>
 <p>The best parameters for our model are:</p>
 <div class="cell" data-execution_count="122">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>svm_cv.best_params_</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display" data-execution_count="122">
 <pre><code>{'svm__C': 0.1, 'svm__degree': 3, 'svm__gamma': 0.01, 'svm__kernel': 'linear'}</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="123">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>svm_results</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display" data-execution_count="123">
 
 <div>

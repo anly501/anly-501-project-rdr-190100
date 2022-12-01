@@ -6,48 +6,68 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<link rel="stylesheet" href="styles.css">
-
-<body>
-  <a href="https://analytics.georgetown.edu/"><img src="https://ngpardeshi.georgetown.domains/ANLY 501 IMAGES/DSA.jpg" style="width:600px;height:200px;" /> 
-     <img src="https://ngpardeshi.georgetown.domains/ANLY 501 IMAGES/GU_Background.png" style="width:700px;height:200px;" align="right">
-  </a> 
-
-<ul class="header"><!-- link back to homepage -->
-<li><a href="https://ramdayal.georgetown.domains/501-project-website/index.html">About me</a></li>
-<!-- tab with dropdown  -->
-<li class="dropdown"><a class="dropbtn" href="javascript:void(0)">Code</a>
-<div class="dropdown-content"><!-- open in new tab use:   <a href="https://www.google.com/" target="_blank">google</a>--><!-- open in same tab use:  <a href="https://www.google.com/">google</a>--><a href="https://github.com/anly501/anly-501-project-rdr-190100" target="_blank">Github</a></div>
-</li>
-<!-- tab with dropdown  -->
-<li class="dropdown"><a class="dropbtn" href="javascript:void(0)">Data</a>
-<div class="dropdown-content"><!-- open in new tab use:   <a href="https://www.google.com/" target="_blank">google</a>--><!-- open in same tab use:  <a href="https://www.google.com/">google</a>--><a href="https://github.com/anly501/anly-501-project-rdr-190100/tree/main/data" target="_blank">Data Files</a></div>
-</li>
-<!-- tab without dropdown  -->
-<li><a href="https://ramdayal.georgetown.domains/501-project-website/pages/introduction.html">Introduction</a></li>
-<!-- tab without dropdown  -->
-<li><a href="https://ramdayal.georgetown.domains/501-project-website/pages/data_gathering.html">Data Gathering</a></li>
-<!-- tab without dropdown  -->
-<li><a href="https://ramdayal.georgetown.domains/501-project-website/pages/data_cleaning.html">Data Cleaning</a></li>
-<!-- tab without dropdown  -->
-<li><a href="https://ramdayal.georgetown.domains/501-project-website/pages/exploring_data.html">Exploring Data</a></li>
-<!-- tab without dropdown  -->
-<li><a href="https://ramdayal.georgetown.domains/501-project-website/pages/naive_bayes.html">Naive Bayes</a></li>
-<!-- tab without dropdown  -->
-<li><a href="https://ramdayal.georgetown.domains/501-project-website/pages/Decision-Trees.html">Decision Trees</a></li>
-<!-- tab without dropdown  -->
-<li><a href="https://ramdayal.georgetown.domains/501-project-website/pages/SVM-Record-data.html">SVM</a></li>
-<!-- tab without dropdown  -->
-<li><a href="https://ramdayal.georgetown.domains/501-project-website/pages/Clustering.html">Clustering</a></li>
-<!-- tab without dropdown  -->
-<li><a href="https://ramdayal.georgetown.domains/501-project-website/pages/arm_and_networking.html">ARM and Networking</a></li>
-<!-- tab without dropdown  -->
-<li><a href="https://ramdayal.georgetown.domains/501-project-website/pages/conclusions.html">Conclusion</a></li>
-</ul>
-
 <meta name="author" content="Ramdayal Rewaria">
 
 <title>Decision Tree Classifier for Twitter Data</title>
+
+<ul style="list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: red ; max-width:100%; padding-top:0%; padding-bottom:0%; display: flex; justify-content: center;">
+  <li style = "display: inline-block; color: black; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: black; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="https://ramdayal.georgetown.domains/501-project-website/index.html">About Me</a>
+  </li>
+  <li style = "display: inline-block; color: black; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: black; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="https://github.com/anly501/anly-501-project-rdr-190100">Code</a>
+  </li>
+  <li style = "display: inline-block; color: black; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: black; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="https://github.com/anly501/anly-501-project-rdr-190100/tree/main/data">Data</a>
+  </li>
+  <li style = "display: inline-block; color: black; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: black; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="https://ramdayal.georgetown.domains/501-project-website/pages/introduction.html">Introduction</a>
+  </li>
+  <li style = "display: inline-block; color: black; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: black; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="https://ramdayal.georgetown.domains/501-project-website/pages/data_gathering.html">Data Gathering</a>
+  </li>
+  <li style = "display: inline-block; color: black; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: black; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="https://ramdayal.georgetown.domains/501-project-website/pages/data_cleaning.html">Data Cleaning</a>
+  </li>
+  <li style = "display: inline-block; color: black; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: black; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="https://ramdayal.georgetown.domains/501-project-website/pages/exploring_data.html">Exploring Data</a>
+  </li>
+  <li class="dropdown" style = "display: inline-block; color: black; text-align: center; padding: 6px 6px;">
+    <a class="dropbtn" style = "display: inline-block; color: black; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="javascript:void(0)">Naive Bayes’</a>
+    <div class="dropdown-content">
+      <a href="https://ramdayal.georgetown.domains/501-project-website/pages/Naive-Bayes-twitterdata.html" target="_blank">Twitter Data in Python</a>
+      <a href="https://ramdayal.georgetown.domains/501-project-website/pages/Naive-Bayes-recorddata.html" target="_blank">Record Data in R</a>
+  </li>
+  <li style = "display: inline-block; color: black; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: black; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="https://ramdayal.georgetown.domains/501-project-website/pages/Decision-Trees.html">Decision Trees</a>
+  </li>
+  <li style = "display: inline-block; color: black; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: black; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="https://ramdayal.georgetown.domains/501-project-website/pages/introduction.html">SVM</a>
+  </li>
+  <li style = "display: inline-block; color: black; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: black; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="https://ramdayal.georgetown.domains/501-project-website/pages/SVM-Record-data.html">Clustering</a>
+  </li>
+  <li style = "display: inline-block; color: black; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: black; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="https://ramdayal.georgetown.domains/501-project-website/pages/introduction.html">ARM and Networking</a>
+  </li>
+  <li style = "display: inline-block; color: black; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: black; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="https://ramdayal.georgetown.domains/501-project-website/pages/introduction.html">Conclusion</a>
+  </li>
+  </ul>
+
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -123,6 +143,26 @@ code span.st { color: #4070a0; } /* String */
 code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: white;}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    min-width: 160px;   
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;   
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: .8;
+}
 </style>
 
 
@@ -132,10 +172,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="Decision-Trees_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="Decision-Trees_files/libs/quarto-html/anchor.min.js"></script>
 <link href="Decision-Trees_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="Decision-Trees_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="Decision-Trees_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="Decision-Trees_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="Decision-Trees_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="Decision-Trees_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="Decision-Trees_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
@@ -173,7 +213,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <section id="import-libraries" class="level1">
 <h1>Import Libraries</h1>
-<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;python&quot;}" data-execution_count="128">
+<div class="cell" data-execution_count="128">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
@@ -206,6 +248,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">"ignore"</span>)</span>
 <span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 </section>
 <section id="import-data" class="level1">
@@ -227,10 +270,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ol></li>
 <li>The data is also cleaned to an extent by removing punctuations in the previous sections when sentiments of these tweets were extracted.</li>
 </ul>
-<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;python&quot;}" data-execution_count="129">
+<div class="cell" data-execution_count="129">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'../../data/01-modified-data/all_teams_sentiment_df.csv'</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df.drop([<span class="st">'Unnamed: 0'</span>], axis<span class="op">=</span><span class="dv">1</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display" data-execution_count="129">
 
 <div>
@@ -325,9 +371,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Distribution of labels were also visualization to check if any downsampling needs to be performed.</li>
 <li>The label column was converted to numerical values by mapping each team to a number.</li>
 </ul>
-<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;python&quot;}" data-execution_count="130">
+<div class="cell" data-execution_count="130">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[[<span class="st">'Team'</span>, <span class="st">'text'</span>]]</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>df.head(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display" data-execution_count="130">
 
 <div>
@@ -396,7 +445,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </div>
-<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;python&quot;}" data-execution_count="131">
+<div class="cell" data-execution_count="131">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(df)):</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    df[<span class="st">'text'</span>][i] <span class="op">=</span> df[<span class="st">'text'</span>][i].replace(<span class="st">" f "</span>, <span class="st">" f1 "</span>)</span>
@@ -404,6 +455,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    df[<span class="st">'text'</span>][i].replace(<span class="st">","</span>,<span class="st">""</span>).replace(<span class="st">"["</span>,<span class="st">""</span>).replace(<span class="st">"]"</span>,<span class="st">""</span>).replace(<span class="st">"'"</span>,<span class="st">""</span>)</span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display" data-execution_count="131">
 
 <div>
@@ -447,7 +499,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </div>
-<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;python&quot;}" data-execution_count="132">
+<div class="cell" data-execution_count="132">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">4</span>))</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>sns.barplot(x <span class="op">=</span> df[<span class="st">'Team'</span>].value_counts().index, y <span class="op">=</span> df[<span class="st">'Team'</span>].value_counts().values, ax<span class="op">=</span>ax)</span>
@@ -456,6 +510,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">'Number of Tweets'</span>)</span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">'Number of Tweets per Team'</span>)</span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>ax.set_xticklabels(ax.get_xticklabels(), rotation<span class="op">=</span><span class="dv">45</span>, ha<span class="op">=</span><span class="st">"right"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display" data-execution_count="132">
 <pre><code>[Text(0, 0, 'Williams'),
  Text(1, 0, 'Mclaren'),
@@ -473,23 +528,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 <p>The distribution of tweets as can be seen is not uniform but the difference in minimum and maximum number of tweets per team is not too high hence no downsampling is performed.</p>
-<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;python&quot;}" data-execution_count="133">
+<div class="cell" data-execution_count="133">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> df[<span class="st">'text'</span>]</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> df[<span class="st">'Team'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
-<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;python&quot;}" data-execution_count="134">
+<div class="cell" data-execution_count="134">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>labelencoder <span class="op">=</span> LabelEncoder()</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> labelencoder.fit_transform(y)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display" data-execution_count="134">
 <pre><code>array([4, 4, 4, ..., 0, 0, 0])</code></pre>
 </div>
 </div>
-<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;python&quot;}" data-execution_count="135">
+<div class="cell" data-execution_count="135">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>teams <span class="op">=</span> [<span class="st">'Ferrari'</span>, <span class="st">'Mercedes'</span>, <span class="st">'Redbull'</span>, <span class="st">'Haas'</span>, <span class="st">'Mclaren'</span>, <span class="st">'Alpine'</span>, <span class="st">'Williams'</span>, <span class="st">'Aston Martin'</span>, <span class="st">'Alpha Tauri'</span>, <span class="st">'Alfa Romeo'</span>]</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>y1 <span class="op">=</span> labelencoder.fit(teams)</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>label_map <span class="op">=</span> <span class="bu">dict</span>(<span class="bu">zip</span>(y1.classes_, y1.transform(y1.classes_)))</span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>label_map</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display" data-execution_count="135">
 <pre><code>{'Alfa Romeo': 0,
  'Alpha Tauri': 1,
@@ -503,8 +567,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
  'Williams': 9}</code></pre>
 </div>
 </div>
-<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;python&quot;}" data-execution_count="136">
+<div class="cell" data-execution_count="136">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>label_list <span class="op">=</span> <span class="bu">list</span>(label_map.keys())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 </section>
 <section id="decision-tree-model" class="level1">
@@ -536,13 +603,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p><code>Count Vectorizer</code>: It is used to transform a given text into a vector on the basis of the frequency (count) of each word that occurs in the entire text. This is helpful when we have multiple such texts, and we wish to convert each word in each text into vectors (for using in further text analysis). CountVectorizer creates a matrix in which each unique word is represented by a column of the matrix, and each text sample from the document is a row in the matrix. The value of each cell is nothing but the count of the word in that particular text sample.</p></li>
 <li><p>The data is first split into train and test with a split ratio of 80(train) - 20(test). The tweets are then transformed to number vectors using sklearn CountVectorizer function.</p></li>
 </ul>
-<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;python&quot;}" data-execution_count="137">
+<div class="cell" data-execution_count="137">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(X, y, test_size<span class="op">=</span><span class="fl">0.2</span>, random_state<span class="op">=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
-<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;python&quot;}" data-execution_count="138">
+<div class="cell" data-execution_count="138">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>vectorizer <span class="op">=</span> CountVectorizer()</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>X_train1 <span class="op">=</span> vectorizer.fit_transform(X_train.astype(<span class="st">'U'</span>)) </span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>X_test1 <span class="op">=</span> vectorizer.transform(X_test.astype(<span class="st">'U'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 </section>
 <section id="decision-trees-with-random-hyperparameters" class="level2">
@@ -550,23 +623,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="decision-tree-1" class="level3">
 <h3 class="anchored" data-anchor-id="decision-tree-1">Decision Tree 1</h3>
 <p>Hyperparameters: <br> - Criterion: Entropy <br> - Splitter: Best <br> - Maximum depth of the decision tree: 4</p>
-<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;python&quot;}" data-execution_count="139">
+<div class="cell" data-execution_count="139">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>dt1 <span class="op">=</span> DecisionTreeClassifier(random_state<span class="op">=</span><span class="dv">1973</span>,criterion <span class="op">=</span> <span class="st">"entropy"</span>, splitter <span class="op">=</span> <span class="st">"best"</span>, max_depth <span class="op">=</span> <span class="dv">4</span>)</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>dt1.fit(X_train1, y_train)</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>y_pred <span class="op">=</span> dt1.predict(X_test1)</span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>Classification_report_1 <span class="op">=</span> classification_report(y_test, y_pred)</span>
 <span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>conf_matrix_1 <span class="op">=</span> confusion_matrix(y_test, y_pred)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <p>Decision Tree 1 Plot after fitting:</p>
-<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;python&quot;}" data-execution_count="140">
+<div class="cell" data-execution_count="140">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize <span class="op">=</span> (<span class="dv">30</span>,<span class="dv">30</span>))</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>dec_tree_1 <span class="op">=</span> plot_tree(decision_tree<span class="op">=</span>dt1, class_names<span class="op">=</span>label_list, filled<span class="op">=</span><span class="va">True</span>, rounded<span class="op">=</span><span class="va">True</span>, fontsize<span class="op">=</span><span class="dv">10</span>, max_depth<span class="op">=</span><span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 <p><img src="Decision-Trees_files/figure-html/cell-14-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <p>Classification Report for Decision Tree 1:</p>
-<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;python&quot;}" data-execution_count="141">
+<div class="cell" data-execution_count="141">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Confusion matrix seaborn</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>sns.heatmap(conf_matrix_1,annot<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Original'</span>)</span>
@@ -577,6 +658,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="co">#Accuracy</span></span>
 <span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Accuracy'</span>,metrics.accuracy_score(y_test,y_pred))</span>
 <span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(classification_report(y_test,y_pred))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Accuracy 0.5381679389312977
               precision    recall  f1-score   support
@@ -606,23 +688,31 @@ weighted avg       0.53      0.54      0.48       786
 <section id="decision-tree-2" class="level3">
 <h3 class="anchored" data-anchor-id="decision-tree-2">Decision Tree 2</h3>
 <p>Hyperparameters:<br> - Criterion: Gini Impurity<br> - Splitter: Random<br> - Maximum depth of the decision tree: 5<br></p>
-<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;python&quot;}" data-execution_count="142">
+<div class="cell" data-execution_count="142">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>dt2 <span class="op">=</span> DecisionTreeClassifier(random_state<span class="op">=</span><span class="dv">10</span>,criterion <span class="op">=</span> <span class="st">"gini"</span>, splitter <span class="op">=</span> <span class="st">"random"</span>,max_depth <span class="op">=</span> <span class="dv">5</span>)</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>dt2.fit(X_train1, y_train)</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>y_pred <span class="op">=</span> dt2.predict(X_test1)</span>
 <span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>Classification_report_2 <span class="op">=</span> classification_report(y_test, y_pred)</span>
 <span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>conf_matrix_2 <span class="op">=</span> confusion_matrix(y_test, y_pred)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <p>Decision Tree 2 Plot after fitting:</p>
-<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;python&quot;}" data-execution_count="143">
+<div class="cell" data-execution_count="143">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize <span class="op">=</span> (<span class="dv">30</span>,<span class="dv">30</span>))</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>dec_tree_2 <span class="op">=</span> plot_tree(decision_tree<span class="op">=</span>dt2, class_names<span class="op">=</span>label_list, filled<span class="op">=</span><span class="va">True</span>, rounded<span class="op">=</span><span class="va">True</span>, fontsize<span class="op">=</span><span class="dv">10</span>, max_depth<span class="op">=</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 <p><img src="Decision-Trees_files/figure-html/cell-17-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <p>Classification Report for Decision Tree 2:</p>
-<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;python&quot;}" data-execution_count="144">
+<div class="cell" data-execution_count="144">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Confusion matrix seaborn</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>sns.heatmap(conf_matrix_2,annot<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Original'</span>)</span>
@@ -633,6 +723,7 @@ weighted avg       0.53      0.54      0.48       786
 <span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="co">#Accuracy</span></span>
 <span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Accuracy'</span>,metrics.accuracy_score(y_test,y_pred))</span>
 <span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(classification_report(y_test,y_pred))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Accuracy 0.5928753180661578
               precision    recall  f1-score   support
@@ -662,23 +753,31 @@ weighted avg       0.57      0.59      0.55       786
 <section id="decision-tree-3" class="level3">
 <h3 class="anchored" data-anchor-id="decision-tree-3">Decision Tree 3</h3>
 <p>Hyperparameters: - Criterion: Entropy - Splitter: Random - Maximum depth of the decision tree: 4</p>
-<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;python&quot;}" data-execution_count="145">
+<div class="cell" data-execution_count="145">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>dt3 <span class="op">=</span> DecisionTreeClassifier(random_state<span class="op">=</span><span class="dv">0</span>,criterion <span class="op">=</span> <span class="st">"entropy"</span>, splitter <span class="op">=</span> <span class="st">"random"</span>,max_depth <span class="op">=</span> <span class="dv">4</span>)</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>dt3.fit(X_train1, y_train)</span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>y_pred <span class="op">=</span> dt3.predict(X_test1)</span>
 <span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>Classification_report_3 <span class="op">=</span> classification_report(y_test, y_pred)</span>
 <span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>conf_matrix_3 <span class="op">=</span> confusion_matrix(y_test, y_pred)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <p>Decision Tree 3 Plot after fitting:</p>
-<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;python&quot;}" data-execution_count="146">
+<div class="cell" data-execution_count="146">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize <span class="op">=</span> (<span class="dv">60</span>,<span class="dv">40</span>))</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>dec_tree_3 <span class="op">=</span> plot_tree(decision_tree<span class="op">=</span>dt3, class_names<span class="op">=</span>label_list, filled<span class="op">=</span><span class="va">True</span>, rounded<span class="op">=</span><span class="va">True</span>, fontsize<span class="op">=</span><span class="dv">10</span>, max_depth<span class="op">=</span><span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 <p><img src="Decision-Trees_files/figure-html/cell-20-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <p>Classification Report for Decision Tree 3:</p>
-<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;python&quot;}" data-execution_count="147">
+<div class="cell" data-execution_count="147">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Confusion matrix seaborn</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>sns.heatmap(conf_matrix_3,annot<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Original'</span>)</span>
@@ -689,6 +788,7 @@ weighted avg       0.57      0.59      0.55       786
 <span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a><span class="co">#Accuracy</span></span>
 <span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Accuracy'</span>,metrics.accuracy_score(y_test,y_pred))</span>
 <span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(classification_report(y_test,y_pred))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Accuracy 0.5190839694656488
               precision    recall  f1-score   support
@@ -724,7 +824,9 @@ weighted avg       0.50      0.52      0.47       786
 <li>It is also observed that increasing the depth of the decision tree leads to better results but it also increases the complexity of the model and thus may lead to overfitting. Hence we need to find an optimal depth for our decision tree model.</li>
 <li>This can be achieved by iterating with the help of loops over depth ranging from 0-20 and finding the accuracy and recall for all the depths.</li>
 </ul>
-<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;python&quot;}" data-execution_count="148">
+<div class="cell" data-execution_count="148">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>test_results<span class="op">=</span>[]</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>train_results<span class="op">=</span>[]</span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -746,8 +848,11 @@ weighted avg       0.50      0.52      0.47       786
 <span id="cb27-19"><a href="#cb27-19" aria-hidden="true" tabindex="-1"></a>                          recall_score(y_train, yp_train,pos_label<span class="op">=</span><span class="dv">4</span>, average<span class="op">=</span><span class="st">'micro'</span>),recall_score(y_train, yp_train,pos_label<span class="op">=</span><span class="dv">5</span>, average<span class="op">=</span><span class="st">'micro'</span>),</span>
 <span id="cb27-20"><a href="#cb27-20" aria-hidden="true" tabindex="-1"></a>                          recall_score(y_train, yp_train,pos_label<span class="op">=</span><span class="dv">6</span>, average<span class="op">=</span><span class="st">'micro'</span>),recall_score(y_train, yp_train,pos_label<span class="op">=</span><span class="dv">7</span>, average<span class="op">=</span><span class="st">'micro'</span>),</span>
 <span id="cb27-21"><a href="#cb27-21" aria-hidden="true" tabindex="-1"></a>                          recall_score(y_train, yp_train,pos_label<span class="op">=</span><span class="dv">8</span>, average<span class="op">=</span><span class="st">'micro'</span>),recall_score(y_train, yp_train,pos_label<span class="op">=</span><span class="dv">9</span>, average<span class="op">=</span><span class="st">'micro'</span>)])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
-<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;python&quot;}" data-execution_count="149">
+<div class="cell" data-execution_count="149">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>plt.plot([x[<span class="dv">0</span>] <span class="cf">for</span> x <span class="kw">in</span> test_results],[x[<span class="dv">1</span>] <span class="cf">for</span> x <span class="kw">in</span> test_results],label<span class="op">=</span><span class="st">'test'</span>, color<span class="op">=</span><span class="st">'red'</span>, marker<span class="op">=</span><span class="st">'o'</span>)</span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>plt.plot([x[<span class="dv">0</span>] <span class="cf">for</span> x <span class="kw">in</span> train_results],[x[<span class="dv">1</span>] <span class="cf">for</span> x <span class="kw">in</span> train_results],label<span class="op">=</span><span class="st">'train'</span>, color<span class="op">=</span><span class="st">'blue'</span>, marker<span class="op">=</span><span class="st">'o'</span>)</span>
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Number of layers in decision tree (max_depth)'</span>)</span>
@@ -813,6 +918,7 @@ weighted avg       0.50      0.52      0.47       786
 <span id="cb28-63"><a href="#cb28-63" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Number of layers in decision tree (max_depth)'</span>)</span>
 <span id="cb28-64"><a href="#cb28-64" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'RECALL (Y=9): Training (blue) and Test (red)'</span>)</span>
 <span id="cb28-65"><a href="#cb28-65" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 <p><img src="Decision-Trees_files/figure-html/cell-23-output-1.png" class="img-fluid"></p>
 </div>
@@ -851,24 +957,32 @@ weighted avg       0.50      0.52      0.47       786
 </section>
 <section id="optimal-decision-tree" class="level2">
 <h2 class="anchored" data-anchor-id="optimal-decision-tree">Optimal Decision Tree</h2>
-<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;python&quot;}" data-execution_count="150">
+<div class="cell" data-execution_count="150">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>optimal_dt <span class="op">=</span> DecisionTreeClassifier(random_state<span class="op">=</span><span class="dv">1973</span>, max_depth <span class="op">=</span> <span class="dv">10</span>, criterion <span class="op">=</span> <span class="st">'gini'</span>)</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>optimal_dt.fit(X_train1, y_train)</span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>y_pred <span class="op">=</span> optimal_dt.predict(X_test1)</span>
 <span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>Classification_report <span class="op">=</span> classification_report(y_test, y_pred)</span>
 <span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>conf_matrix <span class="op">=</span> confusion_matrix(y_test, y_pred)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <p>Optimal Decision Tree Plot after fitting:</p>
-<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;python&quot;}" data-execution_count="151">
+<div class="cell" data-execution_count="151">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize <span class="op">=</span> (<span class="dv">40</span>,<span class="dv">40</span>))</span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>optimal_dec_tree <span class="op">=</span> plot_tree(decision_tree<span class="op">=</span>optimal_dt, class_names<span class="op">=</span>label_list, filled<span class="op">=</span><span class="va">True</span>, rounded<span class="op">=</span><span class="va">True</span>, fontsize<span class="op">=</span><span class="dv">10</span>, max_depth<span class="op">=</span><span class="dv">10</span>)</span>
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="co">#plt.savefig('dec_tree_4.png')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 <p><img src="Decision-Trees_files/figure-html/cell-25-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <p>Classification report for Optimal Decision Tree:</p>
-<div class="cell" data-vscode="{&quot;languageId&quot;:&quot;python&quot;}" data-execution_count="152">
+<div class="cell" data-execution_count="152">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>sns.heatmap(conf_matrix,annot<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Original'</span>)</span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Predicted'</span>)</span>
@@ -878,6 +992,7 @@ weighted avg       0.50      0.52      0.47       786
 <span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="co">#Accuracy</span></span>
 <span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Accuracy'</span>,metrics.accuracy_score(y_test,y_pred))</span>
 <span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(classification_report(y_test,y_pred))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Accuracy 0.7404580152671756
               precision    recall  f1-score   support
@@ -1013,5 +1128,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body>
-</html>
+</body></html>
