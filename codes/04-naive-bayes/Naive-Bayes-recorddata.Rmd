@@ -1,13 +1,17 @@
 ---
-title: "naive-bayes-recorddata"
+title: "Naive Bayes for Record Data"
 author: "Ramdayal Rewaria"
-date: "2022-10-12"
-output: html_document
+format:
+  html:
+    code-fold: true
+    theme: darkly
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+# Import Libraries
 
 ```{r}
 library(tidyr)
@@ -24,19 +28,24 @@ library(sjPlot)
 library(klaR)
 ```
 
+# Import Data
+
 ```{r}
-df = read_csv("../../data/01-modified-data/data_cleaned.csv")
+df = read_csv("../../data/02-model-data/data_cleaned.csv")
 head(df)
 ```
 
+# Data Pre-Processing and Visualization
+
 ```{r}
 barplot(table(df$label), col = 'lightblue', main = 'Distribution of Labels', xlab = 'Labels', ylab = 'Count')
-
 ```
 
 ```{r}
 plot(df$cumulative_points, df$win_history, col = 'lightblue', main = 'Points vs Win History', xlab = 'Cumulative Points', ylab = 'Win History')
 ```
+
+Converting some numeric variables to factors:
 
 ```{r}
 a = factor(df$status, levels = unique(df$status))
@@ -63,6 +72,8 @@ a = factor(df$label, levels = unique(df$label))
 df$label = as.integer(a)
 ```
 
+Dropping unnecessary columns:
+
 ```{r}
 df = df[-c(1:3)]
 ```
@@ -72,6 +83,8 @@ df$label = as.factor(df$label)
 df
 ```
 
+Splitting data into train and test set:
+
 ```{r}
 set.seed(1973)
 
@@ -80,11 +93,53 @@ train  <- df[sample, ]
 test   <- df[!sample, ]
 ```
 
-
 ```{r}
 nrow(train)
 nrow(test)
 ```
+
+# Naive Bayes Model
+
+- Bayes' Theorem: In probability theory and statistics, Bayes' theorem (alternatively Bayes' law or Bayes' rule), named after Thomas Bayes, describes the probability of an event, based on prior knowledge of conditions that might be related to the event. For example, if the risk of developing health problems is known to increase with age, Bayes' theorem allows the risk to an individual of a known age to be assessed more accurately (by conditioning it on their age) than simply assuming that the individual is typical of the population as a whole.
+- Naive Bayes Algorithm is a classification technique based on Bayes’ Theorem with an assumption of independence among predictors. In simple terms, a Naive Bayes classifier assumes that the presence of a particular feature in a class is unrelated to the presence of any other feature.
+- A fruit might be categorized as an apple, for instance, if it is red, rounded, and around 3 inches in diameter. Even if these characteristics depend on one another or on the presence of other characteristics, each of these traits separately increases the likelihood that this fruit is an apple, which is why it is called "Naive."
+- Naive Bayes model is easy to build and particularly useful for very large data sets. Along with simplicity, Naive Bayes is known to outperform even highly sophisticated classification methods.
+- Bayes' Theorem can be shown by this equation:
+$$ P(C|X) = \frac {P(X|C) * P(C)}{P(X)} $$
+- In the above equation:
+    - P(C|X) is the posterior probability of class (C, target) given predictor (X, attributes).
+    - P(C) is the prior probability of class.
+    - P(X|C) is the likelihood which is the probability of predictor given class.
+    - P(X) is the prior probability of predictor.
+- How does Bayes Theorem work?
+    - Let's take an example: A Path Lab is performing a Test of disease say “D” with two results “Positive” & “Negative.” They guarantee that their test result is 99% accurate: if you have the disease, they will give test positive 99% of the time. If you don’t have the disease, they will test negative 99% of the time. If 3% of all the people have this disease and test gives “positive” result, what is the probability that you actually have the disease?
+    - For solving the above problem, we will have to use conditional probability.
+        - Probability of people suffering from Disease D, P(D) = 0.03 = 3%
+        - Probability that test gives “positive” result and patient have the disease, P(Pos | D) = 0.99 =99%
+        - Probability of people not suffering from Disease D, P(~D) = 0.97 = 97%
+        - Probability that test gives “positive” result and patient does have the disease, P(Pos | ~D) = 0.01 =1%
+    - For calculating the probability that the patient actually have the disease i.e, P( D | Pos) we will use Bayes theorem.
+    - P(Pos) = P(D, pos) + P( ~D, pos) = P(pos|D) * P(D) + P(pos|~D) * P(~D) = 0.99 * 0.03 + 0.01 * 0.97 = 0.0394
+    - Hence, P( D | Pos) = (P(Pos | D) * P(D)) / P(Pos) = (0.99 * 0.03) / 0.0394 = 0.753807107
+    - So, Approximately 75% chances are there that the patient is actually suffering from disease.
+    - This is how Bayes' Theorem works. <a href='https://dataaspirant.com/naive-bayes-classifier-machine-learning'> Reference </a>
+- Types of Naive Bayes Algorithms:
+    1. Gaussian Naïve Bayes Classifier: In Gaussian Naïve Bayes, continuous values associated with each feature are assumed to be distributed according to a Gaussian distribution (Normal distribution). When plotted, it gives a bell-shaped curve which is symmetric about the mean of the feature values.
+    2. Multinomial Naïve Bayes Classifier: Feature vectors represent the frequencies with which certain events have been generated by a multinomial distribution. This is the event model typically used for document classification.
+    3. Bernoulli Naïve Bayes Classifier: In the multivariate Bernoulli event model, features are independent booleans (binary variables) describing inputs. Like the multinomial model, this model is popular for document classification tasks, where binary term occurrence (i.e. a word occurs in a document or not) features are used rather than term frequencies (i.e. frequency of a word in the document).
+- Applications of Naive Bayes Algorithm:
+    1. Real time Prediction: Naive Bayes is an eager learning classifier and it is sure fast. Thus, it could be used for making predictions in real time.
+    2. Multi class Prediction: This algorithm is also well known for multi class prediction feature. Here we can predict the probability of multiple classes of target variable.
+    3. Text classification/ Spam Filtering/ Sentiment Analysis: Naive Bayes classifiers mostly used in text classification (due to better result in multi class problems and independence rule) have higher success rate as compared to other algorithms. As a result, it is widely used in Spam filtering (identify spam e-mail) and Sentiment Analysis (in social media analysis, to identify positive and negative customer sentiments)
+    4. Recommendation System: Naive Bayes Classifier and Collaborative Filtering together builds a Recommendation System that uses machine learning and data mining techniques to filter unseen information and predict whether a user would like a given resource or not
+- Advantages:
+    - It is easy and fast to predict class of test data set. It also perform well in multi class prediction
+    - When assumption of independence holds, a Naive Bayes classifier performs better compare to other models like logistic regression and you need less training data.
+    - It performs well in case of categorical input variables compared to numerical variable(s). For numerical variable, normal distribution is assumed (bell curve, which is a strong assumption).
+- Disadvatages:
+    - If categorical variable has a category (in test data set), which was not observed in training data set, then model will assign a 0 (zero) probability and will be unable to make a prediction. This is often known as “Zero Frequency”. To solve this, we can use the smoothing technique. One of the simplest smoothing techniques is called Laplace estimation.
+    - On the other side naive Bayes is also known as a bad estimator, so the probability outputs from predict_proba are not to be taken too seriously.
+    - Another limitation of Naive Bayes is the assumption of independent predictors. In real life, it is almost impossible that we get a set of predictors which are completely independent.
 
 ```{r}
 set.seed(1973)
@@ -95,6 +150,8 @@ model = naive_bayes(label ~., data=train)
 ```{r}
 plot(model1)
 ```
+
+Above are the density line plots for all the feature variables for all 3 label values.
 
 ```{r}
 train_pred=predict(model,train)
@@ -107,6 +164,11 @@ test_pred=predict(model,test)
 test_cm = table(test_pred,test$label)
 confusionMatrix(test_cm)
 ```
+
+We get training accuracy from our model as 83.93% and balanced accuracy as 93% for Podium, 75% for Top_10 and 84% for Outisde_Top_10.
+Test accuracy from our model as 83.24% and balanced accuracy as 93% for Podium, 74% for Top_10 and 85% for Outisde_Top_10. There is a not a lot of difference between train and test accuracy which means our model is not over fitted.
+
+Confusion Matrix for Train and Test Data:
 
 ```{r}
 train_cm_df = data.frame(train_cm)
@@ -135,6 +197,8 @@ ggplot(data = test_cm_df, mapping = aes(x = truth , y = pred)) +
   # scale_fill_gradient(low = "cyan", high = "darkgoldenrod1") +
   theme_bw() + theme(legend.position = "none")
 ```
+
+Model Parameters:
 
 ```{r}
 model1
