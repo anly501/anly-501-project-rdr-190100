@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Ramdayal Rewaria">
+
+<title>Data Exploration for Record and Twitter Data</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="R_dataviz_files/libs/clipboard/clipboard.min.js"></script>
+<script src="R_dataviz_files/libs/quarto-html/quarto.js"></script>
+<script src="R_dataviz_files/libs/quarto-html/popper.min.js"></script>
+<script src="R_dataviz_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="R_dataviz_files/libs/quarto-html/anchor.min.js"></script>
+<link href="R_dataviz_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="R_dataviz_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="R_dataviz_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="R_dataviz_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="R_dataviz_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Data Exploration for Record and Twitter Data</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Ramdayal Rewaria </p>
+          </div>
+  </div>
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="import-libraries" class="level1">
+<h1>Import Libraries</h1>
+<div class="cell" data-execution_count="192">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> nltk</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> wordcloud <span class="im">import</span> WordCloud, STOPWORDS</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> PIL <span class="im">import</span> Image</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>sns.set_theme(style<span class="op">=</span><span class="st">"whitegrid"</span>, palette<span class="op">=</span><span class="st">'Set2'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="import-data" class="level1">
+<h1>Import Data</h1>
+<div class="cell" data-execution_count="7">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'../../data/02-model-data/data_cleaned.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>driver_df <span class="op">=</span> pd.read_csv(<span class="st">'../../data/00-raw-data/drivers.csv'</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.merge(df, driver_df[[<span class="st">'driverId'</span>, <span class="st">'driverRef'</span>]], on<span class="op">=</span><span class="st">'driverId'</span>, how<span class="op">=</span><span class="st">'left'</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>driver_df.rename(columns<span class="op">=</span>{<span class="st">'driverId'</span>:<span class="st">'pole_driverId'</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.merge(df, driver_df[[<span class="st">'pole_driverId'</span>, <span class="st">'driverRef'</span>]], on<span class="op">=</span><span class="st">'pole_driverId'</span>, how<span class="op">=</span><span class="st">'left'</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>driver_df.rename(columns<span class="op">=</span>{<span class="st">'pole_driverId'</span>:<span class="st">'win_driverId'</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.merge(df, driver_df[[<span class="st">'win_driverId'</span>, <span class="st">'driverRef'</span>]], on<span class="op">=</span><span class="st">'win_driverId'</span>, how<span class="op">=</span><span class="st">'left'</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>df.rename(columns<span class="op">=</span>{<span class="st">'driverRef_x'</span>:<span class="st">'driverRef'</span>, <span class="st">'driverRef_y'</span>:<span class="st">'pole_driverRef'</span>, <span class="st">'driverRef'</span>:<span class="st">'win_driverRef'</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-execution_count="97">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="97">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>season</th>
+      <th>round</th>
+      <th>season_round</th>
+      <th>driverId</th>
+      <th>raceId</th>
+      <th>circuitId</th>
+      <th>position</th>
+      <th>points</th>
+      <th>grid</th>
+      <th>laps</th>
+      <th>...</th>
+      <th>cumulative_points</th>
+      <th>cumulative_laps</th>
+      <th>pole_driverId</th>
+      <th>pole_history</th>
+      <th>win_driverId</th>
+      <th>win_history</th>
+      <th>label</th>
+      <th>driverRef</th>
+      <th>pole_driverRef</th>
+      <th>win_driverRef</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1950</td>
+      <td>1</td>
+      <td>1950_1</td>
+      <td>642</td>
+      <td>833</td>
+      <td>9</td>
+      <td>1</td>
+      <td>9.0</td>
+      <td>1</td>
+      <td>70</td>
+      <td>...</td>
+      <td>9.0</td>
+      <td>70</td>
+      <td>642</td>
+      <td>1</td>
+      <td>642</td>
+      <td>1</td>
+      <td>Podium</td>
+      <td>farina</td>
+      <td>farina</td>
+      <td>farina</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1950</td>
+      <td>1</td>
+      <td>1950_1</td>
+      <td>786</td>
+      <td>833</td>
+      <td>9</td>
+      <td>2</td>
+      <td>6.0</td>
+      <td>2</td>
+      <td>70</td>
+      <td>...</td>
+      <td>6.0</td>
+      <td>70</td>
+      <td>642</td>
+      <td>0</td>
+      <td>642</td>
+      <td>0</td>
+      <td>Podium</td>
+      <td>fagioli</td>
+      <td>farina</td>
+      <td>farina</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1950</td>
+      <td>1</td>
+      <td>1950_1</td>
+      <td>686</td>
+      <td>833</td>
+      <td>9</td>
+      <td>3</td>
+      <td>4.0</td>
+      <td>4</td>
+      <td>70</td>
+      <td>...</td>
+      <td>4.0</td>
+      <td>70</td>
+      <td>642</td>
+      <td>0</td>
+      <td>642</td>
+      <td>0</td>
+      <td>Podium</td>
+      <td>reg_parnell</td>
+      <td>farina</td>
+      <td>farina</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1950</td>
+      <td>1</td>
+      <td>1950_1</td>
+      <td>704</td>
+      <td>833</td>
+      <td>9</td>
+      <td>4</td>
+      <td>3.0</td>
+      <td>6</td>
+      <td>68</td>
+      <td>...</td>
+      <td>3.0</td>
+      <td>68</td>
+      <td>642</td>
+      <td>0</td>
+      <td>642</td>
+      <td>0</td>
+      <td>Top_10</td>
+      <td>cabantous</td>
+      <td>farina</td>
+      <td>farina</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1950</td>
+      <td>1</td>
+      <td>1950_1</td>
+      <td>627</td>
+      <td>833</td>
+      <td>9</td>
+      <td>5</td>
+      <td>2.0</td>
+      <td>9</td>
+      <td>68</td>
+      <td>...</td>
+      <td>2.0</td>
+      <td>68</td>
+      <td>642</td>
+      <td>0</td>
+      <td>642</td>
+      <td>0</td>
+      <td>Top_10</td>
+      <td>rosier</td>
+      <td>farina</td>
+      <td>farina</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 25 columns</p>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="98">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="98">
+<pre><code>Index(['season', 'round', 'season_round', 'driverId', 'raceId', 'circuitId',
+       'position', 'points', 'grid', 'laps', 'status', 'constructorRef',
+       'weather', 'stop', 'age_on_race', 'cumulative_points',
+       'cumulative_laps', 'pole_driverId', 'pole_history', 'win_driverId',
+       'win_history', 'label', 'driverRef', 'pole_driverRef', 'win_driverRef'],
+      dtype='object')</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="186">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>all_sentiment_df <span class="op">=</span> pd.read_csv(<span class="st">'../../data/01-modified-data/all_teams_sentiment_df.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-execution_count="187">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>grouped_df <span class="op">=</span> all_sentiment_df.groupby([<span class="st">'Team'</span>, <span class="st">'sentiment'</span>], as_index <span class="op">=</span> <span class="va">False</span>)[<span class="st">'0'</span>].count() <span class="co"># Group by team and sentiment</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="data-visualization" class="level1">
+<h1>Data Visualization</h1>
+<ul>
+<li>In our increasingly data-driven world, it’s more important than ever to have accessible ways to view and understand data. After all, the demand for data skills in employees is steadily increasing each year. Employees and business owners at every level need to have an understanding of data and of its impact.</li>
+<li>That’s where data visualization comes in handy. With the goal of making data more accessible and understandable, data visualization in the form of dashboards is the go-to tool for many businesses to analyze and share information.</li>
+<li>Data visualization is the graphical representation of information and data. By using visual elements like charts, graphs, and maps, data visualization tools provide an accessible way to see and understand trends, outliers, and patterns in data. Additionally, it provides an excellent way for employees or business owners to present data to non-technical audiences without confusion.</li>
+<li>In the world of Big Data, data visualization tools and technologies are essential to analyze massive amounts of information and make data-driven decisions.</li>
+<li>​​​​Something as simple as presenting data in graphic format may seem to have no downsides. But sometimes data can be misrepresented or misinterpreted when placed in the wrong style of data visualization. When choosing to create a data visualization, it’s best to keep both the advantages and disadvantages in mind.</li>
+<li><code>Why data visualization is important?</code>
+<ul>
+<li>The importance of data visualization is simple: it helps people see, interact with, and better understand data. Whether simple or complex, the right visualization can bring everyone on the same page, regardless of their level of expertise.</li>
+<li>It’s hard to think of a professional industry that doesn’t benefit from making data more understandable. Every STEM field benefits from understanding data—and so do fields in government, finance, marketing, history, consumer goods, service industries, education, sports, and so on.</li>
+<li>While we’ll always wax poetically about data visualization (you’re on the Tableau website, after all) there are practical, real-life applications that are undeniable. And, since visualization is so prolific, it’s also one of the most useful professional skills to develop. The better you can convey your points visually, whether in a dashboard or a slide deck, the better you can leverage that information. The concept of the citizen data scientist is on the rise. Skill sets are changing to accommodate a data-driven world. It is increasingly valuable for professionals to be able to use data to make decisions and use visuals to tell stories of when data informs the who, what, when, where, and how.</li>
+<li>While traditional education typically draws a distinct line between creative storytelling and technical analysis, the modern professional world also values those who can cross between the two: data visualization sits right in the middle of analysis and visual storytelling.</li>
+</ul></li>
+<li><code>General Types of Visualizations:</code>
+<ul>
+<li>Chart: Information presented in a tabular, graphical form with data displayed along two axes. Can be in the form of a graph, diagram, or map. Learn more.</li>
+<li>Table: A set of figures displayed in rows and columns. Learn more.</li>
+<li>Graph: A diagram of points, lines, segments, curves, or areas that represents certain variables in comparison to each other, usually along two axes at a right angle.</li>
+<li>Geospatial: A visualization that shows data in map form using different shapes and colors to show the relationship between pieces of data and specific locations. Learn more.</li>
+<li>Infographic: A combination of visuals and words that represent data. Usually uses charts or diagrams.</li>
+<li>Dashboards: A collection of visualizations and data displayed in one place to help with analyzing and presenting data. Learn more.</li>
+</ul></li>
+<li><code>Advantages:</code>
+<ul>
+<li>Our eyes are drawn to colors and patterns. We can quickly identify red from blue, and squares from circles. Our culture is visual, including everything from art and advertisements to TV and movies. Data visualization is another form of visual art that grabs our interest and keeps our eyes on the message. When we see a chart, we quickly see trends and outliers. If we can see something, we internalize it quickly. It’s storytelling with a purpose. If you’ve ever stared at a massive spreadsheet of data and couldn’t see a trend, you know how much more effective a visualization can be.</li>
+<li>Easily sharing information.</li>
+<li>Interactively explore opportunities.</li>
+<li>Visualize patterns and relationships.</li>
+</ul></li>
+<li><code>Disadvantages:</code>
+<ul>
+<li>While there are many advantages, some of the disadvantages may seem less obvious. For example, when viewing a visualization with many different datapoints, it’s easy to make an inaccurate assumption. Or sometimes the visualization is just designed wrong so that it’s biased or confusing.</li>
+<li>Biased or inaccurate information.</li>
+<li>Correlation doesn’t always mean causation.</li>
+<li>Core messages can get lost in translation.</li>
+</ul></li>
+</ul>
+<section id="record-data" class="level2">
+<h2 class="anchored" data-anchor-id="record-data">Record Data</h2>
+<section id="visualizing-drivers-with-most-wins-and-points" class="level3">
+<h3 class="anchored" data-anchor-id="visualizing-drivers-with-most-wins-and-points">Visualizing Drivers with most wins and points</h3>
+<div class="cell" data-execution_count="99">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>win_count_df <span class="op">=</span> df[df[<span class="st">'position'</span>] <span class="op">==</span> <span class="fl">1.0</span>].groupby(<span class="st">'driverRef'</span>, as_index<span class="op">=</span><span class="va">False</span>)[<span class="st">'position'</span>].count()</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>win_count_df.sort_values(by <span class="op">=</span> <span class="st">'position'</span>, axis<span class="op">=</span><span class="dv">0</span>, ascending<span class="op">=</span><span class="va">False</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>win_count_df_top10 <span class="op">=</span> win_count_df.head(<span class="dv">10</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>max_points_df <span class="op">=</span> df.groupby(<span class="st">'driverRef'</span>, as_index<span class="op">=</span><span class="va">False</span>)[<span class="st">'points'</span>].<span class="bu">sum</span>()</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>max_points_df.sort_values(by <span class="op">=</span> <span class="st">'points'</span>, axis<span class="op">=</span><span class="dv">0</span>, ascending<span class="op">=</span><span class="va">False</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>max_points_df_top10 <span class="op">=</span> max_points_df.head(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-execution_count="184">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(nrows<span class="op">=</span><span class="dv">1</span>, ncols<span class="op">=</span><span class="dv">2</span> ,figsize <span class="op">=</span> (<span class="dv">18</span>, <span class="dv">10</span>))</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>sns.barplot(x <span class="op">=</span> win_count_df_top10[<span class="st">'driverRef'</span>], y <span class="op">=</span> win_count_df_top10[<span class="st">'position'</span>] , ax <span class="op">=</span> ax[<span class="dv">0</span>])</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>sns.barplot(x <span class="op">=</span> max_points_df_top10[<span class="st">'driverRef'</span>], y <span class="op">=</span> max_points_df_top10[<span class="st">'points'</span>], ax <span class="op">=</span> ax[<span class="dv">1</span>])</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>FS <span class="op">=</span> <span class="dv">16</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>].set_xlabel(<span class="st">'Driver'</span>, fontsize<span class="op">=</span>FS)</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>].set_ylabel(<span class="st">'Number of Points in Career'</span>, fontsize<span class="op">=</span>FS)</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>].set_title(<span class="st">'Top 10 Drivers with Most Points'</span>, fontsize<span class="op">=</span>FS)</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>].set_xticklabels(ax[<span class="dv">1</span>].get_xticklabels(), rotation<span class="op">=</span><span class="dv">45</span>, horizontalalignment<span class="op">=</span><span class="st">'right'</span>)</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>].set_xlabel(<span class="st">'Driver'</span>, fontsize<span class="op">=</span>FS)</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>].set_ylabel(<span class="st">'Number of Wins in Career'</span>, fontsize<span class="op">=</span>FS)</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>].set_title(<span class="st">'Top 10 Drivers with Most Wins'</span>, fontsize<span class="op">=</span>FS)</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>].set_xticklabels(ax[<span class="dv">0</span>].get_xticklabels(), rotation<span class="op">=</span><span class="dv">45</span>, horizontalalignment<span class="op">=</span><span class="st">'right'</span>)</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">'../../501-project-website/images/visualizations/main_data/top10_drivers_wins_points.png'</span>)</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<p><img src="R_dataviz_files/figure-html/cell-10-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<p>While Michael Schumacher has the more wins in his entire career than other drivers except Lewis Hamilton, he has lesser number of points as compares to them. By domain knowledge we also know that Schumacher was a part of F1 from the early 90s to 2004, which leads us to the conclusion the point distribution for getting wins has increased over the years. This strange behaviour may also mean that other drivers apart of Schumacher gained more points while not wining (positions 2-10 also has points).</p>
+</section>
+<section id="visualizing-constructors-team-with-most-wins-and-points" class="level3">
+<h3 class="anchored" data-anchor-id="visualizing-constructors-team-with-most-wins-and-points">Visualizing Constructors (Team) with most wins and points</h3>
+<div class="cell" data-execution_count="102">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>c_win_count_df <span class="op">=</span> df[df[<span class="st">'position'</span>] <span class="op">==</span> <span class="fl">1.0</span>].groupby(<span class="st">'constructorRef'</span>, as_index<span class="op">=</span><span class="va">False</span>)[<span class="st">'position'</span>].count()</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>c_win_count_df.sort_values(by <span class="op">=</span> <span class="st">'position'</span>, axis<span class="op">=</span><span class="dv">0</span>, ascending<span class="op">=</span><span class="va">False</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>c_win_count_df_top10 <span class="op">=</span> c_win_count_df.head(<span class="dv">10</span>)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>c_max_points_df <span class="op">=</span> df.groupby(<span class="st">'constructorRef'</span>, as_index<span class="op">=</span><span class="va">False</span>)[<span class="st">'points'</span>].<span class="bu">sum</span>()</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>c_max_points_df.sort_values(by <span class="op">=</span> <span class="st">'points'</span>, axis<span class="op">=</span><span class="dv">0</span>, ascending<span class="op">=</span><span class="va">False</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>c_max_points_df_top10 <span class="op">=</span> c_max_points_df.head(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-execution_count="185">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(nrows<span class="op">=</span><span class="dv">1</span>, ncols<span class="op">=</span><span class="dv">2</span> ,figsize <span class="op">=</span> (<span class="dv">18</span>, <span class="dv">10</span>))</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>sns.barplot(x <span class="op">=</span> c_win_count_df_top10[<span class="st">'constructorRef'</span>], y <span class="op">=</span> c_win_count_df_top10[<span class="st">'position'</span>], ax<span class="op">=</span>ax[<span class="dv">0</span>])</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>sns.barplot(x <span class="op">=</span> c_max_points_df_top10[<span class="st">'constructorRef'</span>], y <span class="op">=</span> c_max_points_df_top10[<span class="st">'points'</span>], ax<span class="op">=</span>ax[<span class="dv">1</span>])</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>FS <span class="op">=</span> <span class="dv">16</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>].set_xlabel(<span class="st">'Constructor'</span>, fontsize<span class="op">=</span>FS)</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>].set_ylabel(<span class="st">'Number of Points'</span>, fontsize<span class="op">=</span>FS)</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>].set_title(<span class="st">'Top 10 Constructors with Most Points'</span>, fontsize<span class="op">=</span>FS)</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>].set_xticklabels(ax[<span class="dv">1</span>].get_xticklabels(), rotation<span class="op">=</span><span class="dv">45</span>, horizontalalignment<span class="op">=</span><span class="st">'right'</span>)</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>].set_xlabel(<span class="st">'Constructor'</span>, fontsize<span class="op">=</span>FS)</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>].set_ylabel(<span class="st">'Number of Race Wins'</span>, fontsize<span class="op">=</span>FS)</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>].set_title(<span class="st">'Top 10 Constructors with Most Race Wins'</span>, fontsize<span class="op">=</span>FS)</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>].set_xticklabels(ax[<span class="dv">0</span>].get_xticklabels(), rotation<span class="op">=</span><span class="dv">45</span>, horizontalalignment<span class="op">=</span><span class="st">'right'</span>)</span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">'../../501-project-website/images/visualizations/main_data/top10_constructor_wins_points.png'</span>)</span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<p><img src="R_dataviz_files/figure-html/cell-12-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<p>A team like McLaren has been in F1 since a very early time which justifies it being the second team while seeing race wins. But the points gathered for McLaren have been lesser in the past few years compared to before 2000. Since we already know the point distribution from being 1st in the race was less before 2000 and McLaren is now a mid-tier team it makes sense that it has less overall points despite being second in Race wins.</p>
+</section>
+<section id="comparison-of-most-famous-and-successful-drivers" class="level3">
+<h3 class="anchored" data-anchor-id="comparison-of-most-famous-and-successful-drivers">Comparison of most famous and successful drivers</h3>
+<section id="sebastian-vettel-lewis-hamilton-and-fernando-alonso" class="level4">
+<h4 class="anchored" data-anchor-id="sebastian-vettel-lewis-hamilton-and-fernando-alonso">Sebastian Vettel, Lewis Hamilton and Fernando Alonso</h4>
+<p>These 3 drivers are also called the big 3 of the newer generation. All of them are from rival teams and are rivals on track too. They went head-to-head in a lot of battles on track which makes me want to compare their points , win histories and laps races over the past seasons.</p>
+<div class="cell" data-execution_count="60">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>df1 <span class="op">=</span> df[(df[<span class="st">'driverRef'</span>] <span class="op">==</span> <span class="st">'vettel'</span>) <span class="op">|</span> (df[<span class="st">'driverRef'</span>] <span class="op">==</span> <span class="st">'hamilton'</span>) <span class="op">|</span> (df[<span class="st">'driverRef'</span>] <span class="op">==</span> <span class="st">'alonso'</span>)]</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>df2 <span class="op">=</span> df1[[<span class="st">'season'</span>, <span class="st">'round'</span>, <span class="st">'driverRef'</span>, <span class="st">'cumulative_points'</span>]]</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>df3 <span class="op">=</span> df1[[<span class="st">'season'</span>, <span class="st">'round'</span>, <span class="st">'driverRef'</span>, <span class="st">'win_history'</span>]]</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>df4 <span class="op">=</span> df1[[<span class="st">'season'</span>, <span class="st">'round'</span>, <span class="st">'driverRef'</span>, <span class="st">'cumulative_laps'</span>]]</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>df5 <span class="op">=</span> df1.groupby([<span class="st">'season'</span>, <span class="st">'driverRef'</span>], as_index<span class="op">=</span><span class="va">False</span>)[<span class="st">'points'</span>].<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-execution_count="93">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(nrows<span class="op">=</span><span class="dv">2</span>, ncols<span class="op">=</span><span class="dv">2</span> ,figsize <span class="op">=</span> (<span class="dv">18</span>, <span class="dv">10</span>))</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>sns.lineplot(x <span class="op">=</span> <span class="st">'season'</span>, y <span class="op">=</span> <span class="st">'points'</span>, hue <span class="op">=</span> <span class="st">'driverRef'</span>, data <span class="op">=</span> df5, ax<span class="op">=</span>ax[<span class="dv">0</span>,<span class="dv">0</span>])</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>sns.lineplot(x <span class="op">=</span> <span class="st">'season'</span>, y <span class="op">=</span> <span class="st">'cumulative_points'</span>, hue <span class="op">=</span> <span class="st">'driverRef'</span>, data <span class="op">=</span> df2, ax<span class="op">=</span>ax[<span class="dv">0</span>,<span class="dv">1</span>])</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>sns.lineplot(x <span class="op">=</span> <span class="st">'season'</span>, y <span class="op">=</span> <span class="st">'win_history'</span>, hue <span class="op">=</span> <span class="st">'driverRef'</span>, data <span class="op">=</span> df3, ax<span class="op">=</span>ax[<span class="dv">1</span>,<span class="dv">0</span>])</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>sns.lineplot(x <span class="op">=</span> <span class="st">'season'</span>, y <span class="op">=</span> <span class="st">'cumulative_laps'</span>, hue <span class="op">=</span> <span class="st">'driverRef'</span>, data <span class="op">=</span> df4, ax<span class="op">=</span>ax[<span class="dv">1</span>,<span class="dv">1</span>])</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>plt.suptitle(<span class="st">'Comparison of Vettel, Alonso and Hamilton Seasonwise'</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="93">
+<pre><code>Text(0.5, 0.98, 'Comparison of Vettel, Alonso and Hamilton Seasonwise')</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="R_dataviz_files/figure-html/cell-14-output-2.png" class="img-fluid"></p>
+</div>
+</div>
+<p>The number of points gained in each season for Alonso and Vettel peaked during 2011-2014 seasons while Hamilton peaked during 2017-2020. The downfall of Alonso resulted in the success of Hamiltion who became more succesful after 2013.</p>
+</section>
+<section id="lewis-hamilton-and-max-verstappen-for-the-2021-season" class="level4">
+<h4 class="anchored" data-anchor-id="lewis-hamilton-and-max-verstappen-for-the-2021-season">Lewis Hamilton and Max Verstappen for the 2021 Season</h4>
+<p>The 2021 season went down to the last race and resulted in a very close finish for World Driver’s Championship between Lewish Hamilton (2nd) and Max Verstappen (1st). The following section compares the points, laps completed and grid positions for all the races in the 2021 season.</p>
+<div class="cell" data-execution_count="88">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>df6 <span class="op">=</span> df[(df[<span class="st">'driverRef'</span>] <span class="op">==</span> <span class="st">'max_verstappen'</span>) <span class="op">|</span> (df[<span class="st">'driverRef'</span>] <span class="op">==</span> <span class="st">'hamilton'</span>)]</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>df6 <span class="op">=</span> df6[df6[<span class="st">'season'</span>] <span class="op">==</span> <span class="dv">2021</span>]</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>df7 <span class="op">=</span> df6[[<span class="st">'round'</span>, <span class="st">'driverRef'</span>, <span class="st">'position'</span>]]</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>df8 <span class="op">=</span> df6[[<span class="st">'round'</span>, <span class="st">'driverRef'</span>, <span class="st">'points'</span>]]</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>df9 <span class="op">=</span> df6[[<span class="st">'round'</span>, <span class="st">'driverRef'</span>, <span class="st">'laps'</span>]]</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>df10 <span class="op">=</span> df6[[<span class="st">'round'</span>, <span class="st">'driverRef'</span>, <span class="st">'grid'</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-execution_count="92">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(nrows<span class="op">=</span><span class="dv">2</span>, ncols<span class="op">=</span><span class="dv">2</span> ,figsize <span class="op">=</span> (<span class="dv">18</span>, <span class="dv">10</span>))</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>sns.lineplot(x <span class="op">=</span> <span class="st">'round'</span>, y <span class="op">=</span> <span class="st">'position'</span>, hue <span class="op">=</span> <span class="st">'driverRef'</span>, data <span class="op">=</span> df7, ax<span class="op">=</span>ax[<span class="dv">0</span>,<span class="dv">0</span>])</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>sns.lineplot(x <span class="op">=</span> <span class="st">'round'</span>, y <span class="op">=</span> <span class="st">'points'</span>, hue <span class="op">=</span> <span class="st">'driverRef'</span>, data <span class="op">=</span> df8, ax<span class="op">=</span>ax[<span class="dv">0</span>,<span class="dv">1</span>])</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>sns.lineplot(x <span class="op">=</span> <span class="st">'round'</span>, y <span class="op">=</span> <span class="st">'laps'</span>, hue <span class="op">=</span> <span class="st">'driverRef'</span>, data <span class="op">=</span> df9, ax<span class="op">=</span>ax[<span class="dv">1</span>,<span class="dv">0</span>])</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>sns.lineplot(x <span class="op">=</span> <span class="st">'round'</span>, y <span class="op">=</span> <span class="st">'grid'</span>, hue <span class="op">=</span> <span class="st">'driverRef'</span>, data <span class="op">=</span> df10, ax<span class="op">=</span>ax[<span class="dv">1</span>,<span class="dv">1</span>])</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>plt.suptitle(<span class="st">'Comparison of Hamilton and Max for 2021 roundwise'</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="92">
+<pre><code>Text(0.5, 0.98, 'Comparison of Hamilton and Max for 2021 roundwise')</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="R_dataviz_files/figure-html/cell-16-output-2.png" class="img-fluid"></p>
+</div>
+</div>
+<p>Hamilton and Max waere pretty consistent in terms of win results and grid positions with a few exceptions.</p>
+</section>
+</section>
+<section id="drivers-with-highest-win-and-pole-wins" class="level3">
+<h3 class="anchored" data-anchor-id="drivers-with-highest-win-and-pole-wins">Drivers with Highest Win % and Pole wins</h3>
+<div class="cell" data-execution_count="110">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'pole_win'</span>] <span class="op">=</span> np.where((df[<span class="st">'position'</span>] <span class="op">==</span> <span class="fl">1.0</span>) <span class="op">&amp;</span> (df[<span class="st">'grid'</span>] <span class="op">==</span> <span class="fl">1.0</span>), <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>df11 <span class="op">=</span> df[<span class="st">'driverRef'</span>][df[<span class="st">'pole_win'</span>] <span class="op">==</span> <span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-execution_count="154">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>df12 <span class="op">=</span> pd.merge(df.groupby(<span class="st">'driverRef'</span>, as_index<span class="op">=</span><span class="va">False</span>)[<span class="st">'round'</span>].count(), df.groupby(<span class="st">'driverRef'</span>, as_index<span class="op">=</span><span class="va">False</span>)[<span class="st">'win_history'</span>].<span class="bu">max</span>(), on<span class="op">=</span><span class="st">'driverRef'</span>)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>df12[<span class="st">'win_percentage'</span>] <span class="op">=</span> df12[<span class="st">'win_history'</span>]<span class="op">/</span>df12[<span class="st">'round'</span>]<span class="op">*</span><span class="dv">100</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>df12.sort_values(by <span class="op">=</span> <span class="st">'win_percentage'</span>, axis<span class="op">=</span><span class="dv">0</span>, ascending<span class="op">=</span><span class="va">False</span>, inplace<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-execution_count="177">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(nrows<span class="op">=</span><span class="dv">2</span>, ncols<span class="op">=</span><span class="dv">1</span> ,figsize <span class="op">=</span> (<span class="dv">18</span>, <span class="dv">23</span>))</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>sns.barplot(x <span class="op">=</span> df12[df12[<span class="st">'round'</span>]<span class="op">&gt;</span><span class="dv">50</span>].head(<span class="dv">20</span>)[<span class="st">'driverRef'</span>], y <span class="op">=</span> df12[df12[<span class="st">'round'</span>]<span class="op">&gt;</span><span class="dv">50</span>].head(<span class="dv">20</span>)[<span class="st">'win_percentage'</span>], ax<span class="op">=</span>ax[<span class="dv">0</span>])</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>sns.barplot(x <span class="op">=</span> df11.value_counts().index[:<span class="dv">20</span>], y <span class="op">=</span> df11.value_counts().values[:<span class="dv">20</span>], ax<span class="op">=</span>ax[<span class="dv">1</span>])</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>].set_xticklabels(ax[<span class="dv">0</span>].get_xticklabels(), rotation<span class="op">=</span><span class="dv">90</span>, horizontalalignment<span class="op">=</span><span class="st">'right'</span>)</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>].set_xticklabels(ax[<span class="dv">1</span>].get_xticklabels(), rotation<span class="op">=</span><span class="dv">90</span>, horizontalalignment<span class="op">=</span><span class="st">'right'</span>)</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>].set_xlabel(<span class="st">'Driver'</span>)</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>].set_ylabel(<span class="st">'Win Percentage'</span>)</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>].set_title(<span class="st">'Top 20 Drivers with Highest Win Percentage'</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>].set_xlabel(<span class="st">'Driver'</span>)</span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>].set_ylabel(<span class="st">'Number of Pole Wins'</span>)</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>].set_title(<span class="st">'Top 20 Drivers with Most Pole Wins'</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="177">
+<pre><code>Text(0.5, 1.0, 'Top 20 Drivers with Most Pole Wins')</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="R_dataviz_files/figure-html/cell-19-output-2.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="distribution-of-labels" class="level3">
+<h3 class="anchored" data-anchor-id="distribution-of-labels">Distribution of Labels</h3>
+<div class="cell" data-execution_count="181">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(nrows<span class="op">=</span><span class="dv">1</span>, ncols<span class="op">=</span><span class="dv">2</span> ,figsize <span class="op">=</span> (<span class="dv">18</span>, <span class="dv">10</span>))</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>].pie(df[<span class="st">'label'</span>].value_counts(), labels <span class="op">=</span> df[<span class="st">'label'</span>].value_counts().index, autopct<span class="op">=</span><span class="st">'</span><span class="sc">%1.1f%%</span><span class="st">'</span>)</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>sns.countplot(x <span class="op">=</span> <span class="st">'label'</span>, data <span class="op">=</span> df, ax<span class="op">=</span>ax[<span class="dv">1</span>])</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>plt.suptitle(<span class="st">'Distribution of Labels'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="181">
+<pre><code>Text(0.5, 0.98, 'Distribution of Labels')</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="R_dataviz_files/figure-html/cell-20-output-2.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="pairplot" class="level3">
+<h3 class="anchored" data-anchor-id="pairplot">Pairplot</h3>
+<div class="cell" data-execution_count="183">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>sns.pairplot(df[[<span class="st">'position'</span>, <span class="st">'points'</span>, <span class="st">'laps'</span>, <span class="st">'grid'</span>, <span class="st">'label'</span>]], hue<span class="op">=</span><span class="st">'label'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="183">
+<pre><code>&lt;seaborn.axisgrid.PairGrid at 0x7fa44c99a9e0&gt;</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="R_dataviz_files/figure-html/cell-21-output-2.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+</section>
+<section id="twitter-data" class="level2">
+<h2 class="anchored" data-anchor-id="twitter-data">Twitter Data</h2>
+<section id="pie-charts-to-compare-sentiments-of-tweets-written-by-fans-of-different-teams" class="level3">
+<h3 class="anchored" data-anchor-id="pie-charts-to-compare-sentiments-of-tweets-written-by-fans-of-different-teams">Pie charts to compare Sentiments of tweets written by fans of different teams</h3>
+<div class="cell" data-execution_count="194">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>teams <span class="op">=</span> [<span class="st">'Ferrari'</span>, <span class="st">'Mercedes'</span>, <span class="st">'Redbull'</span>, <span class="st">'Haas'</span>, <span class="st">'Mclaren'</span>, <span class="st">'Alpine'</span>, <span class="st">'Williams'</span>, <span class="st">'Aston Martin'</span>, <span class="st">'Alpha Tauri'</span>, <span class="st">'Alfa Romeo'</span>]</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> team <span class="kw">in</span> teams:</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>    indiv_df <span class="op">=</span> grouped_df[grouped_df[<span class="st">'Team'</span>] <span class="op">==</span> team]</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>    indiv_df <span class="op">=</span> indiv_df.rename(columns <span class="op">=</span> {<span class="st">'0'</span>: <span class="st">'Count'</span>})</span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">#indiv_df = indiv_df.pivot(index = 'Team', columns = 'sentiment', values = 'Count')</span></span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>    <span class="co">#display(indiv_df)</span></span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a>    positive_percentage <span class="op">=</span> (indiv_df[indiv_df[<span class="st">'sentiment'</span>] <span class="op">==</span> <span class="st">'positive'</span>][<span class="st">'Count'</span>].values[<span class="dv">0</span>] <span class="op">/</span> indiv_df[<span class="st">'Count'</span>].<span class="bu">sum</span>()) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a>    negative_percentage <span class="op">=</span> (indiv_df[indiv_df[<span class="st">'sentiment'</span>] <span class="op">==</span> <span class="st">'negative'</span>][<span class="st">'Count'</span>].values[<span class="dv">0</span>] <span class="op">/</span> indiv_df[<span class="st">'Count'</span>].<span class="bu">sum</span>()) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>    neutral_percentage <span class="op">=</span> (indiv_df[indiv_df[<span class="st">'sentiment'</span>] <span class="op">==</span> <span class="st">'neutral'</span>][<span class="st">'Count'</span>].values[<span class="dv">0</span>] <span class="op">/</span> indiv_df[<span class="st">'Count'</span>].<span class="bu">sum</span>()) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a>    positive <span class="op">=</span> indiv_df[indiv_df[<span class="st">'sentiment'</span>] <span class="op">==</span> <span class="st">'positive'</span>][<span class="st">'Count'</span>].values[<span class="dv">0</span>]</span>
+<span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a>    negative <span class="op">=</span> indiv_df[indiv_df[<span class="st">'sentiment'</span>] <span class="op">==</span> <span class="st">'negative'</span>][<span class="st">'Count'</span>].values[<span class="dv">0</span>]</span>
+<span id="cb27-16"><a href="#cb27-16" aria-hidden="true" tabindex="-1"></a>    neutral <span class="op">=</span> indiv_df[indiv_df[<span class="st">'sentiment'</span>] <span class="op">==</span> <span class="st">'neutral'</span>][<span class="st">'Count'</span>].values[<span class="dv">0</span>]</span>
+<span id="cb27-17"><a href="#cb27-17" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb27-18"><a href="#cb27-18" aria-hidden="true" tabindex="-1"></a>    labels <span class="op">=</span> [<span class="st">"Positive"</span>, <span class="st">"Neutral"</span>,<span class="st">"Negative"</span>]</span>
+<span id="cb27-19"><a href="#cb27-19" aria-hidden="true" tabindex="-1"></a>    sizes <span class="op">=</span> [positive, neutral, negative]</span>
+<span id="cb27-20"><a href="#cb27-20" aria-hidden="true" tabindex="-1"></a>    plt.pie(sizes, startangle<span class="op">=</span><span class="dv">90</span>, autopct<span class="op">=</span><span class="st">'</span><span class="sc">%1.1f%%</span><span class="st">'</span>)</span>
+<span id="cb27-21"><a href="#cb27-21" aria-hidden="true" tabindex="-1"></a>    plt.legend(labels)</span>
+<span id="cb27-22"><a href="#cb27-22" aria-hidden="true" tabindex="-1"></a>    plt.title(<span class="st">"Sentiment Analysis Result for keyword="</span> <span class="op">+</span> team)</span>
+<span id="cb27-23"><a href="#cb27-23" aria-hidden="true" tabindex="-1"></a>    plt.axis(<span class="st">'equal'</span>)</span>
+<span id="cb27-24"><a href="#cb27-24" aria-hidden="true" tabindex="-1"></a>    plt.savefig(<span class="st">'../../501-project-website/images/visualizations/sentiment_analysis/'</span> <span class="op">+</span> team <span class="op">+</span> <span class="st">'_pie.png'</span>)</span>
+<span id="cb27-25"><a href="#cb27-25" aria-hidden="true" tabindex="-1"></a>    plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<p><img src="R_dataviz_files/figure-html/cell-22-output-1.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="R_dataviz_files/figure-html/cell-22-output-2.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="R_dataviz_files/figure-html/cell-22-output-3.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="R_dataviz_files/figure-html/cell-22-output-4.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="R_dataviz_files/figure-html/cell-22-output-5.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="R_dataviz_files/figure-html/cell-22-output-6.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="R_dataviz_files/figure-html/cell-22-output-7.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="R_dataviz_files/figure-html/cell-22-output-8.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="R_dataviz_files/figure-html/cell-22-output-9.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="R_dataviz_files/figure-html/cell-22-output-10.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="worldcloud-to-check-the-most-used-words-in-tweets-for-each-team" class="level3">
+<h3 class="anchored" data-anchor-id="worldcloud-to-check-the-most-used-words-in-tweets-for-each-team">Worldcloud to check the most used words in tweets for each team</h3>
+<div class="cell" data-execution_count="197">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> create_wordcloud(text):</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">#mask = np.array(Image.open("cloud.png"))</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>    stopwords <span class="op">=</span> <span class="bu">set</span>(STOPWORDS)</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>    wc <span class="op">=</span> WordCloud(background_color<span class="op">=</span><span class="st">"white"</span>,</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>                    max_words<span class="op">=</span><span class="dv">3000</span>,</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>                    stopwords<span class="op">=</span>stopwords,</span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>                    repeat<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>    wc.generate(<span class="bu">str</span>(text))</span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>    wc.to_file(<span class="st">"../../501-project-website/images/visualizations/sentiment_analysis/"</span> <span class="op">+</span> team <span class="op">+</span> <span class="st">"_wordcloud.png"</span>)</span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a>    path<span class="op">=</span><span class="st">"../../501-project-website/images/visualizations/sentiment_analysis/"</span> <span class="op">+</span> team <span class="op">+</span> <span class="st">"_wordcloud.png"</span></span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a>    display(Image.<span class="bu">open</span>(path))</span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> team <span class="kw">in</span> teams:</span>
+<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a>    indiv_df <span class="op">=</span> all_sentiment_df[all_sentiment_df[<span class="st">'Team'</span>] <span class="op">==</span> team]</span>
+<span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a>    create_wordcloud(indiv_df[<span class="st">"text"</span>].values)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<p><img src="R_dataviz_files/figure-html/cell-23-output-1.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="R_dataviz_files/figure-html/cell-23-output-2.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="R_dataviz_files/figure-html/cell-23-output-3.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="R_dataviz_files/figure-html/cell-23-output-4.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="R_dataviz_files/figure-html/cell-23-output-5.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="R_dataviz_files/figure-html/cell-23-output-6.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="R_dataviz_files/figure-html/cell-23-output-7.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="R_dataviz_files/figure-html/cell-23-output-8.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="R_dataviz_files/figure-html/cell-23-output-9.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="R_dataviz_files/figure-html/cell-23-output-10.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="scatter-plot-to-compare-polarity-and-subjectivity-distributions-sentiment-wise" class="level3">
+<h3 class="anchored" data-anchor-id="scatter-plot-to-compare-polarity-and-subjectivity-distributions-sentiment-wise">Scatter plot to Compare Polarity and Subjectivity distributions Sentiment-wise</h3>
+<div class="cell" data-execution_count="206">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(data <span class="op">=</span> all_sentiment_df, x <span class="op">=</span> <span class="st">'polarity'</span>, y <span class="op">=</span> <span class="st">'subjectivity'</span>, hue <span class="op">=</span> <span class="st">'sentiment'</span>)</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Polarity vs Subjectivity Sentiment-wise'</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="co">#plt.savefig('../../501-project-website/images/visualizations/sentiment_analysis/scatterplot_polarity_vs_subjectivity.png')</span></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<p><img src="R_dataviz_files/figure-html/cell-24-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="polarity-and-subjectivity-values-between-teams" class="level3">
+<h3 class="anchored" data-anchor-id="polarity-and-subjectivity-values-between-teams">Polarity and Subjectivity Values between Teams</h3>
+<div class="cell" data-execution_count="201">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(nrows<span class="op">=</span><span class="dv">1</span>, ncols<span class="op">=</span><span class="dv">2</span> ,figsize <span class="op">=</span> (<span class="dv">18</span>, <span class="dv">10</span>))</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>sns.barplot(x <span class="op">=</span> <span class="st">'Team'</span>, y <span class="op">=</span> <span class="st">'polarity'</span>, data <span class="op">=</span> all_sentiment_df, ax <span class="op">=</span> ax[<span class="dv">0</span>])</span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>sns.barplot(x <span class="op">=</span> <span class="st">'Team'</span>, y <span class="op">=</span> <span class="st">'subjectivity'</span>, data <span class="op">=</span> all_sentiment_df, ax <span class="op">=</span> ax[<span class="dv">1</span>])</span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>FS <span class="op">=</span> <span class="dv">18</span></span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>].set_title(<span class="st">'Team vs Polarity'</span>, fontsize <span class="op">=</span> FS)</span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>].set_title(<span class="st">'Team vs Subjectivity'</span>, fontsize <span class="op">=</span> FS)</span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>].set_xlabel(<span class="st">'Team'</span>, fontsize <span class="op">=</span> FS)</span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>].set_ylabel(<span class="st">'Polarity'</span>, fontsize <span class="op">=</span> FS)</span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>].set_xlabel(<span class="st">'Team'</span>, fontsize <span class="op">=</span> FS)</span>
+<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>].set_ylabel(<span class="st">'Subjectivity'</span>, fontsize <span class="op">=</span> FS)</span>
+<span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>].set_xticklabels(ax[<span class="dv">0</span>].get_xticklabels(), rotation<span class="op">=</span><span class="dv">45</span>, horizontalalignment<span class="op">=</span><span class="st">'right'</span>)</span>
+<span id="cb30-14"><a href="#cb30-14" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>].set_xticklabels(ax[<span class="dv">1</span>].get_xticklabels(), rotation<span class="op">=</span><span class="dv">45</span>, horizontalalignment<span class="op">=</span><span class="st">'right'</span>)</span>
+<span id="cb30-15"><a href="#cb30-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-16"><a href="#cb30-16" aria-hidden="true" tabindex="-1"></a><span class="co">#plt.savefig('../../501-project-website/images/visualizations/sentiment_analysis/Team_vs_Polarity_Subjectivity.png')</span></span>
+<span id="cb30-17"><a href="#cb30-17" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<p><img src="R_dataviz_files/figure-html/cell-25-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

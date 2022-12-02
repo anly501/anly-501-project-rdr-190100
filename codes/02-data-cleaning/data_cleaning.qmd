@@ -1,0 +1,67 @@
+---
+title: "Data Cleaning Part 1"
+author: "Ramdayal Rewaria"
+format:
+  html:
+    code-fold: true
+    theme: darkly
+---
+
+# Data Cleaning
+
+\- In the era of big data, cleaning or scrubbing your data has become an essential part of the data management process. Even though data cleaning can be tedious at times, it is absolutely crucial for getting accurate business intelligence (BI) that can drive your strategic decisions.
+
+\- Incorrect or inconsistent data leads to false conclusions. And so, how well you clean and understand the data has a high impact on the quality of the results.
+
+\- Data cleaning involve different techniques based on the problem and the data type. Different methods can be applied with each has its own trade-offs. Overall, incorrect data is either removed, corrected, or imputed.
+
+\- Data cleaning is the process of removing incorrect, duplicate, or otherwise erroneous data from a dataset. These errors can include incorrectly formatted data, redundant entries, mislabeled data, and other issues; they often arise when two or more datasets are combined together. Data cleaning improves the quality of your data as well as any business decisions that you draw based on the data.
+
+\- There is no one right way to clean a dataset, as every set is different and presents its own unique slate of errors that need to be corrected. Many data cleaning techniques can now be automated with the help of dedicated software, but some portion of the work must be done manually to ensure the greatest accuracy. Usually this work is done by data quality analysts, BI analysts, and business users.
+
+\- Every organization's data cleaning methods will vary according to their individual needs as well as the particular constraints of the dataset. However, most data cleaning steps follow a standard framework:
+
+1.  Determine the critical data values you need for your analysis.
+
+2.  Collect the data you need, then sort and organize it.
+
+3.  Identify duplicate or irrelevant values and remove them.
+
+4.  Search for missing values and fill them in, so you have a complete dataset.
+
+5.  Fix any remaining structural or repetitive errors in the dataset.
+
+6.  Identify outliers and remove them, so they will not interfere with your analysis.
+
+7.  Validate your dataset to ensure it is ready for data transformation and analysis.
+
+8.  Once the set has been validated, perform your transformation and analysis.
+
+\-`Data Cleaning vs. Data Cleansing vs. Data Scrubbing`:
+
+-   You might sometimes hear the terms data cleansing or data scrubbing used instead of data cleaning. In most situations, these terms are all being used interchangeably and refer to the exact same thing. Data scrubbing may sometimes be used to refer to a specific aspect of data cleaning---namely, removing duplicate or bad data from datasets.
+
+-   You should also know that data scrubbing can have a slightly different meaning within the specific context of data storage; in this case, it refers to an automated function that evaluates storage systems and disk drives to identify any bad sectors or blocks and to confirm the data in them can be read.
+
+-   Note that all three of these terms---data cleaning, data cleansing, and data scrubbing---are different from data transformation, which is the act of taking clean data and converting it into a new format or structure. Data transformation is a separate process that comes after data cleaning.
+
+\- \`Benefits of Data Cleaning:\`
+
+-   Not having clean data exacts a high price: IBM estimates that bad data costs the U.S. over \$3 trillion each year. That's because data-driven decisions are only as good as the data you are relying on. Bad quality data leads to equally bad quality decisions. If the data you are basing your strategy on is inaccurate, then your strategy will have the same issues present in the data, even if it seems sound. In fact, sometimes no data at all is better than bad data.
+
+-   Cleaning your data results in many benefits for your organization in both the short- and long-term. It leads to better decision making, which can boost your efficiency and your customer satisfaction, in turn giving your business a competitive edge. Over time, it also reduces your costs of data management by preemptively removing errors and other mistakes that would necessitate performing analysis over and over again.
+
+# Import Libraries
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```

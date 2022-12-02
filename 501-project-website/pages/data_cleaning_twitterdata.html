@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Ramdayal Rewaria">
+
+<ul style="list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: red ; max-width:100%; padding-top:0%; padding-bottom:0%; display: flex; justify-content: center; font-size:small;">
+  <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="../index.html">About Me</a>
+  </li>
+  <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="https://github.com/anly501/anly-501-project-rdr-190100">Code</a>
+  </li>
+  <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="https://github.com/anly501/anly-501-project-rdr-190100/tree/main/data">Data</a>
+  </li>
+  <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="./introduction.html">Introduction</a>
+  </li>
+  <li class="dropdwn" style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="javascript:void(0)" class="drpbtn">Data Gathering</a>
+    <div class="dropdwn-content">
+      <a style = "display: block;" href="./data_gathering_twitterdata.html">Twitter Data</a>
+      <a style = "display: block;" href="./data_gathering_recorddata.html">Record Data</a>
+    </div>
+  </li>
+  <li class="dropdwn" style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="javascript:void(0)" class="drpbtn">Data Cleaning</a>
+    <div class="dropdwn-content">
+      <a style = "display: block;" href="./data_cleaning_twitterdata.html">Twitter Data</a>
+      <a style = "display: block;" href="./data_cleaning_recorddata.html">Record Data</a>
+    </div>
+  </li>
+  <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="./data_exploration.html">Exploring Data</a>
+  </li>
+  <li class="dropdwn" style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="javascript:void(0)" class="drpbtn">Naive Bayes’</a>
+    <div class="dropdwn-content">
+      <a style = "display: block;" href="./Naive-Bayes-twitterdata.html">Twitter Data in Python</a>
+      <a style = "display: block;" href="./Naive-Bayes-recorddata.html">Record Data in R</a>
+    </div>
+  </li>
+  <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="./Decision-Trees.html">Decision Trees</a>
+  </li>
+  <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="./SVM-Record-data.html">SVM</a>
+  </li>
+  <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="./Clustering.html">Clustering</a>
+  </li>
+  <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="./introduction.html">ARM and Networking</a>
+  </li>
+  <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="./introduction.html">Conclusion</a>
+  </li>
+  </ul>
+
+  <video width="100%" height="100%" autoplay muted>
+    <source src="./f1_video1.mp4" type="video/mp4"/>
+  </video>
+
+<title>Data Cleaning for Twitter Data</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+
+li a:hover, .dropdwn:hover .drpbtn {
+  background-color: black;
+}
+.dropdwn-content {
+    display: none;
+    position:static;
+    background-color: black;
+    min-width: 160px; 
+}
+.dropdwn-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+.dropdwn:hover .dropdwn-content {
+  display: block;
+  opacity: 1; 
+}
+li.dropdwn {
+  display: inline-block;
+}
+</style>
+
+
+<script src="twitter_data_cleaning_files/libs/clipboard/clipboard.min.js"></script>
+<script src="twitter_data_cleaning_files/libs/quarto-html/quarto.js"></script>
+<script src="twitter_data_cleaning_files/libs/quarto-html/popper.min.js"></script>
+<script src="twitter_data_cleaning_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="twitter_data_cleaning_files/libs/quarto-html/anchor.min.js"></script>
+<link href="twitter_data_cleaning_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="twitter_data_cleaning_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="twitter_data_cleaning_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="twitter_data_cleaning_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="twitter_data_cleaning_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Data Cleaning for Twitter Data</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Ramdayal Rewaria </p>
+          </div>
+  </div>
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="data-cleaning" class="level1">
+<h1>Data Cleaning</h1>
+<ul>
+<li>In the era of big data, cleaning or scrubbing your data has become an essential part of the data management process. Even though data cleaning can be tedious at times, it is absolutely crucial for getting accurate business intelligence (BI) that can drive your strategic decisions.</li>
+<li>Incorrect or inconsistent data leads to false conclusions. And so, how well you clean and understand the data has a high impact on the quality of the results.</li>
+<li>Data cleaning involve different techniques based on the problem and the data type. Different methods can be applied with each has its own trade-offs. Overall, incorrect data is either removed, corrected, or imputed.</li>
+<li>Data cleaning is the process of removing incorrect, duplicate, or otherwise erroneous data from a dataset. These errors can include incorrectly formatted data, redundant entries, mislabeled data, and other issues; they often arise when two or more datasets are combined together. Data cleaning improves the quality of your data as well as any business decisions that you draw based on the data.</li>
+<li>There is no one right way to clean a dataset, as every set is different and presents its own unique slate of errors that need to be corrected. Many data cleaning techniques can now be automated with the help of dedicated software, but some portion of the work must be done manually to ensure the greatest accuracy. Usually this work is done by data quality analysts, BI analysts, and business users.</li>
+<li>Every organization’s data cleaning methods will vary according to their individual needs as well as the particular constraints of the dataset. However, most data cleaning steps follow a standard framework:
+<ol type="1">
+<li>Determine the critical data values you need for your analysis.</li>
+<li>Collect the data you need, then sort and organize it.</li>
+<li>Identify duplicate or irrelevant values and remove them.</li>
+<li>Search for missing values and fill them in, so you have a complete dataset.</li>
+<li>Fix any remaining structural or repetitive errors in the dataset.</li>
+<li>Identify outliers and remove them, so they will not interfere with your analysis.</li>
+<li>Validate your dataset to ensure it is ready for data transformation and analysis.</li>
+<li>Once the set has been validated, perform your transformation and analysis.</li>
+</ol></li>
+<li><code>Data Cleaning vs. Data Cleansing vs. Data Scrubbing</code>
+<ul>
+<li>You might sometimes hear the terms data cleansing or data scrubbing used instead of data cleaning. In most situations, these terms are all being used interchangeably and refer to the exact same thing. Data scrubbing may sometimes be used to refer to a specific aspect of data cleaning—namely, removing duplicate or bad data from datasets.</li>
+<li>You should also know that data scrubbing can have a slightly different meaning within the specific context of data storage; in this case, it refers to an automated function that evaluates storage systems and disk drives to identify any bad sectors or blocks and to confirm the data in them can be read.</li>
+<li>Note that all three of these terms—data cleaning, data cleansing, and data scrubbing—are different from data transformation, which is the act of taking clean data and converting it into a new format or structure. Data transformation is a separate process that comes after data cleaning.</li>
+</ul></li>
+<li><code>Benefits of Data Cleaning:</code>
+<ul>
+<li>Not having clean data exacts a high price: IBM estimates that bad data costs the U.S. over $3 trillion each year. That’s because data-driven decisions are only as good as the data you are relying on. Bad quality data leads to equally bad quality decisions. If the data you are basing your strategy on is inaccurate, then your strategy will have the same issues present in the data, even if it seems sound. In fact, sometimes no data at all is better than bad data.</li>
+<li>Cleaning your data results in many benefits for your organization in both the short- and long-term. It leads to better decision making, which can boost your efficiency and your customer satisfaction, in turn giving your business a competitive edge. Over time, it also reduces your costs of data management by preemptively removing errors and other mistakes that would necessitate performing analysis over and over again.</li>
+</ul></li>
+</ul>
+</section>
+<section id="import-libraries" class="level1">
+<h1>Import Libraries</h1>
+<div class="cell" data-execution_count="1">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> textblob <span class="im">import</span> TextBlob</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tweepy</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> nltk</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pycountry</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> string</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> wordcloud <span class="im">import</span> WordCloud, STOPWORDS</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> PIL <span class="im">import</span> Image</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>nltk.downloader.download(<span class="st">'vader_lexicon'</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> langdetect <span class="im">import</span> detect</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> nltk.stem <span class="im">import</span> SnowballStemmer</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> nltk.sentiment.vader <span class="im">import</span> SentimentIntensityAnalyzer</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.feature_extraction.text <span class="im">import</span> CountVectorizer</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>[nltk_data] Downloading package vader_lexicon to
+[nltk_data]     /Users/rd/nltk_data...
+[nltk_data]   Package vader_lexicon is already up-to-date!</code></pre>
+</div>
+</div>
+</section>
+<section id="import-data" class="level1">
+<h1>Import Data</h1>
+<div class="cell" data-execution_count="3">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>ferrari_df <span class="op">=</span> pd.read_csv(<span class="st">'../../data/00-raw-data/tweet_data/ferrari_f1_tweets.csv'</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>mercedes_df <span class="op">=</span> pd.read_csv(<span class="st">'../../data/00-raw-data/tweet_data/mercedes_f1_tweets.csv'</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>redbull_df <span class="op">=</span> pd.read_csv(<span class="st">'../../data/00-raw-data/tweet_data/redbull_f1_tweets.csv'</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>alfa_romeo_df <span class="op">=</span> pd.read_csv(<span class="st">'../../data/00-raw-data/tweet_data/alfa romeo_f1_tweets.csv'</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>alpha_tauri_df <span class="op">=</span> pd.read_csv(<span class="st">'../../data/00-raw-data/tweet_data/alpha tauri_f1_tweets.csv'</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>alpine_df <span class="op">=</span> pd.read_csv(<span class="st">'../../data/00-raw-data/tweet_data/alpine_f1_tweets.csv'</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>aston_martin_df <span class="op">=</span> pd.read_csv(<span class="st">'../../data/00-raw-data/tweet_data/aston martin_f1_tweets.csv'</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>haas_df <span class="op">=</span> pd.read_csv(<span class="st">'../../data/00-raw-data/tweet_data/haas_f1_tweets.csv'</span>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>mclaren_df <span class="op">=</span> pd.read_csv(<span class="st">'../../data/00-raw-data/tweet_data/mclaren_f1_tweets.csv'</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>williams_df <span class="op">=</span> pd.read_csv(<span class="st">'../../data/00-raw-data/tweet_data/williams_f1_tweets.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="cleaning-the-data" class="level1">
+<h1>Cleaning the Data</h1>
+<section id="natural-language-processing-terms" class="level2">
+<h2 class="anchored" data-anchor-id="natural-language-processing-terms">Natural Language Processing terms:</h2>
+<ul>
+<li><code>Stopwords:</code>
+<ul>
+<li>The words which are generally filtered out before processing a natural language are called stop words. These are actually the most common words in any language (like articles, prepositions, pronouns, conjunctions, etc) and does not add much information to the text. Examples of a few stop words in English are “the”, “a”, “an”, “so”, “what”.</li>
+<li>Stop words are available in abundance in any human language. By removing these words, we remove the low-level information from our text in order to give more focus to the important information. In order words, we can say that the removal of such words does not show any negative consequences on the model we train for our task. Removal of stop words definitely reduces the dataset size and thus reduces the training time due to the fewer number of tokens involved in the training.</li>
+</ul></li>
+<li><code>Stemming:</code>
+<ul>
+<li>Stemming is the process of reducing a word to its stem that affixes to suffixes and prefixes or to the roots of words known as “lemmas”. Stemming is important in natural language understanding (NLU) and natural language processing (NLP).</li>
+<li>Stemming is a part of linguistic studies in morphology as well as artificial intelligence (AI) information retrieval and extraction. Stemming and AI knowledge extract meaningful information from vast sources like big data or the internet since additional forms of a word related to a subject may need to be searched to get the best results. Stemming is also a part of queries and internet search engines.</li>
+<li>Recognizing, searching and retrieving more forms of words returns more results. When a form of a word is recognized, it’s possible to return search results that otherwise might have been missed. That additional information retrieved is why stemming is integral to search queries and information retrieval.</li>
+</ul></li>
+<li><code>Tokenization:</code>
+<ul>
+<li>Tokenization is a way of separating a piece of text into smaller units called tokens. Here, tokens can be either words, characters, or subwords. Hence, tokenization can be broadly classified into 3 types
+<ul>
+<li>word</li>
+<li>character</li>
+<li>subword (n-gram characters)</li>
+</ul></li>
+<li>As tokens are the building blocks of Natural Language, the most common way of processing the raw text happens at the token level.</li>
+<li>Tokenization is performed on the corpus to obtain tokens. The following tokens are then used to prepare a vocabulary. Vocabulary refers to the set of unique tokens in the corpus. Remember that vocabulary can be constructed by considering each unique token in the corpus or by considering the top K Frequently Occurring Words.</li>
+</ul></li>
+</ul>
+</section>
+<section id="helper-functions" class="level2">
+<h2 class="anchored" data-anchor-id="helper-functions">Helper functions:</h2>
+<ul>
+<li><em>percentage</em>: computes the percentage of any number.</li>
+<li><em>remove_punct</em>: Removes punctuations and numbers from the text.</li>
+<li><em>tokenization</em>: Tokenizes the text data.</li>
+<li><em>remove_stopwords</em>: Removes stopwords from the data</li>
+<li><em>stemming</em>: Performs stemming on the text.</li>
+</ul>
+<div class="cell" data-execution_count="4">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> percentage(part,whole):</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">100</span> <span class="op">*</span> <span class="bu">float</span>(part)<span class="op">/</span><span class="bu">float</span>(whole)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-execution_count="5">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> remove_punct(text):</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    text  <span class="op">=</span> <span class="st">""</span>.join([char <span class="cf">for</span> char <span class="kw">in</span> text <span class="cf">if</span> char <span class="kw">not</span> <span class="kw">in</span> string.punctuation])</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    text <span class="op">=</span> re.sub(<span class="st">'[0-9]+'</span>, <span class="st">''</span>, text) <span class="co">#removes numbers from text</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> text</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-execution_count="6">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> tokenization(text):</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    text <span class="op">=</span> re.split(<span class="st">'\W+'</span>, text)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> text</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>stopword <span class="op">=</span> nltk.corpus.stopwords.words(<span class="st">'english'</span>)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> remove_stopwords(text):</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    text <span class="op">=</span> [word <span class="cf">for</span> word <span class="kw">in</span> text <span class="cf">if</span> word <span class="kw">not</span> <span class="kw">in</span> stopword]</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> text</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>ps <span class="op">=</span> nltk.PorterStemmer()</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> stemming(text):</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    text <span class="op">=</span> [ps.stem(word) <span class="cf">for</span> word <span class="kw">in</span> text]</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> text</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> clean_text(text):</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>    text_lc <span class="op">=</span> <span class="st">""</span>.join([word.lower() <span class="cf">for</span> word <span class="kw">in</span> text <span class="cf">if</span> word <span class="kw">not</span> <span class="kw">in</span> string.punctuation]) <span class="co"># remove puntuation</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>    text_rc <span class="op">=</span> re.sub(<span class="st">'[0-9]+'</span>, <span class="st">''</span>, text_lc)</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>    tokens <span class="op">=</span> re.split(<span class="st">'\W+'</span>, text_rc)    <span class="co"># tokenization</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>    text <span class="op">=</span> [ps.stem(word) <span class="cf">for</span> word <span class="kw">in</span> tokens <span class="cf">if</span> word <span class="kw">not</span> <span class="kw">in</span> stopword]  <span class="co"># remove stopwords and stemming</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> text</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="pipeline-function" class="level2">
+<h2 class="anchored" data-anchor-id="pipeline-function">Pipeline function:</h2>
+<ul>
+<li><code>Sentiment Analysis:</code> Sentiment analysis (or opinion mining) is a natural language processing (NLP) technique used to determine whether data is positive, negative or neutral. Sentiment analysis is often performed on textual data to help businesses monitor brand and product sentiment in customer feedback, and understand customer needs.</li>
+<li>Since humans express their thoughts and feelings more openly than ever before, sentiment analysis is fast becoming an essential tool to monitor and understand sentiment in all types of data.</li>
+<li>The pipeline function computes the sentiments of all our tweets for different teams using polarity scores before and after applying the above helper functions. It also creates 3 separate dataframes for Positive, Neutral and Negative Sentiments for further analysis</li>
+</ul>
+<div class="cell" data-execution_count="15">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> pipeline(df):</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    positive <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    negative <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    neutral <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    polarity <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    tweet_list <span class="op">=</span> []</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    neutral_list <span class="op">=</span> []</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    negative_list <span class="op">=</span> []</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    positive_list <span class="op">=</span> []</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> tweet <span class="kw">in</span> df[<span class="st">'text'</span>]:</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>        tweet_list.append(tweet)</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>        analysis <span class="op">=</span> TextBlob(tweet)</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>        score <span class="op">=</span> SentimentIntensityAnalyzer().polarity_scores(tweet)</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>        neg <span class="op">=</span> score[<span class="st">'neg'</span>]</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>        neu <span class="op">=</span> score[<span class="st">'neu'</span>]</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>        pos <span class="op">=</span> score[<span class="st">'pos'</span>]</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>        comp <span class="op">=</span> score[<span class="st">'compound'</span>]</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>        polarity <span class="op">+=</span> analysis.sentiment.polarity</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> neg <span class="op">&gt;</span> pos:</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>            negative_list.append(tweet)</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>            negative <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> pos <span class="op">&gt;</span> neg:</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>            positive_list.append(tweet)</span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>            positive <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> pos <span class="op">==</span> neg:</span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>            neutral_list.append(tweet)</span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>            neutral <span class="op">=</span> neutral <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>    tweet_list <span class="op">=</span> pd.DataFrame(tweet_list)</span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>    neutral_list <span class="op">=</span> pd.DataFrame(neutral_list)</span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>    negative_list <span class="op">=</span> pd.DataFrame(negative_list)</span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>    positive_list <span class="op">=</span> pd.DataFrame(positive_list)</span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>    positive_percentage <span class="op">=</span> percentage(positive,<span class="bu">len</span>(tweet_list))</span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>    negative_percentage <span class="op">=</span> percentage(negative,<span class="bu">len</span>(tweet_list))</span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a>    neutral_percentage <span class="op">=</span> percentage(neutral,<span class="bu">len</span>(tweet_list))</span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a>    tweet_list.drop_duplicates(inplace <span class="op">=</span> <span class="va">True</span>)</span>
+<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a>    tw_list <span class="op">=</span> pd.DataFrame(tweet_list)</span>
+<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a>    tw_list[<span class="st">'text'</span>] <span class="op">=</span> tw_list[<span class="dv">0</span>]</span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a>    <span class="co">#Removing RT, Punctuation etc</span></span>
+<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a>    remove_rt <span class="op">=</span> <span class="kw">lambda</span> x: re.sub(<span class="st">'@\w+: '</span>, <span class="st">""</span>, x)</span>
+<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a>    tw_list[<span class="st">"text"</span>] <span class="op">=</span> tw_list.text.<span class="bu">map</span>(remove_rt)</span>
+<span id="cb7-55"><a href="#cb7-55" aria-hidden="true" tabindex="-1"></a>    tw_list[<span class="st">"text"</span>] <span class="op">=</span> tw_list.text.<span class="bu">map</span>(remove_punct)</span>
+<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a>    tw_list[<span class="st">"text"</span>] <span class="op">=</span> tw_list.text.<span class="bu">str</span>.lower()</span>
+<span id="cb7-57"><a href="#cb7-57" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-58"><a href="#cb7-58" aria-hidden="true" tabindex="-1"></a>    tw_list[[<span class="st">'polarity'</span>, <span class="st">'subjectivity'</span>]] <span class="op">=</span> tw_list[<span class="st">'text'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> Text: pd.Series(TextBlob(Text).sentiment))</span>
+<span id="cb7-59"><a href="#cb7-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-60"><a href="#cb7-60" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> index, row <span class="kw">in</span> tw_list[<span class="st">'text'</span>].iteritems():</span>
+<span id="cb7-61"><a href="#cb7-61" aria-hidden="true" tabindex="-1"></a>        score <span class="op">=</span> SentimentIntensityAnalyzer().polarity_scores(row)</span>
+<span id="cb7-62"><a href="#cb7-62" aria-hidden="true" tabindex="-1"></a>        neg <span class="op">=</span> score[<span class="st">'neg'</span>]</span>
+<span id="cb7-63"><a href="#cb7-63" aria-hidden="true" tabindex="-1"></a>        neu <span class="op">=</span> score[<span class="st">'neu'</span>]</span>
+<span id="cb7-64"><a href="#cb7-64" aria-hidden="true" tabindex="-1"></a>        pos <span class="op">=</span> score[<span class="st">'pos'</span>]</span>
+<span id="cb7-65"><a href="#cb7-65" aria-hidden="true" tabindex="-1"></a>        comp <span class="op">=</span> score[<span class="st">'compound'</span>]</span>
+<span id="cb7-66"><a href="#cb7-66" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> neg <span class="op">&gt;</span> pos:</span>
+<span id="cb7-67"><a href="#cb7-67" aria-hidden="true" tabindex="-1"></a>            tw_list.loc[index, <span class="st">'sentiment'</span>] <span class="op">=</span> <span class="st">"negative"</span></span>
+<span id="cb7-68"><a href="#cb7-68" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> pos <span class="op">&gt;</span> neg:</span>
+<span id="cb7-69"><a href="#cb7-69" aria-hidden="true" tabindex="-1"></a>            tw_list.loc[index, <span class="st">"sentiment"</span>] <span class="op">=</span> <span class="st">"positive"</span></span>
+<span id="cb7-70"><a href="#cb7-70" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb7-71"><a href="#cb7-71" aria-hidden="true" tabindex="-1"></a>            tw_list.loc[index, <span class="st">"sentiment"</span>] <span class="op">=</span> <span class="st">"neutral"</span></span>
+<span id="cb7-72"><a href="#cb7-72" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-73"><a href="#cb7-73" aria-hidden="true" tabindex="-1"></a>    tw_list_negative <span class="op">=</span> tw_list[tw_list[<span class="st">"sentiment"</span>]<span class="op">==</span><span class="st">"negative"</span>]</span>
+<span id="cb7-74"><a href="#cb7-74" aria-hidden="true" tabindex="-1"></a>    tw_list_positive <span class="op">=</span> tw_list[tw_list[<span class="st">"sentiment"</span>]<span class="op">==</span><span class="st">"positive"</span>]</span>
+<span id="cb7-75"><a href="#cb7-75" aria-hidden="true" tabindex="-1"></a>    tw_list_neutral <span class="op">=</span> tw_list[tw_list[<span class="st">"sentiment"</span>]<span class="op">==</span><span class="st">"neutral"</span>]</span>
+<span id="cb7-76"><a href="#cb7-76" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-77"><a href="#cb7-77" aria-hidden="true" tabindex="-1"></a>    tw_list[<span class="st">"text"</span>] <span class="op">=</span> tw_list.text.replace(<span class="st">" f "</span>, <span class="st">" f1 "</span>)        </span>
+<span id="cb7-78"><a href="#cb7-78" aria-hidden="true" tabindex="-1"></a>    tw_list[<span class="st">'tokenized'</span>] <span class="op">=</span> tw_list[<span class="st">'text'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: tokenization(x.lower()))</span>
+<span id="cb7-79"><a href="#cb7-79" aria-hidden="true" tabindex="-1"></a>    tw_list[<span class="st">'nonstop'</span>] <span class="op">=</span> tw_list[<span class="st">'tokenized'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: remove_stopwords(x))</span>
+<span id="cb7-80"><a href="#cb7-80" aria-hidden="true" tabindex="-1"></a>    tw_list[<span class="st">'stemmed'</span>] <span class="op">=</span> tw_list[<span class="st">'nonstop'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: stemming(x))</span>
+<span id="cb7-81"><a href="#cb7-81" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-82"><a href="#cb7-82" aria-hidden="true" tabindex="-1"></a>    countVectorizer <span class="op">=</span> CountVectorizer(analyzer<span class="op">=</span>clean_text) </span>
+<span id="cb7-83"><a href="#cb7-83" aria-hidden="true" tabindex="-1"></a>    countVector <span class="op">=</span> countVectorizer.fit_transform(tw_list[<span class="st">'text'</span>])</span>
+<span id="cb7-84"><a href="#cb7-84" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-85"><a href="#cb7-85" aria-hidden="true" tabindex="-1"></a>    count_vect_df <span class="op">=</span> pd.DataFrame(countVector.toarray(), columns<span class="op">=</span>countVectorizer.get_feature_names_out())</span>
+<span id="cb7-86"><a href="#cb7-86" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-87"><a href="#cb7-87" aria-hidden="true" tabindex="-1"></a>    count <span class="op">=</span> pd.DataFrame(count_vect_df.<span class="bu">sum</span>())</span>
+<span id="cb7-88"><a href="#cb7-88" aria-hidden="true" tabindex="-1"></a>    top_20_count <span class="op">=</span> count.sort_values(<span class="dv">0</span>,ascending<span class="op">=</span><span class="va">False</span>).head(<span class="dv">20</span>)</span>
+<span id="cb7-89"><a href="#cb7-89" aria-hidden="true" tabindex="-1"></a>    top_20_count.columns <span class="op">=</span> [<span class="st">'count'</span>]</span>
+<span id="cb7-90"><a href="#cb7-90" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-91"><a href="#cb7-91" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> tw_list, top_20_count</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Applying the pipeline function to tweets from different teams:</p>
+<div class="cell" data-execution_count="16">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>ferrari_sentiment_df, ferrari_top_20_count <span class="op">=</span> pipeline(ferrari_df)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>mercedes_sentiment_df, mercedes_top_20_count <span class="op">=</span> pipeline(mercedes_df)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>redbull_sentiment_df, redbull_top_20_count <span class="op">=</span> pipeline(redbull_df)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>haas_sentiment_df, haas_top_20_count <span class="op">=</span> pipeline(haas_df)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>mclaren_sentiment_df, mclaren_top_20_count <span class="op">=</span> pipeline(mclaren_df)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>alpine_sentiment_df, alpine_top_20_count <span class="op">=</span> pipeline(alpine_df)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>williams_sentiment_df, williams_top_20_count <span class="op">=</span> pipeline(williams_df)</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>astonmartin_sentiment_df, astonmartin_top_20_count <span class="op">=</span> pipeline(aston_martin_df)</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>alphatauri_sentiment_df, alphatauri_top_20_count <span class="op">=</span> pipeline(alpha_tauri_df)</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>alfa_romeo_sentiment_df, alfa_romeo_top_20_count <span class="op">=</span> pipeline(alfa_romeo_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-execution_count="17">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>ferrari_sentiment_df.to_csv(<span class="st">'../../data/01-modified-data/sentiment_analysis/ferrari_sentiment_df.csv'</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>mercedes_sentiment_df.to_csv(<span class="st">'../../data/01-modified-data/sentiment_analysis/mercedes_sentiment_df.csv'</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>redbull_sentiment_df.to_csv(<span class="st">'../../data/01-modified-data/sentiment_analysis/redbull_sentiment_df.csv'</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>haas_sentiment_df.to_csv(<span class="st">'../../data/01-modified-data/sentiment_analysis/haas_sentiment_df.csv'</span>)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>mclaren_sentiment_df.to_csv(<span class="st">'../../data/01-modified-data/sentiment_analysis/mclaren_sentiment_df.csv'</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>alpine_sentiment_df.to_csv(<span class="st">'../../data/01-modified-data/sentiment_analysis/alpine_sentiment_df.csv'</span>)</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>williams_sentiment_df.to_csv(<span class="st">'../../data/01-modified-data/sentiment_analysis/williams_sentiment_df.csv'</span>)</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>astonmartin_sentiment_df.to_csv(<span class="st">'../../data/01-modified-data/sentiment_analysis/astonmartin_sentiment_df.csv'</span>)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>alphatauri_sentiment_df.to_csv(<span class="st">'../../data/01-modified-data/sentiment_analysis/alphatauri_sentiment_df.csv'</span>)</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>alfa_romeo_sentiment_df.to_csv(<span class="st">'../../data/01-modified-data/sentiment_analysis/alfa_romeo_sentiment_df.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-execution_count="18">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>all_teams_top20_count <span class="op">=</span> pd.concat([ferrari_top_20_count, mercedes_top_20_count, redbull_top_20_count, haas_top_20_count, mclaren_top_20_count, alpine_top_20_count, williams_top_20_count, astonmartin_top_20_count, alphatauri_top_20_count, alfa_romeo_top_20_count], axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>all_teams_top20_count.reset_index(inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>all_teams_top20_count.columns <span class="op">=</span> [<span class="st">'words'</span>, <span class="st">'ferrari'</span>, <span class="st">'mercedes'</span>, <span class="st">'redbull'</span>, <span class="st">'haas'</span>, <span class="st">'mclaren'</span>, <span class="st">'alpine'</span>, <span class="st">'williams'</span>, <span class="st">'aston martin'</span>, <span class="st">'alpha tauri'</span>, <span class="st">'alfa romeo'</span>]</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>all_teams_top20_count.to_csv(<span class="st">'../../data/01-modified-data/all_teams_top20_wordcount.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-execution_count="19">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>all_teams_top20_count</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="19">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>words</th>
+      <th>ferrari</th>
+      <th>mercedes</th>
+      <th>redbull</th>
+      <th>haas</th>
+      <th>mclaren</th>
+      <th>alpine</th>
+      <th>williams</th>
+      <th>aston martin</th>
+      <th>alpha tauri</th>
+      <th>alfa romeo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>ferrari</td>
+      <td>481.0</td>
+      <td>53.0</td>
+      <td>37.0</td>
+      <td>NaN</td>
+      <td>44.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>f</td>
+      <td>399.0</td>
+      <td>551.0</td>
+      <td>328.0</td>
+      <td>423.0</td>
+      <td>631.0</td>
+      <td>483.0</td>
+      <td>551.0</td>
+      <td>313.0</td>
+      <td>102.0</td>
+      <td>191.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>race</td>
+      <td>93.0</td>
+      <td>106.0</td>
+      <td>57.0</td>
+      <td>52.0</td>
+      <td>85.0</td>
+      <td>58.0</td>
+      <td>96.0</td>
+      <td>34.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td></td>
+      <td>68.0</td>
+      <td>61.0</td>
+      <td>31.0</td>
+      <td>45.0</td>
+      <td>78.0</td>
+      <td>59.0</td>
+      <td>53.0</td>
+      <td>30.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>team</td>
+      <td>50.0</td>
+      <td>122.0</td>
+      <td>40.0</td>
+      <td>76.0</td>
+      <td>65.0</td>
+      <td>59.0</td>
+      <td>90.0</td>
+      <td>83.0</td>
+      <td>24.0</td>
+      <td>40.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>85</th>
+      <td>hurri</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>24.0</td>
+    </tr>
+    <tr>
+      <th>86</th>
+      <td>ceo</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>24.0</td>
+    </tr>
+    <tr>
+      <th>87</th>
+      <td>say</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>24.0</td>
+    </tr>
+    <tr>
+      <th>88</th>
+      <td>sauber</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>23.0</td>
+    </tr>
+    <tr>
+      <th>89</th>
+      <td>decid</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>22.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>90 rows × 11 columns</p>
+</div>
+</div>
+</div>
+<p>Saving all the different tweets of each team into a single dataframe:</p>
+<div class="cell" data-execution_count="20">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>keys <span class="op">=</span> [<span class="st">'Ferrari'</span>, <span class="st">'Mercedes'</span>, <span class="st">'Redbull'</span>, <span class="st">'Haas'</span>, <span class="st">'Mclaren'</span>, <span class="st">'Alpine'</span>, <span class="st">'Williams'</span>, <span class="st">'Aston Martin'</span>, <span class="st">'Alpha Tauri'</span>, <span class="st">'Alfa Romeo'</span>]</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>all_teams_sentiment_df <span class="op">=</span> pd.concat([ferrari_sentiment_df, mercedes_sentiment_df, redbull_sentiment_df, haas_sentiment_df, mclaren_sentiment_df, alpine_sentiment_df, williams_sentiment_df, astonmartin_sentiment_df, alphatauri_sentiment_df, alfa_romeo_sentiment_df], keys<span class="op">=</span>keys, names<span class="op">=</span>[<span class="st">'Team'</span>, <span class="va">None</span>], axis<span class="op">=</span><span class="dv">0</span>).reset_index(level <span class="op">=</span> <span class="st">'Team'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-execution_count="21">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>all_teams_sentiment_df.to_csv(<span class="st">'../../data/01-modified-data/all_teams_sentiment_df.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<section id="wordclouds" class="level3">
+<h3 class="anchored" data-anchor-id="wordclouds">Wordclouds:</h3>
+<ul>
+<li>Word clouds (also known as text clouds or tag clouds) work in a simple way: the more a specific word appears in a source of textual data (such as a speech, blog post, or database), the bigger and bolder it appears in the word cloud.</li>
+<li>Also known as tag clouds or text clouds, these are ideal ways to pull out the most pertinent parts of textual data, from blog posts to databases. They can also help business users compare and contrast two different pieces of text to find the wording similarities between the two.</li>
+</ul>
+<p>Worldcloud function:</p>
+<div class="cell" data-execution_count="155">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> create_wordcloud(text):</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">#mask = np.array(Image.open("cloud.png"))</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    stopwords <span class="op">=</span> <span class="bu">set</span>(STOPWORDS)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    wc <span class="op">=</span> WordCloud(background_color<span class="op">=</span><span class="st">"white"</span>,</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>                    max_words<span class="op">=</span><span class="dv">3000</span>,</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>                    stopwords<span class="op">=</span>stopwords,</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>                    repeat<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    wc.generate(<span class="bu">str</span>(text))</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>    wc.to_file(<span class="st">"wc.png"</span>)</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Word Cloud Saved Successfully"</span>)</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>    path<span class="op">=</span><span class="st">"wc.png"</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    display(Image.<span class="bu">open</span>(path))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Wordclouds for different sentiments of Ferrari:</p>
+<div class="cell" data-execution_count="132">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>create_wordcloud(tw_list[<span class="st">"text"</span>].values)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Word Cloud Saved Successfully</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="twitter_data_cleaning_files/figure-html/cell-15-output-2.png" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="133">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>create_wordcloud(tw_list_positive[<span class="st">"text"</span>].values)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Word Cloud Saved Successfully</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="twitter_data_cleaning_files/figure-html/cell-16-output-2.png" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="134">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>create_wordcloud(tw_list_negative[<span class="st">"text"</span>].values)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Word Cloud Saved Successfully</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="twitter_data_cleaning_files/figure-html/cell-17-output-2.png" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="135">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>tw_list[<span class="st">"text_len"</span>] <span class="op">=</span> tw_list[<span class="st">"text"</span>].astype(<span class="bu">str</span>).<span class="bu">apply</span>(<span class="bu">len</span>)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>tw_list[<span class="st">"text_word_count"</span>] <span class="op">=</span> tw_list[<span class="st">"text"</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: <span class="bu">len</span>(<span class="bu">str</span>(x).split()))</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="bu">round</span>(pd.DataFrame(tw_list.groupby(<span class="st">"sentiment"</span>).text_len.mean()),<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="135">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>text_len</th>
+    </tr>
+    <tr>
+      <th>sentiment</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>negative</th>
+      <td>144.18</td>
+    </tr>
+    <tr>
+      <th>neutral</th>
+      <td>88.48</td>
+    </tr>
+    <tr>
+      <th>positive</th>
+      <td>148.18</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="136">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="bu">round</span>(pd.DataFrame(tw_list.groupby(<span class="st">"sentiment"</span>).text_word_count.mean()),<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="136">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>text_word_count</th>
+    </tr>
+    <tr>
+      <th>sentiment</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>negative</th>
+      <td>23.98</td>
+    </tr>
+    <tr>
+      <th>neutral</th>
+      <td>13.43</td>
+    </tr>
+    <tr>
+      <th>positive</th>
+      <td>24.01</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
