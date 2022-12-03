@@ -1,167 +1,304 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
 
-<head>
-    <title>501 project</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-    <!-- point to css stylesheet -->
- 
-</head>
+<meta name="author" content="Ramdayal Rewaria">
 
-<body>
-  <ul style="list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: red ; max-width:100%; padding-top:0%; padding-bottom:0%; display: flex; justify-content: center; font-size:small;">
-    <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
-      <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
-      href="../index.html">About Me</a>
-    </li>
-    <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
-      <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
-      href="https://github.com/anly501/anly-501-project-rdr-190100">Code</a>
-    </li>
-    <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
-      <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
-      href="https://github.com/anly501/anly-501-project-rdr-190100/tree/main/data">Data</a>
-    </li>
-    <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
-      <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
-      href="./introduction.html">Introduction</a>
-    </li>
-    <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
-      <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
-      href="./data_gathering.html">Data Gathering</a>
-    </li>
-    <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
-      <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
-      href="./data_cleaning.html">Data Cleaning</a>
-    </li>
-    <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
-      <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
-      href="./exploring_data.html">Exploring Data</a>
-    </li>
-    <li class="dropdwn" style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
-      <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
-      href="javascript:void(0)" class="drpbtn">Naive Bayes’</a>
-      <div class="dropdwn-content">
-        <a style = "display: block;" href="./Naive-Bayes-twitterdata.html">Twitter Data in Python</a>
-        <a style = "display: block;" href="./Naive-Bayes-recorddata.html">Record Data in R</a>
-      </div>
-    </li>
-    <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
-      <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
-      href="./Decision-Trees.html">Decision Trees</a>
-    </li>
-    <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
-      <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
-      href="./SVM-Record-data.html">SVM</a>
-    </li>
-    <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
-      <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
-      href="./Clustering.html">Clustering</a>
-    </li>
-    <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
-      <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
-      href="./introduction.html">ARM and Networking</a>
-    </li>
-    <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
-      <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
-      href="./introduction.html">Conclusion</a>
-    </li>
-    </ul>
-  
-    <video width="100%" height="100%" autoplay muted>
-      <source src="./f1_video1.mp4" type="video/mp4"/>
-    </video>
-    
-  <style>
-    li a:hover, .dropdwn:hover .drpbtn {
-      background-color: black;
-    }
-    .dropdwn-content {
-        display: none;
-        position:static;
-        background-color: black;
-        min-width: 160px; 
-    }
-    .dropdwn-content a {
-        color: white;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        text-align: center;
-    }
-    .dropdwn:hover .dropdwn-content {
-      display: block;
-      opacity: 1; 
-    }
-    li.dropdwn {
-      display: inline-block;
-    }
-    </style>
+<ul style="list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: red ; max-width:100%; padding-top:0%; padding-bottom:0%; display: flex; justify-content: center; font-size:small;">
+  <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="../index.html">About Me</a>
+  </li>
+  <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="https://github.com/anly501/anly-501-project-rdr-190100">Code</a>
+  </li>
+  <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="https://github.com/anly501/anly-501-project-rdr-190100/tree/main/data">Data</a>
+  </li>
+  <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="./introduction.html">Introduction</a>
+  </li>
+  <li class="dropdwn" style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="javascript:void(0)" class="drpbtn">Data Gathering</a>
+    <div class="dropdwn-content">
+      <a style = "display: block;" href="./data_gathering_twitterdata.html">Twitter Data</a>
+      <a style = "display: block;" href="./data_gathering_recorddata.html">Record Data</a>
+    </div>
+  </li>
+  <li class="dropdwn" style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="javascript:void(0)" class="drpbtn">Data Cleaning</a>
+    <div class="dropdwn-content">
+      <a style = "display: block;" href="./data_cleaning_twitterdata.html">Twitter Data</a>
+      <a style = "display: block;" href="./data_cleaning_recorddata1.html">Record Data Part 1 in R</a>
+      <a style = "display: block;" href="./data_cleaning_recorddata2.html">Record Data Part 2 in Python</a>
+    </div>
+  </li>
+  <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="./data_exploration.html">Exploring Data</a>
+  </li>
+  <li class="dropdwn" style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="javascript:void(0)" class="drpbtn">Naive Bayes’</a>
+    <div class="dropdwn-content">
+      <a style = "display: block;" href="./Naive-Bayes-twitterdata.html">Twitter Data in Python</a>
+      <a style = "display: block;" href="./Naive-Bayes-recorddata.html">Record Data in R</a>
+    </div>
+  </li>
+  <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="./Decision-Trees.html">Decision Trees</a>
+  </li>
+  <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="./SVM-Record-data.html">SVM</a>
+  </li>
+  <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="./Clustering.html">Clustering</a>
+  </li>
+  <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="./arm_and_networking.html">ARM and Networking</a>
+  </li>
+  <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="./conclusions.html">Conclusion</a>
+  </li>
+  </ul>
 
+  <video width="100%" height="100%" autoplay muted>
+    <source src="./f1_video1.mp4" type="video/mp4"/>
+  </video>
 
+<title>Introduction</title>
 <style>
-  h1{font-family:Arial, sans-serif;color:#000000;background-color:#ffffff;text-align: center;}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+
+li a:hover, .dropdwn:hover .drpbtn {
+  background-color: black;
+}
+.dropdwn-content {
+    display: none;
+    position:static;
+    background-color: black;
+    min-width: 160px; 
+}
+.dropdwn-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+.dropdwn:hover .dropdwn-content {
+  display: block;
+  opacity: 1; 
+}
+li.dropdwn {
+  display: inline-block;
+}
 </style>
 
-<h1>Formula 1 Race Results Predictive Modelling</h1>
 
-<table>
-    <!--TABLE ROW-1-->
-   <tr>
-      <!--ROW-1 COL-1-->
-      <td>
-            <img src="https://ramdayal.georgetown.domains/501-project-website/images/f1_img_1.jpeg" width="670" height="550">
-      </td>
-      
-      <!--ROW-1 COL-2-->
-      <td>
-        <img src="https://ramdayal.georgetown.domains/501-project-website/images/f1_img_3.jpeg" width="670" height="550">
-  </td>
-         
-         
-   </tr>
-
-    <!--ROW-2-->
-   <tr VALIGN =  TOP>
-      <!--ROW-2 COL-1-->
-      <td>
-        
-
-        <h2 style="text-align:left; color:rgb(0, 0, 0);">About the Project</h2>
-            
-      <p> Formula One (F1) is a series of races held at different venues around the world, of the fastest open-wheel, open-cabin, single-seated, four-wheeled autos in the world. There have been a few years when even six-wheeled cars participated in F1. The word “Formula”, included in the name, refers to a set of rules that the constructors of the car, its mechanics and the drivers have to strictly follow during the tenure that they are members of F1. When motor racing first began, there were no limitations on the power or the size of the cars. The races became unequal with cars with more power and bigger sizes easily outpacing the smaller cars. The races also created dangerous situations in which many participants got seriously hurt, some even fatally. When racing resumed after World War II, the governing body of the sport, the FIA, introduced a set of rules that set limits on the size and the power of the cars. This created an even playing field for the participants and drivers, while more stress was laid on the efficiency and design of the cars and also the capability of the drivers. Formula 1 cars are data-driven, intelligent systems that can reach speeds of over 200 mph. There have been more people in space than have driven an F1 car. These Formula One racers are the pinnacle of automobile technology. Hundreds of sensors monitor every aspect of each vehicle, including lap times, tyre and brake temperatures, air flow, and engine performance. Hundreds of stories are unfolding behind the scenes as you watch a race, such as tyre wear, engine health, and driver responsiveness. Few sports use data analytics as extensively as Formula One — it influences the design of the cars, how they are driven, and how the race is aired. Prior to the adoption of data analytics, a race’s success or failure was entirely determined by the driver’s split-second decisions on the track. By the 1970s, however, telemetry systems had shrunk in size and sophistication to the point where they could be installed in vehicles to provide information about their operation.Electronic systems were commonly installed on F1 vehicles by the 1980s. Initially, storage was limited to a single lap’s worth of data, and drivers were given a signal to turn on the telemetry when the team needed to collect data. The data would then be removed from the vehicle and transferred to computer systems in the garage for further analysis. By the end of the decade, ‘burst’ telemetry had been developed, which sent radio signals from the car to the garage during a race, giving the pit crew advance warning of the car’s physical condition. These bursts were replaced by streaming data, which was piped back to the garage and then to the factory. Pre-race simulations, real-time decision-making by analysts and pit crew, post-race analysis, and the broadcast experience are all influenced by real-time data streams today. 
-          Considering so much of the data stored after every lap and as the level of racing between different teams is now more or less even with respect to engine sizes, weight and fuel tanks, there are a ton of other factors that influence the result of any particular race in a season, I thought of creating my project based on this data. The main aim of this project is to observe how these factors influence the results of a race and use these observations to build a model that predicts the results of a race.
+<script src="Introduction_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Introduction_files/libs/quarto-html/quarto.js"></script>
+<script src="Introduction_files/libs/quarto-html/popper.min.js"></script>
+<script src="Introduction_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Introduction_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Introduction_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Introduction_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Introduction_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Introduction_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Introduction_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
 
 
-      </p>
-     
- 
-      </td>
-      
-      <!--ROW-2 COL-2-->
-      <td>
+</head>
 
-         <h2 style="text-align:left; color:rgb(0, 0, 0);">10 Questions about my Project</h2>
+<body class="fullcontent">
 
-  <p>Q1: How has the popularity of F1 increased over the years? </p> 
-  <p>Q2: Which constructor (team) has the highest support every season? </p> 
-  <p>Q3: Does the changing of car rules every few years affect the results of the race? </p> 
-  <p>Q4: Do tyres play an important role in winning any race?  </p> 
-  <p>Q5: How do the pit leaders and team strategists affect the result of a race?</p> 
-  <p>Q6: Do the number of drivers affect seasonwise performace of drivers?</p> 
-  <p>Q7: Do the number of teams affect seasonwise performace of drivers?  </p> 
-  <p>Q8: Do the number of races in a season affect the performace of drivers? </p> 
-  <p>Q9: How does weather play an important role for winning a race? </p> 
-  <p>Q10: Is historic data relevant and preferred to use while predicting future races?  </p> 
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Introduction</h1>
+</div>
 
 
-      </td>
-   </tr>
-   
-</table>
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Ramdayal Rewaria </p>
+          </div>
+  </div>
+    
+    
+  </div>
   
-</body>
-</html>
+
+</header>
+
+<section id="about-the-project" class="level1">
+<h1>About the Project</h1>
+<p>Formula One (F1) is a series of races held at different venues around the world, of the fastest open-wheel, open-cabin, single-seated, four-wheeled autos in the world. There have been a few years when even six-wheeled cars participated in F1. The word Formula, included in the name, refers to a set of rules that the constructors of the car, its mechanics and the drivers have to strictly follow during the tenure that they are members of F1. When motor racing first began, there were no limitations on the power or the size of the cars. The races became unequal with cars with more power and bigger sizes easily outpacing the smaller cars. The races also created dangerous situations in which many participants got seriously hurt, some even fatally. When racing resumed after World War II, the governing body of the sport, the FIA, introduced a set of rules that set limits on the size and the power of the cars. This created an even playing field for the participants and drivers, while more stress was laid on the efficiency and design of the cars and also the capability of the drivers. Formula 1 cars are data-driven, intelligent systems that can reach speeds of over 200 mph. There have been more people in space than have driven an F1 car. These Formula One racers are the pinnacle of automobile technology. Hundreds of sensors monitor every aspect of each vehicle, including lap times, tyre and brake temperatures, air flow, and engine performance. Hundreds of stories are unfolding behind the scenes as you watch a race, such as tyre wear, engine health, and driver responsiveness. Few sports use data analytics as extensively as Formula One. It influences the design of the cars, how they are driven, and how the race is aired. Prior to the adoption of data analytics, a race’s success or failure was entirely determined by the driver’s split-second decisions on the track. By the 1970s, however, telemetry systems had shrunk in size and sophistication to the point where they could be installed in vehicles to provide information about their operation.Electronic systems were commonly installed on F1 vehicles by the 1980s. Initially, storage was limited to a single laps worth of data, and drivers were given a signal to turn on the telemetry when the team needed to collect data. The data would then be removed from the vehicle and transferred to computer systems in the garage for further analysis. By the end of the decade, burst telemetry had been developed, which sent radio signals from the car to the garage during a race, giving the pit crew advance warning of the car’s physical condition. These bursts were replaced by streaming data, which was piped back to the garage and then to the factory. Pre-race simulations, real-time decision-making by analysts and pit crew, post-race analysis, and the broadcast experience are all influenced by real-time data streams today. Considering so much of the data stored after every lap and as the level of racing between different teams is now more or less even with respect to engine sizes, weight and fuel tanks, there are a ton of other factors that influence the result of any particular race in a season, I thought of creating my project based on this data. The main aim of this project is to observe how these factors influence the results of a race and use these observations to build a model that predicts the results of a race.</p>
+</section>
+<section id="basic-information-and-definitions-in-formula-1" class="level1">
+<h1>Basic Information and Definitions in Formula 1</h1>
+<ul>
+<li>Overview: Formula One, also called F1 in short, is an international auto racing sport. F1 is the highest level of single-seat, open-wheel and open-cockpit professional motor racing contest.</li>
+<li>Objective: The objective of a Formula 1 contest is to determine the winner of a race. The driver who crosses the finish line first after completing a pre-determined number of laps is declared the winner.</li>
+<li>Formula One-History &amp; Team Size: Formula 1 racing originated during the 1920-30s in Europe from other similar racing competitions. In 1946, the FIA standardized racing rules and this formed the basis of Formula One racing. The inaugural Formula One World Drivers’ championship was then held in 1950, the first world championship series. Apart from the world championship series, many other non-championship F1 races were also held, but as the costs of conducting these contests got higher, such races were discontinued after 1983. Each F1 team can have maximum of four drivers per season. There is support staff with every F1 team that plays a vital role in the team’s success.</li>
+<li>Number Of Grand Prix in a Season: The number of Grand Prix in a season has varied through the years, starting from 1950 which had 7 races. This number kept increasing up to a maximum of 20 GPs a year (in 2012). Normally there are 19 to 20 GPs in a season now.</li>
+<li>Number of Teams in F1 World Championship: 10 teams with two cars each are permitted to compete in the F1 World Championship as of 2022. That is, a total of 20 cars can enter the competition. However, the FIA regulations allow a limit of 26 cars for the championship.</li>
+<li>Constructor: Since 1981, FIA has passed a rule that respective F1 teams have to build their own engine and chassis of the car. The owner of the engine and chassis is called the constructor.</li>
+<li>Circuit: Formula One circuits are tracks specifically and purposefully built for conducting races. F1 circuits are of two types − Street Circuit and Road Circuit.</li>
+<li>Pole position: Driver who recorded fastest time during qualifying session is awarded the first grid position on race day.</li>
+<li>Race Distance and Duration: The length of the race must be 305 km (260 km in case of Monaco GP) and is defined as “the smallest number of complete laps that exceeds 305 kilometers”. The number of laps in a race is obtained by dividing 305 by the length of a lap, which differs from track to track. The duration of the race cannot be more than 2 hours. If the allocated time of 2 hours is exceeded, the race is considered to be finished at the end of the ongoing lap.</li>
+<li>Racing Points System: The present system of Formula One World Championship points scoring was adopted in 2010 and has been continuing since. According to this system, the top 10 drivers at the end of each Grand Prix will receive points based on the positions they finished and these points will contribute towards determining both, the World Drivers’ and World Constructors’ Championships at the end of the season. The winner receives 25 points (25 Drivers’ Championship points as well as 25 Constructors’ Championship points).</li>
+</ul>
+</section>
+<section id="data-science-questions" class="level1">
+<h1>Data Science Questions</h1>
+<ol type="1">
+<li>Are the points gained and wins in career related to each other for constructors and drivers both?</li>
+<li>What led to the downfall of great drivers like Sebastian Vettel and Fernando Alonso?</li>
+<li>What really happened in 2021 (One of the best seasons ever) between Hamilton and Max?</li>
+<li>What are the sentiments of fans of different teams?</li>
+<li>Is weather an important factor for some drivers to win/lose a race?</li>
+<li>Are some tracks/circuits more prone to accidents than others?</li>
+<li>How has the popularity of F1 increased over the years?</li>
+<li>Which constructor(team) has the highest support every season?</li>
+<li>Does the positions of some drivers depend on final position of other drivers?</li>
+<li>Is historic data relevant and preferred to use while predicting future races?</li>
+</ol>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
 
 
+
+</body></html>
