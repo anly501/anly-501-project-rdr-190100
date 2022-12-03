@@ -1,166 +1,280 @@
-
 <!DOCTYPE html>
-<html>
-    
-<head>
-    <title>501 project</title>
- 
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Ramdayal Rewaria">
+
+<ul style="list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: red ; max-width:100%; padding-top:0%; padding-bottom:0%; display: flex; justify-content: center; font-size:small;">
+  <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="./index.html">About Me</a>
+  </li>
+  <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="https://github.com/anly501/anly-501-project-rdr-190100">Code</a>
+  </li>
+  <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="https://github.com/anly501/anly-501-project-rdr-190100/tree/main/data">Data</a>
+  </li>
+  <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="./pages/introductions.html">Introduction</a>
+  </li>
+  <li class="dropdwn" style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="javascript:void(0)" class="drpbtn">Data Gathering</a>
+    <div class="dropdwn-content">
+      <a style = "display: block;" href="./pages/data_gathering_twitterdata.html">Twitter Data</a>
+      <a style = "display: block;" href="./pages/data_gathering_recorddata.html">Record Data</a>
+    </div>
+  </li>
+  <li class="dropdwn" style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="javascript:void(0)" class="drpbtn">Data Cleaning</a>
+    <div class="dropdwn-content">
+      <a style = "display: block;" href="./pages/data_cleaning_twitterdata.html">Twitter Data</a>
+      <a style = "display: block;" href="./pages/data_cleaning_recorddata1.html">Record Data Part 1 in R</a>
+      <a style = "display: block;" href="./pages/data_cleaning_recorddata2.html">Record Data Part 2 in Python</a>
+    </div>
+  </li>
+  <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="./pages/data_exploration.html">Exploring Data</a>
+  </li>
+  <li class="dropdwn" style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="javascript:void(0)" class="drpbtn">Naive Bayes</a>
+    <div class="dropdwn-content">
+      <a style = "display: block;" href="./pages/Naive-Bayes-twitterdata.html">Twitter Data in Python</a>
+      <a style = "display: block;" href="./pages/Naive-Bayes-recorddata.html">Record Data in R</a>
+    </div>
+  </li>
+  <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="./pages/Decision-Trees.html">Decision Trees</a>
+  </li>
+  <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="./pages/SVM-Record-data.html">SVM</a>
+  </li>
+  <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="./pages/Clustering.html">Clustering</a>
+  </li>
+  <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="./pages/arm_and_networking.html">ARM and Networking</a>
+  </li>
+  <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
+    <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
+    href="./pages/conclusions.html">Conclusion</a>
+  </li>
+  </ul>
+
+  <video width="100%" height="100%" autoplay muted>
+    <source src="./pages/f1_video1.mp4" type="video/mp4"/>
+  </video>
+
+<title>About Me</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+li a:hover, .dropdwn:hover .drpbtn {
+  background-color: black;
+}
+.dropdwn-content {
+    display: none;
+    position:static;
+    background-color: black;
+    min-width: 160px; 
+}
+.dropdwn-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+.dropdwn:hover .dropdwn-content {
+  display: block;
+  opacity: 1; 
+}
+li.dropdwn {
+  display: inline-block;
+}
+</style>
+
+
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/quarto.js"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="index_files/libs/quarto-html/anchor.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="index_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+
+
 </head>
 
-<body style="background-color:#222222;">
-  <ul style="list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: red ; max-width:100%; padding-top:0%; padding-bottom:0%; display: flex; justify-content: center; font-size:small;">
-    <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
-      <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
-      href="./index.html">About Me</a>
-    </li>
-    <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
-      <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
-      href="https://github.com/anly501/anly-501-project-rdr-190100">Code</a>
-    </li>
-    <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
-      <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
-      href="https://github.com/anly501/anly-501-project-rdr-190100/tree/main/data">Data</a>
-    </li>
-    <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
-      <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
-      href="./pages/introductions.html">Introduction</a>
-    </li>
-    <li class="dropdwn" style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
-      <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
-      href="javascript:void(0)" class="drpbtn">Data Gathering</a>
-      <div class="dropdwn-content">
-        <a style = "display: block;" href="./pages/data_gathering_twitterdata.html">Twitter Data</a>
-        <a style = "display: block;" href="./pages/data_gathering_recorddata.html">Record Data</a>
-      </div>
-    </li>
-    <li class="dropdwn" style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
-      <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
-      href="javascript:void(0)" class="drpbtn">Data Cleaning</a>
-      <div class="dropdwn-content">
-        <a style = "display: block;" href="./pages/data_cleaning_twitterdata.html">Twitter Data</a>
-        <a style = "display: block;" href="./pages/data_cleaning_recorddata1.html">Record Data Part 1 in R</a>
-        <a style = "display: block;" href="./pages/data_cleaning_recorddata2.html">Record Data Part 2 in Python</a>
-      </div>
-    </li>
-    <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
-      <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
-      href="./pages/data_exploration.html">Exploring Data</a>
-    </li>
-    <li class="dropdwn" style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
-      <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
-      href="javascript:void(0)" class="drpbtn">Naive Bayes</a>
-      <div class="dropdwn-content">
-        <a style = "display: block;" href="./pages/Naive-Bayes-twitterdata.html">Twitter Data in Python</a>
-        <a style = "display: block;" href="./pages/Naive-Bayes-recorddata.html">Record Data in R</a>
-      </div>
-    </li>
-    <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
-      <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
-      href="./pages/Decision-Trees.html">Decision Trees</a>
-    </li>
-    <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
-      <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
-      href="./pages/SVM-Record-data.html">SVM</a>
-    </li>
-    <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
-      <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
-      href="./pages/Clustering.html">Clustering</a>
-    </li>
-    <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
-      <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
-      href="./pages/arm_and_networking.html">ARM and Networking</a>
-    </li>
-    <li style = "display: inline-block; color: white; text-align: center; padding: 6px 6px;">
-      <a style = "display: inline-block; color: white; text-align: center; padding: 6px 6px; text-decoration: none; outline-style: solid; outline-color: black; margin-left: -2px;" 
-      href="./pages/conclusions.html">Conclusion</a>
-    </li>
-    </ul>
-  
-    <video width="100%" height="100%" autoplay muted>
-      <source src="./pages/f1_video1.mp4" type="video/mp4"/>
-    </video>
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">About Me</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Ramdayal Rewaria </p>
+          </div>
+  </div>
     
-  <style>
-    li a:hover, .dropdwn:hover .drpbtn {
-      background-color: black;
+    
+  </div>
+  
+
+</header>
+
+<p><img src="./images/my_image.JPG" width="100%" height="100%"></p>
+<section id="about-me" class="level1">
+<h1>About Me</h1>
+<ul>
+<li>Name: Ramdayal Rewaria</li>
+<li>NetID: rr1220</li>
+<li>E-mail ID: rr1220@georgetown.edu</li>
+<li>Hometown: Mumbai, India</li>
+</ul>
+<p>In today’s world, data exists everywhere. It applies to transportation, healthcare, supply chain, social media, e-mails, the stock market, academia and almost everything. Statistics show that 500+ terabytes of data are generated by Facebook every day. During my academic years and with the industrial exposure so far, I have realized that Data Science, at its foundation, is the study of extracting vital information from structured and unstructured data. This area of study also concentrates hugely on being able to derive informed decisions and tactical moves from available data often termed as ‘insights’. The insights thus gained have significant advantages and this make Statistics an important part of Data Science, as they stand as a fundamental part of the approach. In the present era, Data Science and Analytics are growing at a fast rate and organizations require professionals who may scrutinize data and help drive instant business decisions competently. I studied Data Science at the Undergraduate Level too at NMIMS University which helped me gain a lot of theoretical knowledge towards the concepts involved in Data Science.<br> My undergraduate course captivated me to further delve into and advance my career in this massive and interesting field. Sharing briefly, I was intrigued by the power of data and the features present in the data that help give out meaningful insights and predictions learned in courses like Machine Learning and Computer Vision. Also, Natural Language Processing helped me gain perspective on how a simple line of text can contain so many different attributes that can be modified and trained as per our needs. Advanced Neural Networks helped me learn how some features that might be neglected during machine learning and how different activation functions and hidden layers might help us focus on that. Statistical Methods helped me understand insightful tests such p test, chi-squared test using advanced Excel. Determined to upskill myself, I also took up certifications in Complete Data Science Bootcamp, Python for Data Science and Machine Learning Bootcamp, Natural Language Processing with Python, Python for Computer Vision with OpenCV and Deep Learning, Tableau A–Z, Deep Learning A–Z, TensorFlow for Deep Learning with Python, SQL for Data Analytics and Business Intelligence, Microsoft Power BI for Business Intelligence, Business Intelligence Analyst. As these topics are directly related to the intended Master’s program, they have helped me build a strong foundation for the same.<br> Furthering my interest in Computer Vision and Deep Learning has been my final year project on Football Penalty Direction Predictor Using Pose Estimation and Deep Learning. This mainly focused on the concept of penalties in football that are usually very unpredictable. Approximately 95% of the penalties turn out to be successful. The pose of the penalty shooter before he/she shoots the ball is considered to predict the direction where the ball would go to help make a shot less unpredictable. For this, I manually crafted a custom dataset of over 250 videos containing more than 2500 penalty shoot- outs and used these videos and images to get the predictions. During this, I came across constraints such as poor data quality and also there was a lot of brute force work such as manually cropping the images and labeling them. I could overcome this by acquiring necessary knowledge on designing, model building, predictions, and calculation of accuracy metrics. The other projects that I undertook included Facial Attribute Detection, Emotion Detection from Speech, Finding Donors Classification, Sentiment Analyzer, and Housing Data Analysis. I could develop an affinity for challenges through these projects and they have enabled me to think out of the box, which in the long run would help me with real-time problems and finding solutions to them would come naturally.<br> Further, to bolster my understanding of the domain, I endeavored to complete my internship in the Machine Learning Team at Konsultera Solutions Pvt. Ltd.&nbsp;During this, I contributed to the development of live projects in Machine Learning. The projects included concepts such as Natural Language Processing, Computer Vision, Web Extraction, and Deep Learning. I also worked on projects such as Spatial Distance algorithm on the predictions from a fine-tuned TensorFlow object detection API on Crowdhumans dataset; Legal Information Extractor for finding appropriate logic and to create a classifier for sorting out legal documents as per the user’s needs; KYC Fraud Detection: a GUI-using Tkinter that makes predictions easier. Through these, I could acquire hands-on experience in data extraction, cleaning, and pre-processing that are essential for data modelling. My training helped me with technical learning and the skills learned are very likely to boost my career.<br> After graduating, I joined ICICI Bank, as the Deputy Manager in the Data Science and Analytics Department. My role in the organization has helped me understand business problems, devising, and implementing data modelling-based solutions to achieve business gain. I am also involved in the analysis of portfolio through detailed analysis to drive lead identification, credit policies, pricing strategies, and portfolio management strategies. One of my projects required me to work with the data of more than 4 crore rows and 4000 columns. The extraction of this data involved the use of SQL from around 60 different tables, which was then cleaned and pre-processed by our team to make it ready for data modelling.<br> In addition, I have always kept a lively lifestyle mixing extra-curricular and academics in the right proportion. I have participated in several fests, sports, seminars, workshops, and conferences in my college. This has helped me evolve as a team player and develop effective communication and managerial skills.<br> I was also a part of a Social Service Organization called Rotaract Club of Bombay Airport for 4 years. I have worked of numerous projects to help the society and also to help 1000s of underprivileged children. Some of the flagship projects included Teaching the underprivileged, beach cleaning, dog collars, food and clothes donation drives and many more.</p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
     }
-    .dropdwn-content {
-        display: none;
-        position:static;
-        background-color: black;
-        min-width: 160px; 
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
     }
-    .dropdwn-content a {
-        color: white;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        text-align: center;
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
     }
-    .dropdwn:hover .dropdwn-content {
-      display: block;
-      opacity: 1; 
-    }
-    li.dropdwn {
-      display: inline-block;
-    }
-    </style>
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
 
 
-<!-- USE A TABLE TO ORGANIZE/FORMAT THE WEBPAGE -->
-<table>
-    <!--TABLE ROW-1-->
-   <tr>
-      <!--ROW-1 COL-1-->
-      <td>
-            <img src="images/my_image.JPG" width="550" height="400">
-      </td>
-      
-      <!--ROW-1 COL-2-->
-      <td>
-            
-        <h2 style="text-align:left; color:rgb(0, 0, 0);">About me</h2>
-        <p  style="font: size 20px;"> Name: Ramdayal Rewaria </p>
-        <p  style="font: size 20px;"> NetID: rr1220 </p>
-        
-        <p  style="font: size 18px;"> I am Ramdayal Rewaria from Mumbai, India, pursuing Masters of Science in Data Science and Analytics at Georgetown University. I completed my undergraduate from NMIMS, Mumbai with my major as Data Science. When I first heard about a program called Data Science it really intrigued me because of its vast applications and use cases. I worked in a startup on various Computer vision projects for 6 months during and with the banking industry as a Data Analyst for a year and . The Computer Vision aspect in Data Science is what interests me the most . Apart from academics, I am really passionate about Photography and Videography, doing Social work, playing Video games and watching TV shows and Movies.</p>
 
-      </td>
-         
-         
-   </tr>
-
-    <!--ROW-2-->
-   <tr>
-      <!--ROW-2 COL-1-->
-      <td>
-        
-
-        <h2 style="text-align:left; color:rgb(0, 0, 0);">Academic Interests</h2>
-            
-        <p> - Machine Learning </p> 
-        <p> - Computer Vision </p> 
-        <p> - Natural Language Processing </p> 
-        <p> - Deep Learning </p> 
-     
- 
-      </td>
-      
-      <!--ROW-2 COL-2-->
-      <td>
-
-         <h2 style="text-align:left; color:rgb(0, 0, 0);">Education</h2>
-
-  <p>2015-2017: Ryan International (Science and Maths)  </p> 
-  <p>2017-2021: NMIMS University (Bachelors of Technology-Data Science) </p> 
-  <p>2021-: Georgetown University (MS-Data Science and Analytics) </p> 
-
-
-      </td>
-   </tr>
-   
-</table>
-
-
-</body>
-</html>
+</body></html>
