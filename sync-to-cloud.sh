@@ -1,5 +1,3 @@
-
-
 # SYNC LOCAL VERSION OF WEBSITE TO GU-DOMAINS SERVER
 rsync -alvr --delete 501-project-website ramdayal@gtown3.reclaimhosting.com:/home/ramdayal/public_html/
 
